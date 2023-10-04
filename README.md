@@ -10,7 +10,20 @@
 <details>
   <summary>Presentations</summary>
 
-  Feasibility(<https://ethanbenton.github.io/Silver-Garden-Assistant/>)
+  [Feasibility](https://ethanbenton.github.io/Silver-Garden-Assistant/)
+
+</details>
+
+<details>
+  <summary>Our Team includes</summary>
+
+    -Ethan Benton
+    -Kai Buckhalter
+    -Justin Cantoria
+    -Seth Groves
+    -Joshua Miller
+    -Jonah Peterson
+    -James Tieu
 
 </details>
 
