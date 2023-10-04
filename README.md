@@ -6,13 +6,17 @@
  # Other Pages
 
 <details>
-  <summary>Presentations</summary>
+  <summary>Placeholder(drop down)</summary>
 
-    - [Presentations (md)](presentations.md)
-    - [Presentations (md)](presentations)
+    idk how links work here
 
 </details>
 
-  - [Presentations (md)](presentations.md)
+<details><summary>Trying again</summary>
+
+[Test](https://google)
+
+</details>
+
   - [Presentations (md)](presentations)
   - [About Us (md)](about_us)
