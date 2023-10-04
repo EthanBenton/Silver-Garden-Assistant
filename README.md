@@ -12,13 +12,5 @@
 
 </details>
 
-
-<details><summary>Trying again</summary>
-
-[Test](https://ethanbenton.github.io/Silver-Garden-Assistant/)
-
-</details>
-
-
   - [Presentations (md)](presentations)
   - [About Us (md)](about_us)
