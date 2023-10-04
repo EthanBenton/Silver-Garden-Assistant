@@ -15,7 +15,7 @@
 
 <details><summary>Trying again</summary>
 
-[Test](https://google.com)
+[Test](https://ethanbenton.github.io/Silver-Garden-Assistant/)
 
 </details>
 
