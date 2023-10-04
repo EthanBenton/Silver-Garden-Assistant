@@ -6,17 +6,13 @@
  # Other Pages
 
 <details>
-  <summary>Our Team includes</summary>
+  <summary>Presentations</summary>
 
-    - Ethan Benton
-    - Kai Buckhalter
-    - Justin Cantoria
-    - Seth Groves
-    - Joshua Miller
-    - Jonah Peterson
-    - James Tieu
+    - [Presentations (md)](presentations.md)
+    - [Presentations (md)](presentations)
 
 </details>
 
+  - [Presentations (md)](presentations.md)
   - [Presentations (md)](presentations)
   - [About Us (md)](about_us)
