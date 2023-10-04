@@ -1,5 +1,6 @@
 Our team includes...
-    -Ethan BEnton
+
+    -Ethan Benton
     -Kai Buckhalter
     -Justin Cantoria
     -Seth Groves
