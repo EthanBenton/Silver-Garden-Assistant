@@ -5,5 +5,14 @@
 
  # Other Pages
 
+    
+
+<details>
+  <summary>Test</summary>
+
+  [hi](https://ethanbenton.github.io/Silver-Garden-Assistant)
+
+</details>
+
   -[Presentations (md)](presentations)
   -[About Us (md)](about_us)
