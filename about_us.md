@@ -1,7 +1,7 @@
 Our team includes...
 
     - Ethan Benton
-    ![Alt text](20230926_202854.jpg)
+        ![Alt text](20230926_202854.png)
     
     - Kai Buckhalter
     - Justin Cantoria
