@@ -1,17 +1,18 @@
-Our team includes...
+# Our team includes...
 
-    # Ethan Benton
+## Ethan Benton
 
         <img src= "images/black-cat-back.png" width=300>
         ![](images/black-cat-back.png)
     
-    # Kai Buckhalter
+## Kai Buckhalter
 
-    # Justin Cantoria
+## Justin Cantoria
 
-    # Seth Groves
+## Seth Groves
 
-    # Joshua Miller
+## Joshua Miller
 
-    # Jonah Peterson
-    # James Tieu
+## Jonah Peterson
+
+## James Tieu
