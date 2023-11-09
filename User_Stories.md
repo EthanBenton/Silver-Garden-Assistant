@@ -1,79 +1,80 @@
 # **Creation**
 
-## Competion
+### Competion
+- comparison
 
-## Competition Matrix
+### Competition Matrix
 
-## Conclusion
+### Conclusion
 
-## Customs and End Users
+### Customs and End Users
 
-## MFCD
+### MFCD
 
-## Problem Characteristics
+### Problem Characteristics
 
-## Problem Statement
+### Problem Statement
 
-## Process Flow
+### Process Flow
 
-## Team Image
+### Team Image
 
-## Table of Contents
+### Table of Contents
 
-## Team Bio
+### Team Bio
 
-## Terms
+### Terms
 
-## References
+### References
 
-## Risks
+### Risks
 
-## Solution Characteristics
+### Solution Characteristics
 
-## Solution Flow
+### Solution Flow
 
-## Solution Statement
+### Solution Statement
 
-## Website
+### Website
 
-## Will do/ Wont do
+### Will do/ Wont do
 
 # **Presentation**
 
-## Competion
+### Competion
 
-## Competition Matrix
+### Competition Matrix
 
-## Conclusion
+### Conclusion
 
-## Customs and End Users
+### Customs and End Users
 
-## MFCD
+### MFCD
 
-## Problem Characteristics
+### Problem Characteristics
 
-## Problem Statement
+### Problem Statement
 
-## Process Flow
+### Process Flow
 
-## Team Image
+### Team Image
 
-## Table of Contents
+### Table of Contents
 
-## Team Bio
+### Team Bio
 
-## Terms
+### Terms
 
-## References
+### References
 
-## Risks
+### Risks
 
-## Solution Characteristics
+### Solution Characteristics
 
-## Solution Flow
+### Solution Flow
 
-## Solution Statement
+### Solution Statement
 
-## Will do/ Wont do
+### Will do/ Wont do
 
 
