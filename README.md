@@ -12,5 +12,8 @@
 
 </details>
 
-  - [Presentations (md)](presentations)
   - [About Us (md)](about_us)
+  - [Project Description (md)](Project_Description)
+  - [Deliverables (md)](Deliverables)
+  - [Presentations (md)](presentations)
+  
