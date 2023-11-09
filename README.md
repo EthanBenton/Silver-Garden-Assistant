@@ -16,4 +16,9 @@
   - [Project Description (md)](Project_Description)
   - [Deliverables (md)](Deliverables)
   - [Presentations (md)](presentations)
+  - [User Stories (md)](User_Stories)
+  - [References (md)](References)
+  - [Gloassary (md)](Glossary)
+  - [Odu](https://www.odu.edu/)
+  - [Cs Department](https://www.odu.edu/computer-science)
   
