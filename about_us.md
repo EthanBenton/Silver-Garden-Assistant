@@ -21,4 +21,7 @@
 - 
 
 ## James Tieu
-- 
+- James is a senior undergraduate at Old Dominion University pursuing a Bachelor's of Science degree
+in Computer Science. This past summer he interned as a Software Developer for the Naval Information
+Warfare Center. Outside of his career, he enjoys developing video games, playing volleyball, and
+is a hobbyist barber.
