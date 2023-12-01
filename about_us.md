@@ -1,9 +1,7 @@
 # Our team includes...
 
 ## Ethan Benton
-- 
-        <img src= "images/black-cat-back.png" width=300>
-        ![](images/black-cat-back.png)
+- Ethan is a Senior at ODU and aims to graduate Summer 2024. He is currently in an intership hoping to find a route into something he wants to persure after school. He enjoys working out and playing video games.
     
 ## Kai Buckhalter
 - 
