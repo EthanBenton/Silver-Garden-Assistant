@@ -9,7 +9,9 @@
 - 
 
 ## Justin Cantoria
-- 
+- Justin is a senior undergraduate at Old Dominion University and is pursuing a Bachelor's degree in 
+Computer Science. He is aiming to become a Software developer after graduation. He enjoys playing 
+video games, drawing, watching dramas, and listening to RnB and Pop music.
 
 ## Seth Groves
 - 
