@@ -18,7 +18,7 @@ video games, drawing, watching dramas, and listening to RnB and Pop music.
 - 
 
 ## Jonah Peterson
-- 
+- Jonah is a senior at ODU aiming for a Bachelor's degree in Computer Science. He wishes to take on a Software or Game Development job post-graduation. On his free time, they enjoy playing video games, communicating with friends, watching videos and interacting with social media.
 
 ## James Tieu
 - James is a senior undergraduate at Old Dominion University pursuing a Bachelor's of Science degree
