@@ -15,7 +15,10 @@
 - 
 
 ## Joshua Miller
-- 
+- Joshua is a senior majoring in Computer Science. He
+is currently an honors student while also working a part-time
+job and is projected to graduate in Spring 2024. He is also
+the treasurer for JASA at ODU.
 
 ## Jonah Peterson
 - 
