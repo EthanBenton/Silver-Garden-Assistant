@@ -1,13 +1,36 @@
 # MFCD
 
-![Pic](https://docs.google.com/presentation/d/18s4wS5BdrwnPOXM77Er2XWeusX0Eoi52o8VPE9PY9V0/edit#slide=id.g29860605728_1_1)
+![MFCD](images/MFCD.png)
 
 # Process Flow
 
+![Process Flow](images/ProcessFlow.png)
+
 # Solution Flow
 
+![Solution Flow](images/SolutionFlow.png)
+
 # Algorithms
+
+![Algorithms](images/Algorithms.png)
 
 # Prototype MFCD
 
 # Risks, Risk Mitigations, and Risk Matrix
+
+## Risks Technical
+
+![Risks Technical](images/RisksTech.png)
+
+![Risks Technical](images/RisksTech1.png)
+
+## Risks Customer
+
+![Risks Customer](images/RisksCus.png)
+
+## Risks Security
+
+![Risks Security](images/RisksSec.png)
+
+
+
