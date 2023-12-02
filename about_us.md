@@ -9,7 +9,10 @@ Computer Science. He is aiming to become a Software developer after graduation. 
 video games, drawing, watching dramas, and listening to RnB and Pop music.
 
 ## Seth Groves
-- 
+- Seth is a senior undergraduate at Old Dominion University, majoring in Computer Science. He possesses an interest in photography, with a focus on portraiture.
+  His academic journey is characterized by strong collaboration and leadership skills.
+  Seth aspires to delve into the realm of data analytics after graduation, rather it be making sense of datasets, or contributing to decision making processes.
+  Outside of his academic pursuits, Seth enjoys exploring the world through his camera lens, and unwinding by discovering new music.
 
 ## Joshua Miller
 - Joshua is a senior majoring in Computer Science. He
