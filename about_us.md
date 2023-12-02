@@ -1,7 +1,7 @@
 # Our team includes...
 
 ## Ethan Benton
-- Ethan is a Senior at ODU and aims to graduate Summer 2024. He is currently in an intership hoping to find a route into something he wants to persue after school. He enjoys working out and playing video games. 
+- Ethan is a Senior at ODU and aims to graduate Summer 2024. He is currently in an intership hoping to find a route into something he wants to pursue after school. He enjoys working out and playing video games. 
 
 ## Justin Cantoria
 - Justin is a senior undergraduate at Old Dominion University and is pursuing a Bachelor's degree in 
