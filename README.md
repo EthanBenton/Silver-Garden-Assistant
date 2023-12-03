@@ -25,7 +25,7 @@
 
   - [References (md)](References)
 
-  - [Gloassary (md)](Glossary)
+  - [Glossary (md)](Glossary)
 
   - [Odu](https://www.odu.edu/)
   
