@@ -11,21 +11,21 @@
 
 </details>
 
-- [About Us (md)](./website/about_us)
+- [About Us](./website/about_us.md)
 
-- [Project Description (md)](./website/Project_Description)
+- [Project Description](./website/Project_Description.md)
 
-- [Deliverables (md)](./website/Deliverables)
+- [Deliverables](./website/Deliverables.md)
 
-- [Presentations (md)](./website/presentations)
+- [Presentations](./website/presentations.md)
   
-- [Docs (md)](./website/docs)
+- [Docs](./website/docs.md)
 
-- [User Stories (md)](./website/User_Stories)
+- [User Stories](./website/User_Stories.md)
 
-- [References (md)](./website/References)
+- [References](./website/References.md)
 
-- [Glossary (md)](./website/Glossary)
+- [Glossary](./website/Glossary.md)
 
 - [Odu](https://www.odu.edu/)
   
