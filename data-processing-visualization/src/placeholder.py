@@ -1,16 +1,17 @@
 import numpy as np
 import pandas as pd
 
-arr = np.array('FileType')
+# Load plant data from CSV into a pandas DataFrame
+def load_gardening_data(file_path):
+    return pd.read_csv(file_path)
 
-print(arr)
+# A function for data processing and analysis
+def process_gardening_data(df):
+    # Example data processing and analysis
+    # Calculate mean height
+    mean_height = df['Height (cm)'].mean()
 
-mydataset = {
-  'FileType'
-}
-
-
-myvar = pd.DataFrame(mydataset)
-
-print(myvar)
-
+    # Sort it by watering frequency 
+    df_sorted = df.sort_values(by='Watering Frequency (days)')
+    
+     
