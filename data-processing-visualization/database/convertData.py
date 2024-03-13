@@ -2,7 +2,7 @@ import pandas as pd
 import sqlite3
 
 # change file name accordingly
-inputFile = f"../../data-input-sim/src/sensorData.json"
+inputFile = f"../../data-input-sim/src/sensor_data.json"
 
 dataFrame = pd.read_json(inputFile)
 
