@@ -1,11 +1,10 @@
 import pandas as pd
 import sqlite3
 
-fileExtension = "csv"
 # change file name accordingly
-inputFile = f"../../data-input-sim/src/sensorData.csv"
+inputFile = f"../../data-input-sim/src/sensorData.json"
 
-dataFrame = pd.read_csv(inputFile)
+dataFrame = pd.read_json(inputFile)
 
 # connect
 database = "priaData.db"
