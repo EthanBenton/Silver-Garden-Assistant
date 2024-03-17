@@ -4,10 +4,46 @@ h1h1 {
     text-align: center;
     padding: 10px;
 }
+/* Pria logo */
 .logo-img {
     position: absolute;
     top: 10px;
     right: 10px;
     width: 50px;
     height: auto;
+}
+.clickable-box {
+    width: 400px; /* width */
+    height: 200px; /* height */
+    background-color: #f0f0f0; /* Background color of the box */
+    border: 2px solid #ccc; /* Border color and thickness */
+    border-radius: 10px; /* Border radius for rounded corners */
+    text-align: center; /* Center align the content */
+    display: flex; /* Use flexbox to align items */
+    flex-direction: column; /* Stack items vertically */
+}
+
+/* CSS styles for the content inside the box */
+.box-content {
+    flex: 1; /* Expand to fill the available space */
+    display: flex; /* Use flexbox for nested items */
+    flex-direction: column; /* Stack items vertically */
+}
+
+/* CSS styles for the image */
+.box-image {
+    flex: 1; /* Expand to fill the available space */
+}
+
+.box-image img {
+    max-width: 100%; /* Ensure image fits inside the box */
+    max-height: 100%; /* Ensure image fits inside the box */
+}
+
+/* CSS styles for the text */
+.box-text {
+    flex: 1; /* Expand to fill the available space */
+    font-size: 20px; /* Increase font size for the text */
+    font-weight: bold; /* Make the text bold */
+    line-height: 50px; /* Center the text vertically */
 }

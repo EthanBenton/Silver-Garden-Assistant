@@ -21,4 +21,9 @@ def Home():
     # Redirect to the "Index" page
     return redirect(url_for('index'))
 
+@app.route('/graphs')
+def graphs():
+    # Add logic to generate and display your graphs
+    return render_template('graphs.html')
+
 

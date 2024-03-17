@@ -2,5 +2,20 @@
 
 {% block content %}
     <h1>{% block title %} Welcome to PRIA {% endblock %}</h1>
+    <!-- In your HTML template -->
+<div class="clickable-box">
+    <a href="{{ url_for('graphs') }}"> <!-- Link to your graphs route -->
+        <div class="box-content">
+            <div class="box-image">
+                <!-- Use Flask's url_for function for the image source -->
+                <img src="{{ url_for('static', filename='pictures/GraphPicForGraphsBox.png') }}" alt="Graphs Image" width="100%" height="100%">
+            </div>
+            <div class="box-text">
+                Your Graphs
+            </div>
+        </div>
+    </a>
+</div>
+
     
 {% endblock %}
