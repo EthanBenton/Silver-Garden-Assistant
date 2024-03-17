@@ -1,5 +1,6 @@
 import numpy as np
 import random
+from datetime import datetime, timedelta
 import json
 
 class SensorDataSimulator:
@@ -7,7 +8,7 @@ class SensorDataSimulator:
     This class simulates the generation of temperature and humidity data with gradual changes.
     """
 
-    def __init__(self, temperature_range=(15, 30), humidity_range=(40, 60),  noise_mean=0.0, noise_std=1.0):
+    def __init__(self, temperature_range=(15, 30), humidity_range=(40, 60), polling_rate_seconds = 10, noise_mean=0.0, noise_std=1.0):
         """
         Initializes the simulator with defined ranges and change rate.
 
@@ -19,17 +20,21 @@ class SensorDataSimulator:
         """
         self.temperature_range = temperature_range
         self.humidity_range = humidity_range
+        self.polling_rate = polling_rate_seconds
+        self.start_timestamp = datetime.now()
         self.noise_mean = noise_mean
         self.noise_std  = noise_std
         self.previous_temperature = np.random.uniform(temperature_range[0], temperature_range[1])
         self.previous_humidity = np.random.uniform(humidity_range[0], humidity_range[1])
+        
 
-    def generate_data(self, num_samples):
+    def generate_data(self, num_samples, polling_rate_seconds):
         """
         Generates a list of dictionaries containing temperature and humidity data.
 
         Parameters:
         num_samples (int): The number of data samples to generate.
+        polling_rate_seconds(int): number of seconds in-between data generation
 
         Returns:
         list: A list of dictionaries, each containing a temperature and humidity value.
@@ -40,11 +45,18 @@ class SensorDataSimulator:
         temperatures[0] = self.previous_temperature
         humidities[0] = self.previous_humidity
 
-        for i in range(1, num_samples):
+        data = []
+
+        start_timestamp = datetime.now()
+
+        for i in range(num_samples):
+            timestamp = (start_timestamp + timedelta(seconds=i*polling_rate_seconds)).strftime("%Y-%m-%d %H:%M:%S")
             temperatures[i] = self._generate_temperature(temperatures[i-1])
             humidities[i] = self._generate_humidity(humidities[i-1])
 
-        data = [{'temperature': temp, 'humidity': hum} for temp, hum in zip(temperatures, humidities)]
+            data_point = {'timestamp': timestamp, 'temperature': temperatures[i], 'humidity': humidities[i]}
+            data.append(data_point)
+
         return data
 
     def _generate_temperature(self, previous_temperature):
@@ -112,8 +124,8 @@ class SensorDataSimulator:
 
 if __name__ == "__main__":
     simulator = SensorDataSimulator(temperature_range=(20, 25), humidity_range=(50, 60), noise_mean=0.0, noise_std=0.5)
-    data = simulator.generate_data(10000)
+    data = simulator.generate_data(360, 10)
     simulator.write_to_json(data, 'sensor_data.json')
 
     for point in data[:50]:
-        print(f"Temperature: {point['temperature']:.2f} °C, Humidity: {point['humidity']:.2f} %")
+        print(f"Timestamp {point['timestamp']}, Temperature: {point['temperature']:.2f} °C, Humidity: {point['humidity']:.2f} %")

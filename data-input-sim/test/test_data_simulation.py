@@ -1,5 +1,6 @@
 # test_data_simulation.py
 from src.data_simulation import SensorDataSimulator
+from datetime import datetime, timedelta
 import pytest
 import numpy as np
 
@@ -9,7 +10,7 @@ def simulator():
     """
     Fixture to create a SensorDataSimulator object for testing.
     """
-    return SensorDataSimulator(temperature_range=(20, 25), humidity_range=(40, 60), noise_mean= 0.0, noise_std= 0.5)
+    return SensorDataSimulator(temperature_range=(20, 25), humidity_range=(40, 60), polling_rate_seconds= 10, noise_mean= 0.0, noise_std= 0.5)
 
 
 @pytest.fixture(params=[(20, 25), (15, 30)], ids=['normal_range', 'wide_range'])
@@ -83,3 +84,21 @@ def test_noise_std_dev(simulator):
     tolerance = 0.1
     assert abs(calculated_humidity_std_dev - simulator.noise_std) < tolerance
     assert abs(calculated_temperature_std_dev - simulator.noise_std) < tolerance
+
+
+def test_generate_data_timestamps(simulator):
+    num_samples = 100
+
+    data = simulator.generate_data(num_samples, simulator.polling_rate)
+
+    assert len(data) == num_samples
+
+    # Check that timestamps are generated at the correct intervals
+    expected_timestamps = [(simulator.start_timestamp + i * timedelta(seconds=simulator.polling_rate)).strftime("%Y-%m-%d %H:%M:%S") for i in range(num_samples)]
+    actual_timestamps = [point['timestamp'] for point in data]
+
+    assert actual_timestamps == expected_timestamps
+
+    # Check that timestamps are in ascending order
+    for i in range(len(actual_timestamps) - 1):
+        assert actual_timestamps[i] < actual_timestamps[i+1]
