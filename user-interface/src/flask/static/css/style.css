@@ -1,8 +1,14 @@
-h1h1 {
+body {
+    background-color: #fff; /* Set background color to light mode */
+    color: #333; /* Set text color to light mode */
+}
+
+h1 {
     border: 2px #eee solid;
     color: brown;
     text-align: center;
     padding: 10px;
+    background-color: #f0f0f0; /* Set header background color to light mode */
 }
 /* Pria logo */
 .logo-img {
@@ -46,4 +52,77 @@ h1h1 {
     font-size: 20px; /* Increase font size for the text */
     font-weight: bold; /* Make the text bold */
     line-height: 50px; /* Center the text vertically */
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode #modeText {
+    color: #fff; /* Change text color for dark mode */
+}
+
+/* Light mode styles */
+.light-mode {
+    background-color: #fff;
+    color: #333;
+}
+
+.light-mode #modeText {
+    color: #333; /* Change text color for light mode */
+}
+
+/* Toggle button styles */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #333; /* Set toggle button background color to dark mode */
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #333; /* Set box shadow color to dark mode */
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
 }
