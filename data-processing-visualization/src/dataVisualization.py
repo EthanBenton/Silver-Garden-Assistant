@@ -37,3 +37,12 @@ plt.ylabel('Frequency')
 
 plt.tight_layout()
 plt.show()
+# Save the plot as an image file
+image_path = 'user-interface/src/flask/static/plots/temperature_humidity_plot.png'
+plt.savefig(image_path)
+
+# Close the plot to avoid displaying it twice (once in the notebook and once in the saved image)
+plt.close()
+
+# Print the image path to be used in the Flask template
+print(image_path)
