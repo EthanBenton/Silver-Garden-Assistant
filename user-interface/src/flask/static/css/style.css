@@ -10,14 +10,15 @@ h1 {
     padding: 10px;
     background-color: #f0f0f0; /* Set header background color to light mode */
 }
-/* Pria logo */
-.logo-img {
+.pria-logo {
     position: absolute;
     top: 10px;
     right: 10px;
-    width: 50px;
+    width: 50px; /* Adjust the width as needed */
     height: auto;
+    z-index: 1000; /* Set a higher z-index to ensure it's displayed on top */
 }
+
 .clickable-box {
     width: 400px; /* width */
     height: 200px; /* height */
