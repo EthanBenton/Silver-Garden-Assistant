@@ -4,6 +4,8 @@ import json
 import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas
+import plotly.express as px
+import plotly.graph_objects as go
 
 """
 The purpose of this function is to convert from a .json format into a .csv format for the sake of graphing utilizing Seaborn
@@ -43,8 +45,11 @@ class graphingTool:
         plt.ylabel(namey)        
         plt.title(title)
         plt.xticks(list(range(min(inx),len(inx)+1)))
+        #One tick for each x value
         plt.yticks(list(range(min(iny),len(iny)+1)))
+        #One tick for each y value
         plt.show()
+        #Demonstration of usage, simple_graph([x array], [y array], string x, string y, string title)
 
     def indexed_graph(self, dex, dey, namex, namey, title):
         """
@@ -60,6 +65,7 @@ class graphingTool:
         plt.ylabel(namey)
         plt.title(title)
         plt.show()
+        #Demonstration of usage, indexed_graph(column index for x, column index for y, string x, string y, string title)
 
     def indexed_graph_double(self, dex, dey, dey2, namex, namey, namey2, title):
         """
@@ -99,7 +105,7 @@ class graphingTool:
         temp2=axisy2.max()
         plt.yticks(list(range(int(temp),int(temp2)+2)))
         plt.tight_layout()
-        plt.legend()
+        plt.legend() #TODO: show both lines in the graph legend
         plt.show()
 
 if __name__ == "__main__":
@@ -113,3 +119,30 @@ if __name__ == "__main__":
     # demo.simple_graph(x,y,"X-values","Y-values","Testing Graph")
     # demo.indexed_graph(0,1,"Timestamp","Temperature","TITLE")
     demo.indexed_graph_double(0,1,2,"Timestamp","Temperature (C)","Humidity (%)","Generated Raw Data")
+    # fig = px.bar(x=['a','b','c'],y=[1,3,2])
+    # fig.write_html('first_figure.html',auto_open=True)
+
+
+    #Demonstration code for the usage of writing to html with plotly
+    # fig = go.Figure()
+    # x=[1,2,3,4,5,6,7,8,9,10]
+    # y1=[10,20,None,15,10,5,15,None,20,10]
+    # y2=[5,15,None,10,5,0,10,None,15,5]
+
+    # fig.add_trace(go.Scatter(
+    #     x=x,
+    #     y=y1,
+    #     name = '<b>No</b> Gaps',
+    #     connectgaps=True
+    # ))
+    # fig.add_trace(go.Scatter(
+    #     x=x,
+    #     y=y2,
+    #     name = 'Gaps',
+    # ))
+
+    # fig.write_html('Linetempt.html',auto_open=True)
+
+
+
+    #TODO: using plotly, export as .html for use on the website.
