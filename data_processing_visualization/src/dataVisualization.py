@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Read JSON file
-with open('data-input-sim\src\sensor_data.json', 'r') as file:
+with open('data_input_sim\src\sensor_data.json', 'r') as file:
     data = json.load(file)
 
 # Extract temperature and humidity data
@@ -39,7 +39,7 @@ plt.tight_layout()
 # Show the plot
 
 # Save the plot as an image file
-image_path = 'user-interface/src/flask/static/plots/temperature_humidity_plot.png'
+image_path = 'user_interface/src/flask/static/plots/temperature_humidity_plot.png'
 plt.savefig(image_path)
 
 # Print the image path to be used in the Flask template
