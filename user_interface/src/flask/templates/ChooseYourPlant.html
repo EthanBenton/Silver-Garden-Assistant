@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="text-center mt-5">
+        <h1>{% block title %} Choose Your Plant {% endblock %}</h1>
+    </div>
+
+    <div class="mt-3">
+        <p class="lead">
+            Please enter the plants you have:
+        </p>
+        
+        <form method="post" action="{{ url_for('ChooseYourPlant') }}">
+            <div class="form-group">
+                <input type="text" class="form-control" name="plant" placeholder="Enter your plant here">
+            </div>
+            <button type="submit" class="btn btn-primary">Add Plant</button>
+        </form>
+        
+        <ul>
+            {% for plant in plant_list %}
+                <li>{{ plant }} <a href="{{ url_for('delete_plant', index=loop.index0) }}">Delete</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
+
+
+
+
+
