@@ -8,7 +8,7 @@ class SensorDataSimulator:
     This class simulates the generation of temperature and humidity data with gradual changes.
     """
 
-    def __init__(self, temperature_range=(15, 30), humidity_range=(40, 60), polling_rate_seconds = 10, noise_mean=0.0, noise_std=1.0):
+    def __init__(self, temperature_range=(0, 50), humidity_range=(0, 100), polling_rate_seconds=0, noise_mean=0.0, noise_std=0.0):
         """
         Initializes the simulator with defined ranges and change rate.
 
@@ -128,4 +128,4 @@ if __name__ == "__main__":
     simulator.write_to_json(data, 'sensor_data.json')
 
     for point in data[:50]:
-        print(f"Timestamp {point['timestamp']}, Temperature: {point['temperature']:.2f} °C, Humidity: {point['humidity']:.2f} %")
+       print(f"Timestamp {point['timestamp']}, Temperature: {point['temperature']:.2f} °C, Humidity: {point['humidity']:.2f} %")
