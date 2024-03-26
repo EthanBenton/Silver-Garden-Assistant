@@ -7,6 +7,7 @@ import AboutPage from './AboutPage';
 import GraphsPage from './GraphsPage';
 import SettingsPage from './SettingsPage';
 import ChooseYourPlantPage from './ChooseYourPlantPage';
+import SimulationForm from './SimulationForm';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/graphs" element={<GraphsPage />} />
         <Route path="/settings" element={<SettingsPage />} />
         <Route path="/ChooseYourPlant" element={<ChooseYourPlantPage />} />
+        <Route path="/SimulationForm" element={<SimulationForm/>} />
       </Routes>
     </Router>
     </ThemeProvider>
@@ -26,5 +28,3 @@ function App() {
 }
 
 export default App;
-
-
