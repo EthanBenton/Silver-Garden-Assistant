@@ -18,6 +18,8 @@ class graphingTool:
         """
         self.dat = data_source #name of source file
         self.dframe = pandas.read_json(self.dat) #frame containing data from the .json
+        self.rounding_value = 0
+        self.averaging = False
 
     def set_data_input(self, input):
         """
@@ -32,8 +34,21 @@ class graphingTool:
     def get_data_frame(self):
         return self.dframe #returns the dataframe of the currently open file
     
-    def produce_average(self, x, y, arr):
-        i = 1
+    def set_average_amount(self, total):
+        """
+        Sets the averaging type for use in other functions.
+        Inputting a total of 0 or less sets averaging to False, turning off the feature.
+        Inputting a total of 1 or higher sets averaging to True, turning on the feature.
+        total - the overarching total for which data points are averaged.
+        Averages are calculated over the value specified in total for the entire dataset.
+        """
+        self.rounding_value = total
+        if total > 0:
+            self.averaging = True
+        else:
+            self.averaging = False
+        #This function will be of use in determining if to find an average for points in time when graphing.
+        #TODO Update graphing functions to utilize the data from set_average_type in developing graphs.
 
     def simple_graph(self, inx, iny, namex, namey, title):
         """
