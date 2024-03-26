@@ -61,7 +61,11 @@ def generate_html(temperature_counts, humidity_counts, output_filename='datasort
 
 if __name__ == '__main__':
     input_filename = 'data_input_sim\src\sensor_data.json'
+<<<<<<< HEAD
     output_filename = 'datasort.html'
+=======
+    output_filename = 'output.html'
+>>>>>>> origin/main
 
     # Read data from JSON file
     data = read_data(input_filename)
