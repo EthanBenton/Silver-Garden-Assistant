@@ -124,7 +124,7 @@ class SensorDataSimulator:
 
 if __name__ == "__main__":
     simulator = SensorDataSimulator(temperature_range=(20, 25), humidity_range=(50, 60), noise_mean=0.0, noise_std=0.5)
-    data = simulator.generate_data(2160, 10)
+    data = simulator.generate_data(360, 10)
     simulator.write_to_json(data, 'sensor_data.json')
 
     for point in data[:50]:
