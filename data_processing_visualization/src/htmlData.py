@@ -33,7 +33,7 @@ def process_data(data):
     return temperature_counts, humidity_counts
 
 # Generate HTML file with sorted and rounded data in separate columns
-def generate_html(temperature_counts, humidity_counts, output_filename='output.html'):
+def generate_html(temperature_counts, humidity_counts, output_filename='datasort.html'):
     with open(output_filename, 'w') as file:
         file.write('<html>\n')
         file.write('<head>\n')
@@ -60,8 +60,8 @@ def generate_html(temperature_counts, humidity_counts, output_filename='output.h
         file.write('</html>\n')
 
 if __name__ == '__main__':
-    input_filename = 'data-processing-visualization\src\sensor_data.json'
-    output_filename = 'output.html'
+    input_filename = 'data_input_sim\src\sensor_data.json'
+    output_filename = 'datasort.html'
 
     # Read data from JSON file
     data = read_data(input_filename)
