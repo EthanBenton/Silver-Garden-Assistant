@@ -26,6 +26,7 @@ class SensorDataSimulator:
         self.noise_std  = noise_std
         self.previous_temperature = np.random.uniform(temperature_range[0], temperature_range[1])
         self.previous_humidity = np.random.uniform(humidity_range[0], humidity_range[1])
+        self.random_state = np.random.RandomState()
         
 
     def generate_data(self, num_samples, polling_rate_seconds):
@@ -103,12 +104,12 @@ class SensorDataSimulator:
         float: The data value with added noise.
         """
         
-        noise = random.gauss(self.noise_mean, self.noise_std)  
-        noisy_value = previous_value + noise
+        value = np.random.uniform(value_range[0], value_range[1])
+        noise = self.random_state.normal(self.noise_mean, self.noise_std)
+        noisy_value = value + noise
         noisy_value = max(value_range[0], min(noisy_value, value_range[1]))
-
         return noisy_value
-    
+        
 
     def write_to_json(self, data, filename):
         """
@@ -120,8 +121,6 @@ class SensorDataSimulator:
         """
         with open(filename, 'w') as f:
             json.dump(data, f)
-
-
 if __name__ == "__main__":
     simulator = SensorDataSimulator(temperature_range=(20, 25), humidity_range=(50, 60), noise_mean=0.0, noise_std=0.5)
     data = simulator.generate_data(360, 10)

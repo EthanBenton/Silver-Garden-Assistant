@@ -17,9 +17,14 @@ const SimulationForm = () => {
   });
 
   const handleChange = (e) => {
-    const value = e.target.name === 'noise_mean' || e.target.name === 'noise_std' 
-      ? parseFloat(e.target.value) 
-      : e.target.value;
+    let value;
+    if (e.target.name === 'noise_mean' || e.target.name === 'noise_std') {
+      value = parseFloat(e.target.value);
+    } else if (e.target.name === 'num_samples' || e.target.name === 'polling_rate_seconds') {
+      value = parseInt(e.target.value, 10);
+    } else {
+      value = e.target.value;
+    }
     setFormData({ ...formData, [e.target.name]: value });
   };
 
@@ -38,6 +43,8 @@ const SimulationForm = () => {
     setFormData({ ...formData, [name]: selectedOption.value });
   };
 
+  const [simulatedData, setSimulatedData] = useState(null);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -49,11 +56,31 @@ const SimulationForm = () => {
         body: JSON.stringify(formData),
       });
       const data = await response.json();
-      console.log(data);
+
+      if (response.ok) {
+        console.log(data);
+        setSimulatedData(data)
+      } else {
+
+        console.error('Error:', data.error);
+      }
     } catch (error) {
+
       console.error('Error:', error);
-    }
+   }
   };
+
+  const generateJsonFile = (data) => {
+    const dataStr = JSON.stringify(data, null, 2); 
+    const blob = new Blob([dataStr], { type: 'application/json' }); 
+    const url = URL.createObjectURL(blob); 
+    const link = document.createElement('a'); 
+    link.href = url; 
+    link.download = 'simulated_data.json'; 
+    link.click(); 
+    URL.revokeObjectURL(url); 
+  };
+
 
   const pollingRateOptions = [
     { value: 5, label: '5 seconds' },
@@ -63,6 +90,7 @@ const SimulationForm = () => {
   ];
 
   return (
+    <div>
     <form onSubmit={handleSubmit}>
       <label>
         Number of Samples:
@@ -127,7 +155,15 @@ const SimulationForm = () => {
       </label>
       <button type="submit">Generate Data</button>
     </form>
+    <button type="button" onClick={() => simulatedData && generateJsonFile(simulatedData)}>
+       Download JSON File
+    </button>
+   </div>
+    
   );
+
+
+
 };
 
 export default SimulationForm;
