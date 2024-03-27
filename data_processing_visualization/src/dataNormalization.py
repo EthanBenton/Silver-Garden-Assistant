@@ -52,12 +52,24 @@ def preprocess_data(data):
 
 def main():
     try:
-        # Load configuration from JSON file
-        with open("config.json", "r") as file:
-            config = json.load(file)
+        # Load configuration from JSON file or use default configuration
+        try:
+            with open("config.json", "r") as file:
+                database_config = json.load(file)
+        except FileNotFoundError:
+            print("Warning: config.json file not found. Using default configuration.")
+            database_config = {
+                "database": {
+                    "host": "your_database_host",
+                    "user": "your_database_user",
+                    "password": "your_database_password",
+                    "database_name": "your_database_name",
+                    "query": "SELECT * FROM gardening_data;"
+                }
+            }
         
         # Step 1: Retrieve data from the database
-        data = pull_data_from_database(config["database"])
+        data = pull_data_from_database(database_config["database"])
         if data is None:
             print("Error: Unable to retrieve data from the database.")
             return
@@ -75,7 +87,7 @@ def main():
             return
         
         # Step 4: Optionally, save or return the preprocessed data
-        # For demonstration, let's print the preprocessed data
+        # For the demonstration, let's print the preprocessed data
         print("Preprocessed Data:")
         print(preprocessed_data)
         
@@ -84,4 +96,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
