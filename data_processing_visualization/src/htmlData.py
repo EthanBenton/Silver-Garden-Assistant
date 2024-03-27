@@ -60,7 +60,7 @@ def generate_html(temperature_counts, humidity_counts, output_filename='output.h
         file.write('</html>\n')
 
 if __name__ == '__main__':
-    input_filename = 'data-processing-visualization\src\sensor_data.json'
+    input_filename = 'data_input_sim\src\sensor_data.json'
     output_filename = 'output.html'
 
     # Read data from JSON file
