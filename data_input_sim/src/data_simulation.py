@@ -120,7 +120,8 @@ class SensorDataSimulator:
         filename (str): The name of the file to write to.
         """
         with open(filename, 'w') as f:
-            json.dump(data, f)
+            json.dump(data, f, indent = 4)
+            
 if __name__ == "__main__":
     simulator = SensorDataSimulator(temperature_range=(20, 25), humidity_range=(50, 60), noise_mean=0.0, noise_std=0.5)
     data = simulator.generate_data(360, 10)
