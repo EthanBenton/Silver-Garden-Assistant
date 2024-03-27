@@ -7,9 +7,10 @@ import pandas
 import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
+import os.path
 
 """
-The purpose of this function is to convert from a .json format into a .csv format for the sake of graphing utilizing Seaborn
+The purpose of this function is to convert from a .json format into a .html graph for use on the website
 """
 class graphingTool:
     def __init__(self, data_source):
@@ -17,9 +18,20 @@ class graphingTool:
         The input must be .json
         """
         self.dat = data_source #name of source file
-        self.dframe = pandas.read_json(self.dat) #frame containing data from the .json
+        if(os.path.isfile(self.dat)):
+            self.dframe = pandas.read_json(self.dat) #frame containing data from the .json
+        else:
+            print("Selected file does not exist in the same directory")
         self.rounding_value = 0
         self.averaging = False
+        self.export_name = 'Graph.html'
+
+    def set_export_name(self, input):
+        """
+        The input is a string
+        Changes the name of the file created on export
+        """
+        self.export_name = input
 
     def set_data_input(self, input):
         """
@@ -28,6 +40,9 @@ class graphingTool:
         self.dat = input #name of source file
         self.dframe = pandas.read_json(self.dat) #frame containing data from the .json
 
+    def get_export_name(self):
+        return self.export_name
+    
     def get_file_name(self):
         return self.dat #returns the name of the currently open file
     
@@ -173,7 +188,7 @@ class graphingTool:
         fig.update_layout(title_text=title)
         fig.update_yaxes(title_text=namey,secondary_y=False)
         fig.update_yaxes(title_text=namey2,secondary_y=True)
-        fig.write_html('Graph.html',auto_open=True)
+        fig.write_html(self.export_name,auto_open=True)
 
 
 
