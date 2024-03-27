@@ -25,6 +25,7 @@ const Navbar = () => {
       <Link to="/About" style={linkStyle}>About</Link>
       <Link to="/graphs" style={linkStyle}>Graphs</Link>
       <Link to="/ChooseYourPlant" style={linkStyle}>Choose Your Plant</Link>
+      <Link to="/SimulationForm" style={linkStyle}>Simulate</Link>
     </nav>
   );
 };
