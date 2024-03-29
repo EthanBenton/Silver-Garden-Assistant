@@ -7,7 +7,11 @@ import AboutPage from './AboutPage';
 import GraphsPage from './GraphsPage';
 import SettingsPage from './SettingsPage';
 import ChooseYourPlantPage from './ChooseYourPlantPage';
+<<<<<<< HEAD
 // import LoginPage from './LoginPage';
+=======
+import SimulationForm from './SimulationForm';
+>>>>>>> 436ca1800301e2b8629b8aaec97ca7cc8ff35420
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -29,6 +33,7 @@ function App() {
         <Navbar />
         <Routes>
         <Route path="/" element={<HomePage />} />
+<<<<<<< HEAD
           <Route path="/About" element={<AboutPage />} />
           <Route path="/Graphs" element={<GraphsPage />} />
           <Route path="/Settings" element={<SettingsPage />} />
@@ -44,3 +49,17 @@ function App() {
 export default App;
 
 
+=======
+        <Route path="/About" element={<AboutPage />} />
+        <Route path="/graphs" element={<GraphsPage />} />
+        <Route path="/settings" element={<SettingsPage />} />
+        <Route path="/ChooseYourPlant" element={<ChooseYourPlantPage />} />
+        <Route path="/SimulationForm" element={<SimulationForm/>} />
+      </Routes>
+    </Router>
+    </ThemeProvider>
+  );
+}
+
+export default App;
+>>>>>>> 436ca1800301e2b8629b8aaec97ca7cc8ff35420
