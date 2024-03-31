@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import './ChooseYourPlantPage.css'; 
 
 const plantImages = {
-  rose: `${process.env.PUBLIC_URL}/rose.png`,
+  rose: `${process.env.PUBLIC_URL}/images/rose.png`,
   tulip: `${process.env.PUBLIC_URL}/tulip.png`,//place holder
   // Add more plants as needed
 };
@@ -25,37 +26,35 @@ const ChooseYourPlantPage = () => {
   const capitalizeFirstLetter = (string) => string.charAt(0).toUpperCase() + string.slice(1);
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '20px' }}>
-      <div style={{ textAlign: 'center' }}>
-        <h1 style={{ fontSize: '3rem' }}>Choose Your Plant</h1>
-        <p style={{ fontSize: '1.5rem' }}>Select plants to add or remove from your garden.</p>
+    <div className="choosePlantContainer">
+      <div className="choosePlantHeader">
+        <h1>Choose Your Plant</h1>
+        <p>Select plants to add or remove from your garden.</p>
         <input
           type="text"
           value={plantInput}
           onChange={(e) => setPlantInput(e.target.value)}
           placeholder="Type a plant name"
-          style={{ fontSize: '1.5rem', padding: '10px', margin: '10px 0' }}
+          className="plantInput"
         />
-        <button 
-          onClick={addPlant} 
-          style={{ fontSize: '1.5rem', padding: '10px 20px' }}>
+        <button onClick={addPlant} className="addPlantButton">
           Add Plant
         </button>
       </div>
-      <ul style={{ alignSelf: 'flex-start', width: '100%', paddingLeft: '20px' }}>
+      <ul className="plantList">
         {plants.map((plant, index) => (
-          <li key={index} style={{ fontSize: '1.5rem', marginBottom: '10px' }}>
+          <li key={index} className="plantItem">
             {capitalizeFirstLetter(plant)}
             {plantImages[plant] ? (
               <img 
                 src={plantImages[plant]} 
                 alt={plant} 
-                style={{ width: '300px', height: '300px', marginLeft: '20px', verticalAlign: 'middle' }}
+                className="plantImage"
               />
             ) : null}
             <button 
               onClick={() => removePlant(plant)} 
-              style={{ fontSize: '1.5rem', marginLeft: '20px' }}>
+              className="removePlantButton">
               X
             </button>
           </li>
@@ -66,6 +65,7 @@ const ChooseYourPlantPage = () => {
 };
 
 export default ChooseYourPlantPage;
+
 
 
 

@@ -1,0 +1,42 @@
+.containerStyle {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    max-width: 860px;
+    margin: auto;
+  }
+  
+  .boxLink {
+    text-decoration: none;
+  }
+  
+  .boxStyle {
+    width: 400px;
+    height: 440px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .imageStyle {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .boxFooter {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  

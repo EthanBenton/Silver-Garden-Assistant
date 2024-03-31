@@ -1,0 +1,37 @@
+/* Styles for the container of the AboutPage. Ensures everything within is centered. */
+.containerStyle {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    text-align: center; /* This centers text for all child elements */
+  }
+  
+  /* Style for leading text, ensuring it inherits center alignment */
+  .leadTextStyle {
+    font-size: 1.25rem;
+    text-align: center; /* Ensures text alignment is centered, useful if inheritance fails */
+  }
+  
+  /* Style for images to ensure they scale properly and maintain aspect ratio */
+  .imageStyle {
+    max-width: 100%; 
+    height: auto;
+  }
+  
+  /* Margins to add space above certain elements */
+  .marginTop40 {
+    margin-top: 40px;
+  }
+  
+  .marginTop20 {
+    margin-top: 20px;
+  }
+  
+  /* If there are headings or paragraphs directly under these classes that aren't aligning,
+  explicitly center their text */
+  .marginTop40 h2,
+  .marginTop20 p {
+    text-align: center;
+  }
+  
+  
