@@ -65,7 +65,7 @@ class graphingTool:
         #This function will be of use in determining if to find an average for points in time when graphing.
         #TODO Update graphing functions to utilize the data from set_average_type in developing graphs.
 
-    def indexed_json_to_html(self, index, indey, indey2, namex, namey, namey2, title):
+    def indexed_json_to_html(self, index, indey, indey2, title):
         """
         This function serves a similar purpose to indexed_graph_double, except the output is an HTML file, for usage on the project website.
         index - index for x1
@@ -81,6 +81,9 @@ class graphingTool:
         axisx = convert[:,index]
         axisy = convert[:,indey]
         axisy2 = convert[:,indey2]
+        namex = self.dframe.columns[index]
+        namey = self.dframe.columns[indey]
+        namey2 = self.dframe.columns[indey2]
 
         #Create the figure
         fig = make_subplots(specs=[[{"secondary_y": True}]])
@@ -148,7 +151,7 @@ if __name__ == "__main__":
     """
     fileNam = input('Enter .json file name.\n')
     demo = graphingTool(fileNam)
-    demo.indexed_json_to_html(0,1,2,"Timestamp","Temperature (C)","Humidity (%)","Generated Raw Sensor Data")
+    demo.indexed_json_to_html(0,1,2,"Generated Raw Sensor Data")
 
 
 
