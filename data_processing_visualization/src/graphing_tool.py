@@ -31,7 +31,7 @@ class graphingTool:
         The input is a string
         Changes the name of the file created on export
         """
-        self.export_name = input
+        self.export_name = input + '.html'
 
     def set_data_input(self, input):
         """
@@ -151,7 +151,9 @@ if __name__ == "__main__":
     """
     fileNam = input('Enter .json file name.\n')
     demo = graphingTool(fileNam)
-    demo.indexed_json_to_html(0,1,2,"Generated Raw Sensor Data")
+    exportNam = input('Enter Graph Title.\n')
+    demo.set_export_name(exportNam)
+    demo.indexed_json_to_html(0,1,2,exportNam)
 
 
 
