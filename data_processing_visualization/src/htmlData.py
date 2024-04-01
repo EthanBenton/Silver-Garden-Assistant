@@ -1,75 +1,105 @@
 import json
 import numpy as np
 
-# Read data from JSON file
-def read_data(filename):
-    with open(filename, 'r') as file:
+# Open and read json file
+def read_data(sensorData):
+    with open(sensorData, 'r') as file:
         data = json.load(file)
-    return data
+        return data
 
-# Process data: sort and round temperature and humidity using numpy
-def process_data(data):
-    temperatures = np.array([entry['temperature'] for entry in data])
-    humidities = np.array([entry['humidity'] for entry in data])
+# Sort temperature and humidity
+def processData(data):
+    sortedData = sorted(data, key = lambda x: x['timestamp'])
+    timestamp = [entry['timestamp'] for entry in sortedData]
 
-    temperatures = np.round(temperatures).astype(int)
-    humidities = np.round(humidities).astype(int)
+    # Get data values in aray
+    temperature = np.array([entry['temperature'] for entry in sortedData])
+    humidity = np.array([entry['humidity'] for entry in sortedData])
+    
+    # Round data values
+    temperature = np.round(temperature).astype(int)
+    humidity = np.round(humidity).astype(int)
 
-    temperature_counts = {}
-    humidity_counts = {}
+    # Count the number of data points
+    temperatureCount = {}
+    humidityCount = {}
 
-    for temp in temperatures:
-        if temp in temperature_counts:
-            temperature_counts[temp] += 1
+    for temp in temperature:
+        if temp in temperatureCount:
+            temperatureCount[temp] += 1
         else:
-            temperature_counts[temp] = 1
+            temperatureCount[temp] = 1
 
-    for humidity in humidities:
-        if humidity in humidity_counts:
-            humidity_counts[humidity] += 1
+    for humid in humidity:
+        if humid in humidityCount:
+            humidityCount[humid] += 1
         else:
-            humidity_counts[humidity] = 1
+            humidityCount[humid] = 1
+    return humidity, humidityCount, temperature, temperatureCount, timestamp
 
-    return temperature_counts, humidity_counts
-
-# Generate HTML file with sorted and rounded data in separate columns
-def generate_html(temperature_counts, humidity_counts, output_filename='output.html'):
-    with open(output_filename, 'w') as file:
+def makehtml(humidity, humidityCount, temperature, temperatureCount, timestamp, outputFile = 'Data.html'):
+    with open(outputFile, 'w') as file:
+        #website formatting
         file.write('<html>\n')
         file.write('<head>\n')
-        file.write('<title>Sorted and Rounded Data</title>\n')
+        file.write('<title>Processed Data</title>\n')  # Added missing closing tag
+        file.write('<style>\n')
+        file.write('table {\n')
+        file.write('    border-collapse: collapse;\n')
+        file.write('    width: 50%;\n')
+        file.write('}\n')
+        file.write('th, td {\n')
+        file.write('    border: 1px solid black;\n')
+        file.write('    padding: 8px;\n')
+        file.write('    text-align: center;\n')
+        file.write('}\n')
+        file.write('</style>\n')
         file.write('</head>\n')
         file.write('<body>\n')
-        file.write('<h1>Sorted and Rounded Data</h1>\n')
-        
-        file.write('<h2>Temperature</h2>\n')
+        file.write('<h1>Processed Data</h1>\n')
+
+        file.write('<div style="display:flex;">\n')
+        file.write('<div style="flex:33%; padding-right: 10px;">\n')
+        file.write('<h2> Temperature</h2>\n')
         file.write('<table>\n')
         file.write('<tr><th>Temperature</th><th>Count</th></tr>\n')
-        for temp, count in temperature_counts.items():
+        for temp, count in temperatureCount.items():
             file.write(f'<tr><td>{temp}</td><td>{count}</td></tr>\n')
         file.write('</table>\n')
+        file.write(f'<p>Total Temperature Data Points: {sum(temperatureCount.values())}</p>\n')
+        file.write('</div>\n')
 
-        file.write('<h2>Humidity</h2>\n')
+        file.write('<div style="flex:33%; padding-right: 10px;">\n')
+        file.write('<h2> Humidity</h2>\n')
         file.write('<table>\n')
         file.write('<tr><th>Humidity</th><th>Count</th></tr>\n')
-        for humidity, count in humidity_counts.items():
-            file.write(f'<tr><td>{humidity}</td><td>{count}</td></tr>\n')
+        for humid, count in humidityCount.items():
+            file.write(f'<tr><td>{humid}</td><td>{count}</td></tr>\n')
         file.write('</table>\n')
+        file.write(f'<p>Total Humidity Data Points: {sum(humidityCount.values())}</p>\n')
+        file.write('</div>\n')
 
+        file.write('<div style="flex:33%;">\n')
+        file.write('<h2> All Data with Timestamps</h2>\n')
+        file.write('<table>\n')
+        file.write('<tr><th>Temperature</th><th>Humidity</th><th>Timestamp</th></tr>\n')
+        for i in range(len(timestamp)):
+            file.write(f'<tr><td>{temperature[i]}</td><td>{humidity[i]}</td><td>{timestamp[i]}</td></tr>\n')
+        file.write('</table>\n')
+        file.write('</div>\n')
+
+        file.write('</div>\n')
         file.write('</body>\n')
         file.write('</html>\n')
 
 if __name__ == '__main__':
-    input_filename = 'data_input_sim\src\sensor_data.json'
-    output_filename = 'output.html'
+    inputFile = 'data_input_sim\src\sensor_data.json'
+    outputFile = 'Data.html'
 
-    # Read data from JSON file
-    data = read_data(input_filename)
+    data = read_data(inputFile)
 
-    # Process data
-    temperature_counts, humidity_counts = process_data(data)
+    temperature, temperatureCount, humidity, humidityCount, timestamp = processData(data)
 
-    # Generate HTML file with sorted and rounded data in separate columns
-    generate_html(temperature_counts, humidity_counts, output_filename)
+    makehtml(humidity, humidityCount, temperature, temperatureCount, timestamp, outputFile)
 
-    print(f'HTML file "{output_filename}" has been generated.')
+    print(f'Data.html has been made')
