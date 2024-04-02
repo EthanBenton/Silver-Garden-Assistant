@@ -5,6 +5,7 @@ const AboutPage = () => {
   return (
     <div className="containerStyle">
       <p className="leadTextStyle lead">
+      <h2>What is PRIA</h2>
         PRIA is a self-hosted web application garden management system to aid gardeners, either new or experienced. 
         It aims to provide gardeners with the necessary tools to know when to plant, manage nutrients and water content in the soil,
         and better improve their gardening capabilities while improving their plant’s health and growth.

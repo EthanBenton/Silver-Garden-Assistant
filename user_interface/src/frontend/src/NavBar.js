@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useTheme } from './ThemeContext'; // Ensure the path matches where your ThemeContext file is located
-import './NavBar.css'; // Import the CSS for styling
+import { useTheme } from './ThemeContext'; 
+import './NavBar.css'; 
 
 const NavBar = () => {
   const { theme } = useTheme(); // Access the current theme

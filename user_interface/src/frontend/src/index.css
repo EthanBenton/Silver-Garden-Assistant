@@ -1,4 +1,4 @@
-/* General body styling for light and dark themes */
+/* index.css */
 body.light {
   background-color: #fff; /* Light background */
   color: #333; /* Darker text */
@@ -13,10 +13,12 @@ body.dark {
 .navbar {
   padding: 10px 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start; /* Adjusted for less space between links */
   align-items: center;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  font-family: 'Indie Flower', cursive; /* Example font for a more natural look */
 }
+
 
 body.light .navbar {
   background-color: #f8f9fa; /* Lighter shade for light mode */
