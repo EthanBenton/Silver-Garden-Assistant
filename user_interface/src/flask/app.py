@@ -9,11 +9,35 @@ app.secret_key = 'your_secret_key'
 
 simulator = None
 
+
+def convert_to_seconds(time_interval, time_unit):
+    time_units_in_seconds = {
+        'seconds': 1,
+        'minutes': 60,
+        'hours': 3600,
+        'days': 86400,
+        'weeks': 604800,
+        'months': 2592000,
+    }
+    return time_interval * time_units_in_seconds[time_unit]
+
+def calculate_max_samples(time_interval_seconds, polling_rate_seconds):
+    return int(time_interval_seconds // polling_rate_seconds)
+
+
 @app.route('/api/simulate', methods=['POST'])
 def simulate():
     global simulator
     params = request.get_json()
     print("Received payload:", params)
+    
+
+
+    time_unit = params.get('time_unit')
+    time_interval = params.get('time_interval')
+    print("time_unit:", time_unit)
+    print("time_interval:", time_interval)
+
 
     errors = validate_params(params)
     if errors:
@@ -21,15 +45,21 @@ def simulate():
         return jsonify(errors), 400
 
 
-    num_samples = params.get('num_samples')
     temp_start = float(params.get('temp_start'))
     temp_end = float(params.get('temp_end'))
     humidity_start = float(params.get('humidity_start'))
     humidity_end = float(params.get('humidity_end'))
-    polling_rate_seconds = params.get('polling_rate_seconds')
+    polling_rate_seconds = (params.get('polling_rate_seconds'))
     noise_mean = float(params.get('noise_mean'))
     noise_std = float(params.get('noise_std'))
+    time_unit = params.get('time_unit')
+    time_interval = float(params.get('time_interval')) 
 
+
+   
+    total_seconds = convert_to_seconds(time_interval, time_unit)
+
+    num_samples = calculate_max_samples(total_seconds, polling_rate_seconds)
 
     print("num_samples:", num_samples)
     print("temp_start:", temp_start)
@@ -39,6 +69,7 @@ def simulate():
     print("polling_rate_seconds:", polling_rate_seconds)
     print("noise_mean:", noise_mean)
     print("noise_std:", noise_std)
+
 
     if None in (num_samples, temp_start, temp_end, humidity_start, humidity_end, polling_rate_seconds, noise_mean, noise_std):
         return jsonify(error='Required parameters are missing or invalid'), 400
