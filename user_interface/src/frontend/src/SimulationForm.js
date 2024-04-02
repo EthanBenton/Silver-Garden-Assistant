@@ -45,7 +45,6 @@ const SimulationForm = () => {
   const handleDropdownChange = (selectedOption) => {
     if (selectedOption && selectedOption.length > 0) {
       const selectedValue = selectedOption[0].value;
-      console.log('Selected time unit:', selectedValue); // Debugging statement
       setFormData({ ...formData, time_unit: selectedValue });
     }
   };
@@ -72,7 +71,6 @@ const SimulationForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form data before sending:', formData); // Debugging statement
     try {
       const response = await fetch('/api/simulate', {
         method: 'POST',
@@ -86,7 +84,6 @@ const SimulationForm = () => {
       const data = await response.json();
   
       if (response.ok) {
-        console.log(data);
         setSimulatedData(data);
       } else {
         console.error('Error:', data.error);
@@ -108,12 +105,12 @@ const SimulationForm = () => {
     URL.revokeObjectURL(url); 
   };
 
-
   const pollingRateOptions = [
-    { value: 5, label: '5 seconds' },
     { value: 10, label: '10 seconds' },
-    { value: 15, label: '15 seconds' },
-    { value: 20, label: '20 seconds' },
+    { value: 30, label: '30 seconds' },
+    { value: 60, label: '1 minute' },
+    { value: 300, label: '5 minutes' },
+    { value: 600, label: '10 minutes' },
   ];
 
   return (
