@@ -16,7 +16,7 @@ body.dark {
   justify-content: flex-start; /* Adjusted for less space between links */
   align-items: center;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  font-family: 'Indie Flower', cursive; /* Example font for a more natural look */
+  font-family: 'Indie Flower', cursive;
 }
 
 

@@ -11,11 +11,6 @@
   width: 100%; /* Ensure full width for alignment */
 }
 
-/* Styling for paragraphs with a 'lead' role */
-.leadTextStyle.lead {
-  /* If additional specific styling is needed, it can be added here */
-}
-
 /* Ensure the image is centered within its column and is responsive */
 .imageStyle {
   display: block; /* Make the image a block-level element */
