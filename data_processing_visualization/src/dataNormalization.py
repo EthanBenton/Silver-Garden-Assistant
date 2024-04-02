@@ -1,98 +1,56 @@
 import pandas as pd
+from sklearn.preprocessing import MinMaxScaler
 import json
-from sklearn.preprocessing import StandardScaler
+from datetime import datetime
 
-def pull_data_from_database(database_config):
-    try:
-        # Connect to the database using the configuration from JSON
-        # Example:
-        # conn = your_database_connection_function(database_config)
-        # data = pd.read_sql(database_config["query"], conn)
-        
-        
-        # For demonstration, let's create a sample DataFrame
-        data = pd.DataFrame({
-            'temperature': [10, 20, 30, 40],
-            'humidity': [35, 45, 55, 65],
-            'soil_moisture': [0.1, 0.2, 0.3, 0.4],
-            'growth_rate': [0.15, 0.3, 0.45, 0.6],
-            'plant_height': [5, 7, 9, 11]
-        })
-        print(database_config)
-        return data
-    except Exception as e:
-        print("Error retrieving data from the database:", e)
-        return None
+# Assuming you have pulled gardening data from a database and stored it in a DataFrame called gardening_data
+# Here's a sample DataFrame with dummy data
+data = {
+    'temperature': (30, 25, 20, 15, 35),
+    'humidity': (60, 50, 45, 55, 65),
+    
+}
+gardening_data = pd.DataFrame(data)
 
-def normalize_data(data):
-    try:
-        # Normalize the data if necessary
-        # Example:
-        # normalized_data = (data - data.min()) / (data.max() - data.min())
-        
-        # For demonstration, let's skip normalization
-        normalized_data = data
-        
-        return normalized_data
-    except Exception as e:
-        print("Error during normalization:", e)
-        return None
+# Display original data
+print("Original Preprocessing Data:")
+print(gardening_data)
 
-def preprocess_data(data):
-    try:
-        # Preprocess the data using scikit-learn's preprocessing modules
-        # Example:
-        scaler = StandardScaler()
-        scaled_data = scaler.fit_transform(data)
-        
-        return scaled_data
-    except Exception as e:
-        print("Error during preprocessing:", e)
-        return None
+# Initialize MinMaxScaler
+scaler = MinMaxScaler()
 
-def main():
-    try:
-        # Load configuration from JSON file or use default configuration
-        try:
-            with open("config.json", "r") as file:
-                database_config = json.load(file)
-        except FileNotFoundError:
-            print("Warning: config.json file not found. Using default configuration.")
-            database_config = {
-                "database": {
-                    "host": "your_database_host",
-                    "user": "your_database_user",
-                    "password": "your_database_password",
-                    "database_name": "your_database_name",
-                    "query": "SELECT * FROM gardening_data;"
-                }
-            }
-        
-        # Step 1: Retrieve data from the database
-        data = pull_data_from_database(database_config["database"])
-        if data is None:
-            print("Error: Unable to retrieve data from the database.")
-            return
-        
-        # Step 2: Normalize the data
-        normalized_data = normalize_data(data)
-        if normalized_data is None:
-            print("Error: Unable to normalize the data.")
-            return
-        
-        # Step 3: Preprocess the data
-        preprocessed_data = preprocess_data(normalized_data)
-        if preprocessed_data is None:
-            print("Error: Unable to preprocess the data.")
-            return
-        
-        # Step 4: Optionally, save or return the preprocessed data
-        # For the demonstration, let's print the preprocessed data
-        print("Preprocessed Data:")
-        print(preprocessed_data)
-        
-    except Exception as e:
-        print("An unexpected error occurred:", e)
+# List of columns to normalize
+columns_to_normalize = ['temperature', 'humidity']
 
-if __name__ == "__main__":
-    main()
+# Apply Min-Max scaling to the selected columns
+gardening_data[columns_to_normalize] = scaler.fit_transform(gardening_data[columns_to_normalize])
+
+# Display normalized data
+print("\nNormalized Preprocessing Data:")
+print(gardening_data)
+
+# Get current timestamp
+timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+# Add timestamp to the data
+gardening_data['timestamp'] = timestamp
+
+# Convert DataFrame to JSON
+original_data_json = gardening_data.to_json(orient='records')
+
+# Save original preprocessing data to a JSON file
+with open('original_data.json', 'w') as f:
+    f.write(original_data_json)
+
+# Display message
+print("\nOriginal data saved to original_data.json")
+
+# Convert normalized DataFrame to JSON
+normalized_data_json = gardening_data.to_json(orient='records')
+
+# Save normalized data to a JSON file
+with open('normalized_data.json', 'w') as f:
+    f.write(normalized_data_json)
+
+# Display message
+print("Normalized data saved to normalized_data.json")
