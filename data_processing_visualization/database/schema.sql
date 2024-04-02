@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS sensorDataTable (
 );
 */
 
-CREATE TABLE IF NOT EXISTS sensorTable (
+CREATE TABLE IF NOT EXISTS sensorType (
     sensorID INTEGER PRIMARY KEY AUTOINCREMENT,
     sensorType INTEGER NOT NULL UNIQUE
 );
@@ -32,14 +32,14 @@ CREATE TABLE IF NOT EXISTS sensorValues (
     tStamp INTEGER NOT NULL,
     temperature INTEGER NOT NULL,
     humidity INTEGER NOT NULL,
-    FOREIGN KEY (sensorID) REFERENCES sensorTable(sensorID)
+    FOREIGN KEY (sensorID) REFERENCES sensorType(sensorID)
 );
 
-INSERT OR IGNORE INTO sensorTable (sensorType) VALUES ('TemperatureAndHumidity');
+INSERT OR IGNORE INTO sensorType (sensorType) VALUES ('TemperatureAndHumidity');
 
 INSERT INTO sensorValues (sensorID, tStamp, temperature, humidity)
 SELECT
-    (SELECT sensorID FROM sensorTable WHERE sensorType = 'TemperatureAndHumidity'),
+    (SELECT sensorID FROM sensorType WHERE sensorType = 'TemperatureAndHumidity'),
     datetime('now'),
     temperature,
     humidity
