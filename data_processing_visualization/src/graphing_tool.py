@@ -31,7 +31,7 @@ class graphingTool:
         The input is a string
         Changes the name of the file created on export
         """
-        self.export_name = 'user_interface/src/frontend/src/'+ input + '.html'
+        self.export_name = 'user_interface/src/frontend/src/graphs/'+ input + '.html'
 
     def set_data_input(self, input):
         """
