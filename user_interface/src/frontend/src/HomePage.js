@@ -4,20 +4,20 @@ import './HomePage.css';
 
 const HomePage = () => {
   const boxes = [
-    { id: 1, imagePath: `${process.env.PUBLIC_URL}/images/GraphPicForGraphsBox.png` },
-    { id: 2, imagePath: `${process.env.PUBLIC_URL}/images/GraphPicForGraphsBox.png` },
-    { id: 3, imagePath: `${process.env.PUBLIC_URL}/images/GraphPicForGraphsBox.png` },
-    { id: 4, imagePath: `${process.env.PUBLIC_URL}/images/GraphPicForGraphsBox.png` },
+    { id: 1, imagePath: `${process.env.PUBLIC_URL}/images/GraphPicForGraphsBox.png`, path: "/graphs0", footerName: "Interactive Graphs" },
+    { id: 2, imagePath: `${process.env.PUBLIC_URL}/images/GraphPicForGraphsBox.png`, path: "/graphs1", footerName: "Data in Tables" },
+    { id: 3, imagePath: `${process.env.PUBLIC_URL}/images/GraphPicForGraphsBox.png`, path: "/graphs2", footerName: "graphs2" },
+    { id: 4, imagePath: `${process.env.PUBLIC_URL}/images/GraphPicForGraphsBox.png`, path: "/graphs3", footerName: "Regression Model" },
   ];
 
   return (
     <div className="containerStyle">
       {boxes.map((box) => (
-        <Link to="/graphs" key={box.id} className="boxLink">
+        <Link to={box.path} key={box.id} className="boxLink">
           <div className="boxStyle">
             <img src={box.imagePath} alt={`Graphs ${box.id}`} className="imageStyle" />
             <div className="boxFooter">
-              Your Graphs
+              {box.footerName}
             </div>
           </div>
         </Link>
@@ -27,4 +27,6 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
+
 
