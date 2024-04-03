@@ -13,7 +13,7 @@ body.dark {
 .navbar {
   padding: 10px 20px;
   display: flex;
-  justify-content: flex-start; /* Adjusted for less space between links */
+  justify-content: flex-start;
   align-items: center;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   font-family: 'Indie Flower', cursive;
