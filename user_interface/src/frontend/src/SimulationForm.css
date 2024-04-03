@@ -37,3 +37,10 @@ form {
   button:hover {
     background-color: #0056b3;
   }
+
+  .time-input-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem; 
+  }
+  
