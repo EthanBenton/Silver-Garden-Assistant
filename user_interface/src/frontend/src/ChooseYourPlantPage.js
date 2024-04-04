@@ -1,61 +1,86 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import './ChooseYourPlantPage.css';
 
 const plantImages = {
-  rose: `${process.env.PUBLIC_URL}/rose.png`,
-  tulip: `${process.env.PUBLIC_URL}/tulip.png`,//place holder
+  rose: `${process.env.PUBLIC_URL}/images/PlantDB/rose.png`,
+  greenpepper: `${process.env.PUBLIC_URL}/images/PlantDB/greenpepper.png`,
+  watermelon: `${process.env.PUBLIC_URL}/images/PlantDB/watermelon.png`,
+  tomato: `${process.env.PUBLIC_URL}/images/PlantDB/tomato.png`,
+  redpepper: `${process.env.PUBLIC_URL}/images/PlantDB/redpepper.png`,
+  yellowpepper: `${process.env.PUBLIC_URL}/images/PlantDB/yellowpepper.png`,
+  carrot: `${process.env.PUBLIC_URL}/images/PlantDB/carrot.png`,
+  cucumber: `${process.env.PUBLIC_URL}/images/PlantDB/cucumber.png`,
+  squash: `${process.env.PUBLIC_URL}/images/PlantDB/squash.png`,
+  zucchini: `${process.env.PUBLIC_URL}/images/PlantDB/zucchini.png`,
+  lettuce: `${process.env.PUBLIC_URL}/images/PlantDB/lettuce.png`,
+  potato: `${process.env.PUBLIC_URL}/images/PlantDB/potato.png`,
   // Add more plants as needed
 };
 
 const ChooseYourPlantPage = () => {
-  const [plants, setPlants] = useState([]);
+  const [plants, setPlants] = useState(() => {
+    const savedPlants = localStorage.getItem('plants');
+    return savedPlants ? JSON.parse(savedPlants) : [];
+  });
   const [plantInput, setPlantInput] = useState('');
+
+  useEffect(() => {
+    localStorage.setItem('plants', JSON.stringify(plants));
+  }, [plants]);
 
   const addPlant = () => {
     const plantName = plantInput.toLowerCase();
-    if (plantName && !plants.includes(plantName)) {
-      setPlants((prevPlants) => [...prevPlants, plantName]);
+    const plantKey = plantInput.replace(/\s+/g, '').toLowerCase();
+    
+    if (plantKey && !plants.some(plant => plant.key === plantKey)) {
+      setPlants(prevPlants => [
+        ...prevPlants, 
+        { key: plantKey, name: plantName }
+      ]);
       setPlantInput('');
     }
   };
 
-  const removePlant = (plantToRemove) => {
-    setPlants((prevPlants) => prevPlants.filter(plant => plant !== plantToRemove));
+  const removePlant = (plantKeyToRemove) => {
+    setPlants(prevPlants => prevPlants.filter(plant => plant.key !== plantKeyToRemove));
   };
 
-  const capitalizeFirstLetter = (string) => string.charAt(0).toUpperCase() + string.slice(1);
+  const capitalizeFirstLetter = (string) => {
+    if (!string) return '';
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  };
+  
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '20px' }}>
-      <div style={{ textAlign: 'center' }}>
-        <h1 style={{ fontSize: '3rem' }}>Choose Your Plant</h1>
-        <p style={{ fontSize: '1.5rem' }}>Select plants to add or remove from your garden.</p>
+    <div className="choosePlantContainer">
+      <div className="choosePlantHeader">
+        <h1>Choose Your Plant</h1>
+        <p>Select plants to add or remove from your garden.</p>
         <input
           type="text"
           value={plantInput}
           onChange={(e) => setPlantInput(e.target.value)}
           placeholder="Type a plant name"
-          style={{ fontSize: '1.5rem', padding: '10px', margin: '10px 0' }}
+          className="plantInput"
         />
-        <button 
-          onClick={addPlant} 
-          style={{ fontSize: '1.5rem', padding: '10px 20px' }}>
+        <button onClick={addPlant} className="addPlantButton">
           Add Plant
         </button>
       </div>
-      <ul style={{ alignSelf: 'flex-start', width: '100%', paddingLeft: '20px' }}>
+      <ul className="plantList">
         {plants.map((plant, index) => (
-          <li key={index} style={{ fontSize: '1.5rem', marginBottom: '10px' }}>
-            {capitalizeFirstLetter(plant)}
-            {plantImages[plant] ? (
+          <li key={index} className="plantItem">
+            {capitalizeFirstLetter(plant.name)}
+            {plantImages[plant.key] ? (
               <img 
-                src={plantImages[plant]} 
-                alt={plant} 
-                style={{ width: '300px', height: '300px', marginLeft: '20px', verticalAlign: 'middle' }}
+                src={plantImages[plant.key]} 
+                alt={plant.name} 
+                className="plantImage"
               />
             ) : null}
             <button 
-              onClick={() => removePlant(plant)} 
-              style={{ fontSize: '1.5rem', marginLeft: '20px' }}>
+              onClick={() => removePlant(plant.key)}
+              className="removePlantButton">
               X
             </button>
           </li>
@@ -66,10 +91,3 @@ const ChooseYourPlantPage = () => {
 };
 
 export default ChooseYourPlantPage;
-
-
-
-
-
-
-
