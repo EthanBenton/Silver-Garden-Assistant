@@ -1,41 +1,51 @@
 import json
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn.linear_model import LinearRegression
-from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import mean_absolute_error, mean_squared_error
 
 
-# Load the JSON data
-with open('data_processing_visualization/src/sensor_data.json', 'r') as file:
-    sensor_data = json.load(file)
+with open('data_processing_visualization/src/normalized_sensor_data.json', 'r') as file:
+    normalized_data = json.load(file)
 
-# Extract temperature and humidity data
-temperatures = np.array([entry['temperature'] for entry in sensor_data]).reshape(-1, 1)
-humidities = np.array([entry['humidity'] for entry in sensor_data])
+# Generate some random data for demonstration
+np.random.seed(0)
+X = 2 * np.random.rand(100, 1)  # Generate 100 random values between 0 and 2
+y = 4 + 3 * X + np.random.randn(100, 1)  # y = 4 + 3x + noise
 
-# Split the data into training and validation sets
-X_train, X_val, y_train, y_val = train_test_split(temperatures, humidities, test_size=0.2, random_state=42)
+# Split the data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Create and fit the linear regression model
+# Normalize the data
+scaler = StandardScaler()
+X_train_normalized = scaler.fit_transform(X_train)
+X_test_normalized = scaler.transform(X_test)
+
+# Create a Linear Regression model
 model = LinearRegression()
-model.fit(X_train, y_train)
 
-# Predict humidity values using the model
-predicted_humidities = model.predict(X_val)
+# Train the model on the normalized training data
+model.fit(X_train_normalized, y_train)
 
-# Plot the data and the linear regression line
-plt.scatter(X_val, y_val, color='blue', label='Actual Data')
-plt.plot(X_val, predicted_humidities, color='red', label='Linear Regression')
+# Make predictions on the normalized testing data
+y_pred = model.predict(X_test_normalized)
+
+# Plot the predictions
+plt.scatter(X_test, y_test, color='b', label='Actual')
+plt.plot(X_test, y_pred, color='k', label='Predicted')
 plt.xlabel('Temperature')
 plt.ylabel('Humidity')
-plt.title('Temperature vs Humidity with Linear Regression')
+plt.title('Linear Regression Prediction')
 plt.legend()
-plt.grid(True)
 plt.show()
 
-# Calculate mean squared error (MSE) and R-squared
-mse = mean_squared_error(y_val, predicted_humidities)
-r2 = r2_score(y_val, predicted_humidities)
+# Evaluate the model
+mae = mean_absolute_error(y_test, y_pred)
+mse = mean_squared_error(y_test, y_pred)
+rmse = np.sqrt(mse)
+
+print("Mean Absolute Error (MAE):", mae)
 print("Mean Squared Error (MSE):", mse)
-print("R-squared:", r2)
+print("Root Mean Squared Error (RMSE):", rmse)
