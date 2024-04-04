@@ -1,56 +1,45 @@
-import pandas as pd
-from sklearn.preprocessing import MinMaxScaler
 import json
-from datetime import datetime
+import pandas as pd
+import numpy as np
+from sklearn.preprocessing import MinMaxScaler
 
-# Assuming you have pulled gardening data from a database and stored it in a DataFrame called gardening_data
-# Here's a sample DataFrame with dummy data
-data = {
-    'temperature': (30, 25, 20, 15, 35),
-    'humidity': (60, 50, 45, 55, 65),
-    
-}
-gardening_data = pd.DataFrame(data)
+# Load the JSON data
+with open('data_processing_visualization/src/sensor_data.json', 'r') as file:
+    sensor_data = json.load(file)
 
-# Display original data
-print("Original Preprocessing Data:")
-print(gardening_data)
+# Create a DataFrame from the sensor data
+dataframe = pd.DataFrame(sensor_data)
 
-# Initialize MinMaxScaler
+# Extract features (temperature and humidity) from the DataFrame
+features = dataframe[['temperature', 'humidity']]
+
+# Initialize the MinMaxScaler
 scaler = MinMaxScaler()
 
-# List of columns to normalize
-columns_to_normalize = ['temperature', 'humidity']
+# Fit the scaler to the data and transform the data
+normalized_data = scaler.fit_transform(features)
 
-# Apply Min-Max scaling to the selected columns
-gardening_data[columns_to_normalize] = scaler.fit_transform(gardening_data[columns_to_normalize])
+# Round the normalized data to have two decimal places using NumPy
+rounded_data = np.round(normalized_data, decimals=2)
 
-# Display normalized data
-print("\nNormalized Preprocessing Data:")
-print(gardening_data)
+# Update the DataFrame with the rounded values
+dataframe[['temperature', 'humidity']] = rounded_data
 
-# Get current timestamp
-timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+# Convert the DataFrame back to a list of dictionaries
+cleaned_sensor_data = dataframe.to_dict(orient='records')
 
-# Add timestamp to the data
-gardening_data['timestamp'] = timestamp
+# Save the cleaned data to a new JSON file
+with open('cleaned_sensor_data.json', 'w') as file:
+    json.dump(cleaned_sensor_data, file, indent=4)
 
-# Convert DataFrame to JSON
-original_data_json = gardening_data.to_json(orient='records')
+# Print the first few cleaned entries for demonstration
+print("Cleaned Sensor Data:")
+print(cleaned_sensor_data[:5])
 
-# Save original preprocessing data to a JSON file
-with open('original_data.json', 'w') as f:
-    f.write(original_data_json)
 
-# Display message
-print("\nOriginal data saved to original_data.json")
 
-# Convert normalized DataFrame to JSON
-normalized_data_json = gardening_data.to_json(orient='records')
 
-# Save normalized data to a JSON file
-with open('normalized_data.json', 'w') as f:
-    f.write(normalized_data_json)
 
-# Display message
-print("Normalized data saved to normalized_data.json")
+
+
+
