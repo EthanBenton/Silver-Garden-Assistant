@@ -1,5 +1,5 @@
 import React from 'react';
-import './GraphsPage.css';
+import './GraphsPage2.css';
 const GraphsPage2 = () => {
   return (
     <div>
