@@ -2,7 +2,8 @@ import numpy as np
 import random
 from datetime import datetime, timedelta
 import json
-
+import sys
+ 
 class SensorDataSimulator:
     """
     This class simulates the generation of temperature and humidity data with gradual changes.
