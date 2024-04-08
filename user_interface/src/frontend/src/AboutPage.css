@@ -1,32 +1,38 @@
+/* AboutPage.css*/
 .containerStyle {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center children horizontally in the container */
-  text-align: center; /* Center text alignment for all text within the container */
+  align-items: center;
+  text-align: center; 
 }
 
 .marginTop40, .marginTop20 {
   margin-top: 40px;
-  width: 100%; /* full width for alignment */
+  width: 100%; 
 }
 
-/* image is centered within its column and is responsive */
 .imageStyle {
-  display: block; /* Make the image a block-level element */
-  margin: 0 auto; /* Center the image horizontally */
-  max-width: 100%; /*responsive and fits its container */
-  height: auto; /* Maintain the aspect ratio of the image */
+  display: block; 
+  margin: 0 auto; 
+  max-width: 100%; 
+  height: auto; 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .row {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .col-lg-6 {
-    width: 100%; 
+  .col-lg-6, .col-md-6 {
+    width: 50%;
   }
 }
+
+.nonClickable {
+  opacity: 0.5;
+  cursor: default;
+}
+
 
   
