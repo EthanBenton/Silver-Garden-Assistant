@@ -1,7 +1,11 @@
 from flask import Flask, request, jsonify
+import sys
+import os
+project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
+sys.path.insert(0, project_root)
 
-from data_input_sim import validate_params
-from data_input_sim import SensorDataSimulator
+from data_input_sim.src.constraint_validation import validate_params
+from data_input_sim.src.data_simulation import SensorDataSimulator
 
 app = Flask(__name__, static_folder='src/flask/static')
 app.secret_key = 'your_secret_key'  
