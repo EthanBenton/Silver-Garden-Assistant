@@ -63,7 +63,8 @@ def makehtml(humidity, humidityCount, temperature, temperatureCount, timestamp, 
         file.write('<h2> Temperature</h2>\n')
         file.write('<table>\n')
         file.write('<tr><th>Temperature</th><th>Count</th></tr>\n')
-        for temp, count in temperatureCount.items():
+        sorted_temperatures = sorted(temperatureCount.items(), key = lambda x: x[0])
+        for temp, count in sorted_temperatures:
             file.write(f'<tr><td>{temp}</td><td>{count}</td></tr>\n')
         file.write('</table>\n')
         file.write(f'<p>Total Temperature Data Points: {sum(temperatureCount.values())}</p>\n')
