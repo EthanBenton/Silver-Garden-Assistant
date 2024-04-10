@@ -145,19 +145,19 @@ class graphingTool:
 
 
 
-if __name__ == "__main__":
-    """
-    This exists for demonstration purposes
-    More will be added in future.
-    """
-    fileNam = input('Enter .json file name.\n')
-    demo = graphingTool(fileNam)
-    exportNam = (demo.dat[demo.dat.rfind('/')+1:demo.dat.find(".json")])
-    demo.set_export_name(exportNam)
-    x = int(input('Enter x index.\n'))
-    y = int(input('Enter y index.\n'))
-    y2 = int(input('Enter second y-index (-1 if unused)\n'))
-    demo.indexed_json_to_html(x,y,y2,exportNam)
+#if __name__ == "__main__":
+ #   """
+  #  This exists for demonstration purposes
+   # More will be added in future.
+    #"""
+#    fileNam = input('Enter .json file name.\n')
+#    demo = graphingTool(fileNam)
+ #   exportNam = (demo.dat[demo.dat.rfind('/')+1:demo.dat.find(".json")])
+  #  demo.set_export_name(exportNam)
+#    x = int(input('Enter x index.\n'))
+ #   y = int(input('Enter y index.\n'))
+  #  y2 = int(input('Enter second y-index (-1 if unused)\n'))
+   # demo.indexed_json_to_html(x,y,y2,exportNam)
 
 
 
