@@ -4,4 +4,4 @@ plugins:
   - jekyll-remote-theme
 
 exclude:
-  - node_modules
+  - node_modules/
