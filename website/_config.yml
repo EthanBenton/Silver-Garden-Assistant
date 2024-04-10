@@ -4,4 +4,4 @@ plugins:
   - jekyll-remote-theme
 
 exclude:
-  - node_modules/
+  - Silver-Garden-Assistant/user_interface/src/auth-server
