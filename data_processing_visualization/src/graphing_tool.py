@@ -31,7 +31,7 @@ class graphingTool:
         The input is a string
         Changes the name of the file created on export
         """
-        self.export_name = 'user_interface/src/frontend/src/graphs/'+ input + '.html'
+        self.export_name = 'user_interface/src/frontend/public/graphs/'+ input + '.html'
 
     def set_data_input(self, input):
         """
@@ -67,23 +67,22 @@ class graphingTool:
 
     def indexed_json_to_html(self, index, indey, indey2, title):
         """
-        This function serves a similar purpose to indexed_graph_double, except the output is an HTML file, for usage on the project website.
+        This function develops a graph with up to two values plotted simultaneously
+        It reads from a .json as input, developing output in a .html file format
         index - index for x1
         indey - index for y1
         indey2 - index for y2
-        namex - name for x1
-        namey - name for y1
-        namey2 - name for y2
         title - graph title
         """
         #Convert our input into three 1d arrays
         convert = self.dframe.values
         axisx = convert[:,index]
         axisy = convert[:,indey]
-        axisy2 = convert[:,indey2]
         namex = self.dframe.columns[index]
         namey = self.dframe.columns[indey]
-        namey2 = self.dframe.columns[indey2]
+        if(indey2 != -1): #third only if specified
+            axisy2 = convert[:,indey2]
+            namey2 = self.dframe.columns[indey2]
 
         #Create the figure
         fig = make_subplots(specs=[[{"secondary_y": True}]])
@@ -98,21 +97,23 @@ class graphingTool:
         secondary_y=False
         )
 
-        #Plot the second set of y-values
-        fig.add_trace(go.Scatter(
-            x=axisx,
-            y=axisy2,
-            name = namey2,
-            connectgaps=True
-        ),
-        secondary_y=True
-        )
+        #Plot the second set of y-values ONLY if y2 != -1
+        if(indey2 != -1):
+            fig.add_trace(go.Scatter(
+                x=axisx,
+                y=axisy2,
+                name = namey2,
+                connectgaps=True
+            ),
+            secondary_y=True
+            )
         
         #Include figure titles
         fig.update_xaxes(title_text=namex)
         fig.update_layout(title_text=title)
         fig.update_yaxes(title_text=namey,secondary_y=False)
-        fig.update_yaxes(title_text=namey2,secondary_y=True)
+        if(indey2 != -1):
+            fig.update_yaxes(title_text=namey2,secondary_y=True)
 
 
 
@@ -144,16 +145,19 @@ class graphingTool:
 
 
 
-if __name__ == "__main__":
-    """
-    This exists for demonstration purposes
-    More will be added in future.
-    """
-    fileNam = input('Enter .json file name.\n')
-    demo = graphingTool(fileNam)
-    exportNam = input('Enter Graph Title.\n')
-    demo.set_export_name(exportNam)
-    demo.indexed_json_to_html(0,1,2,exportNam)
+#if __name__ == "__main__":
+ #   """
+  #  This exists for demonstration purposes
+   # More will be added in future.
+    #"""
+#    fileNam = input('Enter .json file name.\n')
+#    demo = graphingTool(fileNam)
+ #   exportNam = (demo.dat[demo.dat.rfind('/')+1:demo.dat.find(".json")])
+  #  demo.set_export_name(exportNam)
+#    x = int(input('Enter x index.\n'))
+ #   y = int(input('Enter y index.\n'))
+  #  y2 = int(input('Enter second y-index (-1 if unused)\n'))
+   # demo.indexed_json_to_html(x,y,y2,exportNam)
 
 
 

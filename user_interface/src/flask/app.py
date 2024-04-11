@@ -1,7 +1,12 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_file
+import sys
+import os
+project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
+sys.path.insert(0, project_root)
 
-from data_input_sim import validate_params
-from data_input_sim import SensorDataSimulator
+from data_input_sim.src.constraint_validation import validate_params
+from data_input_sim.src.data_simulation import SensorDataSimulator
+from data_processing_visualization.src.graphing_tool import graphingTool
 
 app = Flask(__name__, static_folder='src/flask/static')
 app.secret_key = 'your_secret_key'  
@@ -86,6 +91,19 @@ def simulate():
 def handle_exception(e):
     app.logger.error(str(e))
     return jsonify(error=str(e)), 500
+
+
+@app.route('/api/generate-graph', methods=['POST'])
+def generate_graph():
+    data = request.get_json()
+    # Use your graphingTool logic to generate and save the HTML file
+    # Assuming graph_tool.to_html_file() saves the file and returns its name
+    file_name = write_html(data)  # Adjust based on your actual method
+    return jsonify({"fileName": file_name})
+
+
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)

@@ -35,11 +35,3 @@ with open('cleaned_sensor_data.json', 'w') as file:
 # Print the first few cleaned entries for demonstration
 print("Cleaned Sensor Data:")
 print(cleaned_sensor_data[:5])
-
-
-
-
-
-
-
-
