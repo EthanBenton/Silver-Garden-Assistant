@@ -5,6 +5,10 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from datetime import datetime
 
+timestamp = []
+temperature = []
+humidity = []
+
 with open('data_input_sim/src/sensor_data.json') as f:
     data = json.load(f)
 for entry in data:
