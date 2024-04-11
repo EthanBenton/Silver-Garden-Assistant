@@ -13,7 +13,7 @@ with open('data_input_sim/src/sensor_data.json') as f:
     data = json.load(f)
 for entry in data:
     timestamps.append(entry['timestamp'])
-    temperatures.append(enty['temperature'])
+    temperatures.append(entry['temperature'])
     humidities.append(entry['humidity'])
 
 df = pd.DataFrame({
