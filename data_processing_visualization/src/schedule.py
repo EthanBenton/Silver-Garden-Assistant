@@ -41,4 +41,4 @@ watering_schedule_df = pd.DataFrame({
     'timestamp': df['timestamp'], 'watering_required': prediction
 })
 
-print(watering_schedule_df)
+watering_schedule_df.to_html('watering_schedule.html', index = False)
