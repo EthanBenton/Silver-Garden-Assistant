@@ -3,19 +3,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center; 
+  text-align: center;
 }
 
-.marginTop40, .marginTop20 {
+.marginTop40,
+.marginTop20 {
   margin-top: 40px;
-  width: 100%; 
+  width: 100%;
 }
 
 .imageStyle {
-  display: block; 
-  margin: 0 auto; 
-  max-width: 100%; 
-  height: auto; 
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
 }
 
 @media (max-width: 900px) {
@@ -24,7 +25,9 @@
     flex-direction: column;
     align-items: center;
   }
-  .col-lg-6, .col-md-6 {
+
+  .col-lg-6,
+  .col-md-6 {
     width: 50%;
   }
 }
@@ -33,6 +36,3 @@
   opacity: 0.5;
   cursor: default;
 }
-
-
-  

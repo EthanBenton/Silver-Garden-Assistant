@@ -1,6 +1,7 @@
 /* index.css */
 body.light {
-  background-color: #fff; /* Light background */
+  background-color: #e4e4cc;
+  /*background-color: #fff; Light background */
   color: #333; /* Darker text */
 }
 
@@ -21,8 +22,9 @@ body.dark {
 
 
 body.light .navbar {
-  background-color: #f8f9fa; /* Lighter shade for light mode */
-  color: #212529; /* Dark text for contrast */
+  background-color: #4b5b2b;
+  /* background-color: #f8f9fa; Lighter shade for light mode */
+  color: #f8f9fa; /* Dark text for contrast */
 }
 
 body.dark .navbar {
