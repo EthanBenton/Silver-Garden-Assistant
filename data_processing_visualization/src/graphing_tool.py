@@ -142,23 +142,29 @@ class graphingTool:
 
         fig.write_html(self.export_name,auto_open=True)
 
+def produce_from_json(input):
+    """
+    A simplification of main designed for use in a UI element.
+    It only takes a file name of a json file as input.
+    """
+    gr = graphingTool(input)
+    #Trims the directory content and footer from the input name
+    exportNam = (gr.dat[gr.dat.rfind('/')+1:gr.dat.find(".json")])
+    #Adds in the export destination
+    gr.set_export_name(exportNam)
+    #Creates the graph
+    #This currently assumes that our data is stored as {humidity, temp, timestamp}
+    gr.indexed_json_to_html(2,1,0,exportNam)
+    return 1
+
+
+# if __name__ == "__main__":
+#     """
+#     This exists for demonstration purposes
+#     """
+#     fileNam = input('Enter .json file name.\n')
+#     produce_from_json(input=fileNam)
 
 
 
-#if __name__ == "__main__":
- #   """
-  #  This exists for demonstration purposes
-   # More will be added in future.
-    #"""
-#    fileNam = input('Enter .json file name.\n')
-#    demo = graphingTool(fileNam)
- #   exportNam = (demo.dat[demo.dat.rfind('/')+1:demo.dat.find(".json")])
-  #  demo.set_export_name(exportNam)
-#    x = int(input('Enter x index.\n'))
- #   y = int(input('Enter y index.\n'))
-  #  y2 = int(input('Enter second y-index (-1 if unused)\n'))
-   # demo.indexed_json_to_html(x,y,y2,exportNam)
-
-
-
-    #TODO: using plotly, export as .html for use on the website.
+#     #TODO: using plotly, export as .html for use on the website.
