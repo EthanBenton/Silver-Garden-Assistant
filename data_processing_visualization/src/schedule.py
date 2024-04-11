@@ -1,16 +1,13 @@
 import json
 import pandas as pd
 import numpy as np
-from sklearn.model_selection import
-train_test_split
-from sklearn.ensemble import
-RandomForestClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
 from datetime import datetime
 
 with open('data_input_sim/src/sensor_data.json') as f:
     data = json.load(f)
 
-each column
 timestamps.append(entry['timestamp'])
 temperatures.append(enty['temperature'])
 humidities.append(entry['humidity'])
