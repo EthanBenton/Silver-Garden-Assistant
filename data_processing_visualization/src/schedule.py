@@ -24,6 +24,8 @@ df = pd.DataFrame({
 
 df['timestamp'] = pd.to_datetime(df['timestamp'])
 
+df['watering_schedule'] = np.where((df['temperature'] >  25 ) & (df['humidity'] < 60), 1, 0)
+
 X = df[['humidity', 'temperature']]
 Y = df['watering_schedule']
 
