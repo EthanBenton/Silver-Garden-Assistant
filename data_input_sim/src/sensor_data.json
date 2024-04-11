@@ -1,1802 +1,5042 @@
 [
     {
-        "timestamp": "2024-03-26 21:50:19",
-        "temperature": 23.405052785541116,
-        "humidity": 58.69366157205685
+        "timestamp": "2024-03-26 00:00:00",
+        "temperature": 20.81,
+        "humidity": 43.78
     },
     {
-        "timestamp": "2024-03-26 21:50:29",
-        "temperature": 21.382983304931262,
-        "humidity": 56.21613542640555
+        "timestamp": "2024-03-26 00:10:00",
+        "temperature": 20.18,
+        "humidity": 47.87
     },
     {
-        "timestamp": "2024-03-26 21:50:39",
-        "temperature": 24.352361251487448,
-        "humidity": 54.55306877780614
+        "timestamp": "2024-03-26 00:20:00",
+        "temperature": 25.54,
+        "humidity": 36.73
     },
     {
-        "timestamp": "2024-03-26 21:50:49",
-        "temperature": 21.1657735731833,
-        "humidity": 52.25807417785132
+        "timestamp": "2024-03-26 00:30:00",
+        "temperature": 24.37,
+        "humidity": 44.31
     },
     {
-        "timestamp": "2024-03-26 21:50:59",
-        "temperature": 20.506555213943116,
-        "humidity": 52.22054526079122
+        "timestamp": "2024-03-26 00:40:00",
+        "temperature": 22.23,
+        "humidity": 49.8
     },
     {
-        "timestamp": "2024-03-26 21:51:09",
-        "temperature": 20.723324309774195,
-        "humidity": 56.72374229015719
+        "timestamp": "2024-03-26 00:50:00",
+        "temperature": 23.95,
+        "humidity": 39.94
     },
     {
-        "timestamp": "2024-03-26 21:51:19",
-        "temperature": 21.434463366400887,
-        "humidity": 51.981932727610456
+        "timestamp": "2024-03-26 01:00:00",
+        "temperature": 23.33,
+        "humidity": 39.73
     },
     {
-        "timestamp": "2024-03-26 21:51:29",
-        "temperature": 24.673921135368428,
-        "humidity": 55.48447137048561
+        "timestamp": "2024-03-26 01:10:00",
+        "temperature": 24.6,
+        "humidity": 46.04
     },
     {
-        "timestamp": "2024-03-26 21:51:39",
-        "temperature": 24.162040250431787,
-        "humidity": 58.569487986364344
+        "timestamp": "2024-03-26 01:20:00",
+        "temperature": 24.39,
+        "humidity": 50.01
     },
     {
-        "timestamp": "2024-03-26 21:51:49",
-        "temperature": 21.459980298059467,
-        "humidity": 55.06097881386068
+        "timestamp": "2024-03-26 01:30:00",
+        "temperature": 24.39,
+        "humidity": 49.32
     },
     {
-        "timestamp": "2024-03-26 21:51:59",
-        "temperature": 23.87353337784108,
-        "humidity": 55.75468709513706
+        "timestamp": "2024-03-26 01:40:00",
+        "temperature": 20.67,
+        "humidity": 49.94
     },
     {
-        "timestamp": "2024-03-26 21:52:09",
-        "temperature": 24.74184077449996,
-        "humidity": 60.0
+        "timestamp": "2024-03-26 01:50:00",
+        "temperature": 25.01,
+        "humidity": 43.75
     },
     {
-        "timestamp": "2024-03-26 21:52:19",
-        "temperature": 21.85352889013508,
-        "humidity": 54.06761092834277
+        "timestamp": "2024-03-26 02:00:00",
+        "temperature": 22.88,
+        "humidity": 48.69
     },
     {
-        "timestamp": "2024-03-26 21:52:29",
-        "temperature": 21.900771756798008,
-        "humidity": 50.268595605334866
+        "timestamp": "2024-03-26 02:10:00",
+        "temperature": 20.43,
+        "humidity": 39.8
     },
     {
-        "timestamp": "2024-03-26 21:52:39",
-        "temperature": 21.516613748930848,
-        "humidity": 58.137364994733474
+        "timestamp": "2024-03-26 02:20:00",
+        "temperature": 23.23,
+        "humidity": 38.96
     },
     {
-        "timestamp": "2024-03-26 21:52:49",
-        "temperature": 22.07702152387364,
-        "humidity": 57.70562630602788
+        "timestamp": "2024-03-26 02:30:00",
+        "temperature": 20.1,
+        "humidity": 41.82
     },
     {
-        "timestamp": "2024-03-26 21:52:59",
-        "temperature": 20.782092211309696,
-        "humidity": 56.120985065507035
+        "timestamp": "2024-03-26 02:40:00",
+        "temperature": 24.48,
+        "humidity": 42.04
     },
     {
-        "timestamp": "2024-03-26 21:53:09",
-        "temperature": 22.476255757699526,
-        "humidity": 57.779704229616115
+        "timestamp": "2024-03-26 02:50:00",
+        "temperature": 23.95,
+        "humidity": 51.75
     },
     {
-        "timestamp": "2024-03-26 21:53:19",
-        "temperature": 23.27197330358811,
-        "humidity": 57.60771696469575
+        "timestamp": "2024-03-26 03:00:00",
+        "temperature": 25.44,
+        "humidity": 45.53
     },
     {
-        "timestamp": "2024-03-26 21:53:29",
-        "temperature": 23.061210367974084,
-        "humidity": 53.170957132637206
+        "timestamp": "2024-03-26 03:10:00",
+        "temperature": 22.23,
+        "humidity": 42.0
     },
     {
-        "timestamp": "2024-03-26 21:53:39",
-        "temperature": 21.885182906172567,
-        "humidity": 53.35061107190096
+        "timestamp": "2024-03-26 03:20:00",
+        "temperature": 23.84,
+        "humidity": 36.54
     },
     {
-        "timestamp": "2024-03-26 21:53:49",
-        "temperature": 23.73655519344154,
-        "humidity": 58.2929398584074
+        "timestamp": "2024-03-26 03:30:00",
+        "temperature": 22.13,
+        "humidity": 47.42
     },
     {
-        "timestamp": "2024-03-26 21:53:59",
-        "temperature": 21.24857588890933,
-        "humidity": 51.40892390521432
+        "timestamp": "2024-03-26 03:40:00",
+        "temperature": 20.7,
+        "humidity": 50.19
     },
     {
-        "timestamp": "2024-03-26 21:54:09",
-        "temperature": 23.86302496606927,
-        "humidity": 53.54102750933087
+        "timestamp": "2024-03-26 03:50:00",
+        "temperature": 23.79,
+        "humidity": 37.87
     },
     {
-        "timestamp": "2024-03-26 21:54:19",
-        "temperature": 21.854061397628442,
-        "humidity": 50.0
+        "timestamp": "2024-03-26 04:00:00",
+        "temperature": 20.6,
+        "humidity": 38.79
     },
     {
-        "timestamp": "2024-03-26 21:54:29",
-        "temperature": 23.787175619044614,
-        "humidity": 51.8004192081508
+        "timestamp": "2024-03-26 04:10:00",
+        "temperature": 24.67,
+        "humidity": 43.44
     },
     {
-        "timestamp": "2024-03-26 21:54:39",
-        "temperature": 20.370000536072403,
-        "humidity": 51.4003881768022
+        "timestamp": "2024-03-26 04:20:00",
+        "temperature": 22.67,
+        "humidity": 36.8
     },
     {
-        "timestamp": "2024-03-26 21:54:49",
-        "temperature": 20.78176523374934,
-        "humidity": 50.55434230037351
+        "timestamp": "2024-03-26 04:30:00",
+        "temperature": 23.01,
+        "humidity": 44.89
     },
     {
-        "timestamp": "2024-03-26 21:54:59",
-        "temperature": 20.0,
-        "humidity": 55.59855022648519
+        "timestamp": "2024-03-26 04:40:00",
+        "temperature": 24.53,
+        "humidity": 45.57
     },
     {
-        "timestamp": "2024-03-26 21:55:09",
-        "temperature": 21.789047714977087,
-        "humidity": 55.018804230191265
+        "timestamp": "2024-03-26 04:50:00",
+        "temperature": 22.85,
+        "humidity": 50.86
     },
     {
-        "timestamp": "2024-03-26 21:55:19",
-        "temperature": 24.815857932520295,
-        "humidity": 58.66136004789283
+        "timestamp": "2024-03-26 05:00:00",
+        "temperature": 23.22,
+        "humidity": 39.61
     },
     {
-        "timestamp": "2024-03-26 21:55:29",
-        "temperature": 23.181335416528746,
-        "humidity": 51.68383185365146
+        "timestamp": "2024-03-26 05:10:00",
+        "temperature": 22.82,
+        "humidity": 42.8
     },
     {
-        "timestamp": "2024-03-26 21:55:39",
-        "temperature": 21.600975515425667,
-        "humidity": 51.60468168003234
+        "timestamp": "2024-03-26 05:20:00",
+        "temperature": 22.84,
+        "humidity": 48.38
     },
     {
-        "timestamp": "2024-03-26 21:55:49",
-        "temperature": 20.33141287308937,
-        "humidity": 51.776562681747706
+        "timestamp": "2024-03-26 05:30:00",
+        "temperature": 20.96,
+        "humidity": 37.51
     },
     {
-        "timestamp": "2024-03-26 21:55:59",
-        "temperature": 20.010640453492044,
-        "humidity": 58.55421885710351
+        "timestamp": "2024-03-26 05:40:00",
+        "temperature": 20.99,
+        "humidity": 48.35
     },
     {
-        "timestamp": "2024-03-26 21:56:09",
-        "temperature": 21.80613584815602,
-        "humidity": 54.26538087984268
+        "timestamp": "2024-03-26 05:50:00",
+        "temperature": 24.57,
+        "humidity": 47.51
     },
     {
-        "timestamp": "2024-03-26 21:56:19",
-        "temperature": 22.860556768214206,
-        "humidity": 56.93197058542005
+        "timestamp": "2024-03-26 06:00:00",
+        "temperature": 21.44,
+        "humidity": 40.38
     },
     {
-        "timestamp": "2024-03-26 21:56:29",
-        "temperature": 20.067244738510826,
-        "humidity": 57.53628520025418
+        "timestamp": "2024-03-26 06:10:00",
+        "temperature": 21.8,
+        "humidity": 49.63
     },
     {
-        "timestamp": "2024-03-26 21:56:39",
-        "temperature": 20.0,
-        "humidity": 56.12749768451351
+        "timestamp": "2024-03-26 06:20:00",
+        "temperature": 24.27,
+        "humidity": 40.02
     },
     {
-        "timestamp": "2024-03-26 21:56:49",
-        "temperature": 24.0923786695243,
-        "humidity": 58.17586826487115
+        "timestamp": "2024-03-26 06:30:00",
+        "temperature": 20.23,
+        "humidity": 50.98
     },
     {
-        "timestamp": "2024-03-26 21:56:59",
-        "temperature": 20.55130129448486,
-        "humidity": 57.61326604941553
+        "timestamp": "2024-03-26 06:40:00",
+        "temperature": 25.23,
+        "humidity": 36.4
     },
     {
-        "timestamp": "2024-03-26 21:57:09",
-        "temperature": 24.369460062663677,
-        "humidity": 53.51976428773398
+        "timestamp": "2024-03-26 06:50:00",
+        "temperature": 24.63,
+        "humidity": 45.96
     },
     {
-        "timestamp": "2024-03-26 21:57:19",
-        "temperature": 22.93294059376689,
-        "humidity": 59.47034271830758
+        "timestamp": "2024-03-26 07:00:00",
+        "temperature": 22.3,
+        "humidity": 51.95
     },
     {
-        "timestamp": "2024-03-26 21:57:29",
-        "temperature": 20.528768802483174,
-        "humidity": 51.541326946175445
+        "timestamp": "2024-03-26 07:10:00",
+        "temperature": 20.36,
+        "humidity": 39.16
     },
     {
-        "timestamp": "2024-03-26 21:57:39",
-        "temperature": 22.949113787789933,
-        "humidity": 58.31280380794542
+        "timestamp": "2024-03-26 07:20:00",
+        "temperature": 22.0,
+        "humidity": 47.07
     },
     {
-        "timestamp": "2024-03-26 21:57:49",
-        "temperature": 23.532321861749118,
-        "humidity": 59.79301274902005
+        "timestamp": "2024-03-26 07:30:00",
+        "temperature": 25.17,
+        "humidity": 45.78
     },
     {
-        "timestamp": "2024-03-26 21:57:59",
-        "temperature": 20.828742793695213,
-        "humidity": 51.197175775748825
+        "timestamp": "2024-03-26 07:40:00",
+        "temperature": 22.53,
+        "humidity": 44.85
     },
     {
-        "timestamp": "2024-03-26 21:58:09",
-        "temperature": 22.015590441735036,
-        "humidity": 52.01343370060503
+        "timestamp": "2024-03-26 07:50:00",
+        "temperature": 23.28,
+        "humidity": 36.51
     },
     {
-        "timestamp": "2024-03-26 21:58:19",
-        "temperature": 21.962075325155887,
-        "humidity": 56.702919813740344
+        "timestamp": "2024-03-26 08:00:00",
+        "temperature": 22.14,
+        "humidity": 40.04
     },
     {
-        "timestamp": "2024-03-26 21:58:29",
-        "temperature": 20.56164181021034,
-        "humidity": 54.25644861482098
+        "timestamp": "2024-03-26 08:10:00",
+        "temperature": 23.98,
+        "humidity": 41.85
     },
     {
-        "timestamp": "2024-03-26 21:58:39",
-        "temperature": 22.914975667975437,
-        "humidity": 51.33753043283597
+        "timestamp": "2024-03-26 08:20:00",
+        "temperature": 24.24,
+        "humidity": 41.48
     },
     {
-        "timestamp": "2024-03-26 21:58:49",
-        "temperature": 20.0,
-        "humidity": 53.004963404653154
+        "timestamp": "2024-03-26 08:30:00",
+        "temperature": 20.06,
+        "humidity": 45.56
     },
     {
-        "timestamp": "2024-03-26 21:58:59",
-        "temperature": 20.779516805631214,
-        "humidity": 57.433823434051284
+        "timestamp": "2024-03-26 08:40:00",
+        "temperature": 22.16,
+        "humidity": 44.25
     },
     {
-        "timestamp": "2024-03-26 21:59:09",
-        "temperature": 24.25704320009013,
-        "humidity": 59.29798778113889
+        "timestamp": "2024-03-26 08:50:00",
+        "temperature": 22.88,
+        "humidity": 50.01
     },
     {
-        "timestamp": "2024-03-26 21:59:19",
-        "temperature": 22.846490898526064,
-        "humidity": 60.0
+        "timestamp": "2024-03-26 09:00:00",
+        "temperature": 25.05,
+        "humidity": 47.48
     },
     {
-        "timestamp": "2024-03-26 21:59:29",
-        "temperature": 20.0,
-        "humidity": 50.436533805765464
+        "timestamp": "2024-03-26 09:10:00",
+        "temperature": 25.92,
+        "humidity": 49.19
     },
     {
-        "timestamp": "2024-03-26 21:59:39",
-        "temperature": 20.99009328458051,
-        "humidity": 51.26976434689845
+        "timestamp": "2024-03-26 09:20:00",
+        "temperature": 20.91,
+        "humidity": 51.52
     },
     {
-        "timestamp": "2024-03-26 21:59:49",
-        "temperature": 20.096564496930167,
-        "humidity": 59.100192774381824
+        "timestamp": "2024-03-26 09:30:00",
+        "temperature": 23.59,
+        "humidity": 42.07
     },
     {
-        "timestamp": "2024-03-26 21:59:59",
-        "temperature": 23.81601910093799,
-        "humidity": 52.70465445775082
+        "timestamp": "2024-03-26 09:40:00",
+        "temperature": 24.34,
+        "humidity": 43.03
     },
     {
-        "timestamp": "2024-03-26 22:00:09",
-        "temperature": 24.10508778108193,
-        "humidity": 50.309834049392244
+        "timestamp": "2024-03-26 09:50:00",
+        "temperature": 25.9,
+        "humidity": 51.02
     },
     {
-        "timestamp": "2024-03-26 22:00:19",
+        "timestamp": "2024-03-26 10:00:00",
+        "temperature": 21.37,
+        "humidity": 37.48
+    },
+    {
+        "timestamp": "2024-03-26 10:10:00",
+        "temperature": 20.08,
+        "humidity": 39.96
+    },
+    {
+        "timestamp": "2024-03-26 10:20:00",
+        "temperature": 20.86,
+        "humidity": 43.36
+    },
+    {
+        "timestamp": "2024-03-26 10:30:00",
+        "temperature": 23.39,
+        "humidity": 46.44
+    },
+    {
+        "timestamp": "2024-03-26 10:40:00",
+        "temperature": 21.4,
+        "humidity": 36.55
+    },
+    {
+        "timestamp": "2024-03-26 10:50:00",
+        "temperature": 24.88,
+        "humidity": 47.05
+    },
+    {
+        "timestamp": "2024-03-26 11:00:00",
+        "temperature": 24.32,
+        "humidity": 42.68
+    },
+    {
+        "timestamp": "2024-03-26 11:10:00",
+        "temperature": 23.21,
+        "humidity": 50.88
+    },
+    {
+        "timestamp": "2024-03-26 11:20:00",
+        "temperature": 25.43,
+        "humidity": 48.0
+    },
+    {
+        "timestamp": "2024-03-26 11:30:00",
+        "temperature": 24.59,
+        "humidity": 50.47
+    },
+    {
+        "timestamp": "2024-03-26 11:40:00",
+        "temperature": 20.73,
+        "humidity": 41.8
+    },
+    {
+        "timestamp": "2024-03-26 11:50:00",
+        "temperature": 22.67,
+        "humidity": 51.8
+    },
+    {
+        "timestamp": "2024-03-26 12:00:00",
+        "temperature": 25.5,
+        "humidity": 42.55
+    },
+    {
+        "timestamp": "2024-03-26 12:10:00",
+        "temperature": 23.89,
+        "humidity": 42.86
+    },
+    {
+        "timestamp": "2024-03-26 12:20:00",
+        "temperature": 24.53,
+        "humidity": 37.55
+    },
+    {
+        "timestamp": "2024-03-26 12:30:00",
+        "temperature": 23.82,
+        "humidity": 50.32
+    },
+    {
+        "timestamp": "2024-03-26 12:40:00",
+        "temperature": 20.84,
+        "humidity": 51.59
+    },
+    {
+        "timestamp": "2024-03-26 12:50:00",
+        "temperature": 21.69,
+        "humidity": 50.45
+    },
+    {
+        "timestamp": "2024-03-26 13:00:00",
+        "temperature": 21.91,
+        "humidity": 41.69
+    },
+    {
+        "timestamp": "2024-03-26 13:10:00",
+        "temperature": 24.99,
+        "humidity": 51.07
+    },
+    {
+        "timestamp": "2024-03-26 13:20:00",
+        "temperature": 24.34,
+        "humidity": 44.5
+    },
+    {
+        "timestamp": "2024-03-26 13:30:00",
+        "temperature": 25.09,
+        "humidity": 40.65
+    },
+    {
+        "timestamp": "2024-03-26 13:40:00",
+        "temperature": 21.7,
+        "humidity": 51.75
+    },
+    {
+        "timestamp": "2024-03-26 13:50:00",
+        "temperature": 23.3,
+        "humidity": 47.63
+    },
+    {
+        "timestamp": "2024-03-26 14:00:00",
+        "temperature": 21.71,
+        "humidity": 47.85
+    },
+    {
+        "timestamp": "2024-03-26 14:10:00",
+        "temperature": 24.24,
+        "humidity": 38.58
+    },
+    {
+        "timestamp": "2024-03-26 14:20:00",
+        "temperature": 20.67,
+        "humidity": 41.59
+    },
+    {
+        "timestamp": "2024-03-26 14:30:00",
+        "temperature": 24.8,
+        "humidity": 46.34
+    },
+    {
+        "timestamp": "2024-03-26 14:40:00",
+        "temperature": 20.25,
+        "humidity": 51.74
+    },
+    {
+        "timestamp": "2024-03-26 14:50:00",
+        "temperature": 21.02,
+        "humidity": 36.17
+    },
+    {
+        "timestamp": "2024-03-26 15:00:00",
+        "temperature": 24.88,
+        "humidity": 42.43
+    },
+    {
+        "timestamp": "2024-03-26 15:10:00",
+        "temperature": 24.23,
+        "humidity": 38.8
+    },
+    {
+        "timestamp": "2024-03-26 15:20:00",
+        "temperature": 23.1,
+        "humidity": 46.61
+    },
+    {
+        "timestamp": "2024-03-26 15:30:00",
+        "temperature": 24.76,
+        "humidity": 47.76
+    },
+    {
+        "timestamp": "2024-03-26 15:40:00",
+        "temperature": 25.77,
+        "humidity": 47.71
+    },
+    {
+        "timestamp": "2024-03-26 15:50:00",
+        "temperature": 21.62,
+        "humidity": 39.79
+    },
+    {
+        "timestamp": "2024-03-26 16:00:00",
+        "temperature": 20.67,
+        "humidity": 41.44
+    },
+    {
+        "timestamp": "2024-03-26 16:10:00",
+        "temperature": 21.71,
+        "humidity": 38.31
+    },
+    {
+        "timestamp": "2024-03-26 16:20:00",
+        "temperature": 21.61,
+        "humidity": 42.38
+    },
+    {
+        "timestamp": "2024-03-26 16:30:00",
+        "temperature": 20.91,
+        "humidity": 49.96
+    },
+    {
+        "timestamp": "2024-03-26 16:40:00",
+        "temperature": 21.17,
+        "humidity": 44.38
+    },
+    {
+        "timestamp": "2024-03-26 16:50:00",
+        "temperature": 21.1,
+        "humidity": 43.23
+    },
+    {
+        "timestamp": "2024-03-26 17:00:00",
+        "temperature": 20.82,
+        "humidity": 38.54
+    },
+    {
+        "timestamp": "2024-03-26 17:10:00",
+        "temperature": 20.65,
+        "humidity": 46.75
+    },
+    {
+        "timestamp": "2024-03-26 17:20:00",
+        "temperature": 21.06,
+        "humidity": 42.7
+    },
+    {
+        "timestamp": "2024-03-26 17:30:00",
+        "temperature": 21.76,
+        "humidity": 48.91
+    },
+    {
+        "timestamp": "2024-03-26 17:40:00",
+        "temperature": 22.54,
+        "humidity": 44.69
+    },
+    {
+        "timestamp": "2024-03-26 17:50:00",
+        "temperature": 20.31,
+        "humidity": 47.24
+    },
+    {
+        "timestamp": "2024-03-26 18:00:00",
+        "temperature": 24.08,
+        "humidity": 48.35
+    },
+    {
+        "timestamp": "2024-03-26 18:10:00",
+        "temperature": 24.26,
+        "humidity": 51.31
+    },
+    {
+        "timestamp": "2024-03-26 18:20:00",
+        "temperature": 25.94,
+        "humidity": 36.07
+    },
+    {
+        "timestamp": "2024-03-26 18:30:00",
+        "temperature": 20.86,
+        "humidity": 46.41
+    },
+    {
+        "timestamp": "2024-03-26 18:40:00",
+        "temperature": 23.66,
+        "humidity": 41.18
+    },
+    {
+        "timestamp": "2024-03-26 18:50:00",
+        "temperature": 25.51,
+        "humidity": 41.69
+    },
+    {
+        "timestamp": "2024-03-26 19:00:00",
+        "temperature": 20.36,
+        "humidity": 43.41
+    },
+    {
+        "timestamp": "2024-03-26 19:10:00",
+        "temperature": 24.31,
+        "humidity": 42.71
+    },
+    {
+        "timestamp": "2024-03-26 19:20:00",
+        "temperature": 20.05,
+        "humidity": 48.75
+    },
+    {
+        "timestamp": "2024-03-26 19:30:00",
+        "temperature": 22.52,
+        "humidity": 51.29
+    },
+    {
+        "timestamp": "2024-03-26 19:40:00",
+        "temperature": 21.75,
+        "humidity": 45.02
+    },
+    {
+        "timestamp": "2024-03-26 19:50:00",
+        "temperature": 23.59,
+        "humidity": 48.74
+    },
+    {
+        "timestamp": "2024-03-26 20:00:00",
+        "temperature": 21.21,
+        "humidity": 36.58
+    },
+    {
+        "timestamp": "2024-03-26 20:10:00",
+        "temperature": 22.68,
+        "humidity": 37.03
+    },
+    {
+        "timestamp": "2024-03-26 20:20:00",
+        "temperature": 22.09,
+        "humidity": 40.52
+    },
+    {
+        "timestamp": "2024-03-26 20:30:00",
+        "temperature": 21.31,
+        "humidity": 36.11
+    },
+    {
+        "timestamp": "2024-03-26 20:40:00",
+        "temperature": 21.27,
+        "humidity": 36.67
+    },
+    {
+        "timestamp": "2024-03-26 20:50:00",
+        "temperature": 23.22,
+        "humidity": 37.45
+    },
+    {
+        "timestamp": "2024-03-26 21:00:00",
+        "temperature": 25.5,
+        "humidity": 45.63
+    },
+    {
+        "timestamp": "2024-03-26 21:10:00",
+        "temperature": 25.84,
+        "humidity": 36.31
+    },
+    {
+        "timestamp": "2024-03-26 21:20:00",
+        "temperature": 22.79,
+        "humidity": 47.74
+    },
+    {
+        "timestamp": "2024-03-26 21:30:00",
+        "temperature": 25.1,
+        "humidity": 50.95
+    },
+    {
+        "timestamp": "2024-03-26 21:40:00",
+        "temperature": 25.93,
+        "humidity": 47.42
+    },
+    {
+        "timestamp": "2024-03-26 21:50:00",
+        "temperature": 25.91,
+        "humidity": 39.25
+    },
+    {
+        "timestamp": "2024-03-26 22:00:00",
+        "temperature": 20.49,
+        "humidity": 48.66
+    },
+    {
+        "timestamp": "2024-03-26 22:10:00",
+        "temperature": 23.06,
+        "humidity": 38.46
+    },
+    {
+        "timestamp": "2024-03-26 22:20:00",
+        "temperature": 20.51,
+        "humidity": 36.59
+    },
+    {
+        "timestamp": "2024-03-26 22:30:00",
+        "temperature": 25.42,
+        "humidity": 39.12
+    },
+    {
+        "timestamp": "2024-03-26 22:40:00",
+        "temperature": 21.38,
+        "humidity": 48.91
+    },
+    {
+        "timestamp": "2024-03-26 22:50:00",
+        "temperature": 23.51,
+        "humidity": 40.74
+    },
+    {
+        "timestamp": "2024-03-26 23:00:00",
+        "temperature": 25.68,
+        "humidity": 49.1
+    },
+    {
+        "timestamp": "2024-03-26 23:10:00",
+        "temperature": 23.11,
+        "humidity": 38.2
+    },
+    {
+        "timestamp": "2024-03-26 23:20:00",
+        "temperature": 25.14,
+        "humidity": 41.32
+    },
+    {
+        "timestamp": "2024-03-26 23:30:00",
+        "temperature": 21.3,
+        "humidity": 36.74
+    },
+    {
+        "timestamp": "2024-03-26 23:40:00",
+        "temperature": 24.92,
+        "humidity": 51.83
+    },
+    {
+        "timestamp": "2024-03-26 23:50:00",
+        "temperature": 21.57,
+        "humidity": 36.25
+    },
+    {
+        "timestamp": "2024-03-27 00:00:00",
+        "temperature": 21.84,
+        "humidity": 37.01
+    },
+    {
+        "timestamp": "2024-03-27 00:10:00",
+        "temperature": 24.11,
+        "humidity": 51.66
+    },
+    {
+        "timestamp": "2024-03-27 00:20:00",
+        "temperature": 21.89,
+        "humidity": 50.05
+    },
+    {
+        "timestamp": "2024-03-27 00:30:00",
+        "temperature": 25.02,
+        "humidity": 46.72
+    },
+    {
+        "timestamp": "2024-03-27 00:40:00",
+        "temperature": 21.17,
+        "humidity": 39.31
+    },
+    {
+        "timestamp": "2024-03-27 00:50:00",
+        "temperature": 22.51,
+        "humidity": 45.13
+    },
+    {
+        "timestamp": "2024-03-27 01:00:00",
+        "temperature": 22.49,
+        "humidity": 42.95
+    },
+    {
+        "timestamp": "2024-03-27 01:10:00",
+        "temperature": 23.74,
+        "humidity": 39.01
+    },
+    {
+        "timestamp": "2024-03-27 01:20:00",
+        "temperature": 25.45,
+        "humidity": 38.12
+    },
+    {
+        "timestamp": "2024-03-27 01:30:00",
+        "temperature": 20.74,
+        "humidity": 39.57
+    },
+    {
+        "timestamp": "2024-03-27 01:40:00",
+        "temperature": 21.92,
+        "humidity": 43.46
+    },
+    {
+        "timestamp": "2024-03-27 01:50:00",
+        "temperature": 22.58,
+        "humidity": 42.72
+    },
+    {
+        "timestamp": "2024-03-27 02:00:00",
+        "temperature": 24.87,
+        "humidity": 38.19
+    },
+    {
+        "timestamp": "2024-03-27 02:10:00",
+        "temperature": 22.55,
+        "humidity": 51.08
+    },
+    {
+        "timestamp": "2024-03-27 02:20:00",
+        "temperature": 20.31,
+        "humidity": 37.82
+    },
+    {
+        "timestamp": "2024-03-27 02:30:00",
+        "temperature": 24.9,
+        "humidity": 47.51
+    },
+    {
+        "timestamp": "2024-03-27 02:40:00",
+        "temperature": 21.98,
+        "humidity": 40.61
+    },
+    {
+        "timestamp": "2024-03-27 02:50:00",
+        "temperature": 23.0,
+        "humidity": 46.14
+    },
+    {
+        "timestamp": "2024-03-27 03:00:00",
+        "temperature": 22.31,
+        "humidity": 48.65
+    },
+    {
+        "timestamp": "2024-03-27 03:10:00",
+        "temperature": 23.58,
+        "humidity": 51.72
+    },
+    {
+        "timestamp": "2024-03-27 03:20:00",
+        "temperature": 22.13,
+        "humidity": 47.13
+    },
+    {
+        "timestamp": "2024-03-27 03:30:00",
+        "temperature": 21.3,
+        "humidity": 45.51
+    },
+    {
+        "timestamp": "2024-03-27 03:40:00",
+        "temperature": 25.66,
+        "humidity": 49.66
+    },
+    {
+        "timestamp": "2024-03-27 03:50:00",
+        "temperature": 22.14,
+        "humidity": 40.6
+    },
+    {
+        "timestamp": "2024-03-27 04:00:00",
+        "temperature": 23.32,
+        "humidity": 43.01
+    },
+    {
+        "timestamp": "2024-03-27 04:10:00",
+        "temperature": 23.46,
+        "humidity": 47.78
+    },
+    {
+        "timestamp": "2024-03-27 04:20:00",
+        "temperature": 20.95,
+        "humidity": 45.77
+    },
+    {
+        "timestamp": "2024-03-27 04:30:00",
+        "temperature": 22.59,
+        "humidity": 48.98
+    },
+    {
+        "timestamp": "2024-03-27 04:40:00",
+        "temperature": 20.62,
+        "humidity": 37.19
+    },
+    {
+        "timestamp": "2024-03-27 04:50:00",
+        "temperature": 25.23,
+        "humidity": 45.05
+    },
+    {
+        "timestamp": "2024-03-27 05:00:00",
+        "temperature": 24.62,
+        "humidity": 36.29
+    },
+    {
+        "timestamp": "2024-03-27 05:10:00",
+        "temperature": 25.32,
+        "humidity": 45.07
+    },
+    {
+        "timestamp": "2024-03-27 05:20:00",
+        "temperature": 20.44,
+        "humidity": 44.68
+    },
+    {
+        "timestamp": "2024-03-27 05:30:00",
+        "temperature": 21.97,
+        "humidity": 36.29
+    },
+    {
+        "timestamp": "2024-03-27 05:40:00",
+        "temperature": 23.35,
+        "humidity": 39.82
+    },
+    {
+        "timestamp": "2024-03-27 05:50:00",
+        "temperature": 24.54,
+        "humidity": 41.59
+    },
+    {
+        "timestamp": "2024-03-27 06:00:00",
+        "temperature": 24.27,
+        "humidity": 41.28
+    },
+    {
+        "timestamp": "2024-03-27 06:10:00",
+        "temperature": 25.45,
+        "humidity": 43.3
+    },
+    {
+        "timestamp": "2024-03-27 06:20:00",
+        "temperature": 25.13,
+        "humidity": 48.8
+    },
+    {
+        "timestamp": "2024-03-27 06:30:00",
+        "temperature": 23.67,
+        "humidity": 47.12
+    },
+    {
+        "timestamp": "2024-03-27 06:40:00",
+        "temperature": 25.19,
+        "humidity": 47.4
+    },
+    {
+        "timestamp": "2024-03-27 06:50:00",
+        "temperature": 24.25,
+        "humidity": 37.01
+    },
+    {
+        "timestamp": "2024-03-27 07:00:00",
+        "temperature": 21.42,
+        "humidity": 36.74
+    },
+    {
+        "timestamp": "2024-03-27 07:10:00",
+        "temperature": 23.23,
+        "humidity": 45.71
+    },
+    {
+        "timestamp": "2024-03-27 07:20:00",
+        "temperature": 22.23,
+        "humidity": 46.79
+    },
+    {
+        "timestamp": "2024-03-27 07:30:00",
+        "temperature": 20.88,
+        "humidity": 51.89
+    },
+    {
+        "timestamp": "2024-03-27 07:40:00",
+        "temperature": 23.29,
+        "humidity": 44.84
+    },
+    {
+        "timestamp": "2024-03-27 07:50:00",
+        "temperature": 23.26,
+        "humidity": 38.14
+    },
+    {
+        "timestamp": "2024-03-27 08:00:00",
+        "temperature": 23.4,
+        "humidity": 44.87
+    },
+    {
+        "timestamp": "2024-03-27 08:10:00",
+        "temperature": 24.58,
+        "humidity": 38.84
+    },
+    {
+        "timestamp": "2024-03-27 08:20:00",
+        "temperature": 22.11,
+        "humidity": 40.82
+    },
+    {
+        "timestamp": "2024-03-27 08:30:00",
+        "temperature": 20.76,
+        "humidity": 41.35
+    },
+    {
+        "timestamp": "2024-03-27 08:40:00",
+        "temperature": 21.63,
+        "humidity": 48.17
+    },
+    {
+        "timestamp": "2024-03-27 08:50:00",
+        "temperature": 24.07,
+        "humidity": 51.16
+    },
+    {
+        "timestamp": "2024-03-27 09:00:00",
+        "temperature": 23.37,
+        "humidity": 43.3
+    },
+    {
+        "timestamp": "2024-03-27 09:10:00",
+        "temperature": 21.35,
+        "humidity": 46.13
+    },
+    {
+        "timestamp": "2024-03-27 09:20:00",
+        "temperature": 23.34,
+        "humidity": 39.24
+    },
+    {
+        "timestamp": "2024-03-27 09:30:00",
+        "temperature": 20.36,
+        "humidity": 42.5
+    },
+    {
+        "timestamp": "2024-03-27 09:40:00",
+        "temperature": 21.05,
+        "humidity": 43.92
+    },
+    {
+        "timestamp": "2024-03-27 09:50:00",
+        "temperature": 23.6,
+        "humidity": 45.76
+    },
+    {
+        "timestamp": "2024-03-27 10:00:00",
+        "temperature": 24.31,
+        "humidity": 40.03
+    },
+    {
+        "timestamp": "2024-03-27 10:10:00",
+        "temperature": 21.67,
+        "humidity": 48.53
+    },
+    {
+        "timestamp": "2024-03-27 10:20:00",
+        "temperature": 22.27,
+        "humidity": 39.44
+    },
+    {
+        "timestamp": "2024-03-27 10:30:00",
+        "temperature": 25.7,
+        "humidity": 41.44
+    },
+    {
+        "timestamp": "2024-03-27 10:40:00",
+        "temperature": 25.69,
+        "humidity": 47.57
+    },
+    {
+        "timestamp": "2024-03-27 10:50:00",
+        "temperature": 24.99,
+        "humidity": 51.45
+    },
+    {
+        "timestamp": "2024-03-27 11:00:00",
+        "temperature": 22.79,
+        "humidity": 47.16
+    },
+    {
+        "timestamp": "2024-03-27 11:10:00",
+        "temperature": 23.81,
+        "humidity": 51.36
+    },
+    {
+        "timestamp": "2024-03-27 11:20:00",
+        "temperature": 25.44,
+        "humidity": 38.67
+    },
+    {
+        "timestamp": "2024-03-27 11:30:00",
+        "temperature": 21.26,
+        "humidity": 42.98
+    },
+    {
+        "timestamp": "2024-03-27 11:40:00",
+        "temperature": 22.81,
+        "humidity": 50.99
+    },
+    {
+        "timestamp": "2024-03-27 11:50:00",
+        "temperature": 20.66,
+        "humidity": 41.44
+    },
+    {
+        "timestamp": "2024-03-27 12:00:00",
+        "temperature": 23.44,
+        "humidity": 51.33
+    },
+    {
+        "timestamp": "2024-03-27 12:10:00",
+        "temperature": 25.31,
+        "humidity": 41.91
+    },
+    {
+        "timestamp": "2024-03-27 12:20:00",
+        "temperature": 21.1,
+        "humidity": 45.84
+    },
+    {
+        "timestamp": "2024-03-27 12:30:00",
+        "temperature": 20.67,
+        "humidity": 40.84
+    },
+    {
+        "timestamp": "2024-03-27 12:40:00",
+        "temperature": 23.36,
+        "humidity": 44.01
+    },
+    {
+        "timestamp": "2024-03-27 12:50:00",
+        "temperature": 25.22,
+        "humidity": 40.52
+    },
+    {
+        "timestamp": "2024-03-27 13:00:00",
+        "temperature": 24.53,
+        "humidity": 45.45
+    },
+    {
+        "timestamp": "2024-03-27 13:10:00",
+        "temperature": 25.76,
+        "humidity": 47.44
+    },
+    {
+        "timestamp": "2024-03-27 13:20:00",
+        "temperature": 22.57,
+        "humidity": 47.15
+    },
+    {
+        "timestamp": "2024-03-27 13:30:00",
+        "temperature": 22.11,
+        "humidity": 50.58
+    },
+    {
+        "timestamp": "2024-03-27 13:40:00",
+        "temperature": 23.39,
+        "humidity": 49.13
+    },
+    {
+        "timestamp": "2024-03-27 13:50:00",
+        "temperature": 24.7,
+        "humidity": 40.83
+    },
+    {
+        "timestamp": "2024-03-27 14:00:00",
+        "temperature": 21.89,
+        "humidity": 43.22
+    },
+    {
+        "timestamp": "2024-03-27 14:10:00",
+        "temperature": 22.73,
+        "humidity": 51.01
+    },
+    {
+        "timestamp": "2024-03-27 14:20:00",
+        "temperature": 21.39,
+        "humidity": 41.59
+    },
+    {
+        "timestamp": "2024-03-27 14:30:00",
+        "temperature": 20.15,
+        "humidity": 44.24
+    },
+    {
+        "timestamp": "2024-03-27 14:40:00",
+        "temperature": 22.43,
+        "humidity": 51.82
+    },
+    {
+        "timestamp": "2024-03-27 14:50:00",
+        "temperature": 22.07,
+        "humidity": 51.21
+    },
+    {
+        "timestamp": "2024-03-27 15:00:00",
+        "temperature": 25.42,
+        "humidity": 40.7
+    },
+    {
+        "timestamp": "2024-03-27 15:10:00",
+        "temperature": 20.5,
+        "humidity": 51.66
+    },
+    {
+        "timestamp": "2024-03-27 15:20:00",
+        "temperature": 25.62,
+        "humidity": 43.45
+    },
+    {
+        "timestamp": "2024-03-27 15:30:00",
+        "temperature": 25.34,
+        "humidity": 36.11
+    },
+    {
+        "timestamp": "2024-03-27 15:40:00",
+        "temperature": 25.54,
+        "humidity": 40.28
+    },
+    {
+        "timestamp": "2024-03-27 15:50:00",
+        "temperature": 20.76,
+        "humidity": 36.63
+    },
+    {
+        "timestamp": "2024-03-27 16:00:00",
+        "temperature": 22.6,
+        "humidity": 48.47
+    },
+    {
+        "timestamp": "2024-03-27 16:10:00",
+        "temperature": 24.17,
+        "humidity": 48.52
+    },
+    {
+        "timestamp": "2024-03-27 16:20:00",
+        "temperature": 23.17,
+        "humidity": 48.97
+    },
+    {
+        "timestamp": "2024-03-27 16:30:00",
+        "temperature": 23.13,
+        "humidity": 44.07
+    },
+    {
+        "timestamp": "2024-03-27 16:40:00",
+        "temperature": 22.42,
+        "humidity": 48.06
+    },
+    {
+        "timestamp": "2024-03-27 16:50:00",
+        "temperature": 20.78,
+        "humidity": 36.5
+    },
+    {
+        "timestamp": "2024-03-27 17:00:00",
+        "temperature": 22.69,
+        "humidity": 42.46
+    },
+    {
+        "timestamp": "2024-03-27 17:10:00",
+        "temperature": 25.41,
+        "humidity": 36.94
+    },
+    {
+        "timestamp": "2024-03-27 17:20:00",
+        "temperature": 22.44,
+        "humidity": 38.41
+    },
+    {
+        "timestamp": "2024-03-27 17:30:00",
+        "temperature": 23.32,
+        "humidity": 46.18
+    },
+    {
+        "timestamp": "2024-03-27 17:40:00",
+        "temperature": 20.98,
+        "humidity": 36.59
+    },
+    {
+        "timestamp": "2024-03-27 17:50:00",
+        "temperature": 25.83,
+        "humidity": 39.22
+    },
+    {
+        "timestamp": "2024-03-27 18:00:00",
+        "temperature": 21.3,
+        "humidity": 42.65
+    },
+    {
+        "timestamp": "2024-03-27 18:10:00",
+        "temperature": 21.44,
+        "humidity": 49.55
+    },
+    {
+        "timestamp": "2024-03-27 18:20:00",
+        "temperature": 20.78,
+        "humidity": 47.92
+    },
+    {
+        "timestamp": "2024-03-27 18:30:00",
+        "temperature": 20.21,
+        "humidity": 46.89
+    },
+    {
+        "timestamp": "2024-03-27 18:40:00",
+        "temperature": 23.83,
+        "humidity": 47.6
+    },
+    {
+        "timestamp": "2024-03-27 18:50:00",
+        "temperature": 24.21,
+        "humidity": 45.95
+    },
+    {
+        "timestamp": "2024-03-27 19:00:00",
+        "temperature": 22.29,
+        "humidity": 48.37
+    },
+    {
+        "timestamp": "2024-03-27 19:10:00",
+        "temperature": 22.38,
+        "humidity": 43.99
+    },
+    {
+        "timestamp": "2024-03-27 19:20:00",
+        "temperature": 23.16,
+        "humidity": 41.06
+    },
+    {
+        "timestamp": "2024-03-27 19:30:00",
+        "temperature": 20.58,
+        "humidity": 41.97
+    },
+    {
+        "timestamp": "2024-03-27 19:40:00",
+        "temperature": 24.92,
+        "humidity": 51.32
+    },
+    {
+        "timestamp": "2024-03-27 19:50:00",
+        "temperature": 21.46,
+        "humidity": 39.46
+    },
+    {
+        "timestamp": "2024-03-27 20:00:00",
+        "temperature": 21.16,
+        "humidity": 51.73
+    },
+    {
+        "timestamp": "2024-03-27 20:10:00",
+        "temperature": 20.09,
+        "humidity": 38.64
+    },
+    {
+        "timestamp": "2024-03-27 20:20:00",
+        "temperature": 23.1,
+        "humidity": 43.67
+    },
+    {
+        "timestamp": "2024-03-27 20:30:00",
+        "temperature": 24.87,
+        "humidity": 42.45
+    },
+    {
+        "timestamp": "2024-03-27 20:40:00",
+        "temperature": 24.94,
+        "humidity": 41.79
+    },
+    {
+        "timestamp": "2024-03-27 20:50:00",
+        "temperature": 21.74,
+        "humidity": 36.63
+    },
+    {
+        "timestamp": "2024-03-27 21:00:00",
+        "temperature": 20.91,
+        "humidity": 41.53
+    },
+    {
+        "timestamp": "2024-03-27 21:10:00",
+        "temperature": 21.51,
+        "humidity": 51.32
+    },
+    {
+        "timestamp": "2024-03-27 21:20:00",
+        "temperature": 20.09,
+        "humidity": 43.09
+    },
+    {
+        "timestamp": "2024-03-27 21:30:00",
+        "temperature": 25.06,
+        "humidity": 48.27
+    },
+    {
+        "timestamp": "2024-03-27 21:40:00",
+        "temperature": 20.34,
+        "humidity": 49.76
+    },
+    {
+        "timestamp": "2024-03-27 21:50:00",
+        "temperature": 20.76,
+        "humidity": 44.35
+    },
+    {
+        "timestamp": "2024-03-27 22:00:00",
+        "temperature": 21.59,
+        "humidity": 51.07
+    },
+    {
+        "timestamp": "2024-03-27 22:10:00",
+        "temperature": 23.24,
+        "humidity": 45.69
+    },
+    {
+        "timestamp": "2024-03-27 22:20:00",
+        "temperature": 25.5,
+        "humidity": 49.49
+    },
+    {
+        "timestamp": "2024-03-27 22:30:00",
+        "temperature": 25.85,
+        "humidity": 49.61
+    },
+    {
+        "timestamp": "2024-03-27 22:40:00",
+        "temperature": 25.03,
+        "humidity": 36.73
+    },
+    {
+        "timestamp": "2024-03-27 22:50:00",
+        "temperature": 21.26,
+        "humidity": 48.1
+    },
+    {
+        "timestamp": "2024-03-27 23:00:00",
+        "temperature": 22.42,
+        "humidity": 42.66
+    },
+    {
+        "timestamp": "2024-03-27 23:10:00",
+        "temperature": 20.22,
+        "humidity": 47.76
+    },
+    {
+        "timestamp": "2024-03-27 23:20:00",
+        "temperature": 21.98,
+        "humidity": 45.56
+    },
+    {
+        "timestamp": "2024-03-27 23:30:00",
+        "temperature": 24.71,
+        "humidity": 48.27
+    },
+    {
+        "timestamp": "2024-03-27 23:40:00",
+        "temperature": 21.83,
+        "humidity": 43.39
+    },
+    {
+        "timestamp": "2024-03-27 23:50:00",
+        "temperature": 20.91,
+        "humidity": 50.48
+    },
+    {
+        "timestamp": "2024-03-28 00:00:00",
+        "temperature": 24.04,
+        "humidity": 43.59
+    },
+    {
+        "timestamp": "2024-03-28 00:10:00",
+        "temperature": 20.8,
+        "humidity": 42.75
+    },
+    {
+        "timestamp": "2024-03-28 00:20:00",
+        "temperature": 21.89,
+        "humidity": 45.63
+    },
+    {
+        "timestamp": "2024-03-28 00:30:00",
+        "temperature": 20.93,
+        "humidity": 41.59
+    },
+    {
+        "timestamp": "2024-03-28 00:40:00",
+        "temperature": 22.81,
+        "humidity": 36.35
+    },
+    {
+        "timestamp": "2024-03-28 00:50:00",
+        "temperature": 23.74,
+        "humidity": 44.34
+    },
+    {
+        "timestamp": "2024-03-28 01:00:00",
+        "temperature": 22.58,
+        "humidity": 42.22
+    },
+    {
+        "timestamp": "2024-03-28 01:10:00",
+        "temperature": 25.57,
+        "humidity": 39.35
+    },
+    {
+        "timestamp": "2024-03-28 01:20:00",
+        "temperature": 21.31,
+        "humidity": 38.2
+    },
+    {
+        "timestamp": "2024-03-28 01:30:00",
+        "temperature": 22.8,
+        "humidity": 51.4
+    },
+    {
+        "timestamp": "2024-03-28 01:40:00",
+        "temperature": 25.93,
+        "humidity": 51.6
+    },
+    {
+        "timestamp": "2024-03-28 01:50:00",
+        "temperature": 21.66,
+        "humidity": 50.36
+    },
+    {
+        "timestamp": "2024-03-28 02:00:00",
+        "temperature": 23.04,
+        "humidity": 37.09
+    },
+    {
+        "timestamp": "2024-03-28 02:10:00",
+        "temperature": 20.92,
+        "humidity": 40.97
+    },
+    {
+        "timestamp": "2024-03-28 02:20:00",
+        "temperature": 21.78,
+        "humidity": 36.38
+    },
+    {
+        "timestamp": "2024-03-28 02:30:00",
+        "temperature": 22.63,
+        "humidity": 40.41
+    },
+    {
+        "timestamp": "2024-03-28 02:40:00",
+        "temperature": 25.63,
+        "humidity": 38.3
+    },
+    {
+        "timestamp": "2024-03-28 02:50:00",
+        "temperature": 24.12,
+        "humidity": 41.19
+    },
+    {
+        "timestamp": "2024-03-28 03:00:00",
+        "temperature": 24.71,
+        "humidity": 47.17
+    },
+    {
+        "timestamp": "2024-03-28 03:10:00",
+        "temperature": 25.89,
+        "humidity": 38.82
+    },
+    {
+        "timestamp": "2024-03-28 03:20:00",
+        "temperature": 22.97,
+        "humidity": 45.06
+    },
+    {
+        "timestamp": "2024-03-28 03:30:00",
+        "temperature": 20.33,
+        "humidity": 36.12
+    },
+    {
+        "timestamp": "2024-03-28 03:40:00",
+        "temperature": 22.48,
+        "humidity": 37.86
+    },
+    {
+        "timestamp": "2024-03-28 03:50:00",
+        "temperature": 20.5,
+        "humidity": 39.79
+    },
+    {
+        "timestamp": "2024-03-28 04:00:00",
+        "temperature": 21.0,
+        "humidity": 39.35
+    },
+    {
+        "timestamp": "2024-03-28 04:10:00",
+        "temperature": 22.07,
+        "humidity": 49.3
+    },
+    {
+        "timestamp": "2024-03-28 04:20:00",
+        "temperature": 22.69,
+        "humidity": 46.25
+    },
+    {
+        "timestamp": "2024-03-28 04:30:00",
+        "temperature": 25.81,
+        "humidity": 49.2
+    },
+    {
+        "timestamp": "2024-03-28 04:40:00",
+        "temperature": 24.87,
+        "humidity": 41.99
+    },
+    {
+        "timestamp": "2024-03-28 04:50:00",
+        "temperature": 25.25,
+        "humidity": 42.89
+    },
+    {
+        "timestamp": "2024-03-28 05:00:00",
+        "temperature": 22.33,
+        "humidity": 50.92
+    },
+    {
+        "timestamp": "2024-03-28 05:10:00",
+        "temperature": 20.42,
+        "humidity": 50.01
+    },
+    {
+        "timestamp": "2024-03-28 05:20:00",
+        "temperature": 20.97,
+        "humidity": 51.38
+    },
+    {
+        "timestamp": "2024-03-28 05:30:00",
+        "temperature": 20.06,
+        "humidity": 37.66
+    },
+    {
+        "timestamp": "2024-03-28 05:40:00",
+        "temperature": 22.46,
+        "humidity": 39.75
+    },
+    {
+        "timestamp": "2024-03-28 05:50:00",
+        "temperature": 21.5,
+        "humidity": 38.57
+    },
+    {
+        "timestamp": "2024-03-28 06:00:00",
+        "temperature": 20.12,
+        "humidity": 36.26
+    },
+    {
+        "timestamp": "2024-03-28 06:10:00",
+        "temperature": 25.04,
+        "humidity": 44.73
+    },
+    {
+        "timestamp": "2024-03-28 06:20:00",
+        "temperature": 22.48,
+        "humidity": 48.13
+    },
+    {
+        "timestamp": "2024-03-28 06:30:00",
+        "temperature": 22.62,
+        "humidity": 40.41
+    },
+    {
+        "timestamp": "2024-03-28 06:40:00",
+        "temperature": 22.83,
+        "humidity": 38.45
+    },
+    {
+        "timestamp": "2024-03-28 06:50:00",
+        "temperature": 20.15,
+        "humidity": 49.78
+    },
+    {
+        "timestamp": "2024-03-28 07:00:00",
+        "temperature": 23.54,
+        "humidity": 43.07
+    },
+    {
+        "timestamp": "2024-03-28 07:10:00",
+        "temperature": 22.38,
+        "humidity": 50.43
+    },
+    {
+        "timestamp": "2024-03-28 07:20:00",
+        "temperature": 25.06,
+        "humidity": 50.24
+    },
+    {
+        "timestamp": "2024-03-28 07:30:00",
+        "temperature": 25.15,
+        "humidity": 43.3
+    },
+    {
+        "timestamp": "2024-03-28 07:40:00",
+        "temperature": 20.42,
+        "humidity": 47.86
+    },
+    {
+        "timestamp": "2024-03-28 07:50:00",
+        "temperature": 25.32,
+        "humidity": 42.51
+    },
+    {
+        "timestamp": "2024-03-28 08:00:00",
+        "temperature": 20.71,
+        "humidity": 44.43
+    },
+    {
+        "timestamp": "2024-03-28 08:10:00",
+        "temperature": 23.06,
+        "humidity": 36.28
+    },
+    {
+        "timestamp": "2024-03-28 08:20:00",
+        "temperature": 20.11,
+        "humidity": 48.08
+    },
+    {
+        "timestamp": "2024-03-28 08:30:00",
+        "temperature": 24.48,
+        "humidity": 45.72
+    },
+    {
+        "timestamp": "2024-03-28 08:40:00",
+        "temperature": 23.57,
+        "humidity": 42.88
+    },
+    {
+        "timestamp": "2024-03-28 08:50:00",
+        "temperature": 25.34,
+        "humidity": 37.5
+    },
+    {
+        "timestamp": "2024-03-28 09:00:00",
+        "temperature": 20.71,
+        "humidity": 43.47
+    },
+    {
+        "timestamp": "2024-03-28 09:10:00",
+        "temperature": 25.26,
+        "humidity": 50.33
+    },
+    {
+        "timestamp": "2024-03-28 09:20:00",
+        "temperature": 23.08,
+        "humidity": 41.16
+    },
+    {
+        "timestamp": "2024-03-28 09:30:00",
+        "temperature": 24.57,
+        "humidity": 41.26
+    },
+    {
+        "timestamp": "2024-03-28 09:40:00",
+        "temperature": 20.28,
+        "humidity": 48.18
+    },
+    {
+        "timestamp": "2024-03-28 09:50:00",
+        "temperature": 23.07,
+        "humidity": 43.67
+    },
+    {
+        "timestamp": "2024-03-28 10:00:00",
+        "temperature": 25.22,
+        "humidity": 48.19
+    },
+    {
+        "timestamp": "2024-03-28 10:10:00",
+        "temperature": 21.19,
+        "humidity": 36.49
+    },
+    {
+        "timestamp": "2024-03-28 10:20:00",
+        "temperature": 20.85,
+        "humidity": 40.23
+    },
+    {
+        "timestamp": "2024-03-28 10:30:00",
+        "temperature": 21.65,
+        "humidity": 46.14
+    },
+    {
+        "timestamp": "2024-03-28 10:40:00",
+        "temperature": 24.7,
+        "humidity": 46.14
+    },
+    {
+        "timestamp": "2024-03-28 10:50:00",
+        "temperature": 21.2,
+        "humidity": 42.94
+    },
+    {
+        "timestamp": "2024-03-28 11:00:00",
+        "temperature": 20.36,
+        "humidity": 51.63
+    },
+    {
+        "timestamp": "2024-03-28 11:10:00",
+        "temperature": 21.88,
+        "humidity": 42.38
+    },
+    {
+        "timestamp": "2024-03-28 11:20:00",
+        "temperature": 23.45,
+        "humidity": 38.12
+    },
+    {
+        "timestamp": "2024-03-28 11:30:00",
+        "temperature": 20.11,
+        "humidity": 37.57
+    },
+    {
+        "timestamp": "2024-03-28 11:40:00",
+        "temperature": 25.48,
+        "humidity": 47.98
+    },
+    {
+        "timestamp": "2024-03-28 11:50:00",
+        "temperature": 25.36,
+        "humidity": 40.91
+    },
+    {
+        "timestamp": "2024-03-28 12:00:00",
+        "temperature": 25.45,
+        "humidity": 50.32
+    },
+    {
+        "timestamp": "2024-03-28 12:10:00",
+        "temperature": 22.47,
+        "humidity": 50.87
+    },
+    {
+        "timestamp": "2024-03-28 12:20:00",
+        "temperature": 22.8,
+        "humidity": 46.26
+    },
+    {
+        "timestamp": "2024-03-28 12:30:00",
+        "temperature": 25.68,
+        "humidity": 45.72
+    },
+    {
+        "timestamp": "2024-03-28 12:40:00",
+        "temperature": 24.37,
+        "humidity": 40.97
+    },
+    {
+        "timestamp": "2024-03-28 12:50:00",
+        "temperature": 25.83,
+        "humidity": 47.04
+    },
+    {
+        "timestamp": "2024-03-28 13:00:00",
+        "temperature": 24.83,
+        "humidity": 39.14
+    },
+    {
+        "timestamp": "2024-03-28 13:10:00",
+        "temperature": 20.81,
+        "humidity": 51.06
+    },
+    {
+        "timestamp": "2024-03-28 13:20:00",
+        "temperature": 21.24,
+        "humidity": 47.92
+    },
+    {
+        "timestamp": "2024-03-28 13:30:00",
+        "temperature": 20.58,
+        "humidity": 36.78
+    },
+    {
+        "timestamp": "2024-03-28 13:40:00",
+        "temperature": 21.66,
+        "humidity": 51.04
+    },
+    {
+        "timestamp": "2024-03-28 13:50:00",
+        "temperature": 21.98,
+        "humidity": 42.44
+    },
+    {
+        "timestamp": "2024-03-28 14:00:00",
+        "temperature": 20.23,
+        "humidity": 41.79
+    },
+    {
+        "timestamp": "2024-03-28 14:10:00",
+        "temperature": 24.03,
+        "humidity": 45.3
+    },
+    {
+        "timestamp": "2024-03-28 14:20:00",
+        "temperature": 20.46,
+        "humidity": 46.69
+    },
+    {
+        "timestamp": "2024-03-28 14:30:00",
+        "temperature": 25.62,
+        "humidity": 45.94
+    },
+    {
+        "timestamp": "2024-03-28 14:40:00",
+        "temperature": 21.45,
+        "humidity": 39.71
+    },
+    {
+        "timestamp": "2024-03-28 14:50:00",
+        "temperature": 20.24,
+        "humidity": 37.59
+    },
+    {
+        "timestamp": "2024-03-28 15:00:00",
+        "temperature": 20.19,
+        "humidity": 49.19
+    },
+    {
+        "timestamp": "2024-03-28 15:10:00",
+        "temperature": 21.94,
+        "humidity": 42.44
+    },
+    {
+        "timestamp": "2024-03-28 15:20:00",
+        "temperature": 24.26,
+        "humidity": 41.9
+    },
+    {
+        "timestamp": "2024-03-28 15:30:00",
+        "temperature": 24.81,
+        "humidity": 47.04
+    },
+    {
+        "timestamp": "2024-03-28 15:40:00",
+        "temperature": 21.23,
+        "humidity": 47.5
+    },
+    {
+        "timestamp": "2024-03-28 15:50:00",
+        "temperature": 24.37,
+        "humidity": 43.89
+    },
+    {
+        "timestamp": "2024-03-28 16:00:00",
+        "temperature": 22.09,
+        "humidity": 41.16
+    },
+    {
+        "timestamp": "2024-03-28 16:10:00",
+        "temperature": 22.7,
+        "humidity": 48.4
+    },
+    {
+        "timestamp": "2024-03-28 16:20:00",
+        "temperature": 23.09,
+        "humidity": 38.31
+    },
+    {
+        "timestamp": "2024-03-28 16:30:00",
+        "temperature": 22.41,
+        "humidity": 43.56
+    },
+    {
+        "timestamp": "2024-03-28 16:40:00",
+        "temperature": 22.71,
+        "humidity": 47.39
+    },
+    {
+        "timestamp": "2024-03-28 16:50:00",
+        "temperature": 25.98,
+        "humidity": 40.19
+    },
+    {
+        "timestamp": "2024-03-28 17:00:00",
+        "temperature": 23.02,
+        "humidity": 39.0
+    },
+    {
+        "timestamp": "2024-03-28 17:10:00",
+        "temperature": 20.64,
+        "humidity": 42.53
+    },
+    {
+        "timestamp": "2024-03-28 17:20:00",
+        "temperature": 20.36,
+        "humidity": 41.82
+    },
+    {
+        "timestamp": "2024-03-28 17:30:00",
+        "temperature": 25.38,
+        "humidity": 42.79
+    },
+    {
+        "timestamp": "2024-03-28 17:40:00",
+        "temperature": 21.79,
+        "humidity": 40.85
+    },
+    {
+        "timestamp": "2024-03-28 17:50:00",
+        "temperature": 21.34,
+        "humidity": 51.44
+    },
+    {
+        "timestamp": "2024-03-28 18:00:00",
+        "temperature": 21.38,
+        "humidity": 42.57
+    },
+    {
+        "timestamp": "2024-03-28 18:10:00",
+        "temperature": 25.74,
+        "humidity": 44.32
+    },
+    {
+        "timestamp": "2024-03-28 18:20:00",
+        "temperature": 22.84,
+        "humidity": 48.26
+    },
+    {
+        "timestamp": "2024-03-28 18:30:00",
+        "temperature": 23.05,
+        "humidity": 40.82
+    },
+    {
+        "timestamp": "2024-03-28 18:40:00",
+        "temperature": 21.19,
+        "humidity": 44.36
+    },
+    {
+        "timestamp": "2024-03-28 18:50:00",
+        "temperature": 21.53,
+        "humidity": 46.04
+    },
+    {
+        "timestamp": "2024-03-28 19:00:00",
+        "temperature": 25.87,
+        "humidity": 39.09
+    },
+    {
+        "timestamp": "2024-03-28 19:10:00",
+        "temperature": 21.62,
+        "humidity": 36.75
+    },
+    {
+        "timestamp": "2024-03-28 19:20:00",
+        "temperature": 25.98,
+        "humidity": 45.68
+    },
+    {
+        "timestamp": "2024-03-28 19:30:00",
+        "temperature": 20.76,
+        "humidity": 43.18
+    },
+    {
+        "timestamp": "2024-03-28 19:40:00",
+        "temperature": 20.63,
+        "humidity": 43.79
+    },
+    {
+        "timestamp": "2024-03-28 19:50:00",
+        "temperature": 21.95,
+        "humidity": 51.75
+    },
+    {
+        "timestamp": "2024-03-28 20:00:00",
+        "temperature": 24.57,
+        "humidity": 41.1
+    },
+    {
+        "timestamp": "2024-03-28 20:10:00",
+        "temperature": 25.94,
+        "humidity": 48.94
+    },
+    {
+        "timestamp": "2024-03-28 20:20:00",
+        "temperature": 23.95,
+        "humidity": 42.48
+    },
+    {
+        "timestamp": "2024-03-28 20:30:00",
+        "temperature": 21.63,
+        "humidity": 40.8
+    },
+    {
+        "timestamp": "2024-03-28 20:40:00",
+        "temperature": 21.38,
+        "humidity": 36.63
+    },
+    {
+        "timestamp": "2024-03-28 20:50:00",
+        "temperature": 23.99,
+        "humidity": 48.2
+    },
+    {
+        "timestamp": "2024-03-28 21:00:00",
+        "temperature": 25.23,
+        "humidity": 38.25
+    },
+    {
+        "timestamp": "2024-03-28 21:10:00",
+        "temperature": 22.34,
+        "humidity": 51.15
+    },
+    {
+        "timestamp": "2024-03-28 21:20:00",
+        "temperature": 23.17,
+        "humidity": 37.17
+    },
+    {
+        "timestamp": "2024-03-28 21:30:00",
+        "temperature": 25.15,
+        "humidity": 39.53
+    },
+    {
+        "timestamp": "2024-03-28 21:40:00",
+        "temperature": 21.88,
+        "humidity": 46.36
+    },
+    {
+        "timestamp": "2024-03-28 21:50:00",
+        "temperature": 25.18,
+        "humidity": 50.68
+    },
+    {
+        "timestamp": "2024-03-28 22:00:00",
+        "temperature": 20.01,
+        "humidity": 38.96
+    },
+    {
+        "timestamp": "2024-03-28 22:10:00",
+        "temperature": 20.95,
+        "humidity": 47.92
+    },
+    {
+        "timestamp": "2024-03-28 22:20:00",
+        "temperature": 21.74,
+        "humidity": 46.12
+    },
+    {
+        "timestamp": "2024-03-28 22:30:00",
         "temperature": 25.0,
-        "humidity": 54.83344562160678
+        "humidity": 40.6
     },
     {
-        "timestamp": "2024-03-26 22:00:29",
-        "temperature": 24.88480883491879,
-        "humidity": 57.426715447282895
+        "timestamp": "2024-03-28 22:40:00",
+        "temperature": 20.29,
+        "humidity": 49.12
     },
     {
-        "timestamp": "2024-03-26 22:00:39",
-        "temperature": 20.18237047622954,
-        "humidity": 50.10289943199154
+        "timestamp": "2024-03-28 22:50:00",
+        "temperature": 24.96,
+        "humidity": 36.2
     },
     {
-        "timestamp": "2024-03-26 22:00:49",
-        "temperature": 24.56838452314351,
-        "humidity": 53.87676592844323
+        "timestamp": "2024-03-28 23:00:00",
+        "temperature": 23.93,
+        "humidity": 39.36
     },
     {
-        "timestamp": "2024-03-26 22:00:59",
-        "temperature": 20.09526413966478,
-        "humidity": 54.320218504137024
+        "timestamp": "2024-03-28 23:10:00",
+        "temperature": 20.65,
+        "humidity": 46.3
     },
     {
-        "timestamp": "2024-03-26 22:01:09",
-        "temperature": 24.68743153551835,
-        "humidity": 50.34844142526499
+        "timestamp": "2024-03-28 23:20:00",
+        "temperature": 20.18,
+        "humidity": 36.04
     },
     {
-        "timestamp": "2024-03-26 22:01:19",
-        "temperature": 23.865082311820732,
-        "humidity": 58.934596534869705
+        "timestamp": "2024-03-28 23:30:00",
+        "temperature": 21.76,
+        "humidity": 38.9
     },
     {
-        "timestamp": "2024-03-26 22:01:29",
-        "temperature": 21.38146533537174,
-        "humidity": 59.75418408019921
+        "timestamp": "2024-03-28 23:40:00",
+        "temperature": 21.24,
+        "humidity": 51.9
     },
     {
-        "timestamp": "2024-03-26 22:01:39",
-        "temperature": 20.44884912750629,
-        "humidity": 54.537212071374476
+        "timestamp": "2024-03-28 23:50:00",
+        "temperature": 21.52,
+        "humidity": 38.54
     },
     {
-        "timestamp": "2024-03-26 22:01:49",
-        "temperature": 21.119486295856785,
-        "humidity": 56.94392084952577
+        "timestamp": "2024-03-29 00:00:00",
+        "temperature": 23.07,
+        "humidity": 41.6
     },
     {
-        "timestamp": "2024-03-26 22:01:59",
-        "temperature": 24.426261354710103,
-        "humidity": 58.87570581160825
+        "timestamp": "2024-03-29 00:10:00",
+        "temperature": 25.01,
+        "humidity": 43.96
     },
     {
-        "timestamp": "2024-03-26 22:02:09",
-        "temperature": 22.369514610777497,
-        "humidity": 50.73717706470046
+        "timestamp": "2024-03-29 00:20:00",
+        "temperature": 25.54,
+        "humidity": 40.58
     },
     {
-        "timestamp": "2024-03-26 22:02:19",
-        "temperature": 22.478341339994262,
-        "humidity": 52.291233212381
+        "timestamp": "2024-03-29 00:30:00",
+        "temperature": 21.34,
+        "humidity": 39.45
     },
     {
-        "timestamp": "2024-03-26 22:02:29",
-        "temperature": 23.345836638892845,
-        "humidity": 55.62008384895602
+        "timestamp": "2024-03-29 00:40:00",
+        "temperature": 25.48,
+        "humidity": 46.28
     },
     {
-        "timestamp": "2024-03-26 22:02:39",
-        "temperature": 22.712675930286796,
-        "humidity": 54.00789448284286
+        "timestamp": "2024-03-29 00:50:00",
+        "temperature": 21.99,
+        "humidity": 38.49
     },
     {
-        "timestamp": "2024-03-26 22:02:49",
-        "temperature": 23.814017651714593,
-        "humidity": 51.81072169192209
+        "timestamp": "2024-03-29 01:00:00",
+        "temperature": 21.85,
+        "humidity": 40.56
     },
     {
-        "timestamp": "2024-03-26 22:02:59",
-        "temperature": 21.132576071421582,
-        "humidity": 54.302127077496486
+        "timestamp": "2024-03-29 01:10:00",
+        "temperature": 22.25,
+        "humidity": 45.44
     },
     {
-        "timestamp": "2024-03-26 22:03:09",
-        "temperature": 21.019307211397045,
-        "humidity": 59.766162587572055
+        "timestamp": "2024-03-29 01:20:00",
+        "temperature": 20.47,
+        "humidity": 38.4
     },
     {
-        "timestamp": "2024-03-26 22:03:19",
-        "temperature": 24.713463024284863,
-        "humidity": 56.036824177148134
+        "timestamp": "2024-03-29 01:30:00",
+        "temperature": 25.38,
+        "humidity": 49.24
     },
     {
-        "timestamp": "2024-03-26 22:03:29",
-        "temperature": 21.167988239185597,
-        "humidity": 55.03635572554502
+        "timestamp": "2024-03-29 01:40:00",
+        "temperature": 20.89,
+        "humidity": 41.05
     },
     {
-        "timestamp": "2024-03-26 22:03:39",
-        "temperature": 23.319060416898516,
-        "humidity": 59.36533665122439
+        "timestamp": "2024-03-29 01:50:00",
+        "temperature": 21.07,
+        "humidity": 42.06
     },
     {
-        "timestamp": "2024-03-26 22:03:49",
-        "temperature": 22.540017905062996,
-        "humidity": 56.51007705221688
+        "timestamp": "2024-03-29 02:00:00",
+        "temperature": 21.0,
+        "humidity": 47.35
     },
     {
-        "timestamp": "2024-03-26 22:03:59",
-        "temperature": 21.669535731756213,
-        "humidity": 53.14388906202837
+        "timestamp": "2024-03-29 02:10:00",
+        "temperature": 22.73,
+        "humidity": 36.99
     },
     {
-        "timestamp": "2024-03-26 22:04:09",
-        "temperature": 20.43045693520522,
-        "humidity": 59.85611654600817
+        "timestamp": "2024-03-29 02:20:00",
+        "temperature": 24.71,
+        "humidity": 49.48
     },
     {
-        "timestamp": "2024-03-26 22:04:19",
-        "temperature": 23.35548096125049,
-        "humidity": 56.78504057023791
+        "timestamp": "2024-03-29 02:30:00",
+        "temperature": 24.72,
+        "humidity": 46.62
     },
     {
-        "timestamp": "2024-03-26 22:04:29",
-        "temperature": 20.658629066250434,
-        "humidity": 51.267503961237416
+        "timestamp": "2024-03-29 02:40:00",
+        "temperature": 24.13,
+        "humidity": 37.37
     },
     {
-        "timestamp": "2024-03-26 22:04:39",
-        "temperature": 23.375453315686368,
-        "humidity": 55.758624579880255
+        "timestamp": "2024-03-29 02:50:00",
+        "temperature": 22.5,
+        "humidity": 39.91
     },
     {
-        "timestamp": "2024-03-26 22:04:49",
-        "temperature": 24.92164476591288,
-        "humidity": 55.069518681297076
+        "timestamp": "2024-03-29 03:00:00",
+        "temperature": 22.43,
+        "humidity": 42.76
     },
     {
-        "timestamp": "2024-03-26 22:04:59",
-        "temperature": 21.352064750180563,
-        "humidity": 59.05992672120147
+        "timestamp": "2024-03-29 03:10:00",
+        "temperature": 20.43,
+        "humidity": 48.02
     },
     {
-        "timestamp": "2024-03-26 22:05:09",
-        "temperature": 21.803717619365344,
-        "humidity": 54.02435079705397
+        "timestamp": "2024-03-29 03:20:00",
+        "temperature": 20.88,
+        "humidity": 49.23
     },
     {
-        "timestamp": "2024-03-26 22:05:19",
-        "temperature": 22.244474356436697,
-        "humidity": 50.54768442247933
+        "timestamp": "2024-03-29 03:30:00",
+        "temperature": 25.38,
+        "humidity": 40.67
     },
     {
-        "timestamp": "2024-03-26 22:05:29",
-        "temperature": 22.882266959140733,
-        "humidity": 52.56494882641094
+        "timestamp": "2024-03-29 03:40:00",
+        "temperature": 24.1,
+        "humidity": 41.42
     },
     {
-        "timestamp": "2024-03-26 22:05:39",
-        "temperature": 22.991262618131596,
-        "humidity": 56.84071720816207
+        "timestamp": "2024-03-29 03:50:00",
+        "temperature": 21.77,
+        "humidity": 38.47
     },
     {
-        "timestamp": "2024-03-26 22:05:49",
-        "temperature": 24.602427053010928,
-        "humidity": 52.95585744525375
+        "timestamp": "2024-03-29 04:00:00",
+        "temperature": 24.56,
+        "humidity": 39.81
     },
     {
-        "timestamp": "2024-03-26 22:05:59",
-        "temperature": 21.430479591063417,
-        "humidity": 51.9793589829657
+        "timestamp": "2024-03-29 04:10:00",
+        "temperature": 25.28,
+        "humidity": 42.07
     },
     {
-        "timestamp": "2024-03-26 22:06:09",
-        "temperature": 25.0,
-        "humidity": 57.978234067852654
+        "timestamp": "2024-03-29 04:20:00",
+        "temperature": 21.98,
+        "humidity": 45.1
     },
     {
-        "timestamp": "2024-03-26 22:06:19",
-        "temperature": 24.93380898217318,
-        "humidity": 54.25689674895728
+        "timestamp": "2024-03-29 04:30:00",
+        "temperature": 23.25,
+        "humidity": 37.72
     },
     {
-        "timestamp": "2024-03-26 22:06:29",
-        "temperature": 21.736756780624226,
-        "humidity": 60.0
+        "timestamp": "2024-03-29 04:40:00",
+        "temperature": 20.61,
+        "humidity": 37.78
     },
     {
-        "timestamp": "2024-03-26 22:06:39",
-        "temperature": 21.274723385645355,
-        "humidity": 57.2801965703055
+        "timestamp": "2024-03-29 04:50:00",
+        "temperature": 21.94,
+        "humidity": 45.86
     },
     {
-        "timestamp": "2024-03-26 22:06:49",
-        "temperature": 23.20356874367649,
-        "humidity": 58.92180401857348
+        "timestamp": "2024-03-29 05:00:00",
+        "temperature": 23.03,
+        "humidity": 50.31
     },
     {
-        "timestamp": "2024-03-26 22:06:59",
-        "temperature": 20.364446783516573,
-        "humidity": 56.348737968645686
+        "timestamp": "2024-03-29 05:10:00",
+        "temperature": 23.56,
+        "humidity": 38.88
     },
     {
-        "timestamp": "2024-03-26 22:07:09",
-        "temperature": 22.52318592254267,
-        "humidity": 57.10576826573093
+        "timestamp": "2024-03-29 05:20:00",
+        "temperature": 24.25,
+        "humidity": 44.06
     },
     {
-        "timestamp": "2024-03-26 22:07:19",
-        "temperature": 20.789928886403754,
-        "humidity": 58.931012580700546
+        "timestamp": "2024-03-29 05:30:00",
+        "temperature": 20.74,
+        "humidity": 37.61
     },
     {
-        "timestamp": "2024-03-26 22:07:29",
-        "temperature": 20.615212888575236,
-        "humidity": 52.77559716480277
+        "timestamp": "2024-03-29 05:40:00",
+        "temperature": 24.97,
+        "humidity": 50.24
     },
     {
-        "timestamp": "2024-03-26 22:07:39",
-        "temperature": 22.753256454033348,
-        "humidity": 50.874780565884116
+        "timestamp": "2024-03-29 05:50:00",
+        "temperature": 20.69,
+        "humidity": 42.11
     },
     {
-        "timestamp": "2024-03-26 22:07:49",
-        "temperature": 21.549634602337317,
-        "humidity": 59.156441713205176
+        "timestamp": "2024-03-29 06:00:00",
+        "temperature": 20.9,
+        "humidity": 46.17
     },
     {
-        "timestamp": "2024-03-26 22:07:59",
-        "temperature": 20.748656369790126,
-        "humidity": 52.79134970634855
+        "timestamp": "2024-03-29 06:10:00",
+        "temperature": 20.87,
+        "humidity": 43.63
     },
     {
-        "timestamp": "2024-03-26 22:08:09",
-        "temperature": 24.783670650416376,
-        "humidity": 53.07246548380181
+        "timestamp": "2024-03-29 06:20:00",
+        "temperature": 20.41,
+        "humidity": 43.19
     },
     {
-        "timestamp": "2024-03-26 22:08:19",
-        "temperature": 21.52533546003614,
-        "humidity": 54.59689482716941
+        "timestamp": "2024-03-29 06:30:00",
+        "temperature": 23.01,
+        "humidity": 47.4
     },
     {
-        "timestamp": "2024-03-26 22:08:29",
-        "temperature": 21.668637669457492,
-        "humidity": 57.028844662305474
+        "timestamp": "2024-03-29 06:40:00",
+        "temperature": 21.69,
+        "humidity": 44.54
     },
     {
-        "timestamp": "2024-03-26 22:08:39",
-        "temperature": 24.343311975139677,
-        "humidity": 56.33815409935403
+        "timestamp": "2024-03-29 06:50:00",
+        "temperature": 21.42,
+        "humidity": 36.93
     },
     {
-        "timestamp": "2024-03-26 22:08:49",
-        "temperature": 25.0,
-        "humidity": 53.29656663397952
+        "timestamp": "2024-03-29 07:00:00",
+        "temperature": 20.12,
+        "humidity": 43.24
     },
     {
-        "timestamp": "2024-03-26 22:08:59",
-        "temperature": 21.927253411733027,
-        "humidity": 55.2586312868297
+        "timestamp": "2024-03-29 07:10:00",
+        "temperature": 22.11,
+        "humidity": 43.22
     },
     {
-        "timestamp": "2024-03-26 22:09:09",
-        "temperature": 24.475356142979326,
-        "humidity": 51.61935657744496
+        "timestamp": "2024-03-29 07:20:00",
+        "temperature": 22.2,
+        "humidity": 40.82
     },
     {
-        "timestamp": "2024-03-26 22:09:19",
-        "temperature": 24.363121065848112,
-        "humidity": 54.25089115173774
+        "timestamp": "2024-03-29 07:30:00",
+        "temperature": 21.77,
+        "humidity": 37.3
     },
     {
-        "timestamp": "2024-03-26 22:09:29",
-        "temperature": 22.509502034028333,
-        "humidity": 52.00080170733484
+        "timestamp": "2024-03-29 07:40:00",
+        "temperature": 20.55,
+        "humidity": 39.29
     },
     {
-        "timestamp": "2024-03-26 22:09:39",
-        "temperature": 20.7134405568764,
-        "humidity": 54.034133873436055
+        "timestamp": "2024-03-29 07:50:00",
+        "temperature": 21.55,
+        "humidity": 36.39
     },
     {
-        "timestamp": "2024-03-26 22:09:49",
-        "temperature": 21.210189532686986,
-        "humidity": 51.08957385985203
+        "timestamp": "2024-03-29 08:00:00",
+        "temperature": 21.93,
+        "humidity": 47.03
     },
     {
-        "timestamp": "2024-03-26 22:09:59",
-        "temperature": 23.602898000939213,
-        "humidity": 58.54706721349587
+        "timestamp": "2024-03-29 08:10:00",
+        "temperature": 20.25,
+        "humidity": 50.72
     },
     {
-        "timestamp": "2024-03-26 22:10:09",
-        "temperature": 22.539763640812858,
-        "humidity": 54.48093912857367
+        "timestamp": "2024-03-29 08:20:00",
+        "temperature": 21.41,
+        "humidity": 47.88
     },
     {
-        "timestamp": "2024-03-26 22:10:19",
-        "temperature": 24.291625878302515,
-        "humidity": 51.664471416508604
+        "timestamp": "2024-03-29 08:30:00",
+        "temperature": 22.38,
+        "humidity": 41.78
     },
     {
-        "timestamp": "2024-03-26 22:10:29",
-        "temperature": 23.16578510646275,
-        "humidity": 59.33180574932339
+        "timestamp": "2024-03-29 08:40:00",
+        "temperature": 22.58,
+        "humidity": 42.94
     },
     {
-        "timestamp": "2024-03-26 22:10:39",
-        "temperature": 22.699897624983826,
-        "humidity": 59.33846232661137
+        "timestamp": "2024-03-29 08:50:00",
+        "temperature": 23.88,
+        "humidity": 39.85
     },
     {
-        "timestamp": "2024-03-26 22:10:49",
-        "temperature": 23.500763452240374,
-        "humidity": 53.17794136825226
+        "timestamp": "2024-03-29 09:00:00",
+        "temperature": 21.09,
+        "humidity": 48.47
     },
     {
-        "timestamp": "2024-03-26 22:10:59",
-        "temperature": 21.189884717301833,
-        "humidity": 59.86990654298785
+        "timestamp": "2024-03-29 09:10:00",
+        "temperature": 25.58,
+        "humidity": 42.83
     },
     {
-        "timestamp": "2024-03-26 22:11:09",
-        "temperature": 22.41658691237168,
-        "humidity": 51.8419410494502
+        "timestamp": "2024-03-29 09:20:00",
+        "temperature": 23.99,
+        "humidity": 42.24
     },
     {
-        "timestamp": "2024-03-26 22:11:19",
-        "temperature": 21.18905948636295,
-        "humidity": 57.169410084473014
+        "timestamp": "2024-03-29 09:30:00",
+        "temperature": 24.15,
+        "humidity": 46.49
     },
     {
-        "timestamp": "2024-03-26 22:11:29",
-        "temperature": 24.346674149052888,
-        "humidity": 55.469907189326115
+        "timestamp": "2024-03-29 09:40:00",
+        "temperature": 24.57,
+        "humidity": 43.31
     },
     {
-        "timestamp": "2024-03-26 22:11:39",
-        "temperature": 20.94778695696698,
-        "humidity": 58.43310274106261
+        "timestamp": "2024-03-29 09:50:00",
+        "temperature": 22.34,
+        "humidity": 39.64
     },
     {
-        "timestamp": "2024-03-26 22:11:49",
-        "temperature": 21.791270045966872,
-        "humidity": 58.84813383760643
+        "timestamp": "2024-03-29 10:00:00",
+        "temperature": 20.32,
+        "humidity": 51.16
     },
     {
-        "timestamp": "2024-03-26 22:11:59",
-        "temperature": 22.528068439121967,
-        "humidity": 56.54719023400195
+        "timestamp": "2024-03-29 10:10:00",
+        "temperature": 22.58,
+        "humidity": 37.95
     },
     {
-        "timestamp": "2024-03-26 22:12:09",
-        "temperature": 23.12734675693784,
-        "humidity": 56.267244395786314
+        "timestamp": "2024-03-29 10:20:00",
+        "temperature": 20.82,
+        "humidity": 45.05
     },
     {
-        "timestamp": "2024-03-26 22:12:19",
-        "temperature": 20.0,
-        "humidity": 50.00835661593555
+        "timestamp": "2024-03-29 10:30:00",
+        "temperature": 25.8,
+        "humidity": 41.73
     },
     {
-        "timestamp": "2024-03-26 22:12:29",
-        "temperature": 20.774643720260823,
-        "humidity": 50.318238320653734
+        "timestamp": "2024-03-29 10:40:00",
+        "temperature": 24.08,
+        "humidity": 48.05
     },
     {
-        "timestamp": "2024-03-26 22:12:39",
-        "temperature": 20.0,
-        "humidity": 58.13229311178923
+        "timestamp": "2024-03-29 10:50:00",
+        "temperature": 25.36,
+        "humidity": 43.28
     },
     {
-        "timestamp": "2024-03-26 22:12:49",
-        "temperature": 20.76344480953124,
-        "humidity": 50.0
+        "timestamp": "2024-03-29 11:00:00",
+        "temperature": 21.59,
+        "humidity": 38.42
     },
     {
-        "timestamp": "2024-03-26 22:12:59",
-        "temperature": 24.303997904836557,
-        "humidity": 54.19157041573625
+        "timestamp": "2024-03-29 11:10:00",
+        "temperature": 24.04,
+        "humidity": 48.55
     },
     {
-        "timestamp": "2024-03-26 22:13:09",
-        "temperature": 22.801437765797576,
-        "humidity": 59.31781168468891
+        "timestamp": "2024-03-29 11:20:00",
+        "temperature": 20.5,
+        "humidity": 40.15
     },
     {
-        "timestamp": "2024-03-26 22:13:19",
-        "temperature": 22.456214880946625,
-        "humidity": 50.113503168557536
+        "timestamp": "2024-03-29 11:30:00",
+        "temperature": 23.55,
+        "humidity": 51.86
     },
     {
-        "timestamp": "2024-03-26 22:13:29",
-        "temperature": 24.988187678851187,
-        "humidity": 53.01865894989036
+        "timestamp": "2024-03-29 11:40:00",
+        "temperature": 22.41,
+        "humidity": 36.83
     },
     {
-        "timestamp": "2024-03-26 22:13:39",
-        "temperature": 20.86827755285237,
-        "humidity": 53.221895154535446
+        "timestamp": "2024-03-29 11:50:00",
+        "temperature": 22.39,
+        "humidity": 42.24
     },
     {
-        "timestamp": "2024-03-26 22:13:49",
-        "temperature": 20.0,
-        "humidity": 60.0
+        "timestamp": "2024-03-29 12:00:00",
+        "temperature": 25.83,
+        "humidity": 51.64
     },
     {
-        "timestamp": "2024-03-26 22:13:59",
-        "temperature": 20.0,
-        "humidity": 59.40713744711193
+        "timestamp": "2024-03-29 12:10:00",
+        "temperature": 23.57,
+        "humidity": 42.6
     },
     {
-        "timestamp": "2024-03-26 22:14:09",
-        "temperature": 23.140724979795934,
-        "humidity": 57.50217316155979
+        "timestamp": "2024-03-29 12:20:00",
+        "temperature": 23.41,
+        "humidity": 39.37
     },
     {
-        "timestamp": "2024-03-26 22:14:19",
-        "temperature": 23.940598328440874,
-        "humidity": 53.743135174250135
+        "timestamp": "2024-03-29 12:30:00",
+        "temperature": 21.98,
+        "humidity": 49.49
     },
     {
-        "timestamp": "2024-03-26 22:14:29",
-        "temperature": 22.259289707091806,
-        "humidity": 58.002805306775194
+        "timestamp": "2024-03-29 12:40:00",
+        "temperature": 20.96,
+        "humidity": 40.39
     },
     {
-        "timestamp": "2024-03-26 22:14:39",
-        "temperature": 20.0,
-        "humidity": 50.44831355819046
+        "timestamp": "2024-03-29 12:50:00",
+        "temperature": 22.89,
+        "humidity": 38.85
     },
     {
-        "timestamp": "2024-03-26 22:14:49",
-        "temperature": 22.40079065425741,
-        "humidity": 58.4016183030612
+        "timestamp": "2024-03-29 13:00:00",
+        "temperature": 22.55,
+        "humidity": 51.36
     },
     {
-        "timestamp": "2024-03-26 22:14:59",
-        "temperature": 20.94269096339537,
-        "humidity": 51.60930149893098
+        "timestamp": "2024-03-29 13:10:00",
+        "temperature": 20.38,
+        "humidity": 45.46
     },
     {
-        "timestamp": "2024-03-26 22:15:09",
-        "temperature": 20.0,
-        "humidity": 59.00473719161895
+        "timestamp": "2024-03-29 13:20:00",
+        "temperature": 25.23,
+        "humidity": 47.99
     },
     {
-        "timestamp": "2024-03-26 22:15:19",
-        "temperature": 20.288366941850846,
-        "humidity": 54.72405733656676
+        "timestamp": "2024-03-29 13:30:00",
+        "temperature": 20.67,
+        "humidity": 38.06
     },
     {
-        "timestamp": "2024-03-26 22:15:29",
-        "temperature": 20.0,
-        "humidity": 52.25997961528167
+        "timestamp": "2024-03-29 13:40:00",
+        "temperature": 25.59,
+        "humidity": 39.31
     },
     {
-        "timestamp": "2024-03-26 22:15:39",
-        "temperature": 24.999482381686747,
-        "humidity": 59.72809017219959
+        "timestamp": "2024-03-29 13:50:00",
+        "temperature": 25.96,
+        "humidity": 44.95
     },
     {
-        "timestamp": "2024-03-26 22:15:49",
-        "temperature": 23.21411167291469,
-        "humidity": 54.077388924846574
+        "timestamp": "2024-03-29 14:00:00",
+        "temperature": 25.46,
+        "humidity": 47.36
     },
     {
-        "timestamp": "2024-03-26 22:15:59",
-        "temperature": 22.995446472720896,
-        "humidity": 56.61376839670448
+        "timestamp": "2024-03-29 14:10:00",
+        "temperature": 24.69,
+        "humidity": 37.13
     },
     {
-        "timestamp": "2024-03-26 22:16:09",
-        "temperature": 22.295824595925694,
-        "humidity": 50.0
+        "timestamp": "2024-03-29 14:20:00",
+        "temperature": 21.52,
+        "humidity": 44.95
     },
     {
-        "timestamp": "2024-03-26 22:16:19",
-        "temperature": 20.0,
-        "humidity": 59.07776812270456
+        "timestamp": "2024-03-29 14:30:00",
+        "temperature": 21.22,
+        "humidity": 43.86
     },
     {
-        "timestamp": "2024-03-26 22:16:29",
-        "temperature": 21.35560337286567,
-        "humidity": 59.301990954526104
+        "timestamp": "2024-03-29 14:40:00",
+        "temperature": 22.36,
+        "humidity": 48.07
     },
     {
-        "timestamp": "2024-03-26 22:16:39",
-        "temperature": 22.166124549647943,
-        "humidity": 59.073732717364
+        "timestamp": "2024-03-29 14:50:00",
+        "temperature": 20.44,
+        "humidity": 40.92
     },
     {
-        "timestamp": "2024-03-26 22:16:49",
-        "temperature": 20.0,
-        "humidity": 54.13568093480251
+        "timestamp": "2024-03-29 15:00:00",
+        "temperature": 23.83,
+        "humidity": 47.24
     },
     {
-        "timestamp": "2024-03-26 22:16:59",
-        "temperature": 21.082027736998953,
-        "humidity": 51.2700345292423
+        "timestamp": "2024-03-29 15:10:00",
+        "temperature": 22.69,
+        "humidity": 39.41
     },
     {
-        "timestamp": "2024-03-26 22:17:09",
-        "temperature": 20.039606912328185,
-        "humidity": 57.73085129876308
+        "timestamp": "2024-03-29 15:20:00",
+        "temperature": 20.5,
+        "humidity": 37.56
     },
     {
-        "timestamp": "2024-03-26 22:17:19",
-        "temperature": 22.26409994775919,
-        "humidity": 50.0
+        "timestamp": "2024-03-29 15:30:00",
+        "temperature": 22.55,
+        "humidity": 41.76
     },
     {
-        "timestamp": "2024-03-26 22:17:29",
-        "temperature": 23.859899822144644,
-        "humidity": 59.738933698046324
+        "timestamp": "2024-03-29 15:40:00",
+        "temperature": 21.2,
+        "humidity": 48.84
     },
     {
-        "timestamp": "2024-03-26 22:17:39",
-        "temperature": 23.269548369334178,
-        "humidity": 50.70330740937819
+        "timestamp": "2024-03-29 15:50:00",
+        "temperature": 22.42,
+        "humidity": 51.48
     },
     {
-        "timestamp": "2024-03-26 22:17:49",
-        "temperature": 23.406295404413886,
-        "humidity": 55.57861142939803
+        "timestamp": "2024-03-29 16:00:00",
+        "temperature": 23.2,
+        "humidity": 36.29
     },
     {
-        "timestamp": "2024-03-26 22:17:59",
-        "temperature": 22.225620941445424,
-        "humidity": 53.271584594162434
+        "timestamp": "2024-03-29 16:10:00",
+        "temperature": 23.49,
+        "humidity": 37.5
     },
     {
-        "timestamp": "2024-03-26 22:18:09",
-        "temperature": 25.0,
-        "humidity": 59.36276557949967
+        "timestamp": "2024-03-29 16:20:00",
+        "temperature": 24.6,
+        "humidity": 39.78
     },
     {
-        "timestamp": "2024-03-26 22:18:19",
-        "temperature": 20.098583732514303,
-        "humidity": 51.84749921508104
+        "timestamp": "2024-03-29 16:30:00",
+        "temperature": 20.97,
+        "humidity": 40.46
     },
     {
-        "timestamp": "2024-03-26 22:18:29",
-        "temperature": 22.961029535028725,
-        "humidity": 59.42146974181967
+        "timestamp": "2024-03-29 16:40:00",
+        "temperature": 24.86,
+        "humidity": 46.57
     },
     {
-        "timestamp": "2024-03-26 22:18:39",
-        "temperature": 22.66929468781267,
-        "humidity": 52.21500936349925
+        "timestamp": "2024-03-29 16:50:00",
+        "temperature": 23.09,
+        "humidity": 43.05
     },
     {
-        "timestamp": "2024-03-26 22:18:49",
-        "temperature": 20.95364039076473,
-        "humidity": 53.12918404002284
+        "timestamp": "2024-03-29 17:00:00",
+        "temperature": 25.85,
+        "humidity": 50.22
     },
     {
-        "timestamp": "2024-03-26 22:18:59",
-        "temperature": 22.11192499816768,
-        "humidity": 54.167466311045544
+        "timestamp": "2024-03-29 17:10:00",
+        "temperature": 25.24,
+        "humidity": 43.88
     },
     {
-        "timestamp": "2024-03-26 22:19:09",
-        "temperature": 24.82136197097568,
-        "humidity": 52.84526999893134
+        "timestamp": "2024-03-29 17:20:00",
+        "temperature": 23.71,
+        "humidity": 41.78
     },
     {
-        "timestamp": "2024-03-26 22:19:19",
-        "temperature": 20.0,
-        "humidity": 51.35609839623138
+        "timestamp": "2024-03-29 17:30:00",
+        "temperature": 25.44,
+        "humidity": 41.32
     },
     {
-        "timestamp": "2024-03-26 22:19:29",
-        "temperature": 21.41377010419866,
-        "humidity": 59.868476894773124
+        "timestamp": "2024-03-29 17:40:00",
+        "temperature": 24.17,
+        "humidity": 37.18
     },
     {
-        "timestamp": "2024-03-26 22:19:39",
-        "temperature": 22.85331687593168,
-        "humidity": 58.39354610340037
+        "timestamp": "2024-03-29 17:50:00",
+        "temperature": 21.63,
+        "humidity": 44.44
     },
     {
-        "timestamp": "2024-03-26 22:19:49",
-        "temperature": 23.95483395959193,
-        "humidity": 55.8733298172621
+        "timestamp": "2024-03-29 18:00:00",
+        "temperature": 24.93,
+        "humidity": 49.7
     },
     {
-        "timestamp": "2024-03-26 22:19:59",
-        "temperature": 23.668152725403125,
-        "humidity": 58.33165830583996
+        "timestamp": "2024-03-29 18:10:00",
+        "temperature": 22.64,
+        "humidity": 37.21
     },
     {
-        "timestamp": "2024-03-26 22:20:09",
-        "temperature": 22.915160382046423,
-        "humidity": 53.14929480374295
+        "timestamp": "2024-03-29 18:20:00",
+        "temperature": 20.51,
+        "humidity": 45.05
     },
     {
-        "timestamp": "2024-03-26 22:20:19",
-        "temperature": 21.867804199801363,
-        "humidity": 57.084836105240264
+        "timestamp": "2024-03-29 18:30:00",
+        "temperature": 25.52,
+        "humidity": 43.33
     },
     {
-        "timestamp": "2024-03-26 22:20:29",
-        "temperature": 21.584658447463738,
-        "humidity": 57.51994510000723
+        "timestamp": "2024-03-29 18:40:00",
+        "temperature": 24.48,
+        "humidity": 36.48
     },
     {
-        "timestamp": "2024-03-26 22:20:39",
-        "temperature": 20.70584117412504,
-        "humidity": 54.80084154901071
+        "timestamp": "2024-03-29 18:50:00",
+        "temperature": 20.88,
+        "humidity": 43.78
     },
     {
-        "timestamp": "2024-03-26 22:20:49",
-        "temperature": 21.187207056607203,
-        "humidity": 53.36392107362855
+        "timestamp": "2024-03-29 19:00:00",
+        "temperature": 23.59,
+        "humidity": 40.55
     },
     {
-        "timestamp": "2024-03-26 22:20:59",
-        "temperature": 23.410159809833544,
-        "humidity": 53.066442412426134
+        "timestamp": "2024-03-29 19:10:00",
+        "temperature": 23.91,
+        "humidity": 46.99
     },
     {
-        "timestamp": "2024-03-26 22:21:09",
-        "temperature": 21.216497625787124,
-        "humidity": 51.34721105968803
+        "timestamp": "2024-03-29 19:20:00",
+        "temperature": 24.71,
+        "humidity": 39.49
     },
     {
-        "timestamp": "2024-03-26 22:21:19",
-        "temperature": 20.89868043156992,
-        "humidity": 55.04626657572249
+        "timestamp": "2024-03-29 19:30:00",
+        "temperature": 25.9,
+        "humidity": 51.1
     },
     {
-        "timestamp": "2024-03-26 22:21:29",
-        "temperature": 22.48691727845903,
-        "humidity": 58.442660240708626
+        "timestamp": "2024-03-29 19:40:00",
+        "temperature": 20.12,
+        "humidity": 48.13
     },
     {
-        "timestamp": "2024-03-26 22:21:39",
-        "temperature": 20.33509147717067,
-        "humidity": 58.40822623247796
+        "timestamp": "2024-03-29 19:50:00",
+        "temperature": 22.76,
+        "humidity": 46.5
     },
     {
-        "timestamp": "2024-03-26 22:21:49",
-        "temperature": 20.623996847623342,
-        "humidity": 54.46901038702812
+        "timestamp": "2024-03-29 20:00:00",
+        "temperature": 24.22,
+        "humidity": 48.46
     },
     {
-        "timestamp": "2024-03-26 22:21:59",
-        "temperature": 25.0,
-        "humidity": 53.31296262562795
+        "timestamp": "2024-03-29 20:10:00",
+        "temperature": 22.91,
+        "humidity": 40.14
     },
     {
-        "timestamp": "2024-03-26 22:22:09",
-        "temperature": 20.017295559126826,
-        "humidity": 57.52364333617576
+        "timestamp": "2024-03-29 20:20:00",
+        "temperature": 25.25,
+        "humidity": 48.28
     },
     {
-        "timestamp": "2024-03-26 22:22:19",
-        "temperature": 20.836844437073733,
-        "humidity": 55.5463854396748
+        "timestamp": "2024-03-29 20:30:00",
+        "temperature": 21.79,
+        "humidity": 36.3
     },
     {
-        "timestamp": "2024-03-26 22:22:29",
-        "temperature": 21.911379088603724,
-        "humidity": 56.330580673021146
+        "timestamp": "2024-03-29 20:40:00",
+        "temperature": 20.8,
+        "humidity": 45.16
     },
     {
-        "timestamp": "2024-03-26 22:22:39",
-        "temperature": 22.944411509598712,
-        "humidity": 54.137019923674075
+        "timestamp": "2024-03-29 20:50:00",
+        "temperature": 22.68,
+        "humidity": 37.89
     },
     {
-        "timestamp": "2024-03-26 22:22:49",
-        "temperature": 24.56493366277731,
-        "humidity": 54.67037400140567
+        "timestamp": "2024-03-29 21:00:00",
+        "temperature": 22.44,
+        "humidity": 43.12
     },
     {
-        "timestamp": "2024-03-26 22:22:59",
-        "temperature": 25.0,
-        "humidity": 50.817462647372324
+        "timestamp": "2024-03-29 21:10:00",
+        "temperature": 25.26,
+        "humidity": 43.86
     },
     {
-        "timestamp": "2024-03-26 22:23:09",
-        "temperature": 22.753201809495753,
-        "humidity": 56.08683712774805
+        "timestamp": "2024-03-29 21:20:00",
+        "temperature": 25.3,
+        "humidity": 50.25
     },
     {
-        "timestamp": "2024-03-26 22:23:19",
-        "temperature": 21.98735526243847,
-        "humidity": 54.33905591962621
+        "timestamp": "2024-03-29 21:30:00",
+        "temperature": 23.73,
+        "humidity": 49.5
     },
     {
-        "timestamp": "2024-03-26 22:23:29",
-        "temperature": 24.66190695070178,
-        "humidity": 57.91519900885423
+        "timestamp": "2024-03-29 21:40:00",
+        "temperature": 22.71,
+        "humidity": 49.02
     },
     {
-        "timestamp": "2024-03-26 22:23:39",
-        "temperature": 20.996088219764182,
-        "humidity": 57.93050471414224
+        "timestamp": "2024-03-29 21:50:00",
+        "temperature": 23.69,
+        "humidity": 49.22
     },
     {
-        "timestamp": "2024-03-26 22:23:49",
-        "temperature": 20.065346292955404,
-        "humidity": 59.39922441985036
+        "timestamp": "2024-03-29 22:00:00",
+        "temperature": 22.86,
+        "humidity": 48.25
     },
     {
-        "timestamp": "2024-03-26 22:23:59",
-        "temperature": 23.102996987009604,
-        "humidity": 58.74425713674026
+        "timestamp": "2024-03-29 22:10:00",
+        "temperature": 24.72,
+        "humidity": 43.35
     },
     {
-        "timestamp": "2024-03-26 22:24:09",
-        "temperature": 23.70537137401195,
-        "humidity": 54.37484736230732
+        "timestamp": "2024-03-29 22:20:00",
+        "temperature": 22.92,
+        "humidity": 47.54
     },
     {
-        "timestamp": "2024-03-26 22:24:19",
-        "temperature": 21.796535957907434,
-        "humidity": 56.375020620869336
+        "timestamp": "2024-03-29 22:30:00",
+        "temperature": 22.09,
+        "humidity": 50.75
     },
     {
-        "timestamp": "2024-03-26 22:24:29",
-        "temperature": 21.41556722895953,
-        "humidity": 58.01698596109651
+        "timestamp": "2024-03-29 22:40:00",
+        "temperature": 24.87,
+        "humidity": 51.78
     },
     {
-        "timestamp": "2024-03-26 22:24:39",
-        "temperature": 24.487350329932333,
-        "humidity": 53.34185114854797
+        "timestamp": "2024-03-29 22:50:00",
+        "temperature": 22.71,
+        "humidity": 38.93
     },
     {
-        "timestamp": "2024-03-26 22:24:49",
-        "temperature": 20.289786931310346,
-        "humidity": 52.74178275549473
+        "timestamp": "2024-03-29 23:00:00",
+        "temperature": 25.39,
+        "humidity": 39.49
     },
     {
-        "timestamp": "2024-03-26 22:24:59",
-        "temperature": 22.947394121755043,
-        "humidity": 50.74656018845115
+        "timestamp": "2024-03-29 23:10:00",
+        "temperature": 24.88,
+        "humidity": 44.08
     },
     {
-        "timestamp": "2024-03-26 22:25:09",
-        "temperature": 23.169575054274695,
-        "humidity": 58.88470064145665
+        "timestamp": "2024-03-29 23:20:00",
+        "temperature": 20.76,
+        "humidity": 44.78
     },
     {
-        "timestamp": "2024-03-26 22:25:19",
-        "temperature": 23.56301787415601,
-        "humidity": 58.90893423185567
+        "timestamp": "2024-03-29 23:30:00",
+        "temperature": 20.72,
+        "humidity": 48.63
     },
     {
-        "timestamp": "2024-03-26 22:25:29",
-        "temperature": 24.174210588127874,
-        "humidity": 51.84303562485426
+        "timestamp": "2024-03-29 23:40:00",
+        "temperature": 25.57,
+        "humidity": 45.44
     },
     {
-        "timestamp": "2024-03-26 22:25:39",
-        "temperature": 20.282550026946076,
-        "humidity": 54.30440313218291
+        "timestamp": "2024-03-29 23:50:00",
+        "temperature": 23.63,
+        "humidity": 43.51
     },
     {
-        "timestamp": "2024-03-26 22:25:49",
-        "temperature": 23.910986991894823,
-        "humidity": 55.31593556635176
+        "timestamp": "2024-03-30 00:00:00",
+        "temperature": 25.21,
+        "humidity": 37.32
     },
     {
-        "timestamp": "2024-03-26 22:25:59",
-        "temperature": 24.46605355037708,
-        "humidity": 50.97016771853216
+        "timestamp": "2024-03-30 00:10:00",
+        "temperature": 25.57,
+        "humidity": 43.59
     },
     {
-        "timestamp": "2024-03-26 22:26:09",
-        "temperature": 21.781528230421486,
-        "humidity": 58.74909498213847
+        "timestamp": "2024-03-30 00:20:00",
+        "temperature": 24.97,
+        "humidity": 38.4
     },
     {
-        "timestamp": "2024-03-26 22:26:19",
-        "temperature": 21.227645832668742,
-        "humidity": 56.044372370780906
+        "timestamp": "2024-03-30 00:30:00",
+        "temperature": 20.6,
+        "humidity": 47.58
     },
     {
-        "timestamp": "2024-03-26 22:26:29",
-        "temperature": 25.0,
-        "humidity": 53.21858776726013
+        "timestamp": "2024-03-30 00:40:00",
+        "temperature": 23.25,
+        "humidity": 36.79
     },
     {
-        "timestamp": "2024-03-26 22:26:39",
-        "temperature": 21.17358756775587,
-        "humidity": 54.2447564278188
+        "timestamp": "2024-03-30 00:50:00",
+        "temperature": 21.72,
+        "humidity": 46.08
     },
     {
-        "timestamp": "2024-03-26 22:26:49",
-        "temperature": 24.153353893275742,
-        "humidity": 58.943311777792815
+        "timestamp": "2024-03-30 01:00:00",
+        "temperature": 20.71,
+        "humidity": 36.43
     },
     {
-        "timestamp": "2024-03-26 22:26:59",
-        "temperature": 21.389666095742655,
-        "humidity": 58.18569123584204
+        "timestamp": "2024-03-30 01:10:00",
+        "temperature": 25.95,
+        "humidity": 51.96
     },
     {
-        "timestamp": "2024-03-26 22:27:09",
-        "temperature": 22.004720313566136,
-        "humidity": 50.617299963710444
+        "timestamp": "2024-03-30 01:20:00",
+        "temperature": 23.74,
+        "humidity": 39.76
     },
     {
-        "timestamp": "2024-03-26 22:27:19",
-        "temperature": 23.429261699742074,
-        "humidity": 54.22923701402019
+        "timestamp": "2024-03-30 01:30:00",
+        "temperature": 24.13,
+        "humidity": 42.74
     },
     {
-        "timestamp": "2024-03-26 22:27:29",
-        "temperature": 23.916469929936586,
-        "humidity": 54.1562703648577
+        "timestamp": "2024-03-30 01:40:00",
+        "temperature": 21.67,
+        "humidity": 47.2
     },
     {
-        "timestamp": "2024-03-26 22:27:39",
-        "temperature": 20.0,
-        "humidity": 52.42624625321205
+        "timestamp": "2024-03-30 01:50:00",
+        "temperature": 24.17,
+        "humidity": 49.7
     },
     {
-        "timestamp": "2024-03-26 22:27:49",
-        "temperature": 21.63204553962816,
-        "humidity": 52.052972611725636
+        "timestamp": "2024-03-30 02:00:00",
+        "temperature": 24.31,
+        "humidity": 47.52
     },
     {
-        "timestamp": "2024-03-26 22:27:59",
-        "temperature": 21.175685655190332,
-        "humidity": 55.4988161617494
+        "timestamp": "2024-03-30 02:10:00",
+        "temperature": 20.58,
+        "humidity": 44.58
     },
     {
-        "timestamp": "2024-03-26 22:28:09",
-        "temperature": 21.84738237711942,
-        "humidity": 56.74451011119526
+        "timestamp": "2024-03-30 02:20:00",
+        "temperature": 25.28,
+        "humidity": 49.71
     },
     {
-        "timestamp": "2024-03-26 22:28:19",
-        "temperature": 20.40826994599822,
-        "humidity": 59.858935970211405
+        "timestamp": "2024-03-30 02:30:00",
+        "temperature": 21.65,
+        "humidity": 46.71
     },
     {
-        "timestamp": "2024-03-26 22:28:29",
-        "temperature": 25.0,
-        "humidity": 55.350732983160114
+        "timestamp": "2024-03-30 02:40:00",
+        "temperature": 23.53,
+        "humidity": 50.19
     },
     {
-        "timestamp": "2024-03-26 22:28:39",
-        "temperature": 20.6057603534633,
-        "humidity": 56.811943660412325
+        "timestamp": "2024-03-30 02:50:00",
+        "temperature": 22.28,
+        "humidity": 48.32
     },
     {
-        "timestamp": "2024-03-26 22:28:49",
-        "temperature": 23.546592388549488,
-        "humidity": 57.13709001464123
+        "timestamp": "2024-03-30 03:00:00",
+        "temperature": 21.78,
+        "humidity": 42.77
     },
     {
-        "timestamp": "2024-03-26 22:28:59",
-        "temperature": 20.648253063943287,
-        "humidity": 58.62522218492956
+        "timestamp": "2024-03-30 03:10:00",
+        "temperature": 20.12,
+        "humidity": 40.68
     },
     {
-        "timestamp": "2024-03-26 22:29:09",
-        "temperature": 22.93964801341236,
-        "humidity": 55.78851300035428
+        "timestamp": "2024-03-30 03:20:00",
+        "temperature": 25.06,
+        "humidity": 47.1
     },
     {
-        "timestamp": "2024-03-26 22:29:19",
-        "temperature": 23.221424643609193,
-        "humidity": 58.922743333940694
+        "timestamp": "2024-03-30 03:30:00",
+        "temperature": 23.97,
+        "humidity": 50.78
     },
     {
-        "timestamp": "2024-03-26 22:29:29",
-        "temperature": 22.987413461090213,
-        "humidity": 55.72122186727991
+        "timestamp": "2024-03-30 03:40:00",
+        "temperature": 24.78,
+        "humidity": 42.97
     },
     {
-        "timestamp": "2024-03-26 22:29:39",
-        "temperature": 23.767232073929733,
-        "humidity": 60.0
+        "timestamp": "2024-03-30 03:50:00",
+        "temperature": 22.37,
+        "humidity": 37.71
     },
     {
-        "timestamp": "2024-03-26 22:29:49",
-        "temperature": 23.30008469757836,
-        "humidity": 57.760227392049785
+        "timestamp": "2024-03-30 04:00:00",
+        "temperature": 25.74,
+        "humidity": 44.96
     },
     {
-        "timestamp": "2024-03-26 22:29:59",
-        "temperature": 24.264836841130514,
-        "humidity": 58.19476498871906
+        "timestamp": "2024-03-30 04:10:00",
+        "temperature": 24.1,
+        "humidity": 39.88
     },
     {
-        "timestamp": "2024-03-26 22:30:09",
-        "temperature": 20.702229377300863,
-        "humidity": 55.39441994958489
+        "timestamp": "2024-03-30 04:20:00",
+        "temperature": 25.48,
+        "humidity": 36.85
     },
     {
-        "timestamp": "2024-03-26 22:30:19",
-        "temperature": 24.57626644493523,
-        "humidity": 53.45944958143294
+        "timestamp": "2024-03-30 04:30:00",
+        "temperature": 24.18,
+        "humidity": 49.6
     },
     {
-        "timestamp": "2024-03-26 22:30:29",
-        "temperature": 22.181178907828503,
-        "humidity": 56.033587785665205
+        "timestamp": "2024-03-30 04:40:00",
+        "temperature": 20.68,
+        "humidity": 50.07
     },
     {
-        "timestamp": "2024-03-26 22:30:39",
-        "temperature": 24.69151680853261,
-        "humidity": 57.65286467253383
+        "timestamp": "2024-03-30 04:50:00",
+        "temperature": 24.3,
+        "humidity": 51.74
     },
     {
-        "timestamp": "2024-03-26 22:30:49",
-        "temperature": 20.0,
-        "humidity": 57.49413884045422
+        "timestamp": "2024-03-30 05:00:00",
+        "temperature": 25.52,
+        "humidity": 46.56
     },
     {
-        "timestamp": "2024-03-26 22:30:59",
-        "temperature": 21.200119308422742,
-        "humidity": 59.132844464680154
+        "timestamp": "2024-03-30 05:10:00",
+        "temperature": 20.67,
+        "humidity": 37.61
     },
     {
-        "timestamp": "2024-03-26 22:31:09",
-        "temperature": 20.95234435204883,
-        "humidity": 55.82551602229719
+        "timestamp": "2024-03-30 05:20:00",
+        "temperature": 24.36,
+        "humidity": 45.72
     },
     {
-        "timestamp": "2024-03-26 22:31:19",
-        "temperature": 21.41208101486416,
-        "humidity": 50.0
+        "timestamp": "2024-03-30 05:30:00",
+        "temperature": 21.44,
+        "humidity": 50.74
     },
     {
-        "timestamp": "2024-03-26 22:31:29",
-        "temperature": 23.382458077955096,
-        "humidity": 56.3450749430024
+        "timestamp": "2024-03-30 05:40:00",
+        "temperature": 20.61,
+        "humidity": 45.72
     },
     {
-        "timestamp": "2024-03-26 22:31:39",
-        "temperature": 23.823845075306295,
-        "humidity": 50.0
+        "timestamp": "2024-03-30 05:50:00",
+        "temperature": 24.81,
+        "humidity": 49.97
     },
     {
-        "timestamp": "2024-03-26 22:31:49",
-        "temperature": 23.619473821633232,
-        "humidity": 50.0
+        "timestamp": "2024-03-30 06:00:00",
+        "temperature": 21.48,
+        "humidity": 36.71
     },
     {
-        "timestamp": "2024-03-26 22:31:59",
-        "temperature": 22.927949839536147,
-        "humidity": 50.36400311402626
+        "timestamp": "2024-03-30 06:10:00",
+        "temperature": 20.86,
+        "humidity": 47.62
     },
     {
-        "timestamp": "2024-03-26 22:32:09",
-        "temperature": 23.79404668826325,
-        "humidity": 59.461065488467185
+        "timestamp": "2024-03-30 06:20:00",
+        "temperature": 23.74,
+        "humidity": 41.72
     },
     {
-        "timestamp": "2024-03-26 22:32:19",
-        "temperature": 22.729858214149267,
-        "humidity": 55.7159149342146
+        "timestamp": "2024-03-30 06:30:00",
+        "temperature": 22.41,
+        "humidity": 37.6
     },
     {
-        "timestamp": "2024-03-26 22:32:29",
-        "temperature": 22.69571858997997,
-        "humidity": 50.83509783398659
+        "timestamp": "2024-03-30 06:40:00",
+        "temperature": 25.67,
+        "humidity": 49.34
     },
     {
-        "timestamp": "2024-03-26 22:32:39",
-        "temperature": 21.080923354713896,
-        "humidity": 59.24586602849044
+        "timestamp": "2024-03-30 06:50:00",
+        "temperature": 22.97,
+        "humidity": 43.78
     },
     {
-        "timestamp": "2024-03-26 22:32:49",
-        "temperature": 24.86051766907836,
-        "humidity": 59.05892344848306
+        "timestamp": "2024-03-30 07:00:00",
+        "temperature": 23.86,
+        "humidity": 45.23
     },
     {
-        "timestamp": "2024-03-26 22:32:59",
-        "temperature": 20.888209771933056,
-        "humidity": 50.1643465583554
+        "timestamp": "2024-03-30 07:10:00",
+        "temperature": 21.37,
+        "humidity": 41.89
     },
     {
-        "timestamp": "2024-03-26 22:33:09",
-        "temperature": 24.184711195260384,
-        "humidity": 55.13150382064897
+        "timestamp": "2024-03-30 07:20:00",
+        "temperature": 21.22,
+        "humidity": 49.07
     },
     {
-        "timestamp": "2024-03-26 22:33:19",
-        "temperature": 22.45803056117737,
-        "humidity": 51.72415656842504
+        "timestamp": "2024-03-30 07:30:00",
+        "temperature": 24.89,
+        "humidity": 47.98
     },
     {
-        "timestamp": "2024-03-26 22:33:29",
-        "temperature": 21.339176696154205,
-        "humidity": 50.59546411497627
+        "timestamp": "2024-03-30 07:40:00",
+        "temperature": 23.32,
+        "humidity": 39.58
     },
     {
-        "timestamp": "2024-03-26 22:33:39",
-        "temperature": 20.822528834411738,
-        "humidity": 55.2816413981224
+        "timestamp": "2024-03-30 07:50:00",
+        "temperature": 20.26,
+        "humidity": 47.86
     },
     {
-        "timestamp": "2024-03-26 22:33:49",
-        "temperature": 20.36966571657476,
-        "humidity": 58.7391893130981
+        "timestamp": "2024-03-30 08:00:00",
+        "temperature": 22.29,
+        "humidity": 48.27
     },
     {
-        "timestamp": "2024-03-26 22:33:59",
-        "temperature": 23.783343802355855,
-        "humidity": 54.35894956931755
+        "timestamp": "2024-03-30 08:10:00",
+        "temperature": 23.07,
+        "humidity": 36.78
     },
     {
-        "timestamp": "2024-03-26 22:34:09",
-        "temperature": 23.70190825441234,
-        "humidity": 56.762877642180655
+        "timestamp": "2024-03-30 08:20:00",
+        "temperature": 22.18,
+        "humidity": 39.27
     },
     {
-        "timestamp": "2024-03-26 22:34:19",
-        "temperature": 20.842732332738112,
-        "humidity": 55.565275066561185
+        "timestamp": "2024-03-30 08:30:00",
+        "temperature": 25.36,
+        "humidity": 51.9
     },
     {
-        "timestamp": "2024-03-26 22:34:29",
-        "temperature": 21.31873789997816,
-        "humidity": 53.469627028508604
+        "timestamp": "2024-03-30 08:40:00",
+        "temperature": 25.41,
+        "humidity": 48.7
     },
     {
-        "timestamp": "2024-03-26 22:34:39",
-        "temperature": 21.8768803995999,
-        "humidity": 54.23416819748804
+        "timestamp": "2024-03-30 08:50:00",
+        "temperature": 23.04,
+        "humidity": 37.3
     },
     {
-        "timestamp": "2024-03-26 22:34:49",
-        "temperature": 22.18356207033134,
-        "humidity": 53.6820151261584
+        "timestamp": "2024-03-30 09:00:00",
+        "temperature": 23.62,
+        "humidity": 39.32
     },
     {
-        "timestamp": "2024-03-26 22:34:59",
-        "temperature": 20.621563436951167,
-        "humidity": 58.78600346813249
+        "timestamp": "2024-03-30 09:10:00",
+        "temperature": 24.91,
+        "humidity": 42.61
     },
     {
-        "timestamp": "2024-03-26 22:35:09",
-        "temperature": 23.736123621193887,
-        "humidity": 57.4455466505494
+        "timestamp": "2024-03-30 09:20:00",
+        "temperature": 25.48,
+        "humidity": 37.91
     },
     {
-        "timestamp": "2024-03-26 22:35:19",
-        "temperature": 21.315233341473952,
-        "humidity": 58.5715189029587
+        "timestamp": "2024-03-30 09:30:00",
+        "temperature": 23.46,
+        "humidity": 51.23
     },
     {
-        "timestamp": "2024-03-26 22:35:29",
-        "temperature": 24.78725121687943,
-        "humidity": 59.61892749127024
+        "timestamp": "2024-03-30 09:40:00",
+        "temperature": 20.37,
+        "humidity": 37.18
     },
     {
-        "timestamp": "2024-03-26 22:35:39",
-        "temperature": 23.514713764003215,
-        "humidity": 60.0
+        "timestamp": "2024-03-30 09:50:00",
+        "temperature": 20.49,
+        "humidity": 47.98
     },
     {
-        "timestamp": "2024-03-26 22:35:49",
-        "temperature": 21.285092113953404,
-        "humidity": 58.768607268208044
+        "timestamp": "2024-03-30 10:00:00",
+        "temperature": 23.77,
+        "humidity": 38.97
     },
     {
-        "timestamp": "2024-03-26 22:35:59",
-        "temperature": 22.642579397283104,
-        "humidity": 56.92345635232929
+        "timestamp": "2024-03-30 10:10:00",
+        "temperature": 24.72,
+        "humidity": 38.02
     },
     {
-        "timestamp": "2024-03-26 22:36:09",
-        "temperature": 20.399498854155233,
-        "humidity": 57.017578258457895
+        "timestamp": "2024-03-30 10:20:00",
+        "temperature": 22.75,
+        "humidity": 45.42
     },
     {
-        "timestamp": "2024-03-26 22:36:19",
-        "temperature": 20.580104040665418,
-        "humidity": 55.78559459656796
+        "timestamp": "2024-03-30 10:30:00",
+        "temperature": 21.98,
+        "humidity": 39.07
     },
     {
-        "timestamp": "2024-03-26 22:36:29",
-        "temperature": 22.898227032083206,
-        "humidity": 57.57621236889016
+        "timestamp": "2024-03-30 10:40:00",
+        "temperature": 21.93,
+        "humidity": 43.05
     },
     {
-        "timestamp": "2024-03-26 22:36:39",
-        "temperature": 20.55630894623341,
-        "humidity": 54.55224607416471
+        "timestamp": "2024-03-30 10:50:00",
+        "temperature": 21.05,
+        "humidity": 50.92
     },
     {
-        "timestamp": "2024-03-26 22:36:49",
-        "temperature": 21.147486879870407,
-        "humidity": 53.69488709244787
+        "timestamp": "2024-03-30 11:00:00",
+        "temperature": 25.66,
+        "humidity": 49.6
     },
     {
-        "timestamp": "2024-03-26 22:36:59",
-        "temperature": 20.29952882364628,
-        "humidity": 58.05315641835465
+        "timestamp": "2024-03-30 11:10:00",
+        "temperature": 21.38,
+        "humidity": 47.41
     },
     {
-        "timestamp": "2024-03-26 22:37:09",
-        "temperature": 20.268775274834645,
-        "humidity": 52.92299696189517
+        "timestamp": "2024-03-30 11:20:00",
+        "temperature": 21.98,
+        "humidity": 44.07
     },
     {
-        "timestamp": "2024-03-26 22:37:19",
-        "temperature": 20.483445192693754,
-        "humidity": 51.84481360427331
+        "timestamp": "2024-03-30 11:30:00",
+        "temperature": 22.12,
+        "humidity": 46.41
     },
     {
-        "timestamp": "2024-03-26 22:37:29",
-        "temperature": 21.535040330106206,
-        "humidity": 57.38849623803122
+        "timestamp": "2024-03-30 11:40:00",
+        "temperature": 21.17,
+        "humidity": 50.57
     },
     {
-        "timestamp": "2024-03-26 22:37:39",
-        "temperature": 21.702704676723446,
-        "humidity": 58.2149960077847
+        "timestamp": "2024-03-30 11:50:00",
+        "temperature": 21.19,
+        "humidity": 41.82
     },
     {
-        "timestamp": "2024-03-26 22:37:49",
-        "temperature": 20.0,
-        "humidity": 59.51681043226543
+        "timestamp": "2024-03-30 12:00:00",
+        "temperature": 20.99,
+        "humidity": 48.84
     },
     {
-        "timestamp": "2024-03-26 22:37:59",
-        "temperature": 24.014404281874995,
-        "humidity": 52.00968845056236
+        "timestamp": "2024-03-30 12:10:00",
+        "temperature": 25.1,
+        "humidity": 38.13
     },
     {
-        "timestamp": "2024-03-26 22:38:09",
-        "temperature": 22.67248522366065,
-        "humidity": 51.88900002502673
+        "timestamp": "2024-03-30 12:20:00",
+        "temperature": 20.7,
+        "humidity": 50.05
     },
     {
-        "timestamp": "2024-03-26 22:38:19",
-        "temperature": 20.0,
-        "humidity": 53.27836657088803
+        "timestamp": "2024-03-30 12:30:00",
+        "temperature": 24.17,
+        "humidity": 36.74
     },
     {
-        "timestamp": "2024-03-26 22:38:29",
-        "temperature": 20.474302670314028,
-        "humidity": 52.65256764749528
+        "timestamp": "2024-03-30 12:40:00",
+        "temperature": 21.29,
+        "humidity": 45.56
     },
     {
-        "timestamp": "2024-03-26 22:38:39",
-        "temperature": 22.770392243810473,
-        "humidity": 51.88516856948337
+        "timestamp": "2024-03-30 12:50:00",
+        "temperature": 20.34,
+        "humidity": 51.6
     },
     {
-        "timestamp": "2024-03-26 22:38:49",
-        "temperature": 21.06292700029079,
-        "humidity": 51.1126819579255
+        "timestamp": "2024-03-30 13:00:00",
+        "temperature": 22.17,
+        "humidity": 42.48
     },
     {
-        "timestamp": "2024-03-26 22:38:59",
-        "temperature": 20.809884972235086,
-        "humidity": 58.31943401493159
+        "timestamp": "2024-03-30 13:10:00",
+        "temperature": 20.93,
+        "humidity": 40.91
     },
     {
-        "timestamp": "2024-03-26 22:39:09",
-        "temperature": 21.336652809916835,
-        "humidity": 52.022337359346395
+        "timestamp": "2024-03-30 13:20:00",
+        "temperature": 21.95,
+        "humidity": 48.89
     },
     {
-        "timestamp": "2024-03-26 22:39:19",
-        "temperature": 21.26539945526428,
-        "humidity": 54.67732126008917
+        "timestamp": "2024-03-30 13:30:00",
+        "temperature": 21.56,
+        "humidity": 43.23
     },
     {
-        "timestamp": "2024-03-26 22:39:29",
-        "temperature": 25.0,
-        "humidity": 57.494398979893994
+        "timestamp": "2024-03-30 13:40:00",
+        "temperature": 20.58,
+        "humidity": 43.71
     },
     {
-        "timestamp": "2024-03-26 22:39:39",
-        "temperature": 21.360599787326112,
-        "humidity": 52.327862827317695
+        "timestamp": "2024-03-30 13:50:00",
+        "temperature": 22.85,
+        "humidity": 36.74
     },
     {
-        "timestamp": "2024-03-26 22:39:49",
-        "temperature": 20.40081834664722,
-        "humidity": 57.92960161357985
+        "timestamp": "2024-03-30 14:00:00",
+        "temperature": 21.78,
+        "humidity": 44.6
     },
     {
-        "timestamp": "2024-03-26 22:39:59",
-        "temperature": 21.197663692209897,
-        "humidity": 55.48964553423836
+        "timestamp": "2024-03-30 14:10:00",
+        "temperature": 24.69,
+        "humidity": 36.89
     },
     {
-        "timestamp": "2024-03-26 22:40:09",
-        "temperature": 25.0,
-        "humidity": 53.16644394608318
+        "timestamp": "2024-03-30 14:20:00",
+        "temperature": 25.08,
+        "humidity": 49.92
     },
     {
-        "timestamp": "2024-03-26 22:40:19",
-        "temperature": 23.944888008898953,
-        "humidity": 58.29594673552603
+        "timestamp": "2024-03-30 14:30:00",
+        "temperature": 24.74,
+        "humidity": 51.53
     },
     {
-        "timestamp": "2024-03-26 22:40:29",
-        "temperature": 23.56950451099037,
-        "humidity": 52.9790150505621
+        "timestamp": "2024-03-30 14:40:00",
+        "temperature": 25.61,
+        "humidity": 36.79
     },
     {
-        "timestamp": "2024-03-26 22:40:39",
-        "temperature": 20.051857796694936,
-        "humidity": 58.843883009080486
+        "timestamp": "2024-03-30 14:50:00",
+        "temperature": 21.54,
+        "humidity": 45.77
     },
     {
-        "timestamp": "2024-03-26 22:40:49",
-        "temperature": 20.508192233960944,
-        "humidity": 50.532430182823475
+        "timestamp": "2024-03-30 15:00:00",
+        "temperature": 22.17,
+        "humidity": 43.64
     },
     {
-        "timestamp": "2024-03-26 22:40:59",
-        "temperature": 25.0,
-        "humidity": 53.12319784669388
+        "timestamp": "2024-03-30 15:10:00",
+        "temperature": 25.37,
+        "humidity": 48.1
     },
     {
-        "timestamp": "2024-03-26 22:41:09",
-        "temperature": 23.698733080506297,
-        "humidity": 56.140215398870346
+        "timestamp": "2024-03-30 15:20:00",
+        "temperature": 23.78,
+        "humidity": 43.97
     },
     {
-        "timestamp": "2024-03-26 22:41:19",
-        "temperature": 20.747221376347955,
-        "humidity": 52.3163610356553
+        "timestamp": "2024-03-30 15:30:00",
+        "temperature": 25.63,
+        "humidity": 46.21
     },
     {
-        "timestamp": "2024-03-26 22:41:29",
-        "temperature": 24.449038738650046,
-        "humidity": 55.82302797106779
+        "timestamp": "2024-03-30 15:40:00",
+        "temperature": 25.16,
+        "humidity": 45.96
     },
     {
-        "timestamp": "2024-03-26 22:41:39",
-        "temperature": 20.84712789672999,
-        "humidity": 54.16882451086672
+        "timestamp": "2024-03-30 15:50:00",
+        "temperature": 22.82,
+        "humidity": 39.88
     },
     {
-        "timestamp": "2024-03-26 22:41:49",
-        "temperature": 25.0,
-        "humidity": 56.45551624175969
+        "timestamp": "2024-03-30 16:00:00",
+        "temperature": 22.62,
+        "humidity": 42.39
     },
     {
-        "timestamp": "2024-03-26 22:41:59",
-        "temperature": 20.995624005574403,
-        "humidity": 59.63677579311256
+        "timestamp": "2024-03-30 16:10:00",
+        "temperature": 20.54,
+        "humidity": 43.69
     },
     {
-        "timestamp": "2024-03-26 22:42:09",
-        "temperature": 23.79891070628605,
-        "humidity": 50.67642687505974
+        "timestamp": "2024-03-30 16:20:00",
+        "temperature": 25.15,
+        "humidity": 36.96
     },
     {
-        "timestamp": "2024-03-26 22:42:19",
-        "temperature": 25.0,
-        "humidity": 54.58966571158151
+        "timestamp": "2024-03-30 16:30:00",
+        "temperature": 23.03,
+        "humidity": 40.34
     },
     {
-        "timestamp": "2024-03-26 22:42:29",
-        "temperature": 23.94327758509162,
-        "humidity": 53.564437956022054
+        "timestamp": "2024-03-30 16:40:00",
+        "temperature": 22.81,
+        "humidity": 42.02
     },
     {
-        "timestamp": "2024-03-26 22:42:39",
-        "temperature": 20.884287823066852,
-        "humidity": 55.692150863811314
+        "timestamp": "2024-03-30 16:50:00",
+        "temperature": 22.3,
+        "humidity": 50.44
     },
     {
-        "timestamp": "2024-03-26 22:42:49",
-        "temperature": 22.971486403069736,
-        "humidity": 51.216510693902585
+        "timestamp": "2024-03-30 17:00:00",
+        "temperature": 25.77,
+        "humidity": 47.77
     },
     {
-        "timestamp": "2024-03-26 22:42:59",
-        "temperature": 23.24968979640601,
-        "humidity": 58.903186951399256
+        "timestamp": "2024-03-30 17:10:00",
+        "temperature": 22.09,
+        "humidity": 48.7
     },
     {
-        "timestamp": "2024-03-26 22:43:09",
-        "temperature": 22.68584794508471,
-        "humidity": 59.51967198679972
+        "timestamp": "2024-03-30 17:20:00",
+        "temperature": 25.1,
+        "humidity": 41.55
     },
     {
-        "timestamp": "2024-03-26 22:43:19",
-        "temperature": 22.696681561858426,
-        "humidity": 55.616596023645066
+        "timestamp": "2024-03-30 17:30:00",
+        "temperature": 25.83,
+        "humidity": 51.53
     },
     {
-        "timestamp": "2024-03-26 22:43:29",
-        "temperature": 23.31935594907981,
-        "humidity": 59.822935229964656
+        "timestamp": "2024-03-30 17:40:00",
+        "temperature": 20.72,
+        "humidity": 38.79
     },
     {
-        "timestamp": "2024-03-26 22:43:39",
-        "temperature": 21.651505075652096,
-        "humidity": 57.588994306227086
+        "timestamp": "2024-03-30 17:50:00",
+        "temperature": 23.49,
+        "humidity": 51.69
     },
     {
-        "timestamp": "2024-03-26 22:43:49",
-        "temperature": 23.37719252467456,
-        "humidity": 56.941455251153776
+        "timestamp": "2024-03-30 18:00:00",
+        "temperature": 20.26,
+        "humidity": 36.31
     },
     {
-        "timestamp": "2024-03-26 22:43:59",
-        "temperature": 24.003396573673054,
-        "humidity": 58.960638422466836
+        "timestamp": "2024-03-30 18:10:00",
+        "temperature": 25.03,
+        "humidity": 48.52
     },
     {
-        "timestamp": "2024-03-26 22:44:09",
-        "temperature": 20.618279846746937,
-        "humidity": 57.09050214318703
+        "timestamp": "2024-03-30 18:20:00",
+        "temperature": 20.56,
+        "humidity": 47.23
     },
     {
-        "timestamp": "2024-03-26 22:44:19",
-        "temperature": 22.307081354949737,
-        "humidity": 50.34994307608196
+        "timestamp": "2024-03-30 18:30:00",
+        "temperature": 23.17,
+        "humidity": 37.38
     },
     {
-        "timestamp": "2024-03-26 22:44:29",
-        "temperature": 24.745358071427173,
-        "humidity": 50.0
+        "timestamp": "2024-03-30 18:40:00",
+        "temperature": 25.43,
+        "humidity": 39.14
     },
     {
-        "timestamp": "2024-03-26 22:44:39",
-        "temperature": 20.930402804032884,
-        "humidity": 58.86058313229893
+        "timestamp": "2024-03-30 18:50:00",
+        "temperature": 21.93,
+        "humidity": 46.92
     },
     {
-        "timestamp": "2024-03-26 22:44:49",
-        "temperature": 23.90160619579791,
-        "humidity": 56.720157961630974
+        "timestamp": "2024-03-30 19:00:00",
+        "temperature": 23.12,
+        "humidity": 41.5
     },
     {
-        "timestamp": "2024-03-26 22:44:59",
-        "temperature": 22.693997457168948,
-        "humidity": 50.329727972103136
+        "timestamp": "2024-03-30 19:10:00",
+        "temperature": 24.6,
+        "humidity": 36.15
     },
     {
-        "timestamp": "2024-03-26 22:45:09",
-        "temperature": 22.760677487731243,
-        "humidity": 53.70079401178168
+        "timestamp": "2024-03-30 19:20:00",
+        "temperature": 24.23,
+        "humidity": 50.87
     },
     {
-        "timestamp": "2024-03-26 22:45:19",
-        "temperature": 21.142188235862758,
-        "humidity": 58.50083261939578
+        "timestamp": "2024-03-30 19:30:00",
+        "temperature": 23.04,
+        "humidity": 47.49
     },
     {
-        "timestamp": "2024-03-26 22:45:29",
-        "temperature": 20.204036935295775,
-        "humidity": 57.470272616833235
+        "timestamp": "2024-03-30 19:40:00",
+        "temperature": 21.94,
+        "humidity": 45.85
     },
     {
-        "timestamp": "2024-03-26 22:45:39",
-        "temperature": 22.2691728493586,
-        "humidity": 54.11371523396997
+        "timestamp": "2024-03-30 19:50:00",
+        "temperature": 20.05,
+        "humidity": 45.02
     },
     {
-        "timestamp": "2024-03-26 22:45:49",
-        "temperature": 24.55998671852146,
-        "humidity": 53.42510233390176
+        "timestamp": "2024-03-30 20:00:00",
+        "temperature": 23.92,
+        "humidity": 50.64
     },
     {
-        "timestamp": "2024-03-26 22:45:59",
-        "temperature": 21.874156206665507,
-        "humidity": 60.0
+        "timestamp": "2024-03-30 20:10:00",
+        "temperature": 22.04,
+        "humidity": 47.51
     },
     {
-        "timestamp": "2024-03-26 22:46:09",
-        "temperature": 21.712996517569543,
-        "humidity": 59.27792607093318
+        "timestamp": "2024-03-30 20:20:00",
+        "temperature": 24.76,
+        "humidity": 46.09
     },
     {
-        "timestamp": "2024-03-26 22:46:19",
-        "temperature": 22.28430259572886,
-        "humidity": 52.4560175955024
+        "timestamp": "2024-03-30 20:30:00",
+        "temperature": 25.75,
+        "humidity": 38.21
     },
     {
-        "timestamp": "2024-03-26 22:46:29",
-        "temperature": 20.0,
-        "humidity": 55.18241870934101
+        "timestamp": "2024-03-30 20:40:00",
+        "temperature": 21.7,
+        "humidity": 46.45
     },
     {
-        "timestamp": "2024-03-26 22:46:39",
-        "temperature": 20.242564169139165,
-        "humidity": 52.819333652144735
+        "timestamp": "2024-03-30 20:50:00",
+        "temperature": 20.4,
+        "humidity": 47.03
     },
     {
-        "timestamp": "2024-03-26 22:46:49",
-        "temperature": 22.712694530440015,
-        "humidity": 56.20703120838145
+        "timestamp": "2024-03-30 21:00:00",
+        "temperature": 21.25,
+        "humidity": 47.71
     },
     {
-        "timestamp": "2024-03-26 22:46:59",
-        "temperature": 22.773160220940156,
-        "humidity": 50.0
+        "timestamp": "2024-03-30 21:10:00",
+        "temperature": 20.06,
+        "humidity": 42.01
     },
     {
-        "timestamp": "2024-03-26 22:47:09",
-        "temperature": 21.466206236984057,
-        "humidity": 52.6931455815158
+        "timestamp": "2024-03-30 21:20:00",
+        "temperature": 20.25,
+        "humidity": 41.83
     },
     {
-        "timestamp": "2024-03-26 22:47:19",
-        "temperature": 24.406489218974716,
-        "humidity": 57.813693093108895
+        "timestamp": "2024-03-30 21:30:00",
+        "temperature": 23.84,
+        "humidity": 47.63
     },
     {
-        "timestamp": "2024-03-26 22:47:29",
-        "temperature": 24.109372087113595,
-        "humidity": 55.98573326234997
+        "timestamp": "2024-03-30 21:40:00",
+        "temperature": 20.44,
+        "humidity": 51.11
     },
     {
-        "timestamp": "2024-03-26 22:47:39",
-        "temperature": 22.03110758483497,
-        "humidity": 55.43963418772888
+        "timestamp": "2024-03-30 21:50:00",
+        "temperature": 25.56,
+        "humidity": 39.11
     },
     {
-        "timestamp": "2024-03-26 22:47:49",
-        "temperature": 20.49559420319201,
-        "humidity": 59.433494941193835
+        "timestamp": "2024-03-30 22:00:00",
+        "temperature": 21.34,
+        "humidity": 43.58
     },
     {
-        "timestamp": "2024-03-26 22:47:59",
-        "temperature": 23.386852837810963,
-        "humidity": 52.55152419491162
+        "timestamp": "2024-03-30 22:10:00",
+        "temperature": 23.58,
+        "humidity": 46.31
     },
     {
-        "timestamp": "2024-03-26 22:48:09",
-        "temperature": 21.924054449559556,
-        "humidity": 57.59193855692704
+        "timestamp": "2024-03-30 22:20:00",
+        "temperature": 21.35,
+        "humidity": 51.19
     },
     {
-        "timestamp": "2024-03-26 22:48:19",
-        "temperature": 23.228398969816585,
-        "humidity": 59.26702993618087
+        "timestamp": "2024-03-30 22:30:00",
+        "temperature": 24.4,
+        "humidity": 42.6
     },
     {
-        "timestamp": "2024-03-26 22:48:29",
-        "temperature": 21.187537296453637,
-        "humidity": 57.68879122103392
+        "timestamp": "2024-03-30 22:40:00",
+        "temperature": 21.16,
+        "humidity": 36.46
     },
     {
-        "timestamp": "2024-03-26 22:48:39",
-        "temperature": 21.100313800258185,
-        "humidity": 55.488180478046026
+        "timestamp": "2024-03-30 22:50:00",
+        "temperature": 22.89,
+        "humidity": 50.56
     },
     {
-        "timestamp": "2024-03-26 22:48:49",
-        "temperature": 20.0,
-        "humidity": 55.56629371853497
+        "timestamp": "2024-03-30 23:00:00",
+        "temperature": 25.27,
+        "humidity": 50.63
     },
     {
-        "timestamp": "2024-03-26 22:48:59",
-        "temperature": 24.614738164337464,
-        "humidity": 51.778109142844635
+        "timestamp": "2024-03-30 23:10:00",
+        "temperature": 22.39,
+        "humidity": 41.91
     },
     {
-        "timestamp": "2024-03-26 22:49:09",
-        "temperature": 20.446456040802268,
-        "humidity": 50.81690553838537
+        "timestamp": "2024-03-30 23:20:00",
+        "temperature": 22.3,
+        "humidity": 50.56
     },
     {
-        "timestamp": "2024-03-26 22:49:19",
-        "temperature": 20.97743461084637,
-        "humidity": 51.8929621921751
+        "timestamp": "2024-03-30 23:30:00",
+        "temperature": 21.6,
+        "humidity": 41.84
     },
     {
-        "timestamp": "2024-03-26 22:49:29",
-        "temperature": 24.73310564280101,
-        "humidity": 56.00132592010343
+        "timestamp": "2024-03-30 23:40:00",
+        "temperature": 21.89,
+        "humidity": 51.74
     },
     {
-        "timestamp": "2024-03-26 22:49:39",
-        "temperature": 20.0,
-        "humidity": 55.45189327516155
+        "timestamp": "2024-03-30 23:50:00",
+        "temperature": 20.93,
+        "humidity": 44.23
     },
     {
-        "timestamp": "2024-03-26 22:49:49",
-        "temperature": 25.0,
-        "humidity": 58.13003958694351
+        "timestamp": "2024-03-31 00:00:00",
+        "temperature": 21.51,
+        "humidity": 42.64
     },
     {
-        "timestamp": "2024-03-26 22:49:59",
-        "temperature": 21.156670613388318,
-        "humidity": 59.01848783427503
+        "timestamp": "2024-03-31 00:10:00",
+        "temperature": 21.26,
+        "humidity": 36.61
     },
     {
-        "timestamp": "2024-03-26 22:50:09",
-        "temperature": 23.949357905655535,
-        "humidity": 52.77306496782197
+        "timestamp": "2024-03-31 00:20:00",
+        "temperature": 25.11,
+        "humidity": 40.27
+    },
+    {
+        "timestamp": "2024-03-31 00:30:00",
+        "temperature": 25.59,
+        "humidity": 43.3
+    },
+    {
+        "timestamp": "2024-03-31 00:40:00",
+        "temperature": 23.11,
+        "humidity": 47.98
+    },
+    {
+        "timestamp": "2024-03-31 00:50:00",
+        "temperature": 20.93,
+        "humidity": 45.68
+    },
+    {
+        "timestamp": "2024-03-31 01:00:00",
+        "temperature": 22.8,
+        "humidity": 42.68
+    },
+    {
+        "timestamp": "2024-03-31 01:10:00",
+        "temperature": 21.26,
+        "humidity": 43.79
+    },
+    {
+        "timestamp": "2024-03-31 01:20:00",
+        "temperature": 24.72,
+        "humidity": 51.18
+    },
+    {
+        "timestamp": "2024-03-31 01:30:00",
+        "temperature": 24.1,
+        "humidity": 38.85
+    },
+    {
+        "timestamp": "2024-03-31 01:40:00",
+        "temperature": 25.68,
+        "humidity": 42.88
+    },
+    {
+        "timestamp": "2024-03-31 01:50:00",
+        "temperature": 21.47,
+        "humidity": 48.52
+    },
+    {
+        "timestamp": "2024-03-31 02:00:00",
+        "temperature": 23.94,
+        "humidity": 50.44
+    },
+    {
+        "timestamp": "2024-03-31 02:10:00",
+        "temperature": 24.08,
+        "humidity": 46.0
+    },
+    {
+        "timestamp": "2024-03-31 02:20:00",
+        "temperature": 25.06,
+        "humidity": 39.91
+    },
+    {
+        "timestamp": "2024-03-31 02:30:00",
+        "temperature": 20.55,
+        "humidity": 36.95
+    },
+    {
+        "timestamp": "2024-03-31 02:40:00",
+        "temperature": 25.91,
+        "humidity": 51.48
+    },
+    {
+        "timestamp": "2024-03-31 02:50:00",
+        "temperature": 23.59,
+        "humidity": 50.38
+    },
+    {
+        "timestamp": "2024-03-31 03:00:00",
+        "temperature": 25.61,
+        "humidity": 43.02
+    },
+    {
+        "timestamp": "2024-03-31 03:10:00",
+        "temperature": 23.26,
+        "humidity": 37.12
+    },
+    {
+        "timestamp": "2024-03-31 03:20:00",
+        "temperature": 25.79,
+        "humidity": 44.78
+    },
+    {
+        "timestamp": "2024-03-31 03:30:00",
+        "temperature": 21.45,
+        "humidity": 48.18
+    },
+    {
+        "timestamp": "2024-03-31 03:40:00",
+        "temperature": 25.8,
+        "humidity": 47.8
+    },
+    {
+        "timestamp": "2024-03-31 03:50:00",
+        "temperature": 23.1,
+        "humidity": 46.48
+    },
+    {
+        "timestamp": "2024-03-31 04:00:00",
+        "temperature": 25.29,
+        "humidity": 43.0
+    },
+    {
+        "timestamp": "2024-03-31 04:10:00",
+        "temperature": 23.85,
+        "humidity": 49.3
+    },
+    {
+        "timestamp": "2024-03-31 04:20:00",
+        "temperature": 25.34,
+        "humidity": 40.94
+    },
+    {
+        "timestamp": "2024-03-31 04:30:00",
+        "temperature": 22.02,
+        "humidity": 50.11
+    },
+    {
+        "timestamp": "2024-03-31 04:40:00",
+        "temperature": 22.54,
+        "humidity": 40.06
+    },
+    {
+        "timestamp": "2024-03-31 04:50:00",
+        "temperature": 23.56,
+        "humidity": 41.34
+    },
+    {
+        "timestamp": "2024-03-31 05:00:00",
+        "temperature": 20.15,
+        "humidity": 41.31
+    },
+    {
+        "timestamp": "2024-03-31 05:10:00",
+        "temperature": 24.58,
+        "humidity": 37.07
+    },
+    {
+        "timestamp": "2024-03-31 05:20:00",
+        "temperature": 21.76,
+        "humidity": 43.86
+    },
+    {
+        "timestamp": "2024-03-31 05:30:00",
+        "temperature": 24.64,
+        "humidity": 39.56
+    },
+    {
+        "timestamp": "2024-03-31 05:40:00",
+        "temperature": 24.76,
+        "humidity": 49.82
+    },
+    {
+        "timestamp": "2024-03-31 05:50:00",
+        "temperature": 21.83,
+        "humidity": 39.01
+    },
+    {
+        "timestamp": "2024-03-31 06:00:00",
+        "temperature": 24.92,
+        "humidity": 39.4
+    },
+    {
+        "timestamp": "2024-03-31 06:10:00",
+        "temperature": 21.98,
+        "humidity": 39.56
+    },
+    {
+        "timestamp": "2024-03-31 06:20:00",
+        "temperature": 25.11,
+        "humidity": 48.15
+    },
+    {
+        "timestamp": "2024-03-31 06:30:00",
+        "temperature": 22.22,
+        "humidity": 41.02
+    },
+    {
+        "timestamp": "2024-03-31 06:40:00",
+        "temperature": 24.2,
+        "humidity": 36.01
+    },
+    {
+        "timestamp": "2024-03-31 06:50:00",
+        "temperature": 20.66,
+        "humidity": 40.37
+    },
+    {
+        "timestamp": "2024-03-31 07:00:00",
+        "temperature": 25.17,
+        "humidity": 39.97
+    },
+    {
+        "timestamp": "2024-03-31 07:10:00",
+        "temperature": 20.88,
+        "humidity": 38.25
+    },
+    {
+        "timestamp": "2024-03-31 07:20:00",
+        "temperature": 20.11,
+        "humidity": 37.2
+    },
+    {
+        "timestamp": "2024-03-31 07:30:00",
+        "temperature": 23.01,
+        "humidity": 44.74
+    },
+    {
+        "timestamp": "2024-03-31 07:40:00",
+        "temperature": 22.35,
+        "humidity": 37.46
+    },
+    {
+        "timestamp": "2024-03-31 07:50:00",
+        "temperature": 24.49,
+        "humidity": 37.53
+    },
+    {
+        "timestamp": "2024-03-31 08:00:00",
+        "temperature": 24.79,
+        "humidity": 37.14
+    },
+    {
+        "timestamp": "2024-03-31 08:10:00",
+        "temperature": 24.06,
+        "humidity": 51.16
+    },
+    {
+        "timestamp": "2024-03-31 08:20:00",
+        "temperature": 22.06,
+        "humidity": 42.02
+    },
+    {
+        "timestamp": "2024-03-31 08:30:00",
+        "temperature": 25.6,
+        "humidity": 50.83
+    },
+    {
+        "timestamp": "2024-03-31 08:40:00",
+        "temperature": 21.76,
+        "humidity": 43.35
+    },
+    {
+        "timestamp": "2024-03-31 08:50:00",
+        "temperature": 24.7,
+        "humidity": 38.62
+    },
+    {
+        "timestamp": "2024-03-31 09:00:00",
+        "temperature": 24.32,
+        "humidity": 45.52
+    },
+    {
+        "timestamp": "2024-03-31 09:10:00",
+        "temperature": 22.34,
+        "humidity": 43.67
+    },
+    {
+        "timestamp": "2024-03-31 09:20:00",
+        "temperature": 21.21,
+        "humidity": 44.01
+    },
+    {
+        "timestamp": "2024-03-31 09:30:00",
+        "temperature": 22.87,
+        "humidity": 48.44
+    },
+    {
+        "timestamp": "2024-03-31 09:40:00",
+        "temperature": 22.86,
+        "humidity": 50.74
+    },
+    {
+        "timestamp": "2024-03-31 09:50:00",
+        "temperature": 23.85,
+        "humidity": 44.1
+    },
+    {
+        "timestamp": "2024-03-31 10:00:00",
+        "temperature": 21.8,
+        "humidity": 48.0
+    },
+    {
+        "timestamp": "2024-03-31 10:10:00",
+        "temperature": 20.92,
+        "humidity": 38.53
+    },
+    {
+        "timestamp": "2024-03-31 10:20:00",
+        "temperature": 22.49,
+        "humidity": 44.02
+    },
+    {
+        "timestamp": "2024-03-31 10:30:00",
+        "temperature": 23.77,
+        "humidity": 45.65
+    },
+    {
+        "timestamp": "2024-03-31 10:40:00",
+        "temperature": 23.46,
+        "humidity": 47.9
+    },
+    {
+        "timestamp": "2024-03-31 10:50:00",
+        "temperature": 22.33,
+        "humidity": 36.02
+    },
+    {
+        "timestamp": "2024-03-31 11:00:00",
+        "temperature": 20.32,
+        "humidity": 37.2
+    },
+    {
+        "timestamp": "2024-03-31 11:10:00",
+        "temperature": 22.19,
+        "humidity": 46.39
+    },
+    {
+        "timestamp": "2024-03-31 11:20:00",
+        "temperature": 20.89,
+        "humidity": 48.93
+    },
+    {
+        "timestamp": "2024-03-31 11:30:00",
+        "temperature": 24.08,
+        "humidity": 38.35
+    },
+    {
+        "timestamp": "2024-03-31 11:40:00",
+        "temperature": 22.86,
+        "humidity": 36.49
+    },
+    {
+        "timestamp": "2024-03-31 11:50:00",
+        "temperature": 24.13,
+        "humidity": 41.47
+    },
+    {
+        "timestamp": "2024-03-31 12:00:00",
+        "temperature": 25.09,
+        "humidity": 42.64
+    },
+    {
+        "timestamp": "2024-03-31 12:10:00",
+        "temperature": 22.34,
+        "humidity": 49.68
+    },
+    {
+        "timestamp": "2024-03-31 12:20:00",
+        "temperature": 21.1,
+        "humidity": 47.49
+    },
+    {
+        "timestamp": "2024-03-31 12:30:00",
+        "temperature": 21.02,
+        "humidity": 46.38
+    },
+    {
+        "timestamp": "2024-03-31 12:40:00",
+        "temperature": 21.93,
+        "humidity": 37.19
+    },
+    {
+        "timestamp": "2024-03-31 12:50:00",
+        "temperature": 20.02,
+        "humidity": 41.49
+    },
+    {
+        "timestamp": "2024-03-31 13:00:00",
+        "temperature": 23.09,
+        "humidity": 49.65
+    },
+    {
+        "timestamp": "2024-03-31 13:10:00",
+        "temperature": 22.07,
+        "humidity": 40.32
+    },
+    {
+        "timestamp": "2024-03-31 13:20:00",
+        "temperature": 22.33,
+        "humidity": 45.6
+    },
+    {
+        "timestamp": "2024-03-31 13:30:00",
+        "temperature": 21.21,
+        "humidity": 49.34
+    },
+    {
+        "timestamp": "2024-03-31 13:40:00",
+        "temperature": 23.33,
+        "humidity": 49.51
+    },
+    {
+        "timestamp": "2024-03-31 13:50:00",
+        "temperature": 21.19,
+        "humidity": 51.05
+    },
+    {
+        "timestamp": "2024-03-31 14:00:00",
+        "temperature": 24.9,
+        "humidity": 47.88
+    },
+    {
+        "timestamp": "2024-03-31 14:10:00",
+        "temperature": 24.77,
+        "humidity": 42.12
+    },
+    {
+        "timestamp": "2024-03-31 14:20:00",
+        "temperature": 21.79,
+        "humidity": 48.15
+    },
+    {
+        "timestamp": "2024-03-31 14:30:00",
+        "temperature": 25.97,
+        "humidity": 36.29
+    },
+    {
+        "timestamp": "2024-03-31 14:40:00",
+        "temperature": 24.38,
+        "humidity": 40.41
+    },
+    {
+        "timestamp": "2024-03-31 14:50:00",
+        "temperature": 23.16,
+        "humidity": 36.75
+    },
+    {
+        "timestamp": "2024-03-31 15:00:00",
+        "temperature": 25.3,
+        "humidity": 41.46
+    },
+    {
+        "timestamp": "2024-03-31 15:10:00",
+        "temperature": 24.88,
+        "humidity": 39.42
+    },
+    {
+        "timestamp": "2024-03-31 15:20:00",
+        "temperature": 20.37,
+        "humidity": 40.21
+    },
+    {
+        "timestamp": "2024-03-31 15:30:00",
+        "temperature": 20.85,
+        "humidity": 45.76
+    },
+    {
+        "timestamp": "2024-03-31 15:40:00",
+        "temperature": 21.8,
+        "humidity": 48.59
+    },
+    {
+        "timestamp": "2024-03-31 15:50:00",
+        "temperature": 21.0,
+        "humidity": 51.65
+    },
+    {
+        "timestamp": "2024-03-31 16:00:00",
+        "temperature": 21.32,
+        "humidity": 39.23
+    },
+    {
+        "timestamp": "2024-03-31 16:10:00",
+        "temperature": 22.81,
+        "humidity": 51.74
+    },
+    {
+        "timestamp": "2024-03-31 16:20:00",
+        "temperature": 21.19,
+        "humidity": 42.65
+    },
+    {
+        "timestamp": "2024-03-31 16:30:00",
+        "temperature": 20.3,
+        "humidity": 48.6
+    },
+    {
+        "timestamp": "2024-03-31 16:40:00",
+        "temperature": 24.4,
+        "humidity": 37.71
+    },
+    {
+        "timestamp": "2024-03-31 16:50:00",
+        "temperature": 21.35,
+        "humidity": 45.41
+    },
+    {
+        "timestamp": "2024-03-31 17:00:00",
+        "temperature": 24.8,
+        "humidity": 40.5
+    },
+    {
+        "timestamp": "2024-03-31 17:10:00",
+        "temperature": 24.45,
+        "humidity": 36.6
+    },
+    {
+        "timestamp": "2024-03-31 17:20:00",
+        "temperature": 24.58,
+        "humidity": 44.56
+    },
+    {
+        "timestamp": "2024-03-31 17:30:00",
+        "temperature": 23.75,
+        "humidity": 44.6
+    },
+    {
+        "timestamp": "2024-03-31 17:40:00",
+        "temperature": 22.29,
+        "humidity": 45.11
+    },
+    {
+        "timestamp": "2024-03-31 17:50:00",
+        "temperature": 21.97,
+        "humidity": 38.51
+    },
+    {
+        "timestamp": "2024-03-31 18:00:00",
+        "temperature": 20.15,
+        "humidity": 40.81
+    },
+    {
+        "timestamp": "2024-03-31 18:10:00",
+        "temperature": 24.23,
+        "humidity": 42.86
+    },
+    {
+        "timestamp": "2024-03-31 18:20:00",
+        "temperature": 22.34,
+        "humidity": 45.0
+    },
+    {
+        "timestamp": "2024-03-31 18:30:00",
+        "temperature": 20.2,
+        "humidity": 45.07
+    },
+    {
+        "timestamp": "2024-03-31 18:40:00",
+        "temperature": 21.14,
+        "humidity": 46.49
+    },
+    {
+        "timestamp": "2024-03-31 18:50:00",
+        "temperature": 22.05,
+        "humidity": 43.69
+    },
+    {
+        "timestamp": "2024-03-31 19:00:00",
+        "temperature": 22.01,
+        "humidity": 36.04
+    },
+    {
+        "timestamp": "2024-03-31 19:10:00",
+        "temperature": 25.12,
+        "humidity": 45.07
+    },
+    {
+        "timestamp": "2024-03-31 19:20:00",
+        "temperature": 24.71,
+        "humidity": 46.71
+    },
+    {
+        "timestamp": "2024-03-31 19:30:00",
+        "temperature": 23.12,
+        "humidity": 44.14
+    },
+    {
+        "timestamp": "2024-03-31 19:40:00",
+        "temperature": 24.97,
+        "humidity": 49.28
+    },
+    {
+        "timestamp": "2024-03-31 19:50:00",
+        "temperature": 23.53,
+        "humidity": 41.79
+    },
+    {
+        "timestamp": "2024-03-31 20:00:00",
+        "temperature": 20.9,
+        "humidity": 36.77
+    },
+    {
+        "timestamp": "2024-03-31 20:10:00",
+        "temperature": 20.48,
+        "humidity": 41.31
+    },
+    {
+        "timestamp": "2024-03-31 20:20:00",
+        "temperature": 22.62,
+        "humidity": 47.65
+    },
+    {
+        "timestamp": "2024-03-31 20:30:00",
+        "temperature": 24.94,
+        "humidity": 51.18
+    },
+    {
+        "timestamp": "2024-03-31 20:40:00",
+        "temperature": 25.64,
+        "humidity": 38.4
+    },
+    {
+        "timestamp": "2024-03-31 20:50:00",
+        "temperature": 21.75,
+        "humidity": 43.04
+    },
+    {
+        "timestamp": "2024-03-31 21:00:00",
+        "temperature": 23.63,
+        "humidity": 45.76
+    },
+    {
+        "timestamp": "2024-03-31 21:10:00",
+        "temperature": 23.63,
+        "humidity": 40.91
+    },
+    {
+        "timestamp": "2024-03-31 21:20:00",
+        "temperature": 24.13,
+        "humidity": 46.27
+    },
+    {
+        "timestamp": "2024-03-31 21:30:00",
+        "temperature": 24.11,
+        "humidity": 42.76
+    },
+    {
+        "timestamp": "2024-03-31 21:40:00",
+        "temperature": 23.14,
+        "humidity": 48.83
+    },
+    {
+        "timestamp": "2024-03-31 21:50:00",
+        "temperature": 20.18,
+        "humidity": 50.53
+    },
+    {
+        "timestamp": "2024-03-31 22:00:00",
+        "temperature": 25.67,
+        "humidity": 47.81
+    },
+    {
+        "timestamp": "2024-03-31 22:10:00",
+        "temperature": 23.64,
+        "humidity": 42.05
+    },
+    {
+        "timestamp": "2024-03-31 22:20:00",
+        "temperature": 23.28,
+        "humidity": 51.66
+    },
+    {
+        "timestamp": "2024-03-31 22:30:00",
+        "temperature": 24.98,
+        "humidity": 47.18
+    },
+    {
+        "timestamp": "2024-03-31 22:40:00",
+        "temperature": 20.9,
+        "humidity": 47.46
+    },
+    {
+        "timestamp": "2024-03-31 22:50:00",
+        "temperature": 25.5,
+        "humidity": 36.19
+    },
+    {
+        "timestamp": "2024-03-31 23:00:00",
+        "temperature": 23.09,
+        "humidity": 46.89
+    },
+    {
+        "timestamp": "2024-03-31 23:10:00",
+        "temperature": 21.61,
+        "humidity": 43.4
+    },
+    {
+        "timestamp": "2024-03-31 23:20:00",
+        "temperature": 23.3,
+        "humidity": 51.68
+    },
+    {
+        "timestamp": "2024-03-31 23:30:00",
+        "temperature": 24.17,
+        "humidity": 36.94
+    },
+    {
+        "timestamp": "2024-03-31 23:40:00",
+        "temperature": 23.72,
+        "humidity": 37.56
+    },
+    {
+        "timestamp": "2024-03-31 23:50:00",
+        "temperature": 24.51,
+        "humidity": 37.23
+    },
+    {
+        "timestamp": "2024-04-01 00:00:00",
+        "temperature": 22.84,
+        "humidity": 44.42
+    },
+    {
+        "timestamp": "2024-04-01 00:10:00",
+        "temperature": 20.61,
+        "humidity": 40.13
+    },
+    {
+        "timestamp": "2024-04-01 00:20:00",
+        "temperature": 25.95,
+        "humidity": 42.58
+    },
+    {
+        "timestamp": "2024-04-01 00:30:00",
+        "temperature": 20.64,
+        "humidity": 45.77
+    },
+    {
+        "timestamp": "2024-04-01 00:40:00",
+        "temperature": 23.22,
+        "humidity": 40.41
+    },
+    {
+        "timestamp": "2024-04-01 00:50:00",
+        "temperature": 22.76,
+        "humidity": 44.07
+    },
+    {
+        "timestamp": "2024-04-01 01:00:00",
+        "temperature": 22.88,
+        "humidity": 42.6
+    },
+    {
+        "timestamp": "2024-04-01 01:10:00",
+        "temperature": 20.68,
+        "humidity": 46.62
+    },
+    {
+        "timestamp": "2024-04-01 01:20:00",
+        "temperature": 21.9,
+        "humidity": 42.1
+    },
+    {
+        "timestamp": "2024-04-01 01:30:00",
+        "temperature": 25.05,
+        "humidity": 43.74
+    },
+    {
+        "timestamp": "2024-04-01 01:40:00",
+        "temperature": 23.09,
+        "humidity": 44.79
+    },
+    {
+        "timestamp": "2024-04-01 01:50:00",
+        "temperature": 25.67,
+        "humidity": 51.91
+    },
+    {
+        "timestamp": "2024-04-01 02:00:00",
+        "temperature": 20.46,
+        "humidity": 49.02
+    },
+    {
+        "timestamp": "2024-04-01 02:10:00",
+        "temperature": 24.94,
+        "humidity": 44.54
+    },
+    {
+        "timestamp": "2024-04-01 02:20:00",
+        "temperature": 23.21,
+        "humidity": 37.76
+    },
+    {
+        "timestamp": "2024-04-01 02:30:00",
+        "temperature": 21.42,
+        "humidity": 49.04
+    },
+    {
+        "timestamp": "2024-04-01 02:40:00",
+        "temperature": 22.73,
+        "humidity": 40.91
+    },
+    {
+        "timestamp": "2024-04-01 02:50:00",
+        "temperature": 25.6,
+        "humidity": 44.76
+    },
+    {
+        "timestamp": "2024-04-01 03:00:00",
+        "temperature": 20.28,
+        "humidity": 38.4
+    },
+    {
+        "timestamp": "2024-04-01 03:10:00",
+        "temperature": 23.98,
+        "humidity": 45.64
+    },
+    {
+        "timestamp": "2024-04-01 03:20:00",
+        "temperature": 20.17,
+        "humidity": 47.93
+    },
+    {
+        "timestamp": "2024-04-01 03:30:00",
+        "temperature": 21.24,
+        "humidity": 39.54
+    },
+    {
+        "timestamp": "2024-04-01 03:40:00",
+        "temperature": 25.41,
+        "humidity": 40.23
+    },
+    {
+        "timestamp": "2024-04-01 03:50:00",
+        "temperature": 22.79,
+        "humidity": 44.24
+    },
+    {
+        "timestamp": "2024-04-01 04:00:00",
+        "temperature": 25.01,
+        "humidity": 38.97
+    },
+    {
+        "timestamp": "2024-04-01 04:10:00",
+        "temperature": 25.58,
+        "humidity": 51.74
+    },
+    {
+        "timestamp": "2024-04-01 04:20:00",
+        "temperature": 22.18,
+        "humidity": 44.18
+    },
+    {
+        "timestamp": "2024-04-01 04:30:00",
+        "temperature": 23.01,
+        "humidity": 49.67
+    },
+    {
+        "timestamp": "2024-04-01 04:40:00",
+        "temperature": 21.42,
+        "humidity": 38.51
+    },
+    {
+        "timestamp": "2024-04-01 04:50:00",
+        "temperature": 22.64,
+        "humidity": 50.3
+    },
+    {
+        "timestamp": "2024-04-01 05:00:00",
+        "temperature": 23.71,
+        "humidity": 42.31
+    },
+    {
+        "timestamp": "2024-04-01 05:10:00",
+        "temperature": 23.91,
+        "humidity": 51.7
+    },
+    {
+        "timestamp": "2024-04-01 05:20:00",
+        "temperature": 24.68,
+        "humidity": 44.32
+    },
+    {
+        "timestamp": "2024-04-01 05:30:00",
+        "temperature": 21.72,
+        "humidity": 50.46
+    },
+    {
+        "timestamp": "2024-04-01 05:40:00",
+        "temperature": 21.66,
+        "humidity": 38.01
+    },
+    {
+        "timestamp": "2024-04-01 05:50:00",
+        "temperature": 22.11,
+        "humidity": 43.48
+    },
+    {
+        "timestamp": "2024-04-01 06:00:00",
+        "temperature": 22.9,
+        "humidity": 37.64
+    },
+    {
+        "timestamp": "2024-04-01 06:10:00",
+        "temperature": 20.24,
+        "humidity": 48.65
+    },
+    {
+        "timestamp": "2024-04-01 06:20:00",
+        "temperature": 20.39,
+        "humidity": 47.23
+    },
+    {
+        "timestamp": "2024-04-01 06:30:00",
+        "temperature": 24.69,
+        "humidity": 49.31
+    },
+    {
+        "timestamp": "2024-04-01 06:40:00",
+        "temperature": 20.53,
+        "humidity": 51.88
+    },
+    {
+        "timestamp": "2024-04-01 06:50:00",
+        "temperature": 20.5,
+        "humidity": 50.19
+    },
+    {
+        "timestamp": "2024-04-01 07:00:00",
+        "temperature": 20.46,
+        "humidity": 38.75
+    },
+    {
+        "timestamp": "2024-04-01 07:10:00",
+        "temperature": 21.29,
+        "humidity": 51.51
+    },
+    {
+        "timestamp": "2024-04-01 07:20:00",
+        "temperature": 24.05,
+        "humidity": 41.02
+    },
+    {
+        "timestamp": "2024-04-01 07:30:00",
+        "temperature": 21.22,
+        "humidity": 51.62
+    },
+    {
+        "timestamp": "2024-04-01 07:40:00",
+        "temperature": 20.7,
+        "humidity": 50.62
+    },
+    {
+        "timestamp": "2024-04-01 07:50:00",
+        "temperature": 24.72,
+        "humidity": 38.3
+    },
+    {
+        "timestamp": "2024-04-01 08:00:00",
+        "temperature": 22.17,
+        "humidity": 43.55
+    },
+    {
+        "timestamp": "2024-04-01 08:10:00",
+        "temperature": 21.8,
+        "humidity": 50.8
+    },
+    {
+        "timestamp": "2024-04-01 08:20:00",
+        "temperature": 20.6,
+        "humidity": 37.4
+    },
+    {
+        "timestamp": "2024-04-01 08:30:00",
+        "temperature": 25.01,
+        "humidity": 43.35
+    },
+    {
+        "timestamp": "2024-04-01 08:40:00",
+        "temperature": 25.62,
+        "humidity": 45.6
+    },
+    {
+        "timestamp": "2024-04-01 08:50:00",
+        "temperature": 24.8,
+        "humidity": 48.18
+    },
+    {
+        "timestamp": "2024-04-01 09:00:00",
+        "temperature": 24.21,
+        "humidity": 42.53
+    },
+    {
+        "timestamp": "2024-04-01 09:10:00",
+        "temperature": 20.18,
+        "humidity": 50.97
+    },
+    {
+        "timestamp": "2024-04-01 09:20:00",
+        "temperature": 25.05,
+        "humidity": 43.63
+    },
+    {
+        "timestamp": "2024-04-01 09:30:00",
+        "temperature": 23.76,
+        "humidity": 40.51
+    },
+    {
+        "timestamp": "2024-04-01 09:40:00",
+        "temperature": 24.86,
+        "humidity": 40.32
+    },
+    {
+        "timestamp": "2024-04-01 09:50:00",
+        "temperature": 22.62,
+        "humidity": 46.66
+    },
+    {
+        "timestamp": "2024-04-01 10:00:00",
+        "temperature": 24.08,
+        "humidity": 45.64
+    },
+    {
+        "timestamp": "2024-04-01 10:10:00",
+        "temperature": 21.47,
+        "humidity": 39.3
+    },
+    {
+        "timestamp": "2024-04-01 10:20:00",
+        "temperature": 23.31,
+        "humidity": 42.19
+    },
+    {
+        "timestamp": "2024-04-01 10:30:00",
+        "temperature": 21.35,
+        "humidity": 38.84
+    },
+    {
+        "timestamp": "2024-04-01 10:40:00",
+        "temperature": 21.47,
+        "humidity": 38.01
+    },
+    {
+        "timestamp": "2024-04-01 10:50:00",
+        "temperature": 24.86,
+        "humidity": 41.62
+    },
+    {
+        "timestamp": "2024-04-01 11:00:00",
+        "temperature": 25.41,
+        "humidity": 40.02
+    },
+    {
+        "timestamp": "2024-04-01 11:10:00",
+        "temperature": 20.65,
+        "humidity": 48.46
+    },
+    {
+        "timestamp": "2024-04-01 11:20:00",
+        "temperature": 21.46,
+        "humidity": 39.4
+    },
+    {
+        "timestamp": "2024-04-01 11:30:00",
+        "temperature": 23.64,
+        "humidity": 36.4
+    },
+    {
+        "timestamp": "2024-04-01 11:40:00",
+        "temperature": 23.73,
+        "humidity": 44.04
+    },
+    {
+        "timestamp": "2024-04-01 11:50:00",
+        "temperature": 24.93,
+        "humidity": 49.17
+    },
+    {
+        "timestamp": "2024-04-01 12:00:00",
+        "temperature": 21.04,
+        "humidity": 51.8
+    },
+    {
+        "timestamp": "2024-04-01 12:10:00",
+        "temperature": 22.28,
+        "humidity": 49.61
+    },
+    {
+        "timestamp": "2024-04-01 12:20:00",
+        "temperature": 25.74,
+        "humidity": 46.53
+    },
+    {
+        "timestamp": "2024-04-01 12:30:00",
+        "temperature": 25.85,
+        "humidity": 36.03
+    },
+    {
+        "timestamp": "2024-04-01 12:40:00",
+        "temperature": 20.59,
+        "humidity": 44.36
+    },
+    {
+        "timestamp": "2024-04-01 12:50:00",
+        "temperature": 21.08,
+        "humidity": 41.59
+    },
+    {
+        "timestamp": "2024-04-01 13:00:00",
+        "temperature": 21.41,
+        "humidity": 41.97
+    },
+    {
+        "timestamp": "2024-04-01 13:10:00",
+        "temperature": 23.34,
+        "humidity": 39.29
+    },
+    {
+        "timestamp": "2024-04-01 13:20:00",
+        "temperature": 21.29,
+        "humidity": 43.68
+    },
+    {
+        "timestamp": "2024-04-01 13:30:00",
+        "temperature": 21.97,
+        "humidity": 37.74
+    },
+    {
+        "timestamp": "2024-04-01 13:40:00",
+        "temperature": 25.61,
+        "humidity": 45.68
+    },
+    {
+        "timestamp": "2024-04-01 13:50:00",
+        "temperature": 25.75,
+        "humidity": 49.55
+    },
+    {
+        "timestamp": "2024-04-01 14:00:00",
+        "temperature": 24.02,
+        "humidity": 49.21
+    },
+    {
+        "timestamp": "2024-04-01 14:10:00",
+        "temperature": 24.12,
+        "humidity": 45.14
+    },
+    {
+        "timestamp": "2024-04-01 14:20:00",
+        "temperature": 24.74,
+        "humidity": 49.44
+    },
+    {
+        "timestamp": "2024-04-01 14:30:00",
+        "temperature": 22.5,
+        "humidity": 45.45
+    },
+    {
+        "timestamp": "2024-04-01 14:40:00",
+        "temperature": 21.94,
+        "humidity": 42.9
+    },
+    {
+        "timestamp": "2024-04-01 14:50:00",
+        "temperature": 24.86,
+        "humidity": 43.19
+    },
+    {
+        "timestamp": "2024-04-01 15:00:00",
+        "temperature": 24.03,
+        "humidity": 45.16
+    },
+    {
+        "timestamp": "2024-04-01 15:10:00",
+        "temperature": 22.62,
+        "humidity": 44.28
+    },
+    {
+        "timestamp": "2024-04-01 15:20:00",
+        "temperature": 22.95,
+        "humidity": 39.53
+    },
+    {
+        "timestamp": "2024-04-01 15:30:00",
+        "temperature": 23.54,
+        "humidity": 45.46
+    },
+    {
+        "timestamp": "2024-04-01 15:40:00",
+        "temperature": 23.04,
+        "humidity": 40.54
+    },
+    {
+        "timestamp": "2024-04-01 15:50:00",
+        "temperature": 20.72,
+        "humidity": 36.94
+    },
+    {
+        "timestamp": "2024-04-01 16:00:00",
+        "temperature": 20.79,
+        "humidity": 44.41
+    },
+    {
+        "timestamp": "2024-04-01 16:10:00",
+        "temperature": 21.03,
+        "humidity": 51.0
+    },
+    {
+        "timestamp": "2024-04-01 16:20:00",
+        "temperature": 20.53,
+        "humidity": 42.5
+    },
+    {
+        "timestamp": "2024-04-01 16:30:00",
+        "temperature": 25.09,
+        "humidity": 45.79
+    },
+    {
+        "timestamp": "2024-04-01 16:40:00",
+        "temperature": 23.26,
+        "humidity": 39.19
+    },
+    {
+        "timestamp": "2024-04-01 16:50:00",
+        "temperature": 24.15,
+        "humidity": 42.89
+    },
+    {
+        "timestamp": "2024-04-01 17:00:00",
+        "temperature": 25.97,
+        "humidity": 51.02
+    },
+    {
+        "timestamp": "2024-04-01 17:10:00",
+        "temperature": 22.91,
+        "humidity": 41.05
+    },
+    {
+        "timestamp": "2024-04-01 17:20:00",
+        "temperature": 22.81,
+        "humidity": 48.28
+    },
+    {
+        "timestamp": "2024-04-01 17:30:00",
+        "temperature": 22.43,
+        "humidity": 51.18
+    },
+    {
+        "timestamp": "2024-04-01 17:40:00",
+        "temperature": 23.82,
+        "humidity": 37.98
+    },
+    {
+        "timestamp": "2024-04-01 17:50:00",
+        "temperature": 21.3,
+        "humidity": 50.77
+    },
+    {
+        "timestamp": "2024-04-01 18:00:00",
+        "temperature": 23.89,
+        "humidity": 36.26
+    },
+    {
+        "timestamp": "2024-04-01 18:10:00",
+        "temperature": 21.17,
+        "humidity": 40.27
+    },
+    {
+        "timestamp": "2024-04-01 18:20:00",
+        "temperature": 25.29,
+        "humidity": 39.26
+    },
+    {
+        "timestamp": "2024-04-01 18:30:00",
+        "temperature": 23.84,
+        "humidity": 48.3
+    },
+    {
+        "timestamp": "2024-04-01 18:40:00",
+        "temperature": 23.72,
+        "humidity": 38.38
+    },
+    {
+        "timestamp": "2024-04-01 18:50:00",
+        "temperature": 23.36,
+        "humidity": 38.34
+    },
+    {
+        "timestamp": "2024-04-01 19:00:00",
+        "temperature": 20.44,
+        "humidity": 36.61
+    },
+    {
+        "timestamp": "2024-04-01 19:10:00",
+        "temperature": 21.6,
+        "humidity": 51.58
+    },
+    {
+        "timestamp": "2024-04-01 19:20:00",
+        "temperature": 22.16,
+        "humidity": 40.26
+    },
+    {
+        "timestamp": "2024-04-01 19:30:00",
+        "temperature": 24.37,
+        "humidity": 45.61
+    },
+    {
+        "timestamp": "2024-04-01 19:40:00",
+        "temperature": 20.03,
+        "humidity": 50.06
+    },
+    {
+        "timestamp": "2024-04-01 19:50:00",
+        "temperature": 22.22,
+        "humidity": 36.48
+    },
+    {
+        "timestamp": "2024-04-01 20:00:00",
+        "temperature": 23.03,
+        "humidity": 39.43
+    },
+    {
+        "timestamp": "2024-04-01 20:10:00",
+        "temperature": 23.98,
+        "humidity": 47.69
+    },
+    {
+        "timestamp": "2024-04-01 20:20:00",
+        "temperature": 20.92,
+        "humidity": 49.26
+    },
+    {
+        "timestamp": "2024-04-01 20:30:00",
+        "temperature": 21.67,
+        "humidity": 42.63
+    },
+    {
+        "timestamp": "2024-04-01 20:40:00",
+        "temperature": 22.49,
+        "humidity": 39.07
+    },
+    {
+        "timestamp": "2024-04-01 20:50:00",
+        "temperature": 22.74,
+        "humidity": 41.81
+    },
+    {
+        "timestamp": "2024-04-01 21:00:00",
+        "temperature": 20.5,
+        "humidity": 46.65
+    },
+    {
+        "timestamp": "2024-04-01 21:10:00",
+        "temperature": 20.46,
+        "humidity": 46.24
+    },
+    {
+        "timestamp": "2024-04-01 21:20:00",
+        "temperature": 24.25,
+        "humidity": 42.89
+    },
+    {
+        "timestamp": "2024-04-01 21:30:00",
+        "temperature": 21.25,
+        "humidity": 48.23
+    },
+    {
+        "timestamp": "2024-04-01 21:40:00",
+        "temperature": 20.56,
+        "humidity": 48.03
+    },
+    {
+        "timestamp": "2024-04-01 21:50:00",
+        "temperature": 21.85,
+        "humidity": 50.05
+    },
+    {
+        "timestamp": "2024-04-01 22:00:00",
+        "temperature": 24.92,
+        "humidity": 38.46
+    },
+    {
+        "timestamp": "2024-04-01 22:10:00",
+        "temperature": 24.97,
+        "humidity": 48.62
+    },
+    {
+        "timestamp": "2024-04-01 22:20:00",
+        "temperature": 21.91,
+        "humidity": 48.07
+    },
+    {
+        "timestamp": "2024-04-01 22:30:00",
+        "temperature": 22.26,
+        "humidity": 38.75
+    },
+    {
+        "timestamp": "2024-04-01 22:40:00",
+        "temperature": 22.9,
+        "humidity": 40.01
+    },
+    {
+        "timestamp": "2024-04-01 22:50:00",
+        "temperature": 25.04,
+        "humidity": 45.42
+    },
+    {
+        "timestamp": "2024-04-01 23:00:00",
+        "temperature": 20.29,
+        "humidity": 46.7
+    },
+    {
+        "timestamp": "2024-04-01 23:10:00",
+        "temperature": 21.19,
+        "humidity": 37.68
+    },
+    {
+        "timestamp": "2024-04-01 23:20:00",
+        "temperature": 25.85,
+        "humidity": 46.83
+    },
+    {
+        "timestamp": "2024-04-01 23:30:00",
+        "temperature": 22.26,
+        "humidity": 45.74
+    },
+    {
+        "timestamp": "2024-04-01 23:40:00",
+        "temperature": 24.37,
+        "humidity": 41.99
+    },
+    {
+        "timestamp": "2024-04-01 23:50:00",
+        "temperature": 25.53,
+        "humidity": 37.12
     }
 ]
