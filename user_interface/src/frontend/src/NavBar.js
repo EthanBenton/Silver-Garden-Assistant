@@ -1,34 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useTheme } from './ThemeContext'; // Import useTheme from your ThemeContext file
+import { useTheme } from './ThemeContext'; 
+import './NavBar.css'; 
 
-const Navbar = () => {
+const NavBar = () => {
   const { theme } = useTheme(); // Access the current theme
 
-  // Adjust styles based on the theme
-  const navStyle = {
-    backgroundColor: theme === 'dark' ? '#333' : '#f8f9fa', // Dark or light background
-    color: theme === 'dark' ? 'white' : '#212529', // Dark or light text
-    padding: '10px',
-  };
-
-  const linkStyle = {
-    color: theme === 'dark' ? 'white' : '#212529', // Dark or light link text
-    textDecoration: 'none',
-    margin: '0 10px',
-  };
-
   return (
-    <nav style={navStyle}>
-      <Link to="/settings" style={linkStyle}>Settings</Link>
-      <Link to="/" style={linkStyle}>Home</Link>
-      <Link to="/About" style={linkStyle}>About</Link>
-      <Link to="/graphs" style={linkStyle}>Graphs</Link>
-      <Link to="/ChooseYourPlant" style={linkStyle}>Choose Your Plant</Link>
+    <nav className={`navbar ${theme}`}>
+      <Link to="/settings" className="nav-link">Settings</Link>
+      <Link to="/" className="nav-link">Home</Link>
+      <Link to="/About" className="nav-link">About</Link>
+      {/*<Link to="/graphs" className="nav-link">Graphs</Link>*/}
+      <Link to="/ChooseYourPlant" className="nav-link">Choose Your Plant</Link>
+      <Link to="/SimulationForm" className="nav-link">Simulate</Link>
     </nav>
   );
 };
 
-export default Navbar;
+export default NavBar;
+
 
 

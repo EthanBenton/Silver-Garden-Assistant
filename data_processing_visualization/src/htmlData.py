@@ -63,8 +63,12 @@ def makehtml(humidity, humidityCount, temperature, temperatureCount, timestamp, 
         file.write('<h2> Temperature</h2>\n')
         file.write('<table>\n')
         file.write('<tr><th>Temperature</th><th>Count</th></tr>\n')
+<<<<<<< HEAD
         sorted_temperatures = sorted(temperatureCount.items(), key = lambda x: x[0])
         for temp, count in sorted_temperatures:
+=======
+        for temp, count in temperatureCount.items():
+>>>>>>> origin/main
             file.write(f'<tr><td>{temp}</td><td>{count}</td></tr>\n')
         file.write('</table>\n')
         file.write(f'<p>Total Temperature Data Points: {sum(temperatureCount.values())}</p>\n')
@@ -74,15 +78,24 @@ def makehtml(humidity, humidityCount, temperature, temperatureCount, timestamp, 
         file.write('<h2> Humidity</h2>\n')
         file.write('<table>\n')
         file.write('<tr><th>Humidity</th><th>Count</th></tr>\n')
+<<<<<<< HEAD
         sorted_humidities = sorted(humidityCount.items(), key = lambda x: x[0])
         for humid, count in sorted_humidities:
+=======
+        for humid, count in humidityCount.items():
+>>>>>>> origin/main
             file.write(f'<tr><td>{humid}</td><td>{count}</td></tr>\n')
         file.write('</table>\n')
         file.write(f'<p>Total Humidity Data Points: {sum(humidityCount.values())}</p>\n')
         file.write('</div>\n')
 
+<<<<<<< HEAD
         file.write('<div style="flex:33%; height: 310px; overflow-y: auto; padding: 5px; margin-right: -5px; position-relative;\n">\n')
         file.write('<h2 style=" position:sticky; top: 0; background-color: white; z-index: 1"> All Data with Timestamps</h2>\n')
+=======
+        file.write('<div style="flex:33%;">\n')
+        file.write('<h2> All Data with Timestamps</h2>\n')
+>>>>>>> origin/main
         file.write('<table>\n')
         file.write('<tr><th>Temperature</th><th>Humidity</th><th>Timestamp</th></tr>\n')
         for i in range(len(timestamp)):

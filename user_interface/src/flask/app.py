@@ -1,37 +1,109 @@
-from flask import Flask, render_template, request, session, redirect, url_for, send_from_directory
+from flask import Flask, request, jsonify, send_file
+import sys
+import os
+project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
+sys.path.insert(0, project_root)
+
+from data_input_sim.src.constraint_validation import validate_params
+from data_input_sim.src.data_simulation import SensorDataSimulator
+from data_processing_visualization.src.graphing_tool import graphingTool
 
 app = Flask(__name__, static_folder='src/flask/static')
-app.secret_key = 'your_secret_key'  # Set a secret key for session encryption
+app.secret_key = 'your_secret_key'  
 
-# Homepage
-@app.route('/')
-def index():
-    return render_template('index.html')
 
-# Solution statement and how PRIA works + MFCD
-@app.route('/About')
-def About():
-    return render_template('About.html')
+simulator = None
 
-# Navigate back to homepage
-@app.route('/Home')
-def Home():
-    return redirect(url_for('index'))
 
-# Clickable box linking to the graphs
-@app.route('/graphs')
-def graphs():
-    return render_template('graphs.html')
+def convert_to_seconds(time_interval, time_unit):
+    time_units_in_seconds = {
+        'seconds': 1,
+        'minutes': 60,
+        'hours': 3600,
+        'days': 86400,
+        'weeks': 604800,
+        'months': 2592000,
+    }
+    return time_interval * time_units_in_seconds[time_unit]
 
-# Settings page
-@app.route('/settings')
-def settings():
-    return render_template('settings.html')
+def calculate_max_samples(time_interval_seconds, polling_rate_seconds):
+    return int(time_interval_seconds // polling_rate_seconds)
 
-# User be able to add/remove plants
-@app.route('/ChooseYourPlant', methods=['GET'])
-def ChooseYourPlant():
-    return send_from_directory('src/flask/static/js/react_app/ItemList', 'index.html')
+
+@app.route('/api/simulate', methods=['POST'])
+def simulate():
+    global simulator
+    params = request.get_json()
+    print("Received payload:", params)
+    
+
+
+    time_unit = params.get('time_unit')
+    time_interval = params.get('time_interval')
+    print("time_unit:", time_unit)
+    print("time_interval:", time_interval)
+
+
+    errors = validate_params(params)
+    if errors:
+        print(errors)
+        return jsonify(errors), 400
+
+
+    temp_start = float(params.get('temp_start'))
+    temp_end = float(params.get('temp_end'))
+    humidity_start = float(params.get('humidity_start'))
+    humidity_end = float(params.get('humidity_end'))
+    polling_rate_seconds = (params.get('polling_rate_seconds'))
+    noise_mean = float(params.get('noise_mean'))
+    noise_std = float(params.get('noise_std'))
+    time_unit = params.get('time_unit')
+    time_interval = float(params.get('time_interval')) 
+
+
+   
+    total_seconds = convert_to_seconds(time_interval, time_unit)
+
+    num_samples = calculate_max_samples(total_seconds, polling_rate_seconds)
+
+    print("num_samples:", num_samples)
+    print("temp_start:", temp_start)
+    print("temp_end:", temp_end)
+    print("humidity_start:", humidity_start)
+    print("humidity_end:", humidity_end)
+    print("polling_rate_seconds:", polling_rate_seconds)
+    print("noise_mean:", noise_mean)
+    print("noise_std:", noise_std)
+
+
+    if None in (num_samples, temp_start, temp_end, humidity_start, humidity_end, polling_rate_seconds, noise_mean, noise_std):
+        return jsonify(error='Required parameters are missing or invalid'), 400
+
+
+    if simulator is None:
+        simulator = SensorDataSimulator((temp_start, temp_end), (humidity_start, humidity_end), polling_rate_seconds, noise_mean, noise_std)
+
+    data = simulator.generate_data(num_samples, polling_rate_seconds)
+
+    return jsonify(data)
+
+@app.errorhandler(Exception)
+def handle_exception(e):
+    app.logger.error(str(e))
+    return jsonify(error=str(e)), 500
+
+
+@app.route('/api/generate-graph', methods=['POST'])
+def generate_graph():
+    data = request.get_json()
+    # Use your graphingTool logic to generate and save the HTML file
+    # Assuming graph_tool.to_html_file() saves the file and returns its name
+    file_name = write_html(data)  # Adjust based on your actual method
+    return jsonify({"fileName": file_name})
+
+
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)
