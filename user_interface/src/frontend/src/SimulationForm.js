@@ -3,7 +3,6 @@ import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 import './SimulationForm.css';
 import Select from 'react-dropdown-select';
-import { useNavigate } from 'react-router-dom';
 
 const SimulationForm = () => {
   const [formData, setFormData] = useState({
@@ -17,8 +16,6 @@ const SimulationForm = () => {
     time_interval: 1,
     time_unit: 'seconds',
   });
-
-  const navigate = useNavigate();
 
   const handleChange = (e) => {
     let value;
@@ -136,7 +133,7 @@ const SimulationForm = () => {
         // navigate(`/path-to-graph-display/${graphPath}`);
   
         // Option 2: Open the graph in a new tab/window
-        window.open(`${process.env.PUBLIC_URL}/path/to/generated/graphs/${graphPath}`, '_blank');
+        window.open(`${process.env.PUBLIC_URL}/graphs/${graphPath}`, '_blank');
       } else {
         console.error('Failed to generate graph');
       }

@@ -1,5 +1,6 @@
-from flask import Flask, request, jsonify, send_file
+from flask import Flask, request, jsonify, send_from_directory
 import sys
+import pandas as pd 
 import os
 project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
 sys.path.insert(0, project_root)
@@ -87,23 +88,31 @@ def simulate():
 
     return jsonify(data)
 
+@app.route('/api/generate-graph', methods=['POST'])
+def generate_graph():
+    try:
+        data = request.get_json()
+        graph_tool = graphingTool(data_source=None)
+        graph_tool.data_frame = pd.DataFrame(data['data'])
+        graph_tool.set_export_name(data['title'])
+        graph_tool.indexed_json_to_html(data['x_column'], data['y_columns'], data['title'])
+        graph_path = f"/graphs/{graph_tool.export_name}"
+        app.logger.info(f"Graph generated at {graph_path}")
+        return jsonify({'graphPath': graph_path})
+    except Exception as e:
+        app.logger.error(f"Error generating graph: {str(e)}")
+        return jsonify({'error': str(e)}), 500
+
+
+@app.route('/graphs/<filename>')
+def serve_graph(filename):
+    return send_from_directory('user_interface/src/frontend/public' + '/graphs/', filename)
+
+
 @app.errorhandler(Exception)
 def handle_exception(e):
     app.logger.error(str(e))
     return jsonify(error=str(e)), 500
-
-
-@app.route('/api/generate-graph', methods=['POST'])
-def generate_graph():
-    data = request.get_json()
-    # Use your graphingTool logic to generate and save the HTML file
-    # Assuming graph_tool.to_html_file() saves the file and returns its name
-    file_name = write_html(data)  # Adjust based on your actual method
-    return jsonify({"fileName": file_name})
-
-
-
-
 
 if __name__ == "__main__":
     app.run(debug=True)
