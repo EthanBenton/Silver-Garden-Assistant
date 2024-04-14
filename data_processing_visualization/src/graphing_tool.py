@@ -22,7 +22,6 @@ class graphingTool:
             self.dframe = pandas.read_json(self.dat) #frame containing data from the .json
         else:
             print("Selected file does not exist in the same directory")
-            self.dframe = pandas.DataFrame()
         self.rounding_value = 0
         self.averaging = False
         self.export_name = 'Graph.html'
