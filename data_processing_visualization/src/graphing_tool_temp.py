@@ -86,20 +86,17 @@ class graphingTool:
 
     def indexed_json_to_html(self, index, indey, indey2, title):
         """
-        Generates a graph in HTML format using specified indices from the DataFrame.
-        :param index: int, the column index for the x-axis.
-        :param indey: int, the column index for the primary y-axis.
-        :param indey2: int, the column index for the secondary y-axis (-1 if not used).
-        :param title: string, the title of the graph.
+        This function develops a graph with up to two values plotted simultaneously
+        It reads from a .json as input, developing output in a .html file format
+        index - index for x1
+        indey - index for y1
+        indey2 - index for y2
+        title - graph title
         """
-        if self.dframe.empty:
-            print("Data frame is empty. No graph will be generated.")
-            return
-        
-        # Extract arrays for the axes based on provided indices.
+        #Convert our input into three 1d arrays
         convert = self.dframe.values
-        axisx = convert[:, index].flatten()
-        axisy = convert[:, indey].flatten()
+        axisx = convert[:,index].flatten()
+        axisy = convert[:,indey].flatten()
         
         namex = self.dframe.columns[index]
         namey = self.dframe.columns[indey]
@@ -107,10 +104,11 @@ class graphingTool:
         if(indey2 != -1): #third only if specified
             axisy2 = convert[:,indey2].flatten()
             namey2 = self.dframe.columns[indey2]
+            
         
-        # Create the figure for plotting.
+        #Create the figure
         fig = make_subplots(specs=[[{"secondary_y": True}]])
-        
+
         #Plot the first set of y-values
         fig.add_trace(go.Scatter(
             x=axisx,
@@ -121,7 +119,7 @@ class graphingTool:
         ),
         secondary_y=False
         )
-
+        
         #Plot the second set of y-values ONLY if y2 != -1
         if(indey2 != -1):
             fig.add_trace(go.Scatter(
@@ -133,16 +131,16 @@ class graphingTool:
             ),
             secondary_y=True
             )
-
-        # Finalize the figure layout.
+        
+        #Include figure titles
         fig.update_xaxes(title_text=namex)
         fig.update_layout(title_text=title)
-        fig.update_yaxes(title_text=namey, secondary_y=False)
+        fig.update_yaxes(title_text=namey,secondary_y=False)
         if(indey2 != -1):
             fig.update_yaxes(title_text=namey2,secondary_y=True)
-            
-        # Export the graph to HTML.
-        fig.write_html(self.export_name, auto_open=True)
+        
+        fig.write_html(self.export_name,auto_open=True)
+
 
 def produce_from_json(input):
     """
