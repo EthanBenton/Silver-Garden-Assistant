@@ -18,7 +18,7 @@ sys.path.insert(0, project_root)
 
 from data_input_sim.src.constraint_validation import validate_params
 from data_input_sim.src.data_simulation import SensorDataSimulator
-from data_processing_visualization.src.graphing_tool import graphingTool
+from data_processing_visualization.src.graphing_tool_temp import graphingTool # change back to og
 
 # Initialize Flask App
 app = Flask(__name__, static_folder='static')
