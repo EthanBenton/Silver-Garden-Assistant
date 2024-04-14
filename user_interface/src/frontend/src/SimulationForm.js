@@ -113,22 +113,22 @@ const SimulationForm = () => {
     { value: 600, label: '10 minutes' },
   ];
 
-  const [graphUrl, setGraphUrl] = useState('');
+
 
   const handleGenerateGraph = async () => {
     try {
-      const response = await fetch('/api/graph0', { method: 'POST' });
-      const data = await response.json();
+          const response = await fetch('/api/graph0', { method: 'POST' });
+          const data = await response.json();
 
-      if (!response.ok) throw new Error(data.error || "Failed to generate graph");
+          if (!response.ok) throw new Error(data.error || "Failed to generate graph");
 
-      // Refresh the graph URL to force reload, avoid caching
-      setGraphUrl(`${process.env.PUBLIC_URL}/graphs/Graph.html`);
-    } catch (error) {
-      console.error('Error:', error.message);
-      alert(`Error: ${error.message}`);
-    }
-  };
+        } 
+          catch (error)   
+          {
+            console.error('Error:', error.message);
+            alert(`Error: ${error.message}`);
+          }
+};
 
   return (
     <div>
