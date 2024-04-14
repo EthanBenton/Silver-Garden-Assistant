@@ -3,7 +3,7 @@ import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 import './SimulationForm.css';
 import Select from 'react-dropdown-select';
-
+import { useNavigate } from 'react-router-dom';
 
 const SimulationForm = () => {
   const [formData, setFormData] = useState({
@@ -17,6 +17,8 @@ const SimulationForm = () => {
     time_interval: 1,
     time_unit: 'seconds',
   });
+
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     let value;
@@ -68,6 +70,7 @@ const SimulationForm = () => {
   ];
 
   const [simulatedData, setSimulatedData] = useState(null);
+  const [graphHtml, setGraphHtml] = useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -112,6 +115,36 @@ const SimulationForm = () => {
     { value: 300, label: '5 minutes' },
     { value: 600, label: '10 minutes' },
   ];
+
+  const generateGraph = async () => {
+    try {
+      // Example POST request sending formData
+      const response = await fetch('/api/generate-graph', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData), // Adjust formData as needed
+      });
+      const data = await response.json();
+  
+      if (response.ok) {
+        // Assuming the response contains the path or filename of the generated graph
+        const graphPath = data.graphPath; // Adjust this line based on your actual response structure
+  
+        // Option 1: Navigate to a new page showing the graph (you need to set up routing for this)
+        // navigate(`/path-to-graph-display/${graphPath}`);
+  
+        // Option 2: Open the graph in a new tab/window
+        window.open(`${process.env.PUBLIC_URL}/path/to/generated/graphs/${graphPath}`, '_blank');
+      } else {
+        console.error('Failed to generate graph');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
+
 
   return (
     <div>
@@ -192,6 +225,7 @@ const SimulationForm = () => {
     <button type="button" onClick={() => simulatedData && generateJsonFile(simulatedData)}>
        Download JSON File
     </button>
+    <button type="button" onClick={generateGraph}>Generate Graph</button>
    </div>
     
   );
