@@ -67,7 +67,7 @@ const SimulationForm = () => {
   ];
 
   const [simulatedData, setSimulatedData] = useState(null);
-  const [graphHtml, setGraphHtml] = useState(null);
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -115,21 +115,20 @@ const SimulationForm = () => {
 
   const [graphUrl, setGraphUrl] = useState('');
 
-const handleGenerateGraph = async () => {
-  try {
-    const response = await fetch('/api/generate-graph', { method: 'POST' });
-    const data = await response.json();
-    
-    if (!response.ok) throw new Error(data.error || "Failed to generate graph");
+  const handleGenerateGraph = async () => {
+    try {
+      const response = await fetch('/api/graph0', { method: 'POST' });
+      const data = await response.json();
 
-    // Refresh the graph URL to force reload, avoid caching
-    setGraphUrl(`${process.env.PUBLIC_URL}/graphs/Graph.html?time=${new Date().getTime()}`);
-  } catch (error) {
-    console.error('Error:', error.message);
-    alert(`Error: ${error.message}`);
-  }
-};
+      if (!response.ok) throw new Error(data.error || "Failed to generate graph");
 
+      // Refresh the graph URL to force reload, avoid caching
+      setGraphUrl(`${process.env.PUBLIC_URL}/graphs/Graph.html`);
+    } catch (error) {
+      console.error('Error:', error.message);
+      alert(`Error: ${error.message}`);
+    }
+  };
 
   return (
     <div>

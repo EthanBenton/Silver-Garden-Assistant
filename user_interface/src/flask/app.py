@@ -88,17 +88,27 @@ def simulate():
 
     return jsonify(data)
 
-@app.route('/api/generate-graph', methods=['POST'])
-def generate_graph():
-    try:
-        # Assuming the JSON file path is fixed or dynamically determined elsewhere
-        data_file_path = 'data_input_sim/src/simulated_data.json'
-        graph_tool = graphingTool(data_source=data_file_path)
-        graph_tool.indexed_json_to_html(index=0, indey=1, indey2=-1, title="Your Graph Title")
+def UI_button_interaction():
+    """
+    Event script that runs upon a button press.
+    It targets a single json file for the initially generated data.
+    """
+    json_file_path = "user_interface/src/frontend/public/graphs/sensor_data.json"
+    export_name = json_file_path.split('/')[-1].split(".json")[0]  # Extracts 'sensor_data' from the file path
 
-        # Return the path or acknowledge that the graph was created
-        return jsonify({"message": "Graph generated successfully", "filePath": "/graphs/Graph.html"})
+    graph = graphingTool(json_file_path)
+    graph.set_export_name(export_name)
+    graph.indexed_json_to_html(index=2, indey=1, indey2=0, title=export_name)
+
+    return export_name  # Return the base name for use in the endpoint
+
+@app.route('/api/graph0', methods=['POST'])
+def graph0():
+    try:
+        export_name = UI_button_interaction()
+        return jsonify({"message": "Graph generated successfully", "filePath": f"/graphs/{export_name}.html"})
     except Exception as e:
+        app.logger.error(f"Failed to generate graph: {str(e)}")
         return jsonify({"error": str(e)}), 500
 
 
