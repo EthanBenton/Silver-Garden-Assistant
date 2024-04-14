@@ -91,22 +91,15 @@ def simulate():
 @app.route('/api/generate-graph', methods=['POST'])
 def generate_graph():
     try:
-        data = request.get_json()
-        graph_tool = graphingTool(data_source=None)
-        graph_tool.data_frame = pd.DataFrame(data['data'])
-        graph_tool.set_export_name(data['title'])
-        graph_tool.indexed_json_to_html(data['x_column'], data['y_columns'], data['title'])
-        graph_path = f"/graphs/{graph_tool.export_name}"
-        app.logger.info(f"Graph generated at {graph_path}")
-        return jsonify({'graphPath': graph_path})
+        # Assuming the JSON file path is fixed or dynamically determined elsewhere
+        data_file_path = 'data_input_sim/src/simulated_data.json'
+        graph_tool = graphingTool(data_source=data_file_path)
+        graph_tool.indexed_json_to_html(index=0, indey=1, indey2=-1, title="Your Graph Title")
+
+        # Return the path or acknowledge that the graph was created
+        return jsonify({"message": "Graph generated successfully", "filePath": "/graphs/Graph.html"})
     except Exception as e:
-        app.logger.error(f"Error generating graph: {str(e)}")
-        return jsonify({'error': str(e)}), 500
-
-
-@app.route('/graphs/<filename>')
-def serve_graph(filename):
-    return send_from_directory('user_interface/src/frontend/public' + '/graphs/', filename)
+        return jsonify({"error": str(e)}), 500
 
 
 @app.errorhandler(Exception)
