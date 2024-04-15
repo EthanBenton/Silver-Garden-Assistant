@@ -1,13 +1,8 @@
 import json
 import pandas as pd
 import numpy as np
-from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from datetime import datetime
-
-timestamps = []
-temperatures = []
-humidities = []
 
 # Load the json file
 with open('simulated_data_5.json') as f:
