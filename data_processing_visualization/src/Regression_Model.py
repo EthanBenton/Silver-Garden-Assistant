@@ -8,7 +8,7 @@ from sklearn.preprocessing import StandardScaler
 import matplotlib.pyplot as plt
 
 # Load data from JSON file
-with open('simulated_data_day.json', 'r') as f:
+with open('data_processing_visualization/src/simulated_data_day.json', 'r') as f:
     raw_data = json.load(f)
 
 data_structure = {
@@ -58,10 +58,10 @@ cluster_centroids = kmeans.cluster_centers_
 
 # Print cluster assignments
 print("Cluster Assignments:")
-for i, label in enumerate(kmeans.labels_):
+for i, label in enumerate(cluster_assignn):
     print("Data point:", df['Temperature'].iloc[i], "is assigned to cluster", label)
     print("Data point:", df['Humidity'].iloc[i], "is assigned to cluster", label)
-
+    
 # Print cluster centroids
 print("\nCluster Centroids:")
 for i, centroid in enumerate(kmeans.cluster_centers_):
@@ -93,7 +93,7 @@ print("Mean Squared Error:", mse_poly)
 # Visualize the regression
 plt.figure(figsize=(12, 6))
 plt.scatter(df['Temperature'], df['Humidity'], color='blue', label='Actual', alpha=0.5)  # Scatter plot for actual data points
-plt.plot(df['Temperature'], y_pred_least_squares, color='red', label='Predicted (Linear Least Squares)')
+plt.plot(df['Temperature'].to_numpy(), np.array(y_pred_least_squares), color='red', label='Predicted (Linear Least Squares)')
 plt.title('Linear Least Squares Approximation - Temperature vs Humidity')
 plt.xlabel('Temperature')
 plt.ylabel('Humidity')
