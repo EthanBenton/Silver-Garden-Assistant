@@ -9,7 +9,7 @@ timestamps = []
 temperatures = []
 humidities = []
 
-with open('data_input_sim/src/sensor_data.json') as f:
+with open('simulated_data_5.json') as f:
     data = json.load(f)
 for entry in data:
     timestamps.append(entry['timestamp'])

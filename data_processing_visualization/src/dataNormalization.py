@@ -2,7 +2,7 @@ import json
 import pandas as pd
 
 # Load the JSON data
-with open('generated_sensor_data.json', 'r') as file:
+with open('simulated_data_week.json', 'r') as file:
     sensor_data = json.load(file)
 
 # Create a DataFrame from the sensor data
