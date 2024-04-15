@@ -12,14 +12,16 @@ humidities = []
 with open('simulated_data_5.json') as f:
     data = json.load(f)
 for entry in data:
-    timestamps.append(entry['timestamp'])
-    temperatures.append(entry['temperature'])
     humidities.append(entry['humidity'])
+    temperatures.append(entry['temperature'])
+    temperatures.append(entry['temperature'])
+    
 
 df = pd.DataFrame({
-    'timestamp': timestamps,
+    'humidity': humidities,
     'temperature': temperatures,
-    'humidity': humidities
+    'timestamp': timestamps,
+
 })
 
 df['timestamp'] = pd.to_datetime(df['timestamp'])
