@@ -33,4 +33,9 @@ df['watering_schedule'] = np.where((df['temperature'] > 25) &(df['humidity'] < 6
 # Makes the schedule only allow people to water once a day
 df['watering_schedule'] = df['watering_schedule'].groupby(pd.Grouper(freq = 'D')).transform('max')
 
+# Select the data to train
+X = df[['temperature', 'humidity']]
+Y = df['watering_schedule']
+
+
 
