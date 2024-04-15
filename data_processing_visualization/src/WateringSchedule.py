@@ -21,23 +21,3 @@ df = pd.DataFrame({
 
 })
 
-df['timestamp'] = pd.to_datetime(df['timestamp'])
-
-df['watering_schedule'] = np.where((df['temperature'] >  25 ) & (df['humidity'] < 60), 1, 0)
-
-X = df.drop(columns=['watering_schedule', 'timestamp'])
-
-Y = df['watering_schedule']
-
-X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size = 0.2, random_state = 42)
-
-model = RandomForestClassifier()
-model.fit(X_train, Y_train)
-
-prediction = model.predict(X)
-
-watering_schedule_df = pd.DataFrame({
-    'timestamp': df['timestamp'], 'watering_required': prediction
-})
-
-watering_schedule_df.to_html('watering_schedule.html', index = False)
