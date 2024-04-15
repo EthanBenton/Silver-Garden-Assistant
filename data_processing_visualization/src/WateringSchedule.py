@@ -30,3 +30,7 @@ df = df.resample('1H').mean().interpolate()
 # Create the watering schedule based on data
 df['watering_schedule'] = np.where((df['temperature'] > 25) &(df['humidity'] < 60), 1, 0)
 
+# Makes the schedule only allow people to water once a day
+df['watering_schedule'] = df['watering_schedule'].groupby(pd.Grouper(freq = 'D')).transform('max')
+
+
