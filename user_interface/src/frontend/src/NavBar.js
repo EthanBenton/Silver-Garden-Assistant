@@ -3,9 +3,12 @@ import { Link } from 'react-router-dom';
 import { useTheme } from './ThemeContext'; 
 import './NavBar.css'; 
 
+/*
+  used for navigation around the website
+*/
 const NavBar = () => {
   const { theme } = useTheme(); // Access the current theme
-
+  
   return (
     <nav className={`navbar ${theme}`}>
       <Link to="/settings" className="nav-link">Settings</Link>
