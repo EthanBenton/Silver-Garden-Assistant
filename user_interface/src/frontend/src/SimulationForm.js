@@ -55,8 +55,6 @@ const SimulationForm = () => {
     }
   };
   
-  
-
   const timeUnitOptions = [
     { value: 'seconds', label: 'Seconds' },
     { value: 'minutes', label: 'Minutes' },
@@ -67,7 +65,6 @@ const SimulationForm = () => {
   ];
 
   const [simulatedData, setSimulatedData] = useState(null);
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -83,22 +80,7 @@ const SimulationForm = () => {
       const simulatedData = await simulateResponse.json();
   
       if (simulateResponse.ok) {
-        // Call the /api/graph0 endpoint with the simulated data
-        const graphResponse = await fetch('/api/graph0', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(simulatedData),
-        });
-        const graphData = await graphResponse.json();
-  
-        if (graphResponse.ok) {
-          console.log('Graph generated successfully:', graphData.filePath);
-          // You can open the generated graph file in a new window or update the UI accordingly
-        } else {
-          console.error('Error generating graph:', graphData.error);
-        }
+        setSimulatedData(simulatedData); 
       } else {
         console.error('Error simulating data:', simulatedData.error);
       }
@@ -127,21 +109,32 @@ const SimulationForm = () => {
   ];
 
 
-
   const handleGenerateGraph = async () => {
     try {
-          const response = await fetch('/api/graph0', { method: 'POST' });
-          const data = await response.json();
-
-          if (!response.ok) throw new Error(data.error || "Failed to generate graph");
-
-        } 
-          catch (error)   
-          {
-            console.error('Error:', error.message);
-            alert(`Error: ${error.message}`);
-          }
-};
+      if (simulatedData) {
+        const graphResponse = await fetch('/api/graph0', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(simulatedData),
+        });
+        const graphData = await graphResponse.json();
+  
+        if (graphResponse.ok) {
+          console.log('Graph generated successfully:', graphData.filePath);
+      
+        } else {
+          console.error('Error generating graph:', graphData.error);
+        }
+      } else {
+        console.error('No simulated data available. Please generate data first.');
+      }
+    } catch (error) {
+      console.error('Error:', error.message);
+      alert(`Error: ${error.message}`);
+    }
+  };
 
   return (
     <div>
