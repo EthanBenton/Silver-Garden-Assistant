@@ -5,9 +5,11 @@
 # Other Pages
 
  To run the app you need 2 terminals(order doesn't matter).
+ 
   To start up React
    cd user_interface/src/frontend
    npm start
+   
   To start up Flask
    cd user_interface/src/flask
    flask run
