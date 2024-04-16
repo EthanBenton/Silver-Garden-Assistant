@@ -12,13 +12,14 @@ import plotly.graph_objects as go
 import plotly.io as io
 from plotly.subplots import make_subplots
 import os.path
+from pathlib import Path
 
 project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
 sys.path.insert(0, project_root)
 
 from data_input_sim.src.constraint_validation import validate_params
 from data_input_sim.src.data_simulation import SensorDataSimulator
-from data_processing_visualization.src.graphing_tool_temp import graphingTool # change back to og
+from data_processing_visualization.src.graphing_tool import graphingTool # change back to og
 
 # Initialize Flask App
 app = Flask(__name__, static_folder='static')
@@ -108,19 +109,16 @@ def graph0():
     API endpoint to generate a graph from sensor_data.json using UI interaction and for an interactive graph located at GrapsPage0.js.
     """
     try:
-        # Define the path to the JSON file
         json_file_path = os.path.join(app.static_folder, 'data', 'sensor_data.json')
         if not os.path.isfile(json_file_path):
             logger.error(f"File does not exist: {json_file_path}")
             return jsonify({"error": "File does not exist"}), 404
         
-        # Generate the graph using the graphing tool
         graph = graphingTool(json_file_path)
-        export_name = os.path.basename(json_file_path).replace('.json', '')
+        export_name = Path(json_file_path).stem
         graph.set_export_name(export_name)
         graph.indexed_json_to_html(2, 1, 0, "Sensor Data Visualization")
 
-        # Return success response
         return jsonify({"message": "Graph generated successfully", "filePath": f"/data/{export_name}.html"})
     except Exception as e:
         logger.error(f"Failed to generate graph: {e}")
