@@ -12,16 +12,36 @@ CREATE TABLE IF NOT EXISTS weatherTable (
     timestampNum INTEGER NOT NULL,
     numValues INTEGER NOT NULL
 );
-*/
-
-CREATE TABLE IF NOT EXISTS sensorTable (
-    sensorID INTEGER PRIMARY KEY,
-    sensorType INTEGER NOT NULL,
-);
 
 CREATE TABLE IF NOT EXISTS sensorDataTable (
-    dataID INTEGER PRIMARY KEY,
-    FOREIGN KEY (sensorID) REFERENCES sensorTable(sensorID),
+    dataID INTEGER PRIMARY KEY AUTOINCREMENT,
     tStamp INTEGER NOT NULL,
-    numValues INTEGER NOT NULL
+    numValues INTEGER NOT NULL,
+    FOREIGN KEY (sensorID) REFERENCES sensorTable(sensorID)
 );
+*/
+
+CREATE TABLE IF NOT EXISTS sensorType (
+    sensorID INTEGER PRIMARY KEY AUTOINCREMENT,
+    sensorType INTEGER NOT NULL UNIQUE
+);
+
+CREATE TABLE IF NOT EXISTS sensorValues (
+    dataID INTEGER PRIMARY KEY AUTOINCREMENT,
+    sensorID INTEGER NOT NULL,
+    tStamp INTEGER NOT NULL,
+    temperature INTEGER NOT NULL,
+    humidity INTEGER NOT NULL,
+    FOREIGN KEY (sensorID) REFERENCES sensorType(sensorID)
+);
+
+INSERT OR IGNORE INTO sensorType (sensorType) VALUES ('TemperatureAndHumidity');
+
+INSERT INTO sensorValues (sensorID, tStamp, temperature, humidity)
+SELECT
+    (SELECT sensorID FROM sensorType WHERE sensorType = 'TemperatureAndHumidity'),
+    datetime('now'),
+    temperature,
+    humidity
+FROM
+    sensorData;
