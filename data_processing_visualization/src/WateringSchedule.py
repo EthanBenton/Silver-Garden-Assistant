@@ -25,7 +25,7 @@ df = pd.DataFrame({
 df.set_index('timestamp', inplace = True)
 
 # Change the data to 1 hour invtervals and replace missing values
-df = df.resample('1H').mean().interpolate()
+df = df.resample('1h').mean().interpolate()
 
 # Create the watering schedule based on data
 df['watering_schedule'] = np.where((df['temperature'] > 25) &(df['humidity'] < 60), 1, 0)
