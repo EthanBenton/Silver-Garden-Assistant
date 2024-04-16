@@ -12,16 +12,17 @@ const HomePage = () => {
 
   return (
     <div className="containerStyle">
-      {boxes.map((box) => (
-        <Link to={box.path} key={box.id} className="boxLink">
-          <div className="boxStyle">
-            <img src={box.imagePath} alt={`Graphs ${box.id}`} className="imageStyle" />
-            <div className="boxFooter">
-              {box.footerName}
+      <div className="welcomeText">Welcome Back, Thomas</div> 
+      <div className="boxesContainer">
+        {boxes.map((box) => (
+          <Link to={box.path} key={box.id} className="boxLink">
+            <div className="boxStyle">
+              <img src={box.imagePath} alt={`Graphs ${box.id}`} className="imageStyle" />
+              <div className="boxFooter">{box.footerName}</div>
             </div>
-          </div>
-        </Link>
-      ))}
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };

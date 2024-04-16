@@ -4,9 +4,18 @@ form {
     flex-direction: column;
     gap: 1rem;
     padding: 1rem;
-    background-color: #f8f8f8;
     border-radius: 0.5rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  form.light {
+    background-color: #f8f8f8;
+    color: black;
+  }
+  
+  form.dark {
+    background-color: #333;
+    color: white;
   }
   
   label {
@@ -43,4 +52,5 @@ form {
     align-items: center;
     gap: 1rem; 
   }
+
   
