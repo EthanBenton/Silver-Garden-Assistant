@@ -28,7 +28,7 @@ df.set_index('timestamp', inplace = True)
 df = df.resample('1h').mean().interpolate()
 
 # Create the watering schedule based on data
-df['watering_schedule'] = np.where((df['temperature'] > 25) &(df['humidity'] < 60), 1, 0)
+df['watering_schedule'] = np.where((df['temperature'] > 25) & (df['humidity'] < 60), 1, 0)
 
 # Makes the schedule only allow people to water once a day
 df['watering_schedule'] = df['watering_schedule'].groupby(pd.Grouper(freq = 'D')).transform('max')
@@ -58,9 +58,12 @@ watering_schedule_df = pd.DataFrame({
     'watering_required': predictions
 })
 
+# Provide a time estimate of when it's best to water your plant
+df['watering_time'] = np.where((df['temperature']> 25) & (df['humidity'] < 60), 'Morning', 'Evening')
+
 # Make the table produce horizontally
 watering_schedule_df = df.pivot_table(index = df.index.date, columns = 'days_of_the_week',
- values = ['watering_schedule'], aggfunc = 'first', observed = False)
+ values = ['watering_schedule', 'watering_time'], aggfunc = 'first', observed = False)
 
 # Replace the 1s as Water Plant
 watering_schedule_df.replace(1, 'Water Plant', inplace = True)
