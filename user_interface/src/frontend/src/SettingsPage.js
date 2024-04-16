@@ -3,8 +3,10 @@ import { useTheme } from './ThemeContext';
 const SettingsPage = () => {
   const { theme, toggleTheme } = useTheme();
 
+  const themeClass = theme === 'dark' ? 'darkTheme' : 'lightTheme';
+
   return (
-    <div style={{ background: theme === 'dark' ? '#333' : '#FFF', color: theme === 'dark' ? '#FFF' : '#333' }}>
+    <div className={themeClass}>
       <h1>Settings</h1>
       <label>
         Dark Mode

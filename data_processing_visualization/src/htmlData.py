@@ -95,7 +95,7 @@ def makehtml(humidity, humidityCount, temperature, temperatureCount, timestamp, 
         file.write('</html>\n')
 
 if __name__ == '__main__':
-    inputFile = 'generated_sensor_data.json'
+    inputFile = 'data_input_sim\src\sensor_data.json'
     outputFile = 'Data.html'
 
     data = read_data(inputFile)

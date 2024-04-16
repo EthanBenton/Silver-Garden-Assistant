@@ -3,20 +3,9 @@
     padding: 10px;
   }
   
-  .navbar.light {
-    background-color: #f8f9fa;
-    color: #212529;
-  }
-  
-  .navbar.dark {
-    background-color: #333;
-    color: white;
-  }
-  
   .nav-link {
-    color: inherit; /* This ensures the link color matches the navbar text color */
+    color: inherit; /* link color matches the navbar text color */
     text-decoration: none;
     margin: 0 10px;
   }
-  
   
