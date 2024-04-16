@@ -2,7 +2,7 @@ import json
 import pandas as pd
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
-from datetime import datetime
+from datetime import datetime, timedelta
 
 # Load the json file
 with open('simulated_data_5.json') as f:
@@ -33,6 +33,13 @@ df['watering_schedule'] = np.where((df['temperature'] > 25) &(df['humidity'] < 6
 # Makes the schedule only allow people to water once a day
 df['watering_schedule'] = df['watering_schedule'].groupby(pd.Grouper(freq = 'D')).transform('max')
 
+# Adding the days of the week with the timestamps
+df['days_of_the_week'] = df.index.days_name()
+
+# Make the days of the week
+weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+df['days_of_the_week'] = pd.Categorical(df['days_of_the_week'], categories = weekdays, ordered = True)
+
 # Select the data to train
 X = df[['temperature', 'humidity']]
 Y = df['watering_schedule']
@@ -47,6 +54,7 @@ predictions = model.predict(X)
 # Create the data frame for the watering schedule
 watering_schedule_df = pd.DataFrame({
     'timestamp': df.index,
+    'days_of_the_week': df['days_of_the_week'],
     'watering_required': predictions
 })
 
