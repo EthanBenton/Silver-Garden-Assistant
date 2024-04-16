@@ -58,5 +58,9 @@ watering_schedule_df = pd.DataFrame({
     'watering_required': predictions
 })
 
+# Make the table produce horizontally
+watering_schedule_df = df.pivot_table(index = df.index.date, columns = 'days_of_the_week',
+ values = 'watering_schedule', aggfunc = 'first')
+
 # Save and send the schedule to an html
-watering_schedule_df.to_html('watering_schedule.html', index = False)
+watering_schedule_df.to_html('watering_schedule.html', na_rep = '', index = True)
