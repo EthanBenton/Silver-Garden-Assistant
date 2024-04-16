@@ -155,19 +155,6 @@ def UI_button_interaction():
     json_file_path = Path("user_interface/src/flask/data/simulated_data.json")
     produce_from_json(json_file_path)
 
-if __name__ == "__main__":
-    """
-    If run as main by the cli, the program will generate 
-    a graph based on a user submitted path to a valid
-    .json file and send it to 
-    user_interface/src/frontend/public/graphs/
-    with the same name as the json file specified.
-    This graph will be displayed upon creation.
-    """
-    #example: data_processing_visualization/src/sensor_data.json
-    filenam = input('Enter .json file name.\n')
-    produce_from_json(filenam)
-
 #------END CURRENT VERSION OF GRAPHING_TOOL---------
         
 
