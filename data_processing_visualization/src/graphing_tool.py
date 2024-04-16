@@ -25,7 +25,7 @@ class graphingTool:
             self.dframe = pandas.read_json(self.dat)
         else:
             logger.error("Selected file does not exist.")
-        self.export_name = self.dat.parent / 'Graph.html'
+        self.export_name = "user_interface/src/frontend/public/graphs/Graph.html"
 
     def set_export_name(self, input_name):
         """
@@ -35,7 +35,9 @@ class graphingTool:
             self: the graphingTool object
             input_name: The name to be used for the exported file
         """
-        self.export_name = self.dat.parent / f'{input_name}.html'
+        export_directory = os.path.abspath(os.path.join(os.getcwd(), "../frontend/public/graphs"))
+        os.makedirs(export_directory, exist_ok=True)
+        self.export_name = os.path.join(export_directory, f"{input_name}.html")
 
     def set_data_input(self, input_path):
         """
@@ -146,7 +148,7 @@ def UI_button_interaction():
     The event script that runs upon a button being pressed within a UI.
     It only targets a single json file for the initially generated data.
     """
-    json_file_path = Path("user_interface/src/flask/data/sensor_data.json")
+    json_file_path = Path("user_interface/src/flask/data/simulated_data.json")
     produce_from_json(json_file_path)
 
 if __name__ == "__main__":

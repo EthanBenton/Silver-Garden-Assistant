@@ -1,5 +1,7 @@
 import React from 'react';
 import './GraphsPage1.css';
+
+// used to display a graph with a staitc name
 const GraphsPage1 = () => {
   return (
     <div>
