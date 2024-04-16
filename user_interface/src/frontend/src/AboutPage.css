@@ -1,15 +1,15 @@
-/* AboutPage.css*/
-.containerStyle {
+/* AboutPage.css */
+.aboutContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
+  padding: 20px;
 }
 
-.marginTop40,
-.marginTop20 {
-  margin-top: 40px;
-  width: 100%;
+.aboutSection {
+  max-width: 800px;
+  margin-bottom: 40px;
+  text-align: center; /* Center the text */
 }
 
 h2 {
@@ -48,22 +48,17 @@ h2 {
   margin-top: 5rem;
   max-width: 120%;
   height: 40%;
+.aboutSection h2 {
+  margin-bottom: 20px;
 }
 
-@media (max-width: 900px) {
-  .row {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .col-lg-6,
-  .col-md-6 {
-    width: 50%;
-  }
+.aboutSection p {
+  margin-bottom: 20px;
+  line-height: 1.6; /* Easier to read text */
 }
 
-.nonClickable {
-  opacity: 0.5;
-  cursor: default;
+.aboutImage {
+  max-width: 100%; /*image responsive */
+  height: auto; /* aspect ratio */
+  margin-bottom: 20px; /* Space below the image */
 }

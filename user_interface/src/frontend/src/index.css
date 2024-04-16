@@ -1,13 +1,88 @@
 /* index.css */
+
+/*light page*/
 body.light {
   background-color: #e4e4cc;
   /*background-color: #fff; Light background */
   color: #333; /* Darker text */
 }
 
+/* Button styles for light theme */
+body.light button {
+  background-color: #aa7c4c; /* light theme button color */
+  color: #fff; /* Text color for light theme buttons */
+
+}
+
+/* light theme button hover color */
+body.light button:hover {
+  background-color: #8B4513; 
+
+}
+
+/* Seths input boxes*/
+body.light input,
+body.light select {
+    background-color: #e4e4cc; /* Input field background color in light mode */
+    color: #333; /* Input text color in light mode */
+}
+
+body.light .popupContent {
+  background-color: #f8f8f8; /* Light background popup content */
+  color: #333; /* text  */
+
+}
+
+body.light .navbar {
+  background-color: #4b5b2b;
+  /* background-color: #f8f9fa; Lighter shade for light mode */
+  color: #f8f9fa; /* Dark text for contrast */
+}
+
+/* Light theme box color */
+body.light .boxStyle {
+  background-color: #4b5b2b; /* Light theme box background color */
+  color: #fff; /* Light theme text color */
+}
+
+/*dark page*/
 body.dark {
   background-color: #333; /* Dark background */
   color: #fff; /* Lighter text */
+}
+
+/* Button styles for dark theme */
+body.dark button {
+  background-color: #343a40; /* dark theme button color */
+  color: #ddd; /* Text color for dark theme buttons */
+}
+
+ /*dark theme button hover color */
+body.dark button:hover {
+  background-color: #8B4513;
+}
+
+/* Seths input boxes*/
+body.dark input,
+body.dark select {
+    background-color: #333; /* Input field background color in dark mode */
+    color: #ccc; /* Input text color in dark mode */
+}
+
+body.dark .popupContent {
+  background-color: #333; /* Dark background for popup content */
+  color: #ddd; /* text */
+}
+
+body.dark .navbar {
+  background-color: #343a40; /* Darker shade for dark mode */
+  color: #f8f9fa; /* Light text for contrast */
+}
+
+/* Dark theme box color */
+body.dark .boxStyle {
+  background-color: #343a40; /* Dark theme box background color */
+  color: #ddd; /* Dark theme text color */
 }
 
 /* Navbar specific styling */
@@ -21,14 +96,4 @@ body.dark {
 }
 
 
-body.light .navbar {
-  background-color: #4b5b2b;
-  /* background-color: #f8f9fa; Lighter shade for light mode */
-  color: #f8f9fa; /* Dark text for contrast */
-}
-
-body.dark .navbar {
-  background-color: #343a40; /* Darker shade for dark mode */
-  color: #f8f9fa; /* Light text for contrast */
-}
 
