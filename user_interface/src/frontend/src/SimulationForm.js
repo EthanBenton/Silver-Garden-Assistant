@@ -72,27 +72,40 @@ const SimulationForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('/api/simulate', {
+      // Send the form data to the /api/simulate endpoint
+      const simulateResponse = await fetch('/api/simulate', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ 
-          ...formData,
-        }),
+        body: JSON.stringify(formData),
       });
-      const data = await response.json();
+      const simulatedData = await simulateResponse.json();
   
-      if (response.ok) {
-        setSimulatedData(data);
+      if (simulateResponse.ok) {
+        // Call the /api/graph0 endpoint with the simulated data
+        const graphResponse = await fetch('/api/graph0', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(simulatedData),
+        });
+        const graphData = await graphResponse.json();
+  
+        if (graphResponse.ok) {
+          console.log('Graph generated successfully:', graphData.filePath);
+          // You can open the generated graph file in a new window or update the UI accordingly
+        } else {
+          console.error('Error generating graph:', graphData.error);
+        }
       } else {
-        console.error('Error:', data.error);
+        console.error('Error simulating data:', simulatedData.error);
       }
     } catch (error) {
       console.error('Error:', error);
     }
   };
-  
 
   const generateJsonFile = (data) => {
     const dataStr = JSON.stringify(data, null, 2); 
