@@ -1,8 +1,12 @@
+import os
+from pathlib import Path
 import numpy as np
-import pandas
+import pandas 
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
-import os.path
+import logging
+
+logger = logging.getLogger(__name__)
 
 """
 The purpose of this function is to convert from a .json format into a .html graph for use on the website
@@ -16,32 +20,35 @@ class graphingTool:
             self: the graphingTool object
             data_source: the full path to a json file from the current directory
         """
-        self.dat = data_source #name of source file
-        if(os.path.isfile(self.dat)):
-            self.dframe = pandas.read_json(self.dat) #frame containing data from the .json
+        self.dat = Path(data_source)
+        if self.dat.is_file():
+            self.dframe = pandas.read_json(self.dat)
         else:
-            print("Selected file does not exist in the same directory")
-        self.export_name = 'user_interface/src/frontend/public/graphs/Graph.html'
+            logger.error("Selected file does not exist.")
+        self.export_name = self.dat.parent / 'Graph.html'
 
-    def set_export_name(self, input):
+    def set_export_name(self, input_name):
         """
         The input is a string
         Changes the name of the file created on export
         Args:
             self: the graphingTool object
-            input: The name to be used for the exported file
+            input_name: The name to be used for the exported file
         """
-        self.export_name = 'user_interface/src/frontend/public/graphs/'+ input + '.html'
+        self.export_name = self.dat.parent / f'{input_name}.html'
 
-    def set_data_input(self, input):
+    def set_data_input(self, input_path):
         """
         The input must be .json
         Args:
             self: the graphingTool object
-            input: The path to the json file being used to construct a graph
+            input_path: The path to the json file being used to construct a graph
         """
-        self.dat = input #name of source file
-        self.dframe = pandas.read_json(self.dat) #frame containing data from the .json
+        self.dat = Path(input_path)
+        if self.dat.is_file():
+            self.dframe = pandas.read_json(self.dat)
+        else:
+            logger.error("Selected file does not exist.")
 
     def get_export_name(self):
         """
@@ -53,7 +60,7 @@ class graphingTool:
         """
         return self.export_name
     
-    def get_file_name(self):
+    def get_filenam(self):
         """
         Returns the path of the currently accessed file
         Args:
@@ -84,85 +91,63 @@ class graphingTool:
             indey2: the index indicating which column to use for the second y-axis' data (-1 if no second y-axis is used)
             title: the title of the displayed graph
         """
-        #Convert our input into three 1d arrays
+         #Convert our input into three 1d arrays
         convert = self.dframe.values
-        axisx = convert[:,index].flatten()
-        axisy = convert[:,indey].flatten()
+        axisx = convert[:, index].flatten()
+        axisy = convert[:, indey].flatten()
         
         namex = self.dframe.columns[index]
         namey = self.dframe.columns[indey]
 
-        if(indey2 != -1): #third only if specified
-            axisy2 = convert[:,indey2].flatten()
-            namey2 = self.dframe.columns[indey2]
-            
-        
-        #Create the figure
-        fig = make_subplots(specs=[[{"secondary_y": True}]])
+        fig = make_subplots(specs=[[{"secondary_y": indey2 != -1}]])
 
-        #Plot the first set of y-values
         fig.add_trace(go.Scatter(
-            x=axisx,
-            y=axisy,
-            mode='markers',
-            name = namey,
+            x=axisx, 
+            y=axisy, 
+            mode='markers', 
+            name=namey,
             connectgaps = False
-        ),
+        ), 
         secondary_y=False
         )
-        
-        #Plot the second set of y-values ONLY if y2 != -1
-        if(indey2 != -1):
-            fig.add_trace(go.Scatter(
-                x=axisx,
-                y=axisy2,
-                mode='markers',
-                name = namey2,
-                connectgaps=False
-            ),
-            secondary_y=True
-            )
-        
+
+        if (indey2 != -1): #third only if specified
+            axisy2 = convert[:, indey2].flatten()
+            namey2 = self.dframe.columns[indey2]
+            fig.add_trace(go.Scatter(x=axisx, y=axisy2, mode='markers', name=namey2), secondary_y=True)
+
         #Include figure titles
         fig.update_xaxes(title_text=namex)
         fig.update_layout(title_text=title)
-        fig.update_yaxes(title_text=namey,secondary_y=False)
-        if(indey2 != -1):
-            fig.update_yaxes(title_text=namey2,secondary_y=True)
+        fig.update_yaxes(title_text=namey, secondary_y=False)
+        if (indey2 != -1):
+            fig.update_yaxes(title_text=namey2, secondary_y=True)
         
-        fig.write_html(self.export_name,auto_open=True)
+        fig.write_html(str(self.export_name), auto_open=True)
 
-def produce_from_json(input):
+def produce_from_json(input_path):
     """
     A simplification of main designed for use in a UI element.
     It only takes a file name of a json file as input.
     Args:
-        input: The file path to a valid json file.
+        input_path: The file path to a valid json file.
     """
-    gr = graphingTool(input)
+    gr = graphingTool(input_path)
     #Trims the directory content and footer from the input name
-    exportNam = (gr.dat[gr.dat.rfind('/')+1:gr.dat.find(".json")])
+    export_name = gr.dat.stem
     #Adds in the export destination
-    gr.set_export_name(exportNam)
+    gr.set_export_name(export_name)
     #Creates the graph
     #This currently assumes that our data is stored as {humidity, temp, timestamp}
-    gr.indexed_json_to_html(2,1,0,exportNam)
+    gr.indexed_json_to_html(2, 1, 0, export_name)
 
 def UI_button_interaction():
     """
     The event script that runs upon a button being pressed within a UI.
     It only targets a single json file for the initially generated data.
     """
-    gr = graphingTool("user_interface/src/frontend/public/graphs/sensor_data.json") #Name can be changed accordingly to what needs graphing later.
-    #Trims the directory content and footer from the input name
-    exportNam = (gr.dat[gr.dat.rfind('/')+1:gr.dat.find(".json")])
-    #Adds in the export destination
-    gr.set_export_name(exportNam)
-    #Creates the graph
-    #This currently assumes that our data is stored as {humidity, temp, timestamp}
-    gr.indexed_json_to_html(2,1,0,exportNam)
-    
-
+    json_file_path = Path("user_interface/src/flask/data/sensor_data.json")
+    produce_from_json(json_file_path)
 
 if __name__ == "__main__":
     """
@@ -174,5 +159,5 @@ if __name__ == "__main__":
     This graph will be displayed upon creation.
     """
     #example: data_processing_visualization/src/sensor_data.json
-    fileNam = input('Enter .json file name.\n')
-    produce_from_json(input=fileNam)
+    filenam = input('Enter .json file name.\n')
+    produce_from_json(filenam)
