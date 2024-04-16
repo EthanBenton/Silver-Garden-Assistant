@@ -1,47 +1,80 @@
 /* HomePage.css */
 .containerStyle {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two-column layout */
-  gap: 20px; /* Space between the boxes */
-  justify-content: center; /* Center the boxes horizontally */
-  padding: 20px; /* Padding inside the container */
-  margin: 40px auto; /* top and bottom margin  */
-}
+    display: grid;
+    grid-template-columns: 1fr 2fr; 
+    gap: 1rem;
+    align-items: start;
+    padding: 1rem;
+  }
 
-.boxLink {
-  text-decoration: none;
-  grid-column: span 1; /* The link will span one column */
-  place-self: center; /* Center the link in the grid cell */
-}
+  .welcomeText {
+    animation: slideDownFromTop 1s ease-out forwards;
+    font-size: 5em;
+    font-weight: bold;
+    margin-top: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .boxesContainer {
+    animation: slideDownFromTop 1s ease-out forwards;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    align-items: start;
+    grid-column: 2 / 3;
+  }
 
-.boxStyle {
-  width: 1000px; /* size of boxes */
-  height: 820px; /* size of boxes */
-  margin-bottom: 20px;
-  margin-right: 20px; 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #4b5b2b;
-  color: white;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 1.8rem; /*  font size */
-}
+  .boxLink {
+    text-decoration: none;
+  }
+  
+  .boxStyle {
+    width: 400px;
+    height: 220px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #4b5b2b;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .imageStyle {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .boxFooter {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
 
-.imageStyle {
-  width: 100%; /* Image will fill the width of the box */
-  height: auto; /* Height will scale according to the width */
-  object-fit: cover;
-  border-top-left-radius: 10px; /* Round the top corners */
-  border-top-right-radius: 10px;
-}
-
-.boxFooter {
-  width: 100%; /* Footer will fill the width of the box */
-  padding: 10px 0; /* Padding at the top and bottom of the footer */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  @keyframes slideDownFromTop {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }

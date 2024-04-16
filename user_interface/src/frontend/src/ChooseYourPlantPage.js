@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './ChooseYourPlantPage.css';
 
+
+/**
+ *  stores the paths for the converted inputs
+ */
 const plantImages = {
   rose: `${process.env.PUBLIC_URL}/images/PlantDB/rose.png`,
   greenpepper: `${process.env.PUBLIC_URL}/images/PlantDB/greenpepper.png`,
@@ -17,6 +21,9 @@ const plantImages = {
   // Add more plants as needed
 };
 
+/**
+ * stores the descriptions of the plants
+ */
 const plantDetails = {
   rose: "Roses have thorns.",
   greenpepper: "Green peppers are good in spagetti.",
@@ -33,6 +40,10 @@ const plantDetails = {
   // Add more as needed
 };
 
+/**
+ * 
+ * @returns 
+ */
 const ChooseYourPlantPage = () => {
   const [plants, setPlants] = useState(() => {
     const savedPlants = localStorage.getItem('plants');
