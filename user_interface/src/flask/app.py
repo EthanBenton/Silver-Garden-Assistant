@@ -1,22 +1,20 @@
-from flask import Flask, request, jsonify
-<<<<<<< HEAD
-=======
-from data_input_sim.src.constraint_validation import validate_params
-from data_input_sim.src.data_simulation import SensorDataSimulator
-from data_processing_visualization.src.graphing_tool import graphingTool # change back to og
-from flask import current_app
-
->>>>>>> c3d2965dcfddad2d904862af43cc230fb66b6b33
 import sys
 import os
 import logging
 import os.path
 import json 
+import pathlib as Path
 
+from flask import Flask, request, jsonify
+from flask import current_app
 
 #needed for flask to use the files
 project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
 sys.path.insert(0, project_root)
+
+from data_input_sim.src.constraint_validation import validate_params
+from data_input_sim.src.data_simulation import SensorDataSimulator
+from data_processing_visualization.src.graphing_tool import graphingTool # change back to og
 
 
 # Initialize Flask App
@@ -107,21 +105,9 @@ def graph0():
     API endpoint to generate a graph from simulated data using UI interaction and for an interactive graph located at GrapsPage0.js.
     """
     try:
-<<<<<<< HEAD
-        json_file_path = os.path.join(app.static_folder, 'data', 'simulated_data.json')
-        if not os.path.isfile(json_file_path):
-            logger.error(f"File does not exist: {json_file_path}")
-            return jsonify({"error": "File does not exist"}), 404
-        
-        graph = graphingTool(json_file_path)
-        export_name = Path(json_file_path).stem
-        graph.set_export_name(export_name)
-        graph.indexed_json_to_html(2, 1, 0, "Sensor Data Visualization")
-=======
         simulated_data = request.get_json()
         if not simulated_data:
             return jsonify({"error": "No simulated data received"}), 400
->>>>>>> c3d2965dcfddad2d904862af43cc230fb66b6b33
 
         data_dir = os.path.join(current_app.static_folder, 'data')
 
@@ -141,7 +127,6 @@ def graph0():
     except Exception as e:
         logger.error(f"Failed to generate graph: {e}")
         return jsonify({"error": str(e)}), 500
-
 
 @app.errorhandler(Exception)
 def handle_exception(e):
