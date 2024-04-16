@@ -8,15 +8,15 @@
  
   To start up React
   
-   cd user_interface/src/frontend
+   - cd user_interface/src/frontend
    
-   npm start
+   - npm start
 
   To start up Flask
   
-   cd user_interface/src/flask
+   - cd user_interface/src/flask
    
-   flask run
+   - flask run
 
 <details>
   <summary>Placeholder(drop down)</summary>
