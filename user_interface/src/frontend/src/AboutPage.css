@@ -12,6 +12,44 @@
   text-align: center; /* Center the text */
 }
 
+h2 {
+  text-decoration: underline;
+}
+
+.leftTextStyle {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-left: 8rem;
+  margin-top: 1rem;
+  text-align: right;
+  text-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.rightTextStyle {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-left: 5rem;
+  margin-right: 10rem;
+  margin-top: 1rem;
+  text-align: left;
+  text-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.imageStyle {
+  display: block;
+  margin: 0 auto;
+  max-width: 50%;
+  height: 50%;
+}
+
+.largeImageStyle {
+  border-radius: 15px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+  margin-top: 5rem;
+  max-width: 120%;
+  height: 40%;
+}
+
 .aboutSection h2 {
   margin-bottom: 20px;
 }
