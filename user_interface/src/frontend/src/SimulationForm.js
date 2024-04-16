@@ -109,6 +109,10 @@ const SimulationForm = () => {
   ];
 
 
+  /**
+   * 
+   * used to make an api call to the flask backend and displa
+   */
   const handleGenerateGraph = async () => {
     try {
       if (simulatedData) {

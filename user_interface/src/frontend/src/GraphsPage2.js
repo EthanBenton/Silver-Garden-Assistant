@@ -1,7 +1,9 @@
 import React from 'react';
 import './GraphsPage2.css';
 
-// used to display a graph with a staitc name
+/**
+ *  Used to display a static .html file name on the website
+ */
 const GraphsPage2 = () => {
   return (
     <div>
