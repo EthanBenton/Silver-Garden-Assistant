@@ -1,18 +1,20 @@
-from flask import Flask, request, jsonify
-from data_input_sim.src.constraint_validation import validate_params
-from data_input_sim.src.data_simulation import SensorDataSimulator
-from data_processing_visualization.src.graphing_tool import graphingTool # change back to og
-from flask import current_app
-
 import sys
 import os
 import logging
 import os.path
 import json 
+import pathlib as Path
 
+from flask import Flask, request, jsonify
+from flask import current_app
 
+#needed for flask to use the files
 project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
 sys.path.insert(0, project_root)
+
+from data_input_sim.src.constraint_validation import validate_params
+from data_input_sim.src.data_simulation import SensorDataSimulator
+from data_processing_visualization.src.graphing_tool import graphingTool # change back to og
 
 
 # Initialize Flask App
@@ -125,7 +127,6 @@ def graph0():
     except Exception as e:
         logger.error(f"Failed to generate graph: {e}")
         return jsonify({"error": str(e)}), 500
-
 
 @app.errorhandler(Exception)
 def handle_exception(e):
