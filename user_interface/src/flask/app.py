@@ -1,19 +1,11 @@
-from flask import Flask, request, jsonify, send_from_directory
+from flask import Flask, request, jsonify
 import sys
-import pandas as pd 
 import os
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-import pandas
 import logging
-import plotly.express as px
-import plotly.graph_objects as go
-import plotly.io as io
-from plotly.subplots import make_subplots
 import os.path
 from pathlib import Path
 
+#needed for flask to use the files
 project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
 sys.path.insert(0, project_root)
 
@@ -109,7 +101,7 @@ def graph0():
     API endpoint to generate a graph from sensor_data.json using UI interaction and for an interactive graph located at GrapsPage0.js.
     """
     try:
-        json_file_path = os.path.join(app.static_folder, 'data', 'sensor_data.json')
+        json_file_path = os.path.join(app.static_folder, 'data', 'simulated_data.json')
         if not os.path.isfile(json_file_path):
             logger.error(f"File does not exist: {json_file_path}")
             return jsonify({"error": "File does not exist"}), 404

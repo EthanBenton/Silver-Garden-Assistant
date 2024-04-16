@@ -146,7 +146,7 @@ def UI_button_interaction():
     The event script that runs upon a button being pressed within a UI.
     It only targets a single json file for the initially generated data.
     """
-    json_file_path = Path("user_interface/src/flask/data/sensor_data.json")
+    json_file_path = Path("user_interface/src/flask/data/simulated_data.json")
     produce_from_json(json_file_path)
 
 if __name__ == "__main__":
