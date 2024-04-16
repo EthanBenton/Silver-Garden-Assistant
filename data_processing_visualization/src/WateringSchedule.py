@@ -37,5 +37,18 @@ df['watering_schedule'] = df['watering_schedule'].groupby(pd.Grouper(freq = 'D')
 X = df[['temperature', 'humidity']]
 Y = df['watering_schedule']
 
+# Training
+model = RandomForestClassifier()
+model.fit(X, Y)
 
+# Create the predictions from the data
+predictions = model.predict(X)
 
+# Create the data frame for the watering schedule
+watering_schedule_df = pd.DataFrame({
+    'timestamp': df.index,
+    'watering_required': predictions
+})
+
+# Save and send the schedule to an html
+watering_schedule_df.to_html('watering_schedule.html', index = False)
