@@ -3,7 +3,7 @@ import json
 import numpy as np
 import sys
 sys.path.append('data_processing_visualization\\src')
-from htmlData import read_data, processData, makehtml
+from htmlData import *
 
 class TestJsonProcess(unittest.TestCase):
 
