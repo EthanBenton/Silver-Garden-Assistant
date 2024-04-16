@@ -60,7 +60,10 @@ watering_schedule_df = pd.DataFrame({
 
 # Make the table produce horizontally
 watering_schedule_df = df.pivot_table(index = df.index.date, columns = 'days_of_the_week',
- values = 'watering_schedule', aggfunc = 'first')
+ values = ['watering_schedule'], aggfunc = 'first', observed = False)
+
+# Replace the 1s as Water Plant
+watering_schedule_df.replace(1, 'Water Plant', inplace = True)
 
 # Save and send the schedule to an html
 watering_schedule_df.to_html('watering_schedule.html', na_rep = '', index = True)
