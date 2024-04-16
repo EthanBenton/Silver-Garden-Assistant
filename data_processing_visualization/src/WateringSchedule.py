@@ -11,7 +11,7 @@ with open('simulated_data_5.json') as f:
 # Take the timestamps, temperatures, and humidities from json file
 temperatures = [entry['temperature'] for entry in data]
 humidities = [entry['humidity'] for entry in data]    
-timestamps = [datetime.strptime(entry['timestamp'], '%Y-%M-%D %H:%M%S') for entry in data]
+timestamps = [datetime.strptime(entry['timestamp'], '%Y-%m-%d %H:%M:%S') for entry in data]
 
 # Create the dataframe from data taken from json
 df = pd.DataFrame({
