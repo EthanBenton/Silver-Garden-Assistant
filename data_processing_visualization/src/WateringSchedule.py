@@ -5,7 +5,7 @@ from sklearn.ensemble import RandomForestClassifier
 from datetime import datetime, timedelta
 
 # Load the json file
-with open('simulated_data_5.json') as f:
+with open('user_interface\\src\\flask\\static\\data\\sensor_data.json') as f:
     data = json.load(f)
 
 # Take the timestamps, temperatures, and humidities from json file
@@ -65,8 +65,8 @@ df['watering_time'] = np.where((df['temperature']> 25) & (df['humidity'] < 60), 
 watering_schedule_df = df.pivot_table(index = df.index.date, columns = 'days_of_the_week',
  values = ['watering_schedule', 'watering_time'], aggfunc = 'first', observed = False)
 
-# Replace the 1s as Water Plant
-watering_schedule_df.replace(1, 'Water Plant', inplace = True)
+# Replace the 0s as Water Plant
+watering_schedule_df.replace(0, 'Water Plant', inplace = True)
 
 # Save and send the schedule to an html
-watering_schedule_df.to_html('watering_schedule.html', na_rep = '', index = True)
+watering_schedule_df.to_html('user_interface\\src\\frontend\\public\\graphs\\watering_schedule.html', na_rep = '', index = True)
