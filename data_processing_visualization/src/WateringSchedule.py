@@ -34,7 +34,7 @@ df['watering_schedule'] = np.where((df['temperature'] > 25) &(df['humidity'] < 6
 df['watering_schedule'] = df['watering_schedule'].groupby(pd.Grouper(freq = 'D')).transform('max')
 
 # Adding the days of the week with the timestamps
-df['days_of_the_week'] = df.index.days_name()
+df['days_of_the_week'] = df.index.day_name()
 
 # Make the days of the week
 weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
