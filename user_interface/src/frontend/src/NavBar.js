@@ -15,6 +15,7 @@ const NavBar = () => {
       <Link to="/" className="nav-link">Home</Link>
       <Link to="/About" className="nav-link">About</Link>
       {/*<Link to= "a route" className="nav-link">(user facing word)</Link>*/}
+      {/*<Link to="/Data" className="nav-link">Data</Link> */}
       <Link to="/ChooseYourPlant" className="nav-link">Choose Your Plant</Link>
       <Link to="/SimulationForm" className="nav-link">Simulate</Link>
     </nav>

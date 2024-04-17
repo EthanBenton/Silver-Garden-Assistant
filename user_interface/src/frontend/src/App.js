@@ -10,6 +10,7 @@ import GraphsPage1 from './GraphsPage1';
 import GraphsPage2 from './GraphsPage2';
 import GraphsPage3 from './GraphsPage3';
 import SettingsPage from './SettingsPage';
+import DataPage from './DataPage';
 import ChooseYourPlantPage from './ChooseYourPlantPage';
 import SimulationForm from './SimulationForm';
 
@@ -29,6 +30,7 @@ function App() {
         <Route path="/graphs2" element={<GraphsPage2 />} />
         <Route path="/graphs3" element={<GraphsPage3 />} />
         <Route path="/settings" element={<SettingsPage />} />
+        <Route path="/Data" element={<DataPage />} />
         <Route path="/ChooseYourPlant" element={<ChooseYourPlantPage />} />
         <Route path="/SimulationForm" element={<SimulationForm/>} />
       </Routes>
