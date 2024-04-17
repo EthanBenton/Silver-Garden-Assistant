@@ -7,7 +7,9 @@ from htmlData import *
 
 class TestJsonProcess(unittest.TestCase):
 
-    # Sample data
+    """
+        Set up sample data for testing.
+        """
     def setUp(self):
         self.sample_data = [
             {
@@ -29,11 +31,17 @@ class TestJsonProcess(unittest.TestCase):
         # Write the sample data to a file
         with open('example.json', 'w' ) as file:
             json.dump(self.sample_data, file)
-    
+
+    """
+        Test the read_data function.
+        """
     def test_read_data(self):
         data = read_data('example.json')
         self.assertEqual(data, self.sample_data)
 
+    """
+        Test the processData function.
+        """
     def test_processData(self):
         temperature, temperatureCount, humidity, humidityCount, timestamp = processData(self.sample_data)
         
@@ -47,11 +55,16 @@ class TestJsonProcess(unittest.TestCase):
             self.assertFalse(isinstance(temp, float) or isinstance(temp, int))
             self.assertFalse(isinstance(humid, float) or isinstance(humid, int))
 
-    # Remove the temporary file
+    """
+        Clean up after testing by removing the temporary file.
+        """
     def tearDown(self):
         import os
         os.remove('example.json')
-        
+
+    """
+        Test the makehtml function.
+        """   
     def test_makehtml(self):
         # Sample data
         temperature = [25, 26, 25]

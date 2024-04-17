@@ -2,7 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './HomePage.css';
 
+
+/**
+ * HomePage display the home page content
+ */
 const HomePage = () => {
+
+  // Data for boxes with images and links with text ontop
   const boxes = [
     { id: 1, imagePath: `${process.env.PUBLIC_URL}/images/dotgraph.png`, path: "/graphs0", footerName: "Simulated Data Visualization" },
     { id: 2, imagePath: `${process.env.PUBLIC_URL}/images/TableGraph.png`, path: "/graphs1", footerName: "Data in Tables" },

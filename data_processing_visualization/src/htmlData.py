@@ -1,26 +1,42 @@
 import json
 import numpy as np
 
-# Open and read json file
-def read_data(sensorData):
+
+"""
+    Open and read JSON file containing sensor data.
+    
+    Args:
+        sensorData (str): Path to the JSON file.
+    
+    Returns:
+        dict: Dictionary containing sensor data.
+    """
+def read_data(sensorData: str) -> dict:
+
     with open(sensorData, 'r') as file:
         data = json.load(file)
         return data
 
-# Sort temperature and humidity
-def processData(data):
+"""
+    Sort temperature and humidity data, round values, and count occurrences.
+    
+    Args:
+        data (dict): Dictionary containing sensor data.
+    
+    Returns:
+        tuple: Tuple containing humidity, humidity count, temperature, temperature count, and timestamps.
+    """
+def processData(data:  dict) -> tuple:
+
     sortedData = sorted(data, key = lambda x: x['timestamp'])
     timestamp = [entry['timestamp'] for entry in sortedData]
 
-    # Get data values in aray
     temperature = np.array([entry['temperature'] for entry in sortedData])
     humidity = np.array([entry['humidity'] for entry in sortedData])
     
-    # Round data values
     temperature = np.round(temperature).astype(int)
     humidity = np.round(humidity).astype(int)
 
-    # Count the number of data points
     temperatureCount = {}
     humidityCount = {}
 
@@ -37,8 +53,21 @@ def processData(data):
             humidityCount[humid] = 1
     return humidity, humidityCount, temperature, temperatureCount, timestamp
 
-# Makes the html file with its table output
-def makehtml(humidity, humidityCount, temperature, temperatureCount, timestamp, outputFile = 'Data.html'):
+"""
+    Create an HTML file with tables displaying processed sensor data.
+    
+    Args:
+        humidity (np.array): Array of humidity values.
+        humidityCount (dict): Dictionary containing humidity counts.
+        temperature (np.array): Array of temperature values.
+        temperatureCount (dict): Dictionary containing temperature counts.
+        timestamp (list): List of timestamps.
+        outputFile (str): Path to save the HTML file. Defaults to 'Data.html'.
+    
+    Returns:
+        None
+    """
+def makehtml(humidity, humidityCount, temperature, temperatureCount, timestamp, outputFile = 'DataTables.html'):
     with open(outputFile, 'w') as file:
         # Table formatting
         file.write('<html>\n')
@@ -96,7 +125,7 @@ def makehtml(humidity, humidityCount, temperature, temperatureCount, timestamp, 
         file.write('</html>\n')
 
 if __name__ == '__main__':
-    inputFile = 'user_interface\\src\\flask\\static\\data\\sensor_data.json'
+    inputFile = 'user_interface\\src\\flask\\static\\data\\simulated_data_week.json'
     outputFile = 'user_interface\\src\\frontend\\public\\graphs\\DataTables.html'
 
     data = read_data(inputFile)
