@@ -1,6 +1,6 @@
 import json
 
-with open('data_processing_visualization\\src\\simulated_data_5.json' , 'r') as raw_file:
+with open('data_processing_visualization\src\simulated_data_day.json' , 'r') as raw_file:
     raw_data = json.load(raw_file)
 
 
@@ -34,7 +34,7 @@ with open('data_processing_visualization\\src\\simulated_data_5.json' , 'r') as 
     }
 
     # Export new aggregated data to JSON
-    with open('data_processing_visualization//src//simulated_data_5.json', 'w') as new_file:
+    with open('data_processing_visualization\src\simulated_data_day.json', 'w') as new_file:
         json.dump(new_aggregated_data, new_file, indent=4)
 
-    print("Aggregated data exported to 'data_processing_visualization//src//simulated_data_5.json'.")
+    print("Aggregated data exported to 'data_processing_visualization\src\simulated_data_day.json'.")
