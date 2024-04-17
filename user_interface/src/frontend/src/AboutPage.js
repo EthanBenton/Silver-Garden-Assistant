@@ -1,9 +1,9 @@
 import React from 'react';
-import './AboutPage.css';
+import styles from './AboutPage.css';
 
 const AboutPage = () => {
   return (
-    <div className="containerStyle">
+    <div className="aboutContainerStyle">
       <div className="row align-items-center">
         <div className="col-md-6">
           <div className="leftTextStyle lead">
@@ -17,7 +17,7 @@ const AboutPage = () => {
           <img 
               src={`${process.env.PUBLIC_URL}/images/PRIA.png`} 
               alt="PRIA Logo" 
-              className="imageStyle img-fluid"
+              className="aboutImageStyle img-fluid"
           />
         </div>
       </div>
@@ -47,8 +47,3 @@ const AboutPage = () => {
 };
 
 export default AboutPage;
-
-
-
-
-

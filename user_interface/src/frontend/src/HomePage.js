@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './HomePage.css';
+import styles from './HomePage.css';
 
 const HomePage = () => {
   const boxes = [
@@ -30,8 +30,8 @@ const HomePage = () => {
         <div className="textBox">
           <h2>Update</h2>
           <h4>Here is what's new today..</h4>
-          <p>- Temperature today has gone up 4 degrees Fahrenheit</p>
-          <p>- Humidity today is down by 2%</p>
+          <p>- Temperature has gone up 4 degrees Fahrenheit</p>
+          <p>- Humidity is down by 2%</p>
         </div>
         <div className="textBox">
           <h2>Suggestions</h2>
