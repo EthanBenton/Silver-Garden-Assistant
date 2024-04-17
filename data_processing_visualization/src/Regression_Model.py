@@ -8,7 +8,7 @@ from sklearn.preprocessing import StandardScaler
 import matplotlib.pyplot as plt
 
 # Load data from JSON file
-with open('simulated_data_day.json', 'r') as f:
+with open('C:\\Users\\aamri\\Documents\\GitHub\\Silver-Garden-Assistant\\data_processing_visualization\\src\simulated_data_day.json', 'r') as f:
     raw_data = json.load(f)
 
 data_structure = {
