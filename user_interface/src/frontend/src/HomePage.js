@@ -4,9 +4,9 @@ import styles from './HomePage.css';
 
 const HomePage = () => {
   const boxes = [
-    { id: 1, imagePath: `${process.env.PUBLIC_URL}/images/GraphPicForGraphsBox.png`, path: "/graphs0", footerName: "Interactive Graphs" },
-    { id: 2, imagePath: `${process.env.PUBLIC_URL}/images/GraphPicForGraphsBox.png`, path: "/graphs1", footerName: "Data in Tables" },
-    { id: 3, imagePath: `${process.env.PUBLIC_URL}/images/GraphPicForGraphsBox.png`, path: "/graphs2", footerName: "graphs2" },
+    { id: 1, imagePath: `${process.env.PUBLIC_URL}/images/dotgraph.png`, path: "/graphs0", footerName: "Simulated Data Visualization" },
+    { id: 2, imagePath: `${process.env.PUBLIC_URL}/images/TableGraph.png`, path: "/graphs1", footerName: "Data in Tables" },
+    { id: 3, imagePath: `${process.env.PUBLIC_URL}/images/watering.png`, path: "/graphs2", footerName: "Watering Schedule" },
     { id: 4, imagePath: `${process.env.PUBLIC_URL}/images/GraphPicForGraphsBox.png`, path: "/graphs3", footerName: "Regression Model" },
   ];
 
@@ -30,7 +30,7 @@ const HomePage = () => {
         <div className="textBox">
           <h2>Update</h2>
           <h4>Here is what's new today..</h4>
-          <p>- Temperature has gone up 4 degrees Fahrenheit</p>
+          <p>- Temperature has gone up 4 degrees</p>
           <p>- Humidity is down by 2%</p>
         </div>
         <div className="textBox">
