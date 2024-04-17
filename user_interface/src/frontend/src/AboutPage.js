@@ -42,6 +42,19 @@ const AboutPage = () => {
           />
         </div>
       </div>
+      <div className="row justify-content-center marginTop40">
+        <div className="col-12">
+          <iframe 
+            src="https://docs.google.com/presentation/d/e/2PACX-1vTFiBwp1e1skWucbLPoIp1q5X92NLZA35hxVR4pT87zAstJct-qOyhQNvZOln2KZ2g4kqwMVGQjUn00/embed?start=false&loop=false&delayms=3000" 
+            frameborder="0" 
+            width="960" 
+            height="569" 
+            allowfullscreen="true" 
+            mozallowfullscreen="true" 
+            webkitallowfullscreen="true">
+          </iframe>
+        </div>
+      </div>
     </div>
   );
 };
