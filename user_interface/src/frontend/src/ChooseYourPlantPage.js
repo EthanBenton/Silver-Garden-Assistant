@@ -29,7 +29,7 @@ const plantDetails = {
   greenpepper: "Green peppers are good in spagetti.",
   watermelon: "Watermelons are mostly of water.",
   tomato: "Tomatoes are good on pizza.",
-  redpepper: "Red pepper are goo with ranch.",
+  redpepper: "Red pepper are good with ranch.",
   yellowpepper: "Yellow peppers are good with ranch too.",
   carrot: "Carrots are underground.",
   cucumber: "These are pickles I think.",
