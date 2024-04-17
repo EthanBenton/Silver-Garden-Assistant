@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './ThemeContext';
+//Linking files to words
 import Navbar from './NavBar';
 import HomePage from './HomePage';
 import AboutPage from './AboutPage';
-//check file names
 import GraphsPage0 from './GraphsPage0';
 import GraphsPage1 from './GraphsPage1';
 import GraphsPage2 from './GraphsPage2';
@@ -15,9 +15,12 @@ import SimulationForm from './SimulationForm';
 
 function App() {
   return (
+    // ThemeProvider to manage the theme of the application
     <ThemeProvider> {}
     <Router>
+      {/* Navbar for navigation */}
       <Navbar /> {}
+      {/* Routes for different pages */}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/About" element={<AboutPage />} />

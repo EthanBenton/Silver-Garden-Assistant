@@ -4,7 +4,6 @@ import 'rc-slider/assets/index.css';
 import './SimulationForm.css';
 import Select from 'react-dropdown-select';
 
-
 const SimulationForm = () => {
   const [formData, setFormData] = useState({
     temp_start: 0,
@@ -56,8 +55,6 @@ const SimulationForm = () => {
     }
   };
   
-  
-
   const timeUnitOptions = [
     { value: 'seconds', label: 'Seconds' },
     { value: 'minutes', label: 'Minutes' },
@@ -72,27 +69,25 @@ const SimulationForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('/api/simulate', {
+      // Send the form data to the /api/simulate endpoint
+      const simulateResponse = await fetch('/api/simulate', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ 
-          ...formData,
-        }),
+        body: JSON.stringify(formData),
       });
-      const data = await response.json();
+      const simulatedData = await simulateResponse.json();
   
-      if (response.ok) {
-        setSimulatedData(data);
+      if (simulateResponse.ok) {
+        setSimulatedData(simulatedData); 
       } else {
-        console.error('Error:', data.error);
+        console.error('Error simulating data:', simulatedData.error);
       }
     } catch (error) {
       console.error('Error:', error);
     }
   };
-  
 
   const generateJsonFile = (data) => {
     const dataStr = JSON.stringify(data, null, 2); 
@@ -112,6 +107,49 @@ const SimulationForm = () => {
     { value: 300, label: '5 minutes' },
     { value: 600, label: '10 minutes' },
   ];
+
+
+  /**
+   * Function used to make an API call to the Flask backend to generate a graph.
+   */
+  const handleGenerateGraph = async () => {
+    try {
+      if (simulatedData) {
+        
+        /**
+         * Make a POST request to the '/api/graph0' endpoint
+         */
+        const graphResponse = await fetch('/api/graph0', {
+          method: 'POST',
+          headers:{
+            'Content-Type': 'application/json',
+          },
+        body: JSON.stringify(simulatedData),
+        });
+
+        /**
+         * Parse the response data as JSON
+         */
+        const graphData = await graphResponse.json();
+        
+        // Check if the response is successful
+        if (graphResponse.ok) {
+          console.log('Graph generated successfully:', graphData.filePath); // Log the success message with the generated graph file path
+        }
+        else {
+          console.error('Error generating graph:', graphData.error); // Log the error message if the response is not successful
+        }
+      }
+      else {
+        console.error('No simulated data available. Please generate data first.'); // Log an error if no simulated data is available
+      }
+    } 
+    catch (error) {
+      // Log and alert any errors that occur during the API call
+      console.error('Error:', error.message);
+      alert(`Error: ${error.message}`);
+    }
+  };
 
   return (
     <div>
@@ -192,6 +230,7 @@ const SimulationForm = () => {
     <button type="button" onClick={() => simulatedData && generateJsonFile(simulatedData)}>
        Download JSON File
     </button>
+    <button onClick={handleGenerateGraph}>Generate Graph</button>
    </div>
     
   );

@@ -1,26 +1,43 @@
-/* HomePage.css */
+/* HomePage.css lol */
 .containerStyle {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    justify-content: center;
-    max-width: 860px;
-    margin: auto;
+    grid-template-columns: 1fr 2fr; 
+    gap: 1rem;
+    align-items: start;
+    padding: 1rem;
+
+  }
+
+  .welcomeText {
+    animation: slideDownFromTop 1s ease-out forwards;
+    font-size: 5em;
+    font-weight: bold;
+    margin-top: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
   
+  .boxesContainer {
+    animation: slideDownFromTop 1s ease-out forwards;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    align-items: start;
+    grid-column: 2 / 3;
+  }
+
   .boxLink {
     text-decoration: none;
   }
   
   .boxStyle {
     width: 400px;
-    height: 440px;
-    margin: 20px;
+    height: 220px;
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #4CAF50;
+    background-color: #4b5b2b;
     color: white;
     border-radius: 10px;
     cursor: pointer;
@@ -28,7 +45,7 @@
   
   .imageStyle {
     width: 100%;
-    height: 80%;
+    height: 100%;
     object-fit: cover;
     border-radius: 10px 10px 0 0;
   }
@@ -41,3 +58,24 @@
     justify-content: center;
   }
   
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideDownFromTop {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }

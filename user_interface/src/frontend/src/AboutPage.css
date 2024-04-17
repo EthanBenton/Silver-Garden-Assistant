@@ -1,32 +1,66 @@
-.containerStyle {
+/* AboutPage.css */
+.aboutContainer {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center children horizontally in the container */
-  text-align: center; /* Center text alignment for all text within the container */
+  align-items: center;
+  padding: 20px;
 }
 
-.marginTop40, .marginTop20 {
-  margin-top: 40px;
-  width: 100%; /* full width for alignment */
+.aboutSection {
+  max-width: 800px;
+  margin-bottom: 40px;
+  text-align: center; /* Center the text */
 }
 
-/* image is centered within its column and is responsive */
+h2 {
+  text-decoration: underline;
+}
+
+.leftTextStyle {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-left: 8rem;
+  margin-top: 1rem;
+  text-align: right;
+  text-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.rightTextStyle {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-left: 5rem;
+  margin-right: 10rem;
+  margin-top: 1rem;
+  text-align: left;
+  text-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
 .imageStyle {
-  display: block; /* Make the image a block-level element */
-  margin: 0 auto; /* Center the image horizontally */
-  max-width: 100%; /*responsive and fits its container */
-  height: auto; /* Maintain the aspect ratio of the image */
+  display: block;
+  margin: 0 auto;
+  max-width: 50%;
+  height: 50%;
 }
 
-@media (max-width: 768px) {
-  .row {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .col-lg-6 {
-    width: 100%; 
-  }
+.largeImageStyle {
+  border-radius: 15px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+  margin-top: 5rem;
+  max-width: 120%;
+  height: 40%;
 }
 
-  
+.aboutSection h2 {
+  margin-bottom: 20px;
+}
+
+.aboutSection p {
+  margin-bottom: 20px;
+  line-height: 1.6; /* Easier to read text */
+}
+
+.aboutImage {
+  max-width: 100%; /*image responsive */
+  height: auto; /* aspect ratio */
+  margin-bottom: 20px; /* Space below the image */
+}

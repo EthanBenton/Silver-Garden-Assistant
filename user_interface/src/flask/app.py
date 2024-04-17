@@ -1,15 +1,31 @@
-from flask import Flask, request, jsonify
 import sys
 import os
+import logging
+import os.path
+import json 
+
+from flask import Flask, request, jsonify
+from flask import current_app
+
+#needed for flask to use the other files
 project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
 sys.path.insert(0, project_root)
 
 from data_input_sim.src.constraint_validation import validate_params
 from data_input_sim.src.data_simulation import SensorDataSimulator
+from data_processing_visualization.src.graphing_tool import graphingTool
 
-app = Flask(__name__, static_folder='src/flask/static')
-app.secret_key = 'your_secret_key'  
 
+"""
+    Initialize flask app
+"""
+app = Flask(__name__, static_folder='static')
+
+"""
+    Setting up basic configuration for logging
+""" 
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 simulator = None
 
@@ -86,10 +102,43 @@ def simulate():
 
     return jsonify(data)
 
+    
+@app.route('/api/graph0', methods=['POST'])
+def graph0():
+    """
+    API endpoint to generate a graph from simulated data using UI interaction and for an interactive graph located at GrapsPage0.js.
+    """
+    try:
+        simulated_data = request.get_json()
+        if not simulated_data:
+            return jsonify({"error": "No simulated data received"}), 400
+
+        data_dir = os.path.join(current_app.static_folder, 'data')
+
+        os.makedirs(data_dir, exist_ok=True)
+
+        json_file_path = os.path.join(data_dir, 'simulated_data.json')
+
+        with open(json_file_path, 'w') as f:
+            json.dump(simulated_data, f, indent = 4)
+
+        graph = graphingTool(json_file_path)
+        export_name = 'simulated_data'
+        graph.set_export_name(export_name)
+        graph.indexed_json_to_html(2, 1, 0, "Simulated Data Visualization")
+
+        return jsonify({"message": "Graph generated successfully", "filePath": f"/static/data/{export_name}.html"})
+    except Exception as e:
+        logger.error(f"Failed to generate graph: {e}")
+        return jsonify({"error": str(e)}), 500
+
 @app.errorhandler(Exception)
 def handle_exception(e):
-    app.logger.error(str(e))
-    return jsonify(error=str(e)), 500
+    """
+    Global exception handler for the Flask app.
+    """
+    logger.error(f"Unhandled exception: {e}")
+    return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__":
     app.run(debug=True)
