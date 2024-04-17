@@ -31,13 +31,11 @@ const HomePage = () => {
             </div>
           </Link>
         ))}
-        <a href={dbFilePath} download="priaData.db" className="download-link">
+        <a href={dbFilePath} download className="downloadLink">
           Download Database File
         </a>
       </div>
     </div>
-
-    
 
     <div className="textBoxesContainer">
         <div className="textBox">
