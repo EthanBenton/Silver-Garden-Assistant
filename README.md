@@ -8,14 +8,30 @@
  
   To start up React
   
+   - install node.js(https://nodejs.org/en) i would advise to not run the extra thing it says it broke my python when I tried not sure if u need the other stuff tho
+   - npm install rc-slider react-select
+   - npm install react-dropdown-select
+   - npm install react-spring
+   - npm install web-vitals
+   - npm install react-router-dom
+   - npm install react-scripts --save
+    
    - cd user_interface/src/frontend
-   
+     
    - npm start
 
   To start up Flask
-  
+
+   - install python(https://www.python.org/downloads/) make sure under custom install u pick add to environmental variables.
+in vscode ctrl + shift + p> python select interpreter > choose the recommend( should be the path u installed python in)
+   - pip install flask
+   - pip install pandas
+   - pip install numpy
+   - pip install matplotlib
+   - pip install plotly
+     
    - cd user_interface/src/flask
-   
+     
    - flask run
 
 <details>
