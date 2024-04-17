@@ -3,23 +3,27 @@ import os
 import logging
 import os.path
 import json 
-import pathlib as Path
 
 from flask import Flask, request, jsonify
 from flask import current_app
 
-#needed for flask to use the files
+#needed for flask to use the other files
 project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
 sys.path.insert(0, project_root)
 
 from data_input_sim.src.constraint_validation import validate_params
 from data_input_sim.src.data_simulation import SensorDataSimulator
-from data_processing_visualization.src.graphing_tool import graphingTool # change back to og
+from data_processing_visualization.src.graphing_tool import graphingTool
 
 
-# Initialize Flask App
+"""
+    Initialize flask app
+"""
 app = Flask(__name__, static_folder='static')
-# Setting up basic configuration for logging
+
+"""
+    Setting up basic configuration for logging
+""" 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 

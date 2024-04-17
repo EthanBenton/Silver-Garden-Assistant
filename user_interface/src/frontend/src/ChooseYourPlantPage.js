@@ -3,7 +3,7 @@ import './ChooseYourPlantPage.css';
 
 
 /**
- *  stores the paths for the converted inputs
+ * Stores the paths for the converted inputs
  */
 const plantImages = {
   rose: `${process.env.PUBLIC_URL}/images/PlantDB/rose.png`,
@@ -22,7 +22,7 @@ const plantImages = {
 };
 
 /**
- * stores the descriptions of the plants
+ * Stores the descriptions of the plants
  */
 const plantDetails = {
   rose: "Roses have thorns.",
@@ -41,8 +41,8 @@ const plantDetails = {
 };
 
 /**
- * 
- * @returns 
+ * Component for choosing plants to add or remove from the garden.
+ * @returns JSX element
  */
 const ChooseYourPlantPage = () => {
   const [plants, setPlants] = useState(() => {
@@ -52,10 +52,14 @@ const ChooseYourPlantPage = () => {
   const [plantInput, setPlantInput] = useState('');
   const [selectedPlant, setSelectedPlant] = useState(null);
 
+  // Save plants to local storage
   useEffect(() => {
     localStorage.setItem('plants', JSON.stringify(plants));
   }, [plants]);
 
+  /**
+   * Function to add a new plant to the list
+   */
   const addPlant = () => {
     const plantName = plantInput.toLowerCase();
     const plantKey = plantInput.replace(/\s+/g, '').toLowerCase();
@@ -69,20 +73,32 @@ const ChooseYourPlantPage = () => {
     }
   };
 
+  /**
+   * Function to remove a plant from the list
+   */
   const removePlant = (event, plantKeyToRemove) => {
     event.stopPropagation();
     setPlants(prevPlants => prevPlants.filter(plant => plant.key !== plantKeyToRemove));
   };
 
+  /**
+   * Function to handle selecting a plant for details
+   */
   const handleSelectPlant = (plant) => {
     if (!plantImages[plant.key]) return; // Only make clickable if image exists
     setSelectedPlant(plant);
   };
 
+  /**
+   * Function to close the popup with plant details
+   */
   const closePopup = () => {
     setSelectedPlant(null);
   };
 
+  /**
+   * Function to capitalize the first letter of a string
+   */
   const capitalizeFirstLetter = (string) => string.charAt(0).toUpperCase() + string.slice(1);
 
   return (
@@ -101,6 +117,7 @@ const ChooseYourPlantPage = () => {
       </div>
       <div className="plantsDisplayBox">
         <ul className="plantList">
+          {/* List of plants */}
           {plants.map((plant, index) => (
             <li key={index} className={`plantItem ${!plantImages[plant.key] ? 'nonClickable' : ''}`} onClick={() => handleSelectPlant(plant)}>
               {capitalizeFirstLetter(plant.name)}
@@ -110,6 +127,7 @@ const ChooseYourPlantPage = () => {
           ))}
         </ul>
       </div>
+      {/* Popup for displaying plant details */}
       {selectedPlant && (
         <div className="plantDetailsPopup">
           <div className="popupContent">
