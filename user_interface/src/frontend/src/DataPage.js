@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styles from './HomePage.css';
+import styles from './DataPage.css';
 
 
 /**
- * HomePage display the home page content
+ * DataPage display the data page content
  */
-const HomePage = () => {
+const DataPage = () => {
 
   // Data for boxes with images and links with text ontop
   const boxes = [
@@ -16,12 +16,13 @@ const HomePage = () => {
     { id: 4, imagePath: `${process.env.PUBLIC_URL}/images/linear.png`, path: "/graphs3", footerName: "Regression Model" },
   ];
 
-  const dbFilePath = `${process.env.PUBLIC_URL}/priaData.db`;
+   const dbFilePath = `${process.env.PUBLIC_URL}../../../../data_processing_visualization/database/priaData.db`;
 
   return (
     <>
+
     <div className="containerStyle">
-      <div className="welcomeText">Welcome Back, Thomas</div> 
+
       <div className="boxesContainer">
         {boxes.map((box) => (
           <Link to={box.path} key={box.id} className="boxLink">
@@ -31,33 +32,18 @@ const HomePage = () => {
             </div>
           </Link>
         ))}
-        <a href={dbFilePath} download="priaData.db" className="download-link">
-          Download Database File
-        </a>
       </div>
     </div>
 
-    
+    <a href={dbFilePath} download className="downloadLink">
+      Download Database File
+    </a>
 
-    <div className="textBoxesContainer">
-        <div className="textBox">
-          <h2>Update</h2>
-          <h4>Here is what's new today..</h4>
-          <p>- Temperature has gone up 4 degrees</p>
-          <p>- Humidity is down by 2%</p>
-        </div>
-        <div className="textBox">
-          <h2>Suggestions</h2>
-          <h4>Here are some suggestions..</h4>
-          <p>- Since the temperature is higher today, try watering your plants a little extra to make up for the hotter weather</p>
-          <p>- With the humidity being lower, mist your plants with water to help add moisture to the air and soil</p>
-        </div>
-      </div>
     </>
   );
 };
 
-export default HomePage;
+export default DataPage;
 
 
 
