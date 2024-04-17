@@ -10,7 +10,9 @@ from WateringSchedule import *
 
 class TestWaterSchedule(unittest.TestCase):
 
-    # Test loading the json
+    """
+        Test loading data from a JSON file.
+        """
     def test_load_from_json(self):
         data = json.load(f)
         self.assertEqual(len(data), 3)
@@ -18,7 +20,9 @@ class TestWaterSchedule(unittest.TestCase):
         self.assertIn("temperature", data[0])
         self.assertIn("timestamp", data[0])
 
-    # Test creating a data frame from json
+    """
+        Test creating a Pandas DataFrame from JSON data.
+        """
     def test_create_dataframe(self):
         test_humidity = [entry['humidity'] for entry in self.sample_data]
         test_temperature = [entry['temperature'] for entry in self.sample_data]
@@ -35,7 +39,9 @@ class TestWaterSchedule(unittest.TestCase):
         self.assertEqual(list(df.columns), ['humidity', 'temperature', 'timestamp'])
         self.assertEqual(df['timestamp'].dtype, '<M8[ns]')
         
-    # Test the opening of a test json file
+    """
+        Set up sample data and write it to a temporary JSON file for testing.
+        """
     def setUp(self):
         self.sample_data = [
             {
@@ -54,11 +60,15 @@ class TestWaterSchedule(unittest.TestCase):
                 "timestamp": "2024-04-11 20:58:49"
             },
         ]
-
-        # Write data to temporary json file
+        """
+        Write data to temporary json file
+        """
         with open('sample_data.json', 'w') as f:
             json.dump(self.sample_data, f)
 
+        """
+        Clean up temporary files after testing.
+        """
         def tearDown(self):
             import os
             os.remove('sample_data.json')
