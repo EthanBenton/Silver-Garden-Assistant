@@ -11,6 +11,7 @@ class htmlData():
     Returns:
         dict: Dictionary containing sensor data.
     """
+    @staticmethod
     def read_data(sensorData: str) -> dict:
 
         with open(sensorData, 'r') as file:
@@ -25,7 +26,9 @@ class htmlData():
         
         Returns:
             tuple: Tuple containing humidity, humidity count, temperature, temperature count, and timestamps.
+     
         """
+    @staticmethod
     def processData(data:  dict) -> tuple:
 
         sortedData = sorted(data, key = lambda x: x['timestamp'])
@@ -67,6 +70,7 @@ class htmlData():
     Returns:
         None
     """
+    @staticmethod
     def makehtml(humidity, humidityCount, temperature, temperatureCount, timestamp, outputFile = 'DataTables.html'):
         with open(outputFile, 'w') as file:
             """
@@ -127,13 +131,13 @@ class htmlData():
             file.write('</html>\n')
 
 if __name__ == '__main__':
-    inputFile = 'user_interface\\src\\flask\\static\\data\\simulated_data_week.json'
+    inputFile = 'user_interface\\src\\flask\\static\\data\\simulated_data.json'
     outputFile = 'user_interface\\src\\frontend\\public\\graphs\\DataTables.html'
 
-    data = read_data(inputFile)
+    data = htmlData.read_data(inputFile)
 
-    temperature, temperatureCount, humidity, humidityCount, timestamp = processData(data)
+    temperature, temperatureCount, humidity, humidityCount, timestamp = htmlData.processData(data)
 
-    makehtml(humidity, humidityCount, temperature, temperatureCount, timestamp, outputFile)
+    htmlData.makehtml(humidity, humidityCount, temperature, temperatureCount, timestamp, outputFile)
 
     print(f'DataTables.html has been made')
