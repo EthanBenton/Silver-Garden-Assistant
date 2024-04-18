@@ -6,6 +6,7 @@ from datetime import datetime, timedelta
 
 class WateringSchedule():
 
+    @staticmethod
     def load_sensor_data(file_path: str) -> dict:
         """
         Load sensor data from a JSON file.
@@ -20,6 +21,7 @@ class WateringSchedule():
             data = json.load(f)
         return data
 
+    @staticmethod
     def create_dataframe(data: dict) -> pd.DataFrame:
         """
         Create a Pandas data frame from sensor data.
@@ -43,6 +45,7 @@ class WateringSchedule():
         df = df.resample('1h').mean().interpolate()
         return df
 
+    @staticmethod
     def create_watering_schedule(df: pd.DataFrame) -> pd.DataFrame:
         """
         Create a watering schedule based on temperature and humidity data.
@@ -60,6 +63,7 @@ class WateringSchedule():
         df['days_of_the_week'] = pd.Categorical(df['days_of_the_week'], categories = weekdays, ordered = True)
         return df
 
+    @staticmethod
     def train_model(df: pd.DataFrame) -> RandomForestClassifier:
         """
         Train a random forest classifier model.
@@ -71,11 +75,12 @@ class WateringSchedule():
         RandomForestClassifier: Trained random forest classifier model.
         """
         X = df[['temperature', 'humidity']]
-        Y = df['watering_schedule']
+        y = df['watering_schedule']
         model = RandomForestClassifier()
-        model.fit(X, Y)
+        model.fit(X, y)
         return model
 
+    @staticmethod
     def create_watering_schedule_df(df: pd.DataFrame, model: RandomForestClassifier) -> pd.DataFrame:
         """
         Create a data frame for the watering schedule based on predictions.
@@ -95,6 +100,7 @@ class WateringSchedule():
         })
         return watering_schedule_df
 
+    @staticmethod
     def generate_watering_time(df: pd.DataFrame) -> None:
         """
         Provide a time estimate of when it's best to water the plant.
@@ -107,6 +113,7 @@ class WateringSchedule():
         """
         df['watering_time'] = np.where((df['temperature'] > 25) & (df['humidity'] < 60), 'Morning', 'Evening')
 
+    @staticmethod
     def generate_watering_schedule_html(df: pd.DataFrame, file_path: str) -> None:
         """
         Generate and save the watering schedule as an HTML file.
@@ -120,26 +127,30 @@ class WateringSchedule():
         """
         watering_schedule_df = df.pivot_table(index=df.index.date, columns = 'days_of_the_week',
             values = ['watering_schedule', 'watering_time'], aggfunc = 'first', observed = False)
-        watering_schedule_df.replace(1, 'Water Plant', inplace = True)
+        watering_schedule_df.replace(0, 'Water Plant', inplace = True)
         watering_schedule_df.to_html(file_path, na_rep = '', index = True)
 
+if __name__ == "__main__":
+        # Create an instance of WateringSchedule
+        watering_schedule_instance = WateringSchedule()
+
         # Load sensor data
-        data = load_sensor_data('user_interface\\src\\flask\\static\\data\\simulated_data.json')
+        data = watering_schedule_instance.load_sensor_data('user_interface\\src\\flask\\static\\data\\simulated_data.json')
 
         # Create DataFrame
-        df = create_dataframe(data)
+        df = watering_schedule_instance.create_dataframe(data)
 
         # Create watering schedule
-        df = create_watering_schedule(df)
+        df = watering_schedule_instance.create_watering_schedule(df)
 
         # Train model
-        model = train_model(df)
+        model = watering_schedule_instance.train_model(df)
 
         # Create DataFrame for watering schedule
-        watering_schedule_df = create_watering_schedule_df(df, model)
+        watering_schedule_df = watering_schedule_instance.create_watering_schedule_df(df, model)
 
         # Provide watering time estimate
-        generate_watering_time(df)
+        watering_schedule_instance.generate_watering_time(df)
 
         # Generate and save watering schedule as HTML
-        generate_watering_schedule_html(df, 'user_interface\\src\\frontend\\public\\graphs\\watering_schedule.html')
+        watering_schedule_instance.generate_watering_schedule_html(df, 'user_interface\\src\\frontend\\public\\graphs\\watering_schedule.html')
