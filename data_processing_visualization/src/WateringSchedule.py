@@ -131,26 +131,42 @@ class WateringSchedule():
         watering_schedule_df.to_html(file_path, na_rep = '', index = True)
 
 if __name__ == "__main__":
-        # Create an instance of WateringSchedule
+        """
+        Create an instance of WateringSchedule
+        """
         watering_schedule_instance = WateringSchedule()
 
-        # Load sensor data
+        """
+        Load sensor data
+        """
         data = watering_schedule_instance.load_sensor_data('user_interface\\src\\flask\\static\\data\\simulated_data.json')
 
-        # Create DataFrame
+        """
+        Create DataFrame
+        """
         df = watering_schedule_instance.create_dataframe(data)
-
-        # Create watering schedule
+        
+        """
+        Create watering schedule
+        """
         df = watering_schedule_instance.create_watering_schedule(df)
 
-        # Train model
+        """
+        Train model
+        """
         model = watering_schedule_instance.train_model(df)
 
-        # Create DataFrame for watering schedule
+        """
+        Create DataFrame for watering schedule
+        """
         watering_schedule_df = watering_schedule_instance.create_watering_schedule_df(df, model)
 
-        # Provide watering time estimate
+        """
+        Provide watering time estimate
+        """
         watering_schedule_instance.generate_watering_time(df)
 
-        # Generate and save watering schedule as HTML
+        """
+        Generate and save watering schedule as HTML
+        """
         watering_schedule_instance.generate_watering_schedule_html(df, 'user_interface\\src\\frontend\\public\\graphs\\watering_schedule.html')
