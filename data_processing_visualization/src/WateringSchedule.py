@@ -4,10 +4,10 @@ import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 from datetime import datetime, timedelta
 
-class WateringSchedule():
+class WateringSchedule:
 
-    @staticmethod
-    def load_sensor_data(file_path: str) -> dict:
+    
+    def load_sensor_data(self, file_path: str) -> dict:
         """
         Load sensor data from a JSON file.
     
@@ -21,8 +21,8 @@ class WateringSchedule():
             data = json.load(f)
         return data
 
-    @staticmethod
-    def create_dataframe(data: dict) -> pd.DataFrame:
+   
+    def create_dataframe(self, data: dict) -> pd.DataFrame:
         """
         Create a Pandas data frame from sensor data.
     
@@ -45,8 +45,8 @@ class WateringSchedule():
         df = df.resample('1h').mean().interpolate()
         return df
 
-    @staticmethod
-    def create_watering_schedule(df: pd.DataFrame) -> pd.DataFrame:
+    
+    def create_watering_schedule(self, df: pd.DataFrame) -> pd.DataFrame:
         """
         Create a watering schedule based on temperature and humidity data.
     
@@ -63,8 +63,8 @@ class WateringSchedule():
         df['days_of_the_week'] = pd.Categorical(df['days_of_the_week'], categories = weekdays, ordered = True)
         return df
 
-    @staticmethod
-    def train_model(df: pd.DataFrame) -> RandomForestClassifier:
+    
+    def train_model(self, df: pd.DataFrame) -> RandomForestClassifier:
         """
         Train a random forest classifier model.
     
@@ -80,8 +80,8 @@ class WateringSchedule():
         model.fit(X, y)
         return model
 
-    @staticmethod
-    def create_watering_schedule_df(df: pd.DataFrame, model: RandomForestClassifier) -> pd.DataFrame:
+   
+    def create_watering_schedule_df(self, df: pd.DataFrame, model: RandomForestClassifier) -> pd.DataFrame:
         """
         Create a data frame for the watering schedule based on predictions.
     
@@ -100,8 +100,8 @@ class WateringSchedule():
         })
         return watering_schedule_df
 
-    @staticmethod
-    def generate_watering_time(df: pd.DataFrame) -> None:
+    
+    def generate_watering_time(self, df: pd.DataFrame) -> None:
         """
         Provide a time estimate of when it's best to water the plant.
     
@@ -113,8 +113,8 @@ class WateringSchedule():
         """
         df['watering_time'] = np.where((df['temperature'] > 25) & (df['humidity'] < 60), 'Morning', 'Evening')
 
-    @staticmethod
-    def generate_watering_schedule_html(df: pd.DataFrame, file_path: str) -> None:
+  
+    def generate_watering_schedule_html(self, df: pd.DataFrame, file_path: str) -> None:
         """
         Generate and save the watering schedule as an HTML file.
     
@@ -128,6 +128,7 @@ class WateringSchedule():
         watering_schedule_df = df.pivot_table(index=df.index.date, columns = 'days_of_the_week',
             values = ['watering_schedule', 'watering_time'], aggfunc = 'first', observed = False)
         watering_schedule_df.replace(0, 'Water Plant', inplace = True)
+        watering_schedule_df.replace(1, 'Water Plant', inplace = True)
         watering_schedule_df.to_html(file_path, na_rep = '', index = True)
 
 if __name__ == "__main__":

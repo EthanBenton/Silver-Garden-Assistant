@@ -1,7 +1,7 @@
 import json
 import numpy as np
 
-class htmlData():
+class htmlData:
     """
     Open and read JSON file containing sensor data.
     
@@ -11,8 +11,8 @@ class htmlData():
     Returns:
         dict: Dictionary containing sensor data.
     """
-    @staticmethod
-    def read_data(sensorData: str) -> dict:
+    
+    def read_data(self, sensorData: str) -> dict:
 
         with open(sensorData, 'r') as file:
             data = json.load(file)
@@ -28,8 +28,8 @@ class htmlData():
             tuple: Tuple containing humidity, humidity count, temperature, temperature count, and timestamps.
      
         """
-    @staticmethod
-    def processData(data:  dict) -> tuple:
+    
+    def processData(self, data:  dict) -> tuple:
 
         sortedData = sorted(data, key = lambda x: x['timestamp'])
         timestamp = [entry['timestamp'] for entry in sortedData]
@@ -70,8 +70,8 @@ class htmlData():
     Returns:
         None
     """
-    @staticmethod
-    def makehtml(humidity, humidityCount, temperature, temperatureCount, timestamp, outputFile = 'DataTables.html'):
+    
+    def makehtml(self, humidity, humidityCount, temperature, temperatureCount, timestamp, outputFile = 'DataTables.html'):
         with open(outputFile, 'w') as file:
             """
             Table formatting
@@ -134,10 +134,12 @@ if __name__ == '__main__':
     inputFile = 'user_interface\\src\\flask\\static\\data\\simulated_data.json'
     outputFile = 'user_interface\\src\\frontend\\public\\graphs\\DataTables.html'
 
-    data = htmlData.read_data(inputFile)
+    html_data_instance = htmlData()
 
-    temperature, temperatureCount, humidity, humidityCount, timestamp = htmlData.processData(data)
+    data = html_data_instance.read_data(inputFile)
 
-    htmlData.makehtml(humidity, humidityCount, temperature, temperatureCount, timestamp, outputFile)
+    temperature, temperatureCount, humidity, humidityCount, timestamp = html_data_instance.processData(data)
+
+    html_data_instance.makehtml(humidity, humidityCount, temperature, temperatureCount, timestamp, outputFile)
 
     print(f'DataTables.html has been made')
