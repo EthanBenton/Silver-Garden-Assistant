@@ -14,6 +14,10 @@ const HomePage = () => {
     { id: 2, imagePath: `${process.env.PUBLIC_URL}/images/TableGraph.png`, path: "/graphs1", footerName: "Data in Tables" },
     { id: 3, imagePath: `${process.env.PUBLIC_URL}/images/watering.png`, path: "/graphs2", footerName: "Watering Schedule" },
     { id: 4, imagePath: `${process.env.PUBLIC_URL}/images/linear.png`, path: "/graphs3", footerName: "Regression Model" },
+    { id: 5, imagePath: `${process.env.PUBLIC_URL}/images/dotgraph.png`, path: "/graphs4", footerName: "graphs4" },
+    { id: 6, imagePath: `${process.env.PUBLIC_URL}/images/TableGraph.png`, path: "/graphs5", footerName: "graphs5" },
+    { id: 7, imagePath: `${process.env.PUBLIC_URL}/images/watering.png`, path: "/graphs6", footerName: "graphs6" },
+    { id: 8, imagePath: `${process.env.PUBLIC_URL}/images/watering.png`, path: "/graphs7", footerName: "graphs7" },
   ];
 
   const dbFilePath = `${process.env.PUBLIC_URL}/priaData.db`;
