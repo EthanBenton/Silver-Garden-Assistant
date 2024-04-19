@@ -12,7 +12,7 @@ const GraphsPage2 = () => {
         <button>Back</button>
       </Link>
       <h1>Watering Schedule</h1>
-      <p>Here is an interesting table...</p>
+      <p>Here is an interesting table...GraphsPage2</p>
       <iframe src={`${process.env.PUBLIC_URL}/graphs/watering_schedule.html`} title="Graphs" style={{width: '100%', height: '600px', border: 'none'}}></iframe>
     </div>
   );
