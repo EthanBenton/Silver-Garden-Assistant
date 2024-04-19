@@ -14,7 +14,7 @@ sys.path.insert(0, project_root)
 from data_input_sim.src.constraint_validation import validate_params
 from data_input_sim.src.data_simulation import SensorDataSimulator
 from data_processing_visualization.src.graphing_tool import graphingTool
-
+from data_processing_visualization.src.WateringSchedule import WateringSchedule
 
 """
     Initialize flask app
@@ -139,6 +139,29 @@ def handle_exception(e):
     """
     logger.error(f"Unhandled exception: {e}")
     return jsonify({"error": str(e)}), 500
+
+@app.route('/api/generate_watering_schedule', methods=['POST'])
+def generate_watering_schedule():
+    try:
+        watering_schedule_instance = WateringSchedule()
+
+        data = watering_schedule_instance.load_sensor_data('user_interface/src/flask/static/data/simulated_data.json')
+
+        df = watering_schedule_instance.create_dataframe(data)
+
+        df = watering_schedule_instance.create_watering_schedule(df)
+
+        model  = watering_schedule_instance.train_model(df)
+
+        watering_schedule_df = watering_schedule_instance.create_watering_schedule_df(df, model)
+
+        watering_schedule_instance.generate_watering_time(df)
+
+        watering_schedule_instance.generate_watering_schedule_html(df, 'user_interface/src/frontend/public/graphs/watering_schedule.html')
+
+        return jsonify({"message": "Watering schedule generated successfully."}), 200
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__":
     app.run(debug=True)
