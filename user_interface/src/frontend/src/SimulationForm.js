@@ -135,22 +135,6 @@ const SimulationForm = () => {
         // Check if the response is successful
         if (graphResponse.ok) {
           console.log('Graph generated successfully:', graphData.filePath); // Log the success message with the generated graph file path
-          
-          const wateringScheduleResponse = await fetch('/api/generate_watering_schedule', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(simulatedData),
-          });
-          
-          if (wateringScheduleResponse.ok) {
-            console.log('Watering schedule generated successfully.');
-            // Open the watering schedule in a new tab
-            window.open('/api/get_watering_schedule_html', '_blank');
-          } else {
-            console.error('Error generating watering schedule:', wateringScheduleResponse.error);
-          }
         }
         else {
           console.error('Error generating graph:', graphData.error); // Log the error message if the response is not successful
