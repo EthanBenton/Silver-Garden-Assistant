@@ -127,6 +127,33 @@ class graphingTool:
         
         fig.write_html(str(self.export_name), auto_open=True)
 
+        
+        #We still need to generate the other two graphs
+        if (indey2 != -1):
+            export_directory = os.path.abspath(os.path.join(os.getcwd(), "../frontend/public/graphs"))
+            os.makedirs(export_directory, exist_ok=True)
+            self.export_name = os.path.join(export_directory, f"{"RawHumidity"}.html")
+            x = 0
+            fig = make_subplots()
+            fig.add_trace(go.Scatter(x=axisx,y=axisy,mode='markers',name=namey,connectgaps = True))
+            fig.update_xaxes(title_text=namex)
+            fig.update_layout(title_text=title)
+            fig.update_yaxes(title_text=namey, secondary_y=False)
+            fig.write_html(str(self.export_name), auto_open=True)
+
+            #Second graph, temps
+            export_directory = os.path.abspath(os.path.join(os.getcwd(), "../frontend/public/graphs"))
+            os.makedirs(export_directory, exist_ok=True)
+            self.export_name = os.path.join(export_directory, f"{"RawTemperature"}.html")
+            x = 0
+            fig = make_subplots()
+            fig.add_trace(go.Scatter(x=axisx,y=axisy2,mode='markers',name=namey2,connectgaps = True))
+            fig.update_xaxes(title_text=namex)
+            fig.update_layout(title_text=title)
+            fig.update_yaxes(title_text=namey2, secondary_y=False)
+            fig.write_html(str(self.export_name), auto_open=True)
+
+
 def produce_from_json(input_path):
     """
     A simplification of main designed for use in a UI element.
