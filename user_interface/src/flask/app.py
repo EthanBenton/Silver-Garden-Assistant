@@ -4,7 +4,7 @@ import logging
 import os.path
 import json 
 
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_file
 from flask import current_app
 
 #needed for flask to use the other files
@@ -154,6 +154,15 @@ def generate_watering_schedule():
         return jsonify({"message": "Watering schedule generated successfully."}), 200
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
+@app.route('/api/get_watering_schedule_html', methods=['GET'])
+def get_watering_schedule_html():
+    try:
+        return send_file('user_interface/src/frontend/public/graphs/watering_schedule.html', attachment_filename='watering_schedule.html')
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
 @app.errorhandler(Exception)
 def handle_exception(e):
     """
