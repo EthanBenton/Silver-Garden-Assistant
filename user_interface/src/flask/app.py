@@ -132,14 +132,6 @@ def graph0():
         logger.error(f"Failed to generate graph: {e}")
         return jsonify({"error": str(e)}), 500
 
-@app.errorhandler(Exception)
-def handle_exception(e):
-    """
-    Global exception handler for the Flask app.
-    """
-    logger.error(f"Unhandled exception: {e}")
-    return jsonify({"error": str(e)}), 500
-
 @app.route('/api/generate_watering_schedule', methods=['POST'])
 def generate_watering_schedule():
     try:
@@ -162,6 +154,14 @@ def generate_watering_schedule():
         return jsonify({"message": "Watering schedule generated successfully."}), 200
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+@app.errorhandler(Exception)
+def handle_exception(e):
+    """
+    Global exception handler for the Flask app.
+    """
+    logger.error(f"Unhandled exception: {e}")
+    return jsonify({"error": str(e)}), 500
+
 
 if __name__ == "__main__":
     app.run(debug=True)
