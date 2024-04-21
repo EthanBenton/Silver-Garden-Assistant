@@ -15,7 +15,7 @@ from data_input_sim.src.constraint_validation import validate_params
 from data_input_sim.src.data_simulation import SensorDataSimulator
 from data_processing_visualization.src.graphing_tool import graphingTool
 from data_processing_visualization.src.WateringSchedule import WateringSchedule
-#from data_processing_visualization.src.graphing_tool import htmlData
+from data_processing_visualization.src.htmlData import htmlData
 
 
 """
@@ -128,6 +128,14 @@ def graph0():
         export_name = 'simulated_data'
         graph.set_export_name(export_name)
         graph.indexed_json_to_html(2, 1, 0, "Simulated Data Visualization")
+
+        export_directory = os.path.abspath(os.path.join(os.getcwd(), "../frontend/public/graphs"))
+        os.makedirs(export_directory, exist_ok=True)
+        export_html_data = os.path.join(export_directory, 'DataTables.html')
+        html_data_instance = htmlData()
+        humidity, humidityCount, temperature, temperatureCount, timestamp = html_data_instance.processData(simulated_data)
+        html_data_instance.makehtml(humidity, humidityCount, temperature, temperatureCount, timestamp, export_html_data)
+
         
         export_directory = os.path.abspath(os.path.join(os.getcwd(), "../frontend/public/graphs"))
         os.makedirs(export_directory, exist_ok=True)
