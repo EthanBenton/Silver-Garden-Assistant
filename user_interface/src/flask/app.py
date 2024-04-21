@@ -14,6 +14,8 @@ sys.path.insert(0, project_root)
 from data_input_sim.src.constraint_validation import validate_params
 from data_input_sim.src.data_simulation import SensorDataSimulator
 from data_processing_visualization.src.graphing_tool import graphingTool
+from data_processing_visualization.src.WateringSchedule import WateringSchedule
+#from data_processing_visualization.src.graphing_tool import htmlData
 
 
 """
@@ -126,6 +128,46 @@ def graph0():
         export_name = 'simulated_data'
         graph.set_export_name(export_name)
         graph.indexed_json_to_html(2, 1, 0, "Simulated Data Visualization")
+        
+        export_directory = os.path.abspath(os.path.join(os.getcwd(), "../frontend/public/graphs"))
+        os.makedirs(export_directory, exist_ok=True)
+        export_Watering_Schedule = os.path.join(export_directory, 'watering_schedule.html')
+        watering_schedule_instance = WateringSchedule()
+
+        """
+        Load sensor data
+        """
+        data = watering_schedule_instance.load_sensor_data(json_file_path)
+
+        """
+        Create DataFrame
+        """
+        df = watering_schedule_instance.create_dataframe(data)
+        
+        """
+        Create watering schedule
+        """
+        df = watering_schedule_instance.create_watering_schedule(df)
+
+        """
+        Train model
+        """
+        model = watering_schedule_instance.train_model(df)
+
+        """
+        Create DataFrame for watering schedule
+        """
+        watering_schedule_df = watering_schedule_instance.create_watering_schedule_df(df, model)
+
+        """
+        Provide watering time estimate
+        """
+        watering_schedule_instance.generate_watering_time(df)
+
+        """
+        Generate and save watering schedule as HTML
+        """
+        watering_schedule_instance.generate_watering_schedule_html(df, export_Watering_Schedule)
 
         return jsonify({"message": "Graph generated successfully", "filePath": f"/static/data/{export_name}.html"})
     except Exception as e:
