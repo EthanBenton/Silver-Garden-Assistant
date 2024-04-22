@@ -1,12 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './GraphsPage0.css';
 
-// used to display a graph with a staitc name
+/**
+ *  Used to display a static .html file name on the website
+ */
 const GraphsPage0 = () => {
   return (
     <div>
-      <h1>Graphs</h1>
-      <p>Here are some interesting graphs...</p>
+      <Link to="/">
+        <button>Back</button>
+      </Link>
+      <h1>Simulated Data Visualization</h1>
+      <p>Here is an interesting graph...GraphsPage0</p>
       <iframe src={`${process.env.PUBLIC_URL}/graphs/simulated_data.html`} title="Graphs" style={{width: '100%', height: '600px', border: 'none'}}></iframe>
     </div>
   );

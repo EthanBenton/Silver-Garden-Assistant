@@ -4,69 +4,170 @@ import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 from datetime import datetime, timedelta
 
-# Load the json file
-with open('user_interface\\src\\flask\\static\\data\\sensor_data.json') as f:
-    data = json.load(f)
+class WateringSchedule:
 
-# Take the timestamps, temperatures, and humidities from json file
-temperatures = [entry['temperature'] for entry in data]
-humidities = [entry['humidity'] for entry in data]    
-timestamps = [datetime.strptime(entry['timestamp'], '%Y-%m-%d %H:%M:%S') for entry in data]
+    
+    def load_sensor_data(self, file_path: str) -> dict:
+        """
+        Load sensor data from a JSON file.
+    
+        Args:
+        file_path (str): Path to the JSON file.
+    
+        Returns:
+        dict: Dictionary containing sensor data.
+        """
+        with open(file_path) as f:
+            data = json.load(f)
+        return data
 
-# Create the dataframe from data taken from json
-df = pd.DataFrame({
-    'humidity': humidities,
-    'temperature': temperatures,
-    'timestamp': timestamps,
+   
+    def create_dataframe(self, data: dict) -> pd.DataFrame:
+        """
+        Create a Pandas data frame from sensor data.
+    
+        Args:
+        data (dict): Dictionary containing sensor data.
+    
+        Returns:
+        pd.DataFrame: Data frame containing sensor data.
+        """
+        temperatures = [entry['temperature'] for entry in data]
+        humidities = [entry['humidity'] for entry in data]
+        timestamps = [datetime.strptime(entry['timestamp'], '%Y-%m-%d %H:%M:%S') for entry in data]
+    
+        df = pd.DataFrame({
+            'humidity': humidities,
+            'temperature': temperatures,
+            'timestamp': timestamps,
+        })
+        df.set_index('timestamp', inplace=True)
+        df = df.resample('1h').mean().interpolate()
+        return df
 
-})
+    
+    def create_watering_schedule(self, df: pd.DataFrame) -> pd.DataFrame:
+        """
+        Create a watering schedule based on temperature and humidity data.
+    
+        Args:
+        df (pd.DataFrame): Data frame containing temperature and humidity data.
+    
+        Returns:
+        pd.DataFrame: Data frame containing watering schedule.
+        """
+        df['watering_schedule'] = np.where((df['temperature'] > 25) & (df['humidity'] < 60), 1, 0)
+        df['watering_schedule'] = df['watering_schedule'].groupby(pd.Grouper(freq='D')).transform('max')
+        df['days_of_the_week'] = df.index.day_name()
+        weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+        df['days_of_the_week'] = pd.Categorical(df['days_of_the_week'], categories = weekdays, ordered = True)
+        return df
 
-# Sets the timestamp as the dataframe index
-df.set_index('timestamp', inplace = True)
+    
+    def train_model(self, df: pd.DataFrame) -> RandomForestClassifier:
+        """
+        Train a random forest classifier model.
+    
+        Args:
+        df (pd.DataFrame): Data frame containing training data.
+    
+        Returns:
+        RandomForestClassifier: Trained random forest classifier model.
+        """
+        X = df[['temperature', 'humidity']]
+        y = df['watering_schedule']
+        model = RandomForestClassifier()
+        model.fit(X, y)
+        return model
 
-# Change the data to 1 hour invtervals and replace missing values
-df = df.resample('1h').mean().interpolate()
+   
+    def create_watering_schedule_df(self, df: pd.DataFrame, model: RandomForestClassifier) -> pd.DataFrame:
+        """
+        Create a data frame for the watering schedule based on predictions.
+    
+        Args:
+        df (pd.DataFrame): Data frame containing sensor data.
+        model (RandomForestClassifier): Trained random forest classifier model.
+    
+        Returns:
+        pd.DataFrame: Data frame containing watering schedule predictions.
+        """
+        predictions = model.predict(df[['temperature', 'humidity']])
+        watering_schedule_df = pd.DataFrame({
+            'timestamp': df.index,
+            'days_of_the_week': df['days_of_the_week'],
+            'watering_required': predictions
+        })
+        return watering_schedule_df
 
-# Create the watering schedule based on data
-df['watering_schedule'] = np.where((df['temperature'] > 25) & (df['humidity'] < 60), 1, 0)
+    
+    def generate_watering_time(self, df: pd.DataFrame) -> None:
+        """
+        Provide a time estimate of when it's best to water the plant.
+    
+        Args:
+        df (pd.DataFrame): Data frame containing sensor data.
+    
+        Returns:
+        None
+        """
+        df['watering_time'] = np.where((df['temperature'] > 25) & (df['humidity'] < 60), 'Morning', 'Evening')
 
-# Makes the schedule only allow people to water once a day
-df['watering_schedule'] = df['watering_schedule'].groupby(pd.Grouper(freq = 'D')).transform('max')
+  
+    def generate_watering_schedule_html(self, df: pd.DataFrame, file_path: str) -> None:
+        """
+        Generate and save the watering schedule as an HTML file.
+    
+        Args:
+        df (pd.DataFrame): Data frame containing watering schedule.
+        file_path (str): Path to save the HTML file.
+    
+        Returns:
+        None
+        """
+        watering_schedule_df = df.pivot_table(index=df.index.date, columns = 'days_of_the_week',
+            values = ['watering_schedule', 'watering_time'], aggfunc = 'first', observed = False)
+        watering_schedule_df.replace(0, 'Water Plant', inplace = True)
+        watering_schedule_df.replace(1, 'Water Plant', inplace = True)
+        watering_schedule_df.to_html(file_path, na_rep = '', index = True)
 
-# Adding the days of the week with the timestamps
-df['days_of_the_week'] = df.index.day_name()
+if __name__ == "__main__":
+        """
+        Create an instance of WateringSchedule
+        """
+        watering_schedule_instance = WateringSchedule()
 
-# Make the days of the week
-weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
-df['days_of_the_week'] = pd.Categorical(df['days_of_the_week'], categories = weekdays, ordered = True)
+        """
+        Load sensor data
+        """
+        data = watering_schedule_instance.load_sensor_data('user_interface\\src\\flask\\static\\data\\simulated_data.json')
 
-# Select the data to train
-X = df[['temperature', 'humidity']]
-Y = df['watering_schedule']
+        """
+        Create DataFrame
+        """
+        df = watering_schedule_instance.create_dataframe(data)
+        
+        """
+        Create watering schedule
+        """
+        df = watering_schedule_instance.create_watering_schedule(df)
 
-# Training
-model = RandomForestClassifier()
-model.fit(X, Y)
+        """
+        Train model
+        """
+        model = watering_schedule_instance.train_model(df)
 
-# Create the predictions from the data
-predictions = model.predict(X)
+        """
+        Create DataFrame for watering schedule
+        """
+        watering_schedule_df = watering_schedule_instance.create_watering_schedule_df(df, model)
 
-# Create the data frame for the watering schedule
-watering_schedule_df = pd.DataFrame({
-    'timestamp': df.index,
-    'days_of_the_week': df['days_of_the_week'],
-    'watering_required': predictions
-})
+        """
+        Provide watering time estimate
+        """
+        watering_schedule_instance.generate_watering_time(df)
 
-# Provide a time estimate of when it's best to water your plant
-df['watering_time'] = np.where((df['temperature']> 25) & (df['humidity'] < 60), 'Morning', 'Evening')
-
-# Make the table produce horizontally
-watering_schedule_df = df.pivot_table(index = df.index.date, columns = 'days_of_the_week',
- values = ['watering_schedule', 'watering_time'], aggfunc = 'first', observed = False)
-
-# Replace the 0s as Water Plant
-watering_schedule_df.replace(0, 'Water Plant', inplace = True)
-
-# Save and send the schedule to an html
-watering_schedule_df.to_html('user_interface\\src\\frontend\\public\\graphs\\watering_schedule.html', na_rep = '', index = True)
+        """
+        Generate and save watering schedule as HTML
+        """
+        watering_schedule_instance.generate_watering_schedule_html(df, 'user_interface\\src\\frontend\\public\\graphs\\watering_schedule.html')

@@ -109,28 +109,43 @@ const SimulationForm = () => {
   ];
 
 
+  /**
+   * Function used to make an API call to the Flask backend to generate a graph.
+   */
   const handleGenerateGraph = async () => {
     try {
       if (simulatedData) {
+        
+        /**
+         * Make a POST request to the '/api/graph0' endpoint
+         */
         const graphResponse = await fetch('/api/graph0', {
           method: 'POST',
-          headers: {
+          headers:{
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify(simulatedData),
+        body: JSON.stringify(simulatedData),
         });
+
+        /**
+         * Parse the response data as JSON
+         */
         const graphData = await graphResponse.json();
-  
+        
+        // Check if the response is successful
         if (graphResponse.ok) {
-          console.log('Graph generated successfully:', graphData.filePath);
-      
-        } else {
-          console.error('Error generating graph:', graphData.error);
+          console.log('Graph generated successfully:', graphData.filePath); // Log the success message with the generated graph file path
         }
-      } else {
-        console.error('No simulated data available. Please generate data first.');
+        else {
+          console.error('Error generating graph:', graphData.error); // Log the error message if the response is not successful
+        }
       }
-    } catch (error) {
+      else {
+        console.error('No simulated data available. Please generate data first.'); // Log an error if no simulated data is available
+      }
+    } 
+    catch (error) {
+      // Log and alert any errors that occur during the API call
       console.error('Error:', error.message);
       alert(`Error: ${error.message}`);
     }
