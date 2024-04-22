@@ -127,7 +127,7 @@ class WateringSchedule:
         """
         watering_schedule_df = df.pivot_table(index=df.index.date, columns = 'days_of_the_week',
             values = ['watering_schedule', 'watering_time'], aggfunc = 'first', observed = False)
-        watering_schedule_df.replace(0, 'Water Plant', inplace = True)
+        watering_schedule_df.replace(0, 'Water if Dry', inplace = True)
         watering_schedule_df.replace(1, 'Water Plant', inplace = True)
         watering_schedule_df.to_html(file_path, na_rep = '', index = True)
 
