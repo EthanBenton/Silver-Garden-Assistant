@@ -37,6 +37,7 @@ h2 {
 }
 
 .aboutImageStyle {
+  animation: .75s ease-out 0s 1 slideInFromRight;
   display: block;
   margin-top: 5rem;
   margin-left: 12rem;
@@ -45,6 +46,7 @@ h2 {
 }
 
 .largeImageStyle {
+  animation: .75s ease-out 0s 1 slideInFromLeft;
   display: block;
   margin-top: 5rem;
   margin-left: 5rem;
@@ -70,4 +72,26 @@ h2 {
 .nonClickable {
   opacity: 0.5;
   cursor: default;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
