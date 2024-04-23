@@ -1,15 +1,13 @@
 import numpy as np
-import random
 from datetime import datetime, timedelta
 import json
-import sys
  
 class SensorDataSimulator:
     """
     This class simulates the generation of temperature and humidity data with gradual changes.
     """
 
-    def __init__(self, temperature_range=(0, 50), humidity_range=(0, 100), polling_rate_seconds=0, noise_mean=0.0, noise_std=0.0):
+    def __init__(self, temperature_range=(0, 50), humidity_range=(0, 100), polling_rate_seconds=0, noise_mean=0.0, noise_std=0.0, temperature_variation=5):
         """
         Initializes the simulator with defined ranges and change rate.
 
@@ -19,6 +17,7 @@ class SensorDataSimulator:
         noise_mean (float): The mean of the Gaussian noise added to the data.
         noise_std (float): The standard deviation of the Gaussian noise added to the data.
         """
+
         self.temperature_range = temperature_range
         self.humidity_range = humidity_range
         self.polling_rate = polling_rate_seconds
@@ -27,7 +26,8 @@ class SensorDataSimulator:
         self.noise_std  = noise_std
         self.previous_temperature = np.random.uniform(temperature_range[0], temperature_range[1])
         self.previous_humidity = np.random.uniform(humidity_range[0], humidity_range[1])
-        self.random_state = np.random.RandomState()
+        self.temperature_variation = temperature_variation
+        
         
 
     def generate_data(self, num_samples, polling_rate_seconds):
@@ -41,6 +41,11 @@ class SensorDataSimulator:
         Returns:
         list: A list of dictionaries, each containing a temperature and humidity value.
         """
+        self.num_samples = num_samples
+
+        if num_samples <= 0:
+            return []
+
         temperatures = np.zeros(num_samples)
         humidities = np.zeros(num_samples)
 
@@ -52,31 +57,52 @@ class SensorDataSimulator:
         start_timestamp = datetime.now()
 
         for i in range(num_samples):
-            timestamp = (start_timestamp + timedelta(seconds=i*polling_rate_seconds)).strftime("%Y-%m-%d %H:%M:%S")
-            temperatures[i] = self._generate_temperature(temperatures[i-1])
+            timestamp = start_timestamp + timedelta(seconds=i * polling_rate_seconds)
+            temperatures[i] = self._generate_temperature(timestamp)
             humidities[i] = self._generate_humidity(humidities[i-1])
 
-            data_point = {'timestamp': timestamp, 'temperature': temperatures[i], 'humidity': humidities[i]}
+            data_point = {'humidity': humidities[i], 'temperature': temperatures[i],  'timestamp': timestamp.strftime("%Y-%m-%d %H:%M:%S")}
             data.append(data_point)
 
         return data
 
-    def _generate_temperature(self, previous_temperature):
+    def _generate_temperature(self, timestamp):
         """
-        Generates a temperature value within the range, including noise.
+        Generates a temperature value within the range, including realistic variations.
+        # Formulae refactor + additional logic aided by Claude 
 
         Parameters:
-        previous_temperature (float): The previous temperature value.
+        timestamp (datetime): The current timestamp.
 
         Returns:
         float: The generated temperature value.
         """
-        noisy_temperature = self._generate_noise(previous_temperature, self.temperature_range)
+        hours = timestamp.hour + timestamp.minute / 60
 
-        self.previous_temperature = noisy_temperature
+        if 6 <= hours < 12:
+            offset = (hours - 6) / 6 * self.temperature_variation * 0.6
+        elif 12 <= hours < 18:
+            offset = (18 - hours) / 6 * self.temperature_variation * 0.6
+        else:
+            offset = -self.temperature_variation * 0.4
 
-        return noisy_temperature
+        total_duration = (self.num_samples - 1) * self.polling_rate
+        rate_of_change = (self.temperature_range[1] - self.temperature_range[0]) / total_duration
+        elapsed_time = (timestamp - self.start_timestamp).total_seconds()
 
+     
+        new_temperature = self.temperature_range[0] + rate_of_change * elapsed_time + offset
+        noise = np.random.normal(self.noise_mean, self.noise_std)
+        new_temperature += noise
+
+
+        buffer = self.temperature_variation * 0.2
+        min_temp = self.temperature_range[0] + buffer
+        max_temp = self.temperature_range[1] - buffer
+        new_temperature = max(min_temp, min(new_temperature, max_temp))
+
+        return new_temperature
+                
     def _generate_humidity(self, previous_humidity):
         """
         Generates a humidity value within the range, including noise.
@@ -87,29 +113,17 @@ class SensorDataSimulator:
         Returns:
         float: The generated humidity value.
         """
-        noisy_humidity = self._generate_noise(previous_humidity, self.humidity_range)
         
-        self.previous_humidity = noisy_humidity
-    
-        return noisy_humidity
-    
-    def _generate_noise(self, previous_value, value_range):
-        """
-        Generates noise for the given data value.
+        humidity_change = np.random.normal(0, 1)
 
-        Parameters:
-        previous_value (float): The previous data value.
-        value_range (tuple): The range of possible values.
-
-        Returns:
-        float: The data value with added noise.
-        """
         
-        value = np.random.uniform(value_range[0], value_range[1])
-        noise = self.random_state.normal(self.noise_mean, self.noise_std)
-        noisy_value = value + noise
-        noisy_value = max(value_range[0], min(noisy_value, value_range[1]))
-        return noisy_value
+        new_humidity = previous_humidity + humidity_change
+
+        
+        new_humidity = max(self.humidity_range[0], min(new_humidity, self.humidity_range[1]))
+
+        self.previous_humidity = new_humidity
+        return new_humidity
         
 
     def write_to_json(self, data, filename):
