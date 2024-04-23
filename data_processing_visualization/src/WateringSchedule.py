@@ -129,7 +129,10 @@ class WateringSchedule:
             values = ['watering_schedule', 'watering_time'], aggfunc = 'first', observed = False)
         watering_schedule_df.replace(0, 'Water if Dry', inplace = True)
         watering_schedule_df.replace(1, 'Water Plant', inplace = True)
-        watering_schedule_df.to_html(file_path, na_rep = '', index = True)
+        html_content = watering_schedule_df.to_html(na_rep = '', index = True)
+        html_content = f"<style>table{{background-color:white;}}</style>\n{html_content}"
+        with open(file_path, 'w') as f:
+            f.write(html_content)
 
 if __name__ == "__main__":
         """
