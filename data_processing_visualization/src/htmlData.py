@@ -83,6 +83,7 @@ class htmlData:
             file.write('table {\n')
             file.write('    border-collapse: collapse;\n')
             file.write('    width: 50%;\n')
+            file.write('    background-color: white;\n')
             file.write('}\n')
             file.write('th, td {\n')
             file.write('    border: 1px solid black;\n')
