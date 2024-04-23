@@ -132,8 +132,8 @@ class htmlData:
             file.write('</html>\n')
 
 if __name__ == '__main__':
-    inputFile = 'user_interface\\src\\flask\\static\\data\\simulated_data.json'
-    outputFile = 'user_interface\\src\\frontend\\public\\graphs\\DataTables.html'
+    inputFile = 'user_interface/src/flask/static/data/simulated_data.json'
+    outputFile = 'user_interface/src/frontend/public/graphs/DataTables.html'
 
     html_data_instance = htmlData()
 
