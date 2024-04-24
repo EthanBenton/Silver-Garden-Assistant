@@ -13,6 +13,7 @@ const SimulationForm = () => {
     polling_rate_seconds: 10,
     noise_mean: 0.0,
     noise_std: 1.0,
+    temperature_variation: 5,
     time_interval: 1,
     time_unit: 'seconds',
   });
