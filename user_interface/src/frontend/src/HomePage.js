@@ -17,7 +17,7 @@ const HomePage = () => {
     { id: 5, imagePath: `${process.env.PUBLIC_URL}/images/poly.png`, path: "/graphs4", footerName: "Polynomial Regression" },
     { id: 6, imagePath: `${process.env.PUBLIC_URL}/images/RANSAC.png`, path: "/graphs5", footerName: "RANSAC Regression" },
     { id: 7, imagePath: `${process.env.PUBLIC_URL}/images/Clustering.png`, path: "/graphs6", footerName: "K-Means Clustering" },
-    { id: 8, imagePath: `${process.env.PUBLIC_URL}/images/linear.png`, path: "/graphs7", footerName: "Data Normalization" },
+    { id: 8, imagePath: `${process.env.PUBLIC_URL}/images/datanormalization1.png`, path: "/graphs7", footerName: "Data Normalization" },
   ];
 
   const dbFilePath = `${process.env.PUBLIC_URL}/priaData.db`;
