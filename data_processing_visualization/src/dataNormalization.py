@@ -82,7 +82,7 @@ plt.text(0.85, humidity_q1, f'Q1: {humidity_q1:.2f}', va='center', ha='center', 
 plt.text(0.85, humidity_q3, f'Q3: {humidity_q3:.2f}', va='center', ha='center', backgroundcolor='w')
 plt.text(0.85, humidity_q1 - 2, f'IQR: {humidity_iqr:.2f}', va='center', ha='center', backgroundcolor='w')
 
-plt.tight_layout()  # Adjust the layout to prevent overlapping
+plt.tight_layout()  # Adjust a layout to prevent overlapping
 plt.show()
 
 
