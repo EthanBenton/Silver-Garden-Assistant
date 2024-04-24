@@ -14,9 +14,9 @@ const HomePage = () => {
     { id: 2, imagePath: `${process.env.PUBLIC_URL}/images/TableGraph.png`, path: "/graphs1", footerName: "Data in Tables" },
     { id: 3, imagePath: `${process.env.PUBLIC_URL}/images/watering.png`, path: "/graphs2", footerName: "Watering Schedule" },
     { id: 4, imagePath: `${process.env.PUBLIC_URL}/images/linear.png`, path: "/graphs3", footerName: "Regression Model" },
-    { id: 5, imagePath: `${process.env.PUBLIC_URL}/images/linear.png`, path: "/graphs4", footerName: "Regression Model" },
-    { id: 6, imagePath: `${process.env.PUBLIC_URL}/images/linear.png`, path: "/graphs5", footerName: "Regression Model" },
-    { id: 7, imagePath: `${process.env.PUBLIC_URL}/images/linear.png`, path: "/graphs6", footerName: "Regression Model" },
+    { id: 5, imagePath: `${process.env.PUBLIC_URL}/images/poly.png`, path: "/graphs4", footerName: "Polynomial Regression" },
+    { id: 6, imagePath: `${process.env.PUBLIC_URL}/images/RANSAC.png`, path: "/graphs5", footerName: "RANSAC Regression" },
+    { id: 7, imagePath: `${process.env.PUBLIC_URL}/images/Clustering.png`, path: "/graphs6", footerName: "K-Means Clustering" },
     { id: 8, imagePath: `${process.env.PUBLIC_URL}/images/linear.png`, path: "/graphs7", footerName: "Data Normalization" },
   ];
 
