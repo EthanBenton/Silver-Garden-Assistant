@@ -4,6 +4,9 @@ import 'rc-slider/assets/index.css';
 import './SimulationForm.css';
 import Select from 'react-dropdown-select';
 
+/**
+ * SimulationForm to allow user to generate simulated data
+ */
 const SimulationForm = () => {
   const [formData, setFormData] = useState({
     temp_start: 0,

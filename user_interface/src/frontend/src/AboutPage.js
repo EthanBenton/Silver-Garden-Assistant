@@ -1,7 +1,11 @@
 import React from 'react';
 import styles from './AboutPage.css';
 
+/**
+ * AboutPage to display the product content
+ */
 const AboutPage = () => {
+  
   return (
     <div className="aboutContainerStyle">
       <div className="row align-items-center">
