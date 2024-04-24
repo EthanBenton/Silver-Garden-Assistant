@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTheme } from './ThemeContext';
+import styles from './SettingsPage.css';
 
 /**
  * SettingsPage component for displaying settings
@@ -13,15 +14,17 @@ const SettingsPage = () => {
   const themeClass = theme === 'dark' ? 'darkTheme' : 'lightTheme';
 
   return (
-    <div className={themeClass}>
-      <h1>Settings</h1>
-      <label>
-        Dark Mode
-        <input
-          type="checkbox"
-          checked={theme === 'dark'} // Set the checkbox checked state based on the current theme
-          onChange={toggleTheme} // Call toggleTheme function when the checkbox changes
-        />
+    <div className={`settingsContainer ${themeClass}`}>
+      <label className="toggleLabel">
+        <h1>Dark Mode</h1>
+        <div className="toggleSwitch">
+          <input
+            type="checkbox"
+            checked={theme === 'dark'}
+            onChange={toggleTheme}
+          />
+          <span className="slider"></span>
+        </div>
       </label>
     </div>
   );
