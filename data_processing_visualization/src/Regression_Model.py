@@ -122,5 +122,3 @@ plt.yticks(np.arange(0, 101, 20))  # Set y-axis tick marks
 plt.legend()
 plt.grid(True)
 plt.show()
-
-
