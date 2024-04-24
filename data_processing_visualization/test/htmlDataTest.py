@@ -2,96 +2,56 @@ import unittest
 import json
 import numpy as np
 import sys
-sys.path.append('data_processing_visualization\\src')
-from htmlData import *
+sys.path.append('data_processing_visualization/src')
+from htmlData import htmlData
 
-class TestJsonProcess(unittest.TestCase):
+class htmlDataTest(unittest.TestCase):
 
-    """
-        Set up sample data for testing.
-        """
     def setUp(self):
-        self.sample_data = [
-            {
-            "timestamp": "2024-03-26 00:00:00",
-            "temperature": 25.55,
-            "humidity": 60.32
-            },
-            {
-            "timestamp": "2024-03-26 00:10:00",
-            "temperature": 26.56,
-            "humidity": 65.94
-            },
-            {
-            "timestamp": "2024-03-26 00:20:00",
-            "temperature": 25.73,
-            "humidity": 63.21
-            },
+        """
+        Create a temporary json file for testing
+        """
+        self.test_data = [
+            {"humidity": 46.11708606933448, "temperature": 24.463786814431522, "timestamp": "2024-04-11 20:56:49"},
+            {"humidity": 54.59773018104158, "temperature": 26.059561397324842, "timestamp": "2024-04-11 20:57:49"}
         ]
-        # Write the sample data to a file
-        with open('example.json', 'w' ) as file:
-            json.dump(self.sample_data, file)
+        with open("test_data.json", "w") as f:
+            json.dump(self.test_data, f)
 
-    """
-        Test the read_data function.
-        """
     def test_read_data(self):
-        data = read_data('example.json')
-        self.assertEqual(data, self.sample_data)
-
-    """
-        Test the processData function.
         """
-    def test_processData(self):
-        temperature, temperatureCount, humidity, humidityCount, timestamp = processData(self.sample_data)
+        Test read_data method
+        """
+        html_data = htmlData()
+        data = html_data.read_data("test_data.json")
+        self.assertEqual(data, self.test_data)
+
+    def test_process_data(self):
+        """
+        Test processData method
+        """
+        html_data = htmlData()
+        humidity, humidity_count, temperature, temperature_count, timestamp = html_data.processData(self.test_data)
         
-        # Makes sure the arrays are the right length
-        self.assertEqual(len(temperature), len(self.sample_data))
-        self.assertEqual(len(humidity), len(self.sample_data))
-        self.assertEqual(len(timestamp), len(self.sample_data))
+        expected_humidity = np.array([46, 55])
+        expected_humidity_count = {46: 1, 55: 1}
+        expected_temperature = np.array([24, 26])
+        expected_temperature_count = {24: 1, 26: 1}
+        expected_timestamp = ['2024-04-11 20:56:49', '2024-04-11 20:57:49']
 
-        # Makes sure the temperature and humidity are floats or integers
-        for temp, humid in zip(temperature, humidity):
-            self.assertFalse(isinstance(temp, float) or isinstance(temp, int))
-            self.assertFalse(isinstance(humid, float) or isinstance(humid, int))
+        np.testing.assert_array_equal(humidity, expected_humidity)
+        self.assertEqual(humidity_count, expected_humidity_count)
+        np.testing.assert_array_equal(temperature, expected_temperature)
+        self.assertEqual(temperature_count, expected_temperature_count)
+        self.assertEqual(timestamp, expected_timestamp)
 
-    """
-        Clean up after testing by removing the temporary file.
-        """
+
     def tearDown(self):
+        """
+        Delete the temporary json file
+        """
         import os
-        os.remove('example.json')
-
-    """
-        Test the makehtml function.
-        """   
-    def test_makehtml(self):
-        # Sample data
-        temperature = [25, 26, 25]
-        temperatureCount = {25: 2, 26: 1}
-        humidity = [60, 65, 63]
-        humidityCount = {60: 1, 65: 1, 63: 1}
-        timestamp = ['2024-03-26 00:00:00', '2024-03-26 00:10:00', '2024-03-26 00:20:00']
-
-        # Make an output file
-        output_file = 'test_output.html'
-
-        # Call output file function
-        makehtml(temperature, temperatureCount, humidity, humidityCount, timestamp, output_file)
-
-
-        # Read the output file
-        with open(output_file, 'r') as f:
-            html_content = f.read()
-
-        # Make certain parts of the html file strings are in the file
-        self.assertIn('<h1>Processed Data</h1>', html_content)
-        self.assertIn('<h2> Temperature</h2>', html_content)
-        self.assertIn('<h2> Humidity</h2>', html_content)
-
-        # Remove the temporary file
-        import os
-        os.remove(output_file)
+        os.remove("test_data.json")
 
 if __name__ == '__main__':
     unittest.main()

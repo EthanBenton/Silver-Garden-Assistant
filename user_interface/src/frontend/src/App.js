@@ -14,7 +14,6 @@ import GraphsPage5 from './GraphsPage5';
 import GraphsPage6 from './GraphsPage6';
 import GraphsPage7 from './GraphsPage7';
 import SettingsPage from './SettingsPage';
-import DataPage from './DataPage';
 import ChooseYourPlantPage from './ChooseYourPlantPage';
 import SimulationForm from './SimulationForm';
 
@@ -38,7 +37,6 @@ function App() {
         <Route path="/graphs6" element={<GraphsPage6 />} />
         <Route path="/graphs7" element={<GraphsPage7 />} />
         <Route path="/settings" element={<SettingsPage />} />
-        <Route path="/Data" element={<DataPage />} />
         <Route path="/ChooseYourPlant" element={<ChooseYourPlantPage />} />
         <Route path="/SimulationForm" element={<SimulationForm/>} />
       </Routes>

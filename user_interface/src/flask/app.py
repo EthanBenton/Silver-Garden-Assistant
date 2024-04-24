@@ -74,8 +74,10 @@ def simulate():
     polling_rate_seconds = (params.get('polling_rate_seconds'))
     noise_mean = float(params.get('noise_mean'))
     noise_std = float(params.get('noise_std'))
+    temperature_variation = float(params.get('temperature_variation')) 
     time_unit = params.get('time_unit')
     time_interval = float(params.get('time_interval')) 
+    
 
 
    
@@ -91,6 +93,7 @@ def simulate():
     print("polling_rate_seconds:", polling_rate_seconds)
     print("noise_mean:", noise_mean)
     print("noise_std:", noise_std)
+    print("temperature_variation:", temperature_variation)
 
 
     if None in (num_samples, temp_start, temp_end, humidity_start, humidity_end, polling_rate_seconds, noise_mean, noise_std):
